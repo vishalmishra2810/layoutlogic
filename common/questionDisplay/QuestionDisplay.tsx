@@ -1,6 +1,5 @@
 import React from "react";
 import { ALL_COMPONENTS } from "../../database/allTech";
-import { getQuestionAnswer } from "../../utils/helper";
 import CodeSnippet from "../codeSnippet/CodeSnippet";
 import ListShow from "../listShow/ListShow";
 import MakeDifferentiate from "../makeDifferentiate/MakeDifferentiate";
