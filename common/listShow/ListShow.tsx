@@ -11,7 +11,7 @@ function ListShow({ list }: IListShowProps) {
         <ul className={style.listShow_list}>
           {list?.map((item: any, index) => (
             <li key={index} className={style.listShow_item}>
-              {item?.description}
+              {item}
             </li>
           ))}
         </ul>

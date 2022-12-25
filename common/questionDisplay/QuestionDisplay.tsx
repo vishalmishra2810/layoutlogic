@@ -25,7 +25,7 @@ function QuestionDisplay({ questionData }: IQuestionDispalayProps) {
               {questions?.components === "" ? (
                 questions?.answer
               ) : questions?.components === ALL_COMPONENTS.LIST ? (
-                <ListShow />
+                <ListShow list={questions?.answer} />
               ) : questions?.components === ALL_COMPONENTS.CODE ? (
                 <CodeSnippet />
               ) : questions?.components === ALL_COMPONENTS.TABLE ? (
