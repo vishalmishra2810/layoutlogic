@@ -3,7 +3,10 @@ import style from "./Dashboard.module.scss";
 
 function Dashboard() {
   return (
-    <div>
+    <div className={style.dashboard}>
+      <div className={style.dashboard_container}>
+        
+      </div>
     </div>
   );
 }
