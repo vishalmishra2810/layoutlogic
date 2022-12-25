@@ -1,0 +1,24 @@
+.codeSnippet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .codeSnippet_container {
+    width: 80%;
+    max-width: 1100px;
+    height: 100%;
+    .codeSnippet_title {
+      height: 42px;
+      width: 100%;
+      background: #343541;
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 0px 20px;
+      font-weight: 600;
+      justify-content: flex-end;
+      cursor: pointer;
+      border-radius: 12px 12px 0 0;
+    }
+  }
+}
