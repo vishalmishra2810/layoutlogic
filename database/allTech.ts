@@ -15,3 +15,10 @@ export enum ALL_TECH {
   REDUX = "redux",
   REDUXTOOLKIT = "reduxtoolkit",
 }
+
+export enum ALL_COMPONENTS {
+  TABLE = "table",
+  CODE = "code",
+  IMAGE = "image",
+  LIST = "list",
+}
