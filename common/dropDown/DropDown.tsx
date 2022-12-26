@@ -2,13 +2,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import style from "./DropDown.module.scss";
 import bottom_arrow from "../../assets/dropdown.svg";
+import { useRouter } from "next/router";
 
 interface IDropDownProps {
-  itemList: string[];
+  itemList: any;
   title: string;
 }
 function DropDown({ itemList, title }: IDropDownProps) {
   const [show, setShow] = useState(false);
+  const router = useRouter();
   const openMenu = () => {
     setShow(!show);
   };
@@ -33,9 +35,15 @@ function DropDown({ itemList, title }: IDropDownProps) {
         </div>
         {show && (
           <div className={style.dropDown_list}>
-            {itemList?.map((item, index) => (
-              <div key={index} className={style.dropDown_list_item}>
-                {item}
+            {itemList?.map((item: any, index: number) => (
+              <div
+                key={index}
+                className={style.dropDown_list_item}
+                onClick={() => {
+                  router.push("#" + item?.question);
+                }}
+              >
+                {item?.question}
               </div>
             ))}
           </div>

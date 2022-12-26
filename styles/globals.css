@@ -99,14 +99,14 @@ a {
   }
 }
 
-.order_list_style {
-  padding: 0;
-  margin: 0;
+.answer_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.order_list {
-  margin-left: 24px;
+.answer_list_item {
+  margin-left: 32px;
 }
-.answer {
-  margin-left: 24px;
-  margin-bottom: 16px;
+.simple_answers {
+  margin-left: 32px;
 }

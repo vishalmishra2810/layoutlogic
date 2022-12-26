@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 52px;
+    height: 42px;
     border-bottom: 1px solid black;
     cursor: pointer;
     padding: 0px 16px;
@@ -24,7 +24,8 @@
   .dropDown_list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    max-height: 400px;
+    overflow-y: scroll;
     .dropDown_list_item {
       font-size: 16px;
       font-weight: 400;
@@ -32,7 +33,7 @@
       cursor: pointer;
       padding: 16px;
       &:hover {
-        background-color: #585656;
+        background-color: #ece7e7;
       }
     }
   }

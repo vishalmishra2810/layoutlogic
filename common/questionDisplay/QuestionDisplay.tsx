@@ -13,7 +13,7 @@ function QuestionDisplay({ questionData }: IQuestionDispalayProps) {
           <div
             key={index}
             className={style.questionDisplay_question}
-            id={"#" + questions?.question}
+            id={questions?.question}
           >
             <div className={style.questionDisplay_question_title}>
               {index + 1 + ". "} {questions?.question}
