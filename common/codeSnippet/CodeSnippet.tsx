@@ -1,9 +1,10 @@
+//@ts-nocheck
 import React from "react";
 import style from "./CodeSnippet.module.scss";
-//@ts-ignore
 import SyntaxHighlighter from "react-syntax-highlighter";
-//@ts-ignore
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import prettier from "prettier/standalone";
+import parserBabel from "prettier/parser-babel";
 
 interface ICodeSnippetProps {
   codeString?: string;
@@ -24,7 +25,10 @@ function CodeSnippet({ codeString }: ICodeSnippetProps) {
             borderRadius: "0px 0px 12px 12px",
           }}
         >
-          {codeString}
+          {prettier.format(codeString, {
+            parser: "babel",
+            plugins: [parserBabel],
+          })}
         </SyntaxHighlighter>
       </div>
     </div>

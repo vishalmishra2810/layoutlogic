@@ -98,3 +98,15 @@ a {
     color-scheme: dark;
   }
 }
+
+.order_list_style {
+  padding: 0;
+  margin: 0;
+}
+.order_list {
+  margin-left: 24px;
+}
+.answer {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}

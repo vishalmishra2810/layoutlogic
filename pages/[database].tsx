@@ -4,6 +4,7 @@ import React from "react";
 import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
 import { getFileContent } from "../utils/helper";
 import style from "./../styles/style.module.scss";
+import SideBar from "./../components/sideBar/SideBar";
 
 function Database() {
   const router = useRouter();
@@ -14,11 +15,7 @@ function Database() {
         <title>ClearJobs</title>
         <meta
           name="description"
-          content={
-            "Best website to prepare for " +
-            database +
-            " interviews and get a job"
-          }
+          content="Best website to prepare for interviews and get a job"
         />
         <meta
           name="keywords"
@@ -28,8 +25,13 @@ function Database() {
         <link rel="icon" href="/clearjobs.png" />
       </Head>
       <div className={style.database}>
-        <div className={style.database_container}>
-          <QuestionDisplay questionData={getFileContent(database)} />
+        <div className={style.database_main_container}>
+          <div className={style.database_sideBar}>
+            <SideBar />
+          </div>
+          <div className={style.database_container}>
+            <QuestionDisplay questionData={getFileContent(database)} />
+          </div>
         </div>
       </div>
     </>

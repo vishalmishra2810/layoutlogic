@@ -27,9 +27,14 @@ function QuestionDisplay({ questionData }: IQuestionDispalayProps) {
               ) : questions?.components === ALL_COMPONENTS.LIST ? (
                 <ListShow list={questions?.answer} />
               ) : questions?.components === ALL_COMPONENTS.CODE ? (
-                <CodeSnippet />
+                <CodeSnippet codeString={questions?.answer?.codeString} />
               ) : questions?.components === ALL_COMPONENTS.TABLE ? (
-                <MakeDifferentiate />
+                <MakeDifferentiate
+                  totalColumn={questions?.answer?.totalColumn}
+                  headerData={questions?.answer?.headerData}
+                  columnData={questions?.answer?.columnData}
+                  columnDataLength={questions?.answer?.columnDataLength}
+                />
               ) : (
                 questions?.answer
               )}
