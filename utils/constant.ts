@@ -3,3 +3,9 @@ export enum TOPICS_DIFFICULTY {
   MEDIUM = "medium",
   HARD = "hard",
 }
+
+export enum TOPICS_DIFFICULTY_LABELS {
+  EASY = "Easy",
+  MEDIUM = "Medium",
+  HARD = "Hard",
+}

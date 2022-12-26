@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
-import { getFileContent } from "../utils/helper";
+import { getAllList, getFileContent } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 
@@ -27,10 +27,10 @@ function Database() {
       <div className={style.database}>
         <div className={style.database_main_container}>
           <div className={style.database_sideBar}>
-            <SideBar />
+            <SideBar database={database} />
           </div>
           <div className={style.database_container}>
-            <QuestionDisplay questionData={getFileContent(database)} />
+            <QuestionDisplay questionData={getAllList(database)} />
           </div>
         </div>
       </div>
