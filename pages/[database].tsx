@@ -5,6 +5,7 @@ import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
 import { getAllList, getFileContent } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
+import { READY_STATES_LABELS } from "../utils/constant";
 
 function Database() {
   const router = useRouter();
@@ -25,14 +26,20 @@ function Database() {
         <link rel="icon" href="/clearjobs.png" />
       </Head>
       <div className={style.database}>
-        <div className={style.database_main_container}>
-          <div className={style.database_sideBar}>
-            <SideBar database={database} />
+        {READY_STATES_LABELS[database?.toLowerCase()] ? (
+          <div className={style.database_main_container}>
+            <div className={style.database_sideBar}>
+              <SideBar database={database} />
+            </div>
+            <div className={style.database_container}>
+              <QuestionDisplay questionData={getAllList(database)} />
+            </div>
           </div>
-          <div className={style.database_container}>
-            <QuestionDisplay questionData={getAllList(database)} />
+        ) : (
+          <div className={style.database_coming_soon_container}>
+            <h1>Coming Soon</h1>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

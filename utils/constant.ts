@@ -9,3 +9,8 @@ export enum TOPICS_DIFFICULTY_LABELS {
   MEDIUM = "Medium",
   HARD = "Hard",
 }
+
+export const READY_STATES_LABELS: any = {
+  REACTJS: "reactjs",
+  reactjs: "reactjs",
+};
