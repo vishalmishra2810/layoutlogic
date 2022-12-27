@@ -1,7 +1,64 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import ListShow from "../../common/listShow/ListShow";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
+import {
+  context_pass_string,
+  props_pass_string,
+  react_router,
+  redux_pass_string,
+} from "./constant";
 
 export const MEDIUM_REACTJS = [
+  {
+    question: "What is ReactJS?",
+    answer: (
+      <ListShow
+        typeOfList={"ul"}
+        list={[
+          "ReactJS is a JavaScript library for building user interfaces.",
+          "ReactJS is a front-end library developed by Facebook.",
+          "ReactJS allows us to create reusable UI components.",
+          "ReactJS is used to handle the view layer for web and mobile apps.",
+          "ReactJS is a component-based library.",
+          "ReactJS is a declarative, efficient, and flexible JavaScript library for building user interfaces.",
+        ]}
+      />
+    ),
+  },
+  {
+    question: "What are the features of ReactJS?",
+    answer: (
+      <ol className="answer_list">
+        <li className="answer_list_item">
+          ReactJS uses <b> Virtual DOM </b> instead of Real DOM.
+        </li>
+        <li className="answer_list_item">
+          React can be rendered on the server as well as the client, which can
+          improve the performance and <b>SEO of the app</b>.
+        </li>
+        <li className="answer_list_item">
+          ReactJS follows <b>uni-directional</b> data flow or data binding.This
+          makes it easier to understand and debug the app, as the flow of data
+          is predictable and explicit.
+        </li>
+        <li className="answer_list_item">
+          ReactJS uses <b> reusable/composable UI</b> components to develop the
+          view.
+        </li>
+        <li className="answer_list_item">
+          ReactJS uses JSX as its primary scripting language.This allows
+          developers to write HTML-like code in their JavaScript files, making
+          it easier to build and style UI components.
+        </li>
+        <li className="answer_list_item">
+          ReactJS uses one-way data binding between the components.
+        </li>
+        <li className="answer_list_item">
+          ReactJS uses <b> Flux</b> architecture.
+        </li>
+      </ol>
+    ),
+  },
   {
     question: "What is difference between Virtual DOM and Real DOM?",
     answer: (
@@ -67,56 +124,6 @@ export const MEDIUM_REACTJS = [
     ),
   },
   {
-    question: "What is ReactJS?",
-    answer: (
-      <ListShow
-        typeOfList={"ul"}
-        list={[
-          "ReactJS is a JavaScript library for building user interfaces.",
-          "ReactJS is a front-end library developed by Facebook.",
-          "ReactJS allows us to create reusable UI components.",
-          "ReactJS is used to handle the view layer for web and mobile apps.",
-          "ReactJS is a component-based library.",
-          "ReactJS is a declarative, efficient, and flexible JavaScript library for building user interfaces.",
-        ]}
-      />
-    ),
-  },
-  {
-    question: "What are the features of ReactJS?",
-    answer: (
-      <ol className="answer_list">
-        <li className="answer_list_item">
-          ReactJS uses <b> Virtual DOM </b> instead of Real DOM.
-        </li>
-        <li className="answer_list_item">
-          React can be rendered on the server as well as the client, which can
-          improve the performance and <b>SEO of the app</b>.
-        </li>
-        <li className="answer_list_item">
-          ReactJS follows <b>uni-directional</b> data flow or data binding.This
-          makes it easier to understand and debug the app, as the flow of data
-          is predictable and explicit.
-        </li>
-        <li className="answer_list_item">
-          ReactJS uses <b> reusable/composable UI</b> components to develop the
-          view.
-        </li>
-        <li className="answer_list_item">
-          ReactJS uses JSX as its primary scripting language.This allows
-          developers to write HTML-like code in their JavaScript files, making
-          it easier to build and style UI components.
-        </li>
-        <li className="answer_list_item">
-          ReactJS uses one-way data binding between the components.
-        </li>
-        <li className="answer_list_item">
-          ReactJS uses <b> Flux</b> architecture.
-        </li>
-      </ol>
-    ),
-  },
-  {
     question: "What are the limitations of ReactJS?",
     answer: (
       <ListShow
@@ -131,24 +138,53 @@ export const MEDIUM_REACTJS = [
     ),
   },
   {
-    question:
-      "How do you optimize the performance of a ReactJS app using the shouldComponentUpdate lifecycle method?",
+    question: "How do you pass data between different components in React?",
     answer: (
       <>
         <p className="simple_answers">
-          The shouldComponentUpdate lifecycle method is used to optimize the
-          performance of a ReactJS app.
-          <br /> It is used to let React know if a component’s output is not
-          affected by the current change in state or props. <br />
-          The default behavior is to re-render on every state change. The
-          shouldComponentUpdate method receives the next props and state as
-          arguments, and you can compare them with the current props and state.
-          If the values are the same, you can return false to tell React that
-          the component’s output is not affected by the current change. If the
-          values are different, you can return true to tell React that the
-          component’s output does change. This method is used to prevent
-          unnecessary re-renders.
+          There are many ways to pass data between different components in
+          React: -
         </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            <b>Props</b> - Props are used to pass data from one component to
+            another. Props are immutable and are passed from parent to child
+            components.
+            <br /> <br />
+            <CodeSnippet codeString={props_pass_string} />
+          </li>
+          <li className="answer_list_item">
+            <b>Context</b> - Context is used to pass data through the component
+            tree without having to pass props down manually at every level.
+            <br /> <br />
+            <CodeSnippet codeString={context_pass_string} />
+          </li>
+          <li className="answer_list_item">
+            <b>Redux</b> - Redux is a predictable state container for JavaScript
+            apps. It helps you write applications that behave consistently, run
+            in different environments (client, server, and native), and are easy
+            to test. On top of that, it provides a great developer experience,
+            such as live code editing combined with a time traveling debugger.
+            <br /> <br />
+            <CodeSnippet codeString={redux_pass_string} />
+          </li>
+        </ol>
+      </>
+    ),
+  },
+  {
+    question: "How do you implement routing in a React application?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To implement routing in a React application, you can use the
+          react-router-dom library. This library provides a `Router` component
+          that manages the application's routing, and a set of `Route`
+          components that define the individual routes in your application.
+        </p>
+        <br />
+        <CodeSnippet codeString={react_router} />
       </>
     ),
   },

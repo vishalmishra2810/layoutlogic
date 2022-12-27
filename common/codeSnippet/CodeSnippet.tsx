@@ -20,8 +20,6 @@ function CodeSnippet({ codeString }: ICodeSnippetProps) {
           style={atomOneDark}
           showLineNumbers={true}
           customStyle={{
-            fontSize: "1.4em",
-            fontFamily: "monospace",
             borderRadius: "0px 0px 12px 12px",
           }}
         >
