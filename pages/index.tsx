@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Dashboard from "../components/dashboard/Dashboard";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <link rel="icon" href="/clearjobs.png" />
       </Head>
       <Dashboard />
+      <Footer />
     </>
   );
 }
