@@ -66,3 +66,88 @@ function App() {
   );
 }
 `;
+
+export const first_form_string = `
+return (
+  <form onSubmit={handleSubmit}>
+  {
+    /* form fields */
+  }
+  </form>
+);
+`;
+
+export const second_form_string = `
+ handleSubmit = (event) => {
+  event.preventDefault();
+  const { name, email, password } = event.target;
+ };
+
+`;
+
+export const third_form_string = `
+function Login() {
+  const [userData, setUserData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { email, password } = userData;
+    console.log(email, password);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="email" name="email" value={userData.email} onChange={handleChange} />
+      <input type="password" name="password" value={userData.password} onChange={handleChange} />
+      <button type="submit">Login</button>
+    </form>
+  );
+  };
+`;
+
+export const first_test_string = `
+  {/* npm install --save-dev jest; */}
+`;
+export const second_test_string = `
+test('MyComponent should render the correct content', () => {
+  const { getByText } = render(<MyComponent />);
+  const element = getByText(/Hello, world!/i);
+  expect(element).toBeInTheDocument();
+});
+`;
+
+export const higher_order_string = `
+const withLoading = (Component) => {
+  return function WihLoadingComponent({ isLoading, ...props }) {
+    if (!isLoading) return <Component {...props} />;
+    return <p>Hold on, fetching data may take some time.</p>;
+  };
+};
+
+const App = ({ isLoading }) => {
+  return (
+    <div>
+      <h1>My App</h1>
+      <p>App is running</p>
+    </div>
+  );
+};
+
+const AppWithLoading = withLoading(App);
+
+const App = () => {
+  return (
+    <div>
+      <AppWithLoading isLoading={true} />
+    </div>
+  );
+};
+`;

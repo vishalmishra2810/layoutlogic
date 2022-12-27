@@ -3,9 +3,15 @@ import ListShow from "../../common/listShow/ListShow";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
   context_pass_string,
+  first_form_string,
+  first_test_string,
+  higher_order_string,
   props_pass_string,
   react_router,
   redux_pass_string,
+  second_form_string,
+  second_test_string,
+  third_form_string,
 } from "./constant";
 
 export const MEDIUM_REACTJS = [
@@ -188,4 +194,149 @@ export const MEDIUM_REACTJS = [
       </>
     ),
   },
+  {
+    question: "How do you handle forms in React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          In React, you can handle forms in a number of ways. Here is one way to
+          do it:
+        </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            Create a form element in your render method with an onSubmit event
+            handler:
+            <br /> <br />
+            <CodeSnippet codeString={first_form_string} />
+          </li>
+          <li className="answer_list_item">
+            Define the `handleSubmit` method in your component class. This
+            method will be called when the form is submitted.
+            <br /> <br />
+            <CodeSnippet codeString={second_form_string} />
+          </li>
+          <li className="answer_list_item">
+            You can also use controlled components to manage the state of the
+            form fields. In this case, you will need to store the form data in
+            the component's state, and update the state whenever the form fields
+            change.
+            <br /> <br />
+            <CodeSnippet codeString={third_form_string} />
+          </li>
+        </ol>
+      </>
+    ),
+  },
+  {
+    question: "How do you optimize the performance of a React application?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are many ways to optimize the performance of a React
+          application. Here are some of them:
+        </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            Use the React.memo higher-order component to wrap functional
+            components that do not need to re-render when their props don't
+            change. This can prevent unnecessary re-renders and improve
+            performance.
+          </li>
+          <li className="answer_list_item">
+            Use the React.useCallback hook to memoize callback functions. This
+            can prevent unnecessary re-creating of functions on every render,
+            improving performance.
+          </li>
+          <li className="answer_list_item">
+            Use the React.useRef hook to store mutable values that do not need
+            to trigger a re-render when they change. This can prevent
+            unnecessary re-renders caused by updates to these values.
+          </li>
+          <li className="answer_list_item">
+            Use the React.useReducer hook instead of the React.useState hook
+            when you have complex state logic that involves multiple state
+            variables or asynchronous updates. This can improve the performance
+            of your application by avoiding unnecessary re-renders.
+          </li>
+          <li className="answer_list_item">
+            Use the React.lazy and React.Suspense components to implement code
+            splitting and lazy loading in your application. This can improve the
+            performance of your application by only loading the code that is
+            needed for a particular route or component.
+          </li>
+        </ol>
+      </>
+    ),
+  },
+  {
+    question: "How do you implement unit testing in a React application?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Here is an example of how to set up Jest and write a simple unit test
+          for a React component:
+        </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            Install the Jest testing framework and the React testing library:
+            <br /> <br />
+            <CodeSnippet codeString={first_test_string} />
+          </li>
+          <li className="answer_list_item">
+            Create a test file in your project. The test file should have the
+            same name as the component file, but with the .test.js extension.
+            For example, if you have a component in a file called Button.js, you
+            should create a test file called Button.test.js.
+            <br /> <br />
+          </li>
+          <li className="answer_list_item">
+            Write a test for your component. For example, you can check that
+            element present in the component renders correctly.
+            <br /> <br />
+            <CodeSnippet codeString={second_test_string} />
+          </li>
+        </ol>
+      </>
+    ),
+  },
+  {
+    question: "How do you use higher-order components in React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Higher-order components are functions that take a component as an
+          argument and return a new component. They can be used to add
+          functionality to a component, such as adding a new prop or state
+          value, or adding a new method.
+        </p>
+        <br />
+        <CodeSnippet codeString={higher_order_string} />
+      </>
+    ),
+  },
+  // {
+  //   question: "How do you use the React Context API?",
+  //   answer:()
+  // }
+  // ,
+  // {
+  //   question: "How do you use the React Hooks API?",
+  //   answer:()
+  // }
+  // ,
+  // {
+  //   question: "How do you use the React memoization technique?",
+  //   answer:()
+  // }
+  // ,
+  // {
+  //   question: "How do you use the React lazy loading technique?",
+  //   answer:()
+  // },{
+  //   question:"How do you use the React error boundaries technique?",
+
+  //   answer:()}
 ];

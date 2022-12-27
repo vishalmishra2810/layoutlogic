@@ -11,10 +11,15 @@ interface ICodeSnippetProps {
 }
 
 function CodeSnippet({ codeString }: ICodeSnippetProps) {
+  const copyCode = () => {
+    navigator?.clipboard?.writeText(codeString);
+  };
   return (
     <div className={style.codeSnippet}>
       <div className={style.codeSnippet_container}>
-        <div className={style.codeSnippet_title}>copy code</div>
+        <div className={style.codeSnippet_title} onClick={copyCode}>
+          copy code
+        </div>
         <SyntaxHighlighter
           language="javascript"
           style={atomOneDark}
