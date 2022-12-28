@@ -6,6 +6,7 @@ import { getAllList, getFileContent } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { READY_STATES_LABELS } from "../utils/constant";
+import UpBtn from "../common/upBtn/UpBtn";
 
 function Database() {
   const router = useRouter();
@@ -40,6 +41,9 @@ function Database() {
             <h1>Coming Soon</h1>
           </div>
         )}
+        <div className={style.database_up_btn}>
+          <UpBtn />
+        </div>
       </div>
     </>
   );

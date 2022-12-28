@@ -1,27 +1,23 @@
 .database {
-  background-color: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
   .database_main_container {
-    max-width: 1100px;
     display: flex;
-    gap: 32px;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
-    padding-top: 32px;
+    margin-top: 72px;
+    position: relative;
+    background-color: #f5f5f5;
     .database_sideBar {
       width: 250px;
+      position: fixed;
+      top: 86px;
+      left: 32px;
     }
     .database_container {
-      flex: 1;
-      width: 100%;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      scroll-behavior: smooth;
+      width: 750px;
     }
   }
   .database_coming_soon_container {
@@ -32,4 +28,10 @@
     align-items: center;
     justify-content: center;
   }
+}
+
+.database_up_btn {
+  position: fixed;
+  bottom: 56px;
+  right: 56px;
 }
