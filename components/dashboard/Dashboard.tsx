@@ -1,12 +1,13 @@
 import React from "react";
 import style from "./Dashboard.module.scss";
+import FeaturedQuestions from "./featuredQuestions/FeaturedQuestions";
+import TopSection from "./topSection/TopSection";
 
 function Dashboard() {
   return (
     <div className={style.dashboard}>
-      <div className={style.dashboard_container}>
-        
-      </div>
+      <TopSection />
+      <FeaturedQuestions />
     </div>
   );
 }

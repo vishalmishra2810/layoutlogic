@@ -49,3 +49,21 @@ export const getAllList = (technologyUsed: string) => {
   }
   return [];
 };
+
+export const getAllTopQuestions = (technologyUsed: string) => {
+  if (technologyUsed) {
+    technologyUsed = technologyUsed.toLowerCase();
+    switch (technologyUsed) {
+      case ALL_TECH.REACTJS:
+        let allQuestions = [
+          ...EASY_REACTJS,
+          ...MEDIUM_REACTJS,
+          ...HARD_REACTJS,
+        ];
+        return allQuestions?.filter((question: any) => question?.top === true);
+      default:
+        return [];
+    }
+  }
+  return [];
+};
