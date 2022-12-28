@@ -1,7 +1,10 @@
 @font-face {
   font-family: "Roboto";
-  font-display: swap;
-  src: url("../assets/fonts/CedarvilleCursive-Regular.ttf");
+  src: url("../assets/fonts/Roboto-Black.ttf");
+}
+@font-face {
+  font-family: "Menlo";
+  src: url("../assets/fonts/Menlo-Regular.ttf");
 }
 :root {
   --max-width: 1100px;
@@ -114,4 +117,8 @@ a {
 }
 .simple_answers {
   margin-left: 32px;
+}
+
+code {
+  font-family: "Menlo", monospace;
 }

@@ -151,3 +151,69 @@ const App = () => {
   );
 };
 `;
+
+export const async_string_first = `
+import React, { useState, useEffect } from 'react';
+
+function Component() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch('your api url');
+      const data = await response.json();
+      setData(data);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {data ? <p>{data.message}</p> : <p>Loading...</p>}
+    </div>
+  );
+}
+`;
+
+export const async_string_second = `
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function MyComponent() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get('https://my-api.com/endpoint');
+      setData(response.data);
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {data ? <p>{data.message}</p> : <p>Loading...</p>}
+    </div>
+  );
+}
+`;
+
+export const controlling_string = `
+import React, { useState } from 'react';
+
+function MyForm() {
+  const [email, setEmail] = useState('');
+
+  function handleChange(event) {
+    setEmail(event.target.value);
+  }
+
+  return (
+    <form>
+      <label htmlFor="email">Email:</label>
+      <input type="text" id="email" value={email} onChange={handleChange} />
+    </form>
+  );
+}
+
+`;

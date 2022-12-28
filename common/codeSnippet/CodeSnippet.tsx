@@ -26,6 +26,7 @@ function CodeSnippet({ codeString }: ICodeSnippetProps) {
           showLineNumbers={true}
           customStyle={{
             borderRadius: "0px 0px 12px 12px",
+            fontFamily: "FiraCode",
           }}
         >
           {prettier.format(codeString, {
