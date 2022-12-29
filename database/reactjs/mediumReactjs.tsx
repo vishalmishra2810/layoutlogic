@@ -283,7 +283,7 @@ export const MEDIUM_REACTJS = [
           <li className="answer_list_item">
             Install the Jest testing framework and the React testing library:
             <br /> <br />
-            <CodeSnippet codeString={first_test_string} />
+            <CodeSnippet codeString={first_test_string} language="bash" />
           </li>
           <li className="answer_list_item">
             Create a test file in your project. The test file should have the

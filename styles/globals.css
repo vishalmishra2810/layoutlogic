@@ -121,4 +121,13 @@ a {
 
 code {
   font-family: "Menlo", monospace;
+  font-size: 14px;
+  text-shadow: 0 1px rgb(0 0 0 / 30%);
+  line-height: 20px;
+}
+
+pre{
+  border-radius: 3px;
+  padding: 1.5rem !important;
+  background: #1d1f21 !important;
 }

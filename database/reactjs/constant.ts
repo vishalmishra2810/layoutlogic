@@ -114,7 +114,7 @@ function Login() {
 `;
 
 export const first_test_string = `
-  {/* npm install --save-dev jest; */}
+  npm install --save-dev jest; 
 `;
 export const second_test_string = `
 test('MyComponent should render the correct content', () => {

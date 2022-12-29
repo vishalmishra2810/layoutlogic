@@ -22,16 +22,17 @@ function DropDown({ itemList, title }: IDropDownProps) {
         }`}
       >
         <div className={style.dropDown_header} onClick={openMenu}>
-          <div className={style.dropDown_header_title}>
-            {title?.toUpperCase()}
-          </div>
           <Image
             src={bottom_arrow}
             alt=""
-            width={24}
-            height={24}
+            width={16}
+            height={16}
             className={show ? style.dropDown_icon_reverse : style.dropDown_icon}
           />
+          <div className={style.dropDown_header_title}>
+            {title}
+            {" " + "Questions"}
+          </div>
         </div>
         {show && (
           <div className={style.dropDown_list}>

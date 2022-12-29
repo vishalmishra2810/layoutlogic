@@ -8,31 +8,23 @@ import parserBabel from "prettier/parser-babel";
 
 interface ICodeSnippetProps {
   codeString?: string;
+  language?: string;
 }
 
-function CodeSnippet({ codeString }: ICodeSnippetProps) {
-  const copyCode = () => {
-    navigator?.clipboard?.writeText(codeString);
-  };
+function CodeSnippet({
+  codeString,
+  language = "javascript",
+}: ICodeSnippetProps) {
   return (
     <div className={style.codeSnippet}>
       <div className={style.codeSnippet_container}>
-        <div className={style.codeSnippet_title} onClick={copyCode}>
-          copy code
-        </div>
-        <SyntaxHighlighter
-          language="javascript"
-          style={atomOneDark}
-          showLineNumbers={true}
-          customStyle={{
-            borderRadius: "0px 0px 12px 12px",
-            fontFamily: "FiraCode",
-          }}
-        >
-          {prettier.format(codeString, {
-            parser: "babel",
-            plugins: [parserBabel],
-          })}
+        <SyntaxHighlighter language={language} style={atomOneDark}>
+          {language === "javascript"
+            ? prettier.format(codeString, {
+                parser: "babel",
+                plugins: [parserBabel],
+              })
+            : codeString}
         </SyntaxHighlighter>
       </div>
     </div>

@@ -19,17 +19,36 @@ export const getFileContent = (fileName: string) => {
 
 export const getQuestionWithAnswerList = (
   technologyUsed: string,
-  difficultyLevel: string
+  difficultyLevel: string,
+  searchText: string
 ) => {
   if (technologyUsed) {
     technologyUsed = technologyUsed.toLowerCase();
     switch (technologyUsed) {
       case ALL_TECH.REACTJS:
         return difficultyLevel === TOPICS_DIFFICULTY.EASY
-          ? EASY_REACTJS
+          ? searchText.length === 0
+            ? EASY_REACTJS
+            : EASY_REACTJS.filter((question: any) =>
+                question?.question
+                  ?.toLowerCase()
+                  .includes(searchText.toLowerCase())
+              )
           : difficultyLevel === TOPICS_DIFFICULTY.MEDIUM
-          ? MEDIUM_REACTJS
-          : HARD_REACTJS;
+          ? searchText.length === 0
+            ? MEDIUM_REACTJS
+            : MEDIUM_REACTJS.filter((question: any) =>
+                question?.question
+                  ?.toLowerCase()
+                  .includes(searchText.toLowerCase())
+              )
+          : searchText.length === 0
+          ? HARD_REACTJS
+          : HARD_REACTJS.filter((question: any) =>
+              question?.question
+                ?.toLowerCase()
+                .includes(searchText.toLowerCase())
+            );
       default:
         return [];
     }

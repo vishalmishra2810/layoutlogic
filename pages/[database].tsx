@@ -41,9 +41,6 @@ function Database() {
             <h1>Coming Soon</h1>
           </div>
         )}
-        <div className={style.database_up_btn}>
-          <UpBtn />
-        </div>
       </div>
     </>
   );

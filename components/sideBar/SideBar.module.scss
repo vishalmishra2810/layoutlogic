@@ -1,0 +1,42 @@
+.sideBar {
+  .sideBar_container {
+    width: 300px;
+    padding: 16px;
+    .sideBar_searchBar {
+      width: 100%;
+      height: 42px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 0 8px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      .sideBar_search {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #333;
+        &::placeholder {
+          color: #ccc;
+        }
+      }
+      .search_icon{
+       margin-right: 4px;
+      }
+    }
+    .sideBar_scroolable_container {
+      height: calc(100vh - 160px);
+      overflow-y: scroll;
+      .sideBar_title {
+        font-size: 24px;
+        font-weight: 500;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
