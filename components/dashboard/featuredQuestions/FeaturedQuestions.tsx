@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { ALL_TECH } from "../../../database/allTech";
 import { READY_STATES_LABELS } from "../../../utils/constant";
@@ -5,6 +6,11 @@ import { getAllTopQuestions } from "../../../utils/helper";
 import style from "./FeaturedQuestions.module.scss";
 
 function FeaturedQuestions() {
+  const router = useRouter();
+  const openReactjsQuestion = (question: string) => () => {
+    router.push(`/reactjs#${question}`);
+  };
+
   return (
     <div className={style.featuredQuestions}>
       <div className={style.featuredQuestions_box}>
@@ -17,6 +23,7 @@ function FeaturedQuestions() {
               <div
                 className={style.featuredQuestions_box_questions_question}
                 key={index}
+                onClick={openReactjsQuestion(question?.question)}
               >
                 <h3>{question.question}</h3>
               </div>

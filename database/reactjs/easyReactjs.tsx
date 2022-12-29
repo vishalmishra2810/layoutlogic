@@ -105,6 +105,7 @@ export const EASY_REACTJS = [
   },
   {
     question: "What is the ReactJS lifecycle and how does it work?",
+    top: true,
     answer: (
       <p className="simple_answers">
         The ReactJS lifecycle refers to the series of methods that are called in
@@ -147,6 +148,7 @@ export const EASY_REACTJS = [
         “global” for a tree of React components.
       </p>
     ),
+    top: true,
   },
   {
     question:
@@ -159,6 +161,7 @@ export const EASY_REACTJS = [
         appropriate components when a route is matched.
       </p>
     ),
+    top: true,
   },
   {
     question: "How do you test a ReactJS app?",

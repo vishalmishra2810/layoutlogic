@@ -64,6 +64,7 @@ export const MEDIUM_REACTJS = [
         </li>
       </ol>
     ),
+    top: true,
   },
   {
     question: "What is difference between Virtual DOM and Real DOM?",
@@ -96,6 +97,7 @@ export const MEDIUM_REACTJS = [
         />
       </>
     ),
+    top: true,
   },
   {
     question: "What is the difference between ReactJS and AngularJS?",
@@ -193,6 +195,7 @@ export const MEDIUM_REACTJS = [
         <CodeSnippet codeString={react_router} />
       </>
     ),
+    top: true,
   },
   {
     question: "How do you handle forms in React?",
@@ -227,6 +230,7 @@ export const MEDIUM_REACTJS = [
         </ol>
       </>
     ),
+    top: true,
   },
   {
     question: "How do you optimize the performance of a React application?",
@@ -269,6 +273,7 @@ export const MEDIUM_REACTJS = [
         </ol>
       </>
     ),
+    top: true,
   },
   {
     question: "How do you implement unit testing in a React application?",
@@ -316,6 +321,7 @@ export const MEDIUM_REACTJS = [
         <CodeSnippet codeString={higher_order_string} />
       </>
     ),
+    top: true,
   },
   // {
   //   question: "How do you use the React Context API?",

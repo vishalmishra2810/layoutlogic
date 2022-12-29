@@ -94,6 +94,7 @@ export const HARD_REACTJS = [
         <CodeSnippet codeString={async_string_second} />
       </>
     ),
+    top: true,
   },
   {
     question:
@@ -147,6 +148,7 @@ export const HARD_REACTJS = [
         <CodeSnippet codeString={controlling_string} />
       </>
     ),
+    top: true,
   },
   {
     question:
@@ -185,5 +187,6 @@ export const HARD_REACTJS = [
         </ol>
       </>
     ),
+    top: true,
   },
 ];
