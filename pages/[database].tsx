@@ -2,11 +2,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
-import { getAllList, getFileContent } from "../utils/helper";
+import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { READY_STATES_LABELS } from "../utils/constant";
-import UpBtn from "../common/upBtn/UpBtn";
 
 function Database() {
   const router = useRouter();

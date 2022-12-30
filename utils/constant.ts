@@ -13,6 +13,8 @@ export enum TOPICS_DIFFICULTY_LABELS {
 export const READY_STATES_LABELS: any = {
   REACTJS: "reactjs",
   reactjs: "reactjs",
+  HTML: "html",
+  html: "html",
 };
 
 export enum URLPaths {

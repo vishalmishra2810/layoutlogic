@@ -1,20 +1,18 @@
 import { ALL_TECH } from "../database/allTech";
-import { REACTJS_QUESTIONS_WITH_ANSWERS } from "../database/reactjs";
+import { EASY_HTML } from "../database/html/easyhtml";
+import { HARD_HTML } from "../database/html/hardHtml";
+import { MEDIUM_HTML } from "../database/html/mediumhtml";
 import { EASY_REACTJS } from "../database/reactjs/easyReactjs";
 import { HARD_REACTJS } from "../database/reactjs/hardReactjs";
 import { MEDIUM_REACTJS } from "../database/reactjs/mediumReactjs";
 import { TOPICS_DIFFICULTY } from "./constant";
 
-export const getFileContent = (fileName: string) => {
-  if (fileName) {
-    fileName = fileName.toLowerCase();
-    switch (fileName) {
-      case ALL_TECH.REACTJS:
-        return REACTJS_QUESTIONS_WITH_ANSWERS;
-      default:
-        return [];
-    }
-  }
+export const getQuestionWithSearchText = (searchText: string, list: any) => {
+  console.log("searchText", searchText,list);
+  if (searchText?.trim()?.length === 0) return list;
+  return list?.filter((question: any) =>
+    question?.question?.toLowerCase().includes(searchText.toLowerCase())
+  );
 };
 
 export const getQuestionWithAnswerList = (
@@ -27,28 +25,17 @@ export const getQuestionWithAnswerList = (
     switch (technologyUsed) {
       case ALL_TECH.REACTJS:
         return difficultyLevel === TOPICS_DIFFICULTY.EASY
-          ? searchText.length === 0
-            ? EASY_REACTJS
-            : EASY_REACTJS.filter((question: any) =>
-                question?.question
-                  ?.toLowerCase()
-                  .includes(searchText.toLowerCase())
-              )
+          ? getQuestionWithSearchText(searchText, EASY_REACTJS)
           : difficultyLevel === TOPICS_DIFFICULTY.MEDIUM
-          ? searchText.length === 0
-            ? MEDIUM_REACTJS
-            : MEDIUM_REACTJS.filter((question: any) =>
-                question?.question
-                  ?.toLowerCase()
-                  .includes(searchText.toLowerCase())
-              )
-          : searchText.length === 0
-          ? HARD_REACTJS
-          : HARD_REACTJS.filter((question: any) =>
-              question?.question
-                ?.toLowerCase()
-                .includes(searchText.toLowerCase())
-            );
+          ? getQuestionWithSearchText(searchText, MEDIUM_REACTJS)
+          : getQuestionWithSearchText(searchText, HARD_REACTJS);
+      case ALL_TECH.HTML:
+        console.log("HTML", EASY_HTML);
+        return difficultyLevel === TOPICS_DIFFICULTY.EASY
+          ? getQuestionWithSearchText(searchText, EASY_HTML)
+          : difficultyLevel === TOPICS_DIFFICULTY.MEDIUM
+          ? getQuestionWithSearchText(searchText, MEDIUM_HTML)
+          : getQuestionWithSearchText(searchText, HARD_HTML);
       default:
         return [];
     }
@@ -62,6 +49,8 @@ export const getAllList = (technologyUsed: string) => {
     switch (technologyUsed) {
       case ALL_TECH.REACTJS:
         return [...EASY_REACTJS, ...MEDIUM_REACTJS, ...HARD_REACTJS];
+      case ALL_TECH.HTML:
+        return [...EASY_HTML, ...MEDIUM_HTML, ...HARD_HTML];
       default:
         return [];
     }
