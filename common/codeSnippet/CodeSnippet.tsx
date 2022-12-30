@@ -5,6 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
+import parserHtml from "prettier/parser-html";
 
 interface ICodeSnippetProps {
   codeString?: string;
@@ -24,7 +25,10 @@ function CodeSnippet({
                 parser: "babel",
                 plugins: [parserBabel],
               })
-            : codeString}
+            : prettier.format(codeString, {
+                parser: "html",
+                plugins: [parserHtml],
+              })}
         </SyntaxHighlighter>
       </div>
     </div>

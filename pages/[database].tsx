@@ -35,7 +35,7 @@ function Database() {
             <div className={style.database_container}>
               <QuestionDisplay questionData={getAllList(database)} />
             </div>
-            <ShareUrl />
+            {/* <ShareUrl /> */}
           </div>
         ) : (
           <div className={style.database_coming_soon_container}>
