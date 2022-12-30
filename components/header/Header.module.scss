@@ -10,10 +10,31 @@
   z-index: 100;
   background: #202123;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  .header_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   .header_title {
     font-size: 32px;
     font-weight: 800;
     color: #fff;
     cursor: pointer;
+  }
+  .header_menu {
+    display: flex;
+    align-items: center;
+    .header_menu_item {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      margin-left: 24px;
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+      &:hover {
+        color: #e2dddd;
+      }
+    }
   }
 }

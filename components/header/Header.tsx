@@ -14,6 +14,24 @@ function Header() {
         <div className={style.header_title} onClick={clickOnLogo}>
           ClearJobs
         </div>
+        <div className={style.header_menu}>
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.REACTJS);
+            }}
+          >
+            ReactJs
+          </div>
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.HTML);
+            }}
+          >
+            HTML
+          </div>
+        </div>
       </div>
     </header>
   );

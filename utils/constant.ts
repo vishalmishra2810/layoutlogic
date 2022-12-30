@@ -19,4 +19,6 @@ export const READY_STATES_LABELS: any = {
 
 export enum URLPaths {
   HOME = "/",
+  REACTJS = "/reactjs",
+  HTML = "/html",
 }

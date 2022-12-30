@@ -6,6 +6,7 @@ import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { READY_STATES_LABELS } from "../utils/constant";
+import ShareUrl from "../common/shareUrl/ShareUrl";
 
 function Database() {
   const router = useRouter();
@@ -34,6 +35,7 @@ function Database() {
             <div className={style.database_container}>
               <QuestionDisplay questionData={getAllList(database)} />
             </div>
+            <ShareUrl />
           </div>
         ) : (
           <div className={style.database_coming_soon_container}>
