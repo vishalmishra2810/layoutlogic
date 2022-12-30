@@ -15,10 +15,22 @@ export const READY_STATES_LABELS: any = {
   reactjs: "reactjs",
   HTML: "html",
   html: "html",
+  CSS: "css",
+  css: "css",
+  JAVASCRIPT: "javascript",
+  javascript: "javascript",
+  SCSS: "scss",
+  scss: "scss",
+  REDUX: "redux",
+  redux: "redux",
 };
 
 export enum URLPaths {
   HOME = "/",
   REACTJS = "/reactjs",
   HTML = "/html",
+  CSS = "/css",
+  JAVASCRIPT = "/javascript",
+  SCSS = "/scss",
+  REDUX = "/redux",
 }

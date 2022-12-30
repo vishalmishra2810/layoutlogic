@@ -59,7 +59,7 @@ export const EASY_HTML = [
           <code>&lt;td&gt;</code> tag.
         </p>
         <br />
-        <CodeSnippet codeString={table_str} language="html" />
+        <CodeSnippet codeString={table_str} language="htmlbars" />
       </>
     ),
   },
