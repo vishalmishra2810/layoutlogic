@@ -14,6 +14,7 @@ export enum ALL_TECH {
   NEXTJS = "nextjs",
   REDUX = "redux",
   REDUXTOOLKIT = "reduxtoolkit",
+  SCSS = "scss",
 }
 
 export enum ALL_COMPONENTS {

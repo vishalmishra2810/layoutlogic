@@ -1,4 +1,4 @@
-export const EASY_SASS = [
+export const EASY_SCSS = [
   {
     question: "What is the difference between Sass and SCSS?",
     answer: (

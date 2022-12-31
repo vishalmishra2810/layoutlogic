@@ -31,6 +31,39 @@ function Header() {
           >
             HTML
           </div>
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.CSS);
+            }}
+          >
+            CSS
+          </div>
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.JAVASCRIPT);
+            }}
+          >
+            JavaScript
+          </div>
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.SCSS);
+            }}
+          >
+            SCSS
+          </div>
+
+          <div
+            className={style.header_menu_item}
+            onClick={() => {
+              router.push(URLPaths.REDUX);
+            }}
+          >
+            Redux
+          </div>
         </div>
       </div>
     </header>
