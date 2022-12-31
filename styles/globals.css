@@ -126,8 +126,11 @@ code {
   line-height: 20px;
 }
 
-pre{
+pre {
   border-radius: 3px;
   padding: 1.5rem !important;
   background: #1d1f21 !important;
+}
+nav {
+  display: none;
 }

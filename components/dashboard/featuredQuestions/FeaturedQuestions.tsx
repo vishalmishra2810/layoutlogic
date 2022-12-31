@@ -1,35 +1,50 @@
-import { useRouter } from "next/router";
 import React from "react";
-import { ALL_TECH } from "../../../database/allTech";
-import { READY_STATES_LABELS } from "../../../utils/constant";
-import { getAllTopQuestions } from "../../../utils/helper";
+import Modal from "../../../common/modal/Modal";
 import style from "./FeaturedQuestions.module.scss";
+import reactIcon from "../../../assets/react.svg";
+import javascriptIcon from "../../../assets/javascript.svg";
+import cssIcon from "../../../assets/css.svg";
+import htmlIcon from "../../../assets/html.svg";
+import reduxIcon from "../../../assets/redux.svg";
 
 function FeaturedQuestions() {
-  const router = useRouter();
-  const openReactjsQuestion = (question: string) => () => {
-    router.push(`/reactjs#${question}`);
-  };
-
   return (
     <div className={style.featuredQuestions}>
       <div className={style.featuredQuestions_box}>
-        <div className={style.featuredQuestions_box_title}>
-          <h2>Top Reactjs Questions</h2>
+        <div className={style.featuredQuestions_left_box}>
+          <Modal
+            title="Reactjs"
+            description="Reactjs is a JavaScript library for building user interfaces."
+            width={500}
+            height={650}
+            url={reactIcon}
+          />
         </div>
-        <div className={style.featuredQuestions_box_questions}>
-          {getAllTopQuestions(ALL_TECH.REACTJS)?.map(
-            (question: any, index: number) => (
-              <div
-                className={style.featuredQuestions_box_questions_question}
-                key={index}
-                onClick={openReactjsQuestion(question?.question)}
-              >
-                <h3>{question.question}</h3>
-              </div>
-            )
-          )}
+        <div className={style.featuredQuestions_right_box}>
+          <Modal
+            title="Javascript"
+            width={500}
+            height={309}
+            url={javascriptIcon}
+          />
+          <Modal title="CSS" width={500} height={309} url={cssIcon} />
         </div>
+      </div>
+      <div className={style.featuredQuestions_bottom}>
+        <Modal
+          title="HTML"
+          width={1024}
+          height={360}
+          url={htmlIcon}
+          description="HTML is the standard markup language for creating Web pages."
+        />
+        <Modal
+          title="Redux"
+          width={1024}
+          height={360}
+          url={reduxIcon}
+          description="Redux is a predictable state container for JavaScript apps."
+        />
       </div>
     </div>
   );
