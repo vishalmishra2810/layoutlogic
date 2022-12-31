@@ -5,6 +5,7 @@ import reactIcon from "../../../assets/react.svg";
 import javascriptIcon from "../../../assets/javascript.svg";
 import cssIcon from "../../../assets/css.svg";
 import htmlIcon from "../../../assets/html.svg";
+import scssIcon from "../../../assets/scss.svg";
 import reduxIcon from "../../../assets/redux.svg";
 
 function FeaturedQuestions() {
@@ -21,30 +22,24 @@ function FeaturedQuestions() {
           />
         </div>
         <div className={style.featuredQuestions_right_box}>
-          <Modal
-            title="Javascript"
-            width={500}
-            height={309}
-            url={javascriptIcon}
-          />
-          <Modal title="CSS" width={500} height={309} url={cssIcon} />
+          <Modal title="Redux" width={500} height={309} url={reduxIcon} />
+          <Modal title="SCSS" width={500} height={309} url={scssIcon} />
         </div>
       </div>
       <div className={style.featuredQuestions_bottom}>
-        <Modal
-          title="HTML"
-          width={1024}
-          height={360}
-          url={htmlIcon}
-          description="HTML is the standard markup language for creating Web pages."
-        />
-        <Modal
-          title="Redux"
-          width={1024}
-          height={360}
-          url={reduxIcon}
-          description="Redux is a predictable state container for JavaScript apps."
-        />
+        <div className={style.featuredQuestions_bottom_left}>
+          <Modal title="CSS" width={500} height={309} url={cssIcon} />
+          <Modal title="HTML" width={500} height={309} url={htmlIcon} />
+        </div>
+        <div className={style.featuredQuestions_bottom_right}>
+          <Modal
+            title="Javascript"
+            width={500}
+            height={650}
+            url={javascriptIcon}
+            description="JavaScript is the world's most popular programming language."
+          />
+        </div>
       </div>
     </div>
   );

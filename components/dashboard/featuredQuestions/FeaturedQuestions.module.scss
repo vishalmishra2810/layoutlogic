@@ -23,7 +23,14 @@
   }
   .featuredQuestions_bottom {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 32px;
+    .featuredQuestions_bottom_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 32px;
+    }
   }
 }
