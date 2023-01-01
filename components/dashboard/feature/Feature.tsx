@@ -7,7 +7,12 @@ function Feature() {
     <div className={style.feature}>
       <div className={style.feature_container}>
         <div className={style.feature_container_text}>
-          Particles Effect with javascript and canvas element
+          Particles Effect and Machine Coding Round Questions
+        </div>
+        <div className={style.feature_container_description}>
+          Practice in a real-time environment and get a feel of the real
+          interview. Get all the questions asked in the Machine Coding round of
+          the top companies.
         </div>
         <ReactCodepen
           hash="eYjZwEp"

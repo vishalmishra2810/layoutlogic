@@ -1,14 +1,19 @@
 import React from "react";
+import { getDescription } from "../../utils/helper";
 import style from "./QuestionDisplay.module.scss";
 
 interface IQuestionDispalayProps {
   questionData: any;
+  database: string;
 }
 
-function QuestionDisplay({ questionData }: IQuestionDispalayProps) {
+function QuestionDisplay({ questionData, database }: IQuestionDispalayProps) {
   return (
     <div className={style.questionDisplay}>
       <div className={style.questionDisplay_container}>
+        <div className={style.questionDisplay_container_title}>
+          {getDescription(database)}
+        </div>
         {questionData?.map((questions: any, index: number) => (
           <div
             key={index}

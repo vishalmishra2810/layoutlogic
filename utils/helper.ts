@@ -2,9 +2,9 @@ import { ALL_TECH } from "../database/allTech";
 import { EASY_CSS } from "../database/css/easyCss";
 import { HARD_CSS } from "../database/css/hardCss";
 import { MEDIUM_CSS } from "../database/css/mediumCss";
-import { EASY_HTML } from "../database/html/easyhtml";
+import { EASY_HTML } from "../database/html/easyHtml";
 import { HARD_HTML } from "../database/html/hardHtml";
-import { MEDIUM_HTML } from "../database/html/mediumhtml";
+import { MEDIUM_HTML } from "../database/html/mediumHtml";
 import { EASY_JAVASCRIPT } from "../database/javascript/easyJavascript";
 import { HARD_JAVASCRIPT } from "../database/javascript/hardJavascript";
 import { MEDIUM_JAVASCRIPT } from "../database/javascript/mediumJavascript";
@@ -117,4 +117,40 @@ export const getAllTopQuestions = (technologyUsed: string) => {
     }
   }
   return [];
+};
+
+export const getDescription = (technologyUsed: string) => {
+  if (technologyUsed) {
+    technologyUsed = technologyUsed.toLowerCase();
+    switch (technologyUsed) {
+      case ALL_TECH.REACTJS:
+        return `ReactJS is a JavaScript library for building user interfaces.
+         ReactJS is a component-based library which helps us to build reusable UI components.
+          ReactJS is a declarative, efficient, and flexible JavaScript library for building user interfaces.
+           It lets you compose complex UIs from small and isolated pieces of code called “components”`;
+      case ALL_TECH.HTML:
+        return `HTML is the standard markup language for Web pages. With HTML you can create your own Website.
+         HTML is easy to learn - You will enjoy it!`;
+      case ALL_TECH.CSS:
+        return `CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.
+          This tutorial will teach you CSS from basic to advanced.`;
+      case ALL_TECH.JAVASCRIPT:
+        return `JavaScript is the world's most popular programming language.
+          JavaScript is the programming language of the Web.
+            JavaScript is easy to learn.`;
+
+      case ALL_TECH.SCSS:
+        return `Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+          Sass is a stylesheet language that’s compiled to CSS.
+            It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax.
+              Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.`;
+
+      case ALL_TECH.REDUX:
+        return `Redux is a predictable state container for JavaScript apps.
+          It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
+            On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.`;
+      default:
+        return "";
+    }
+  }
 };
