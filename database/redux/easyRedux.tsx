@@ -19,12 +19,14 @@ export const EASY_REDUX = [
     question: "What are the three principles of Redux?",
     answer: (
       <>
-        <p className="simple_answers">
-          The three principles of Redux are:
-        </p>
+        <p className="simple_answers">The three principles of Redux are:</p>
         <MakeDifferentiate
           totalColumn={3}
-          headerData={["Single source of truth", "State is read-only", "Changes are made with pure functions"]}
+          headerData={[
+            "Single source of truth",
+            "State is read-only",
+            "Changes are made with pure functions",
+          ]}
           columnDataLength={3}
           columnData={{
             0: [
@@ -44,8 +46,6 @@ export const EASY_REDUX = [
             ],
           }}
         />
-
-
       </>
     ),
   },
@@ -55,20 +55,20 @@ export const EASY_REDUX = [
       <>
         <p className="simple_answers">
           A reducer is a pure function that takes the previous state and an
-          action, and returns the next state. (previousState, action) => newState
+          action, and returns the next state. (previousState, action) = newState
         </p>
         <p className="simple_answers">
           A reducer is a pure function that takes the previous state and an
-          action, and returns the next state. (previousState, action) => newState
+          action, and returns the next state. (previousState, action) = newState
         </p>
         <p className="simple_answers">
           A reducer is a pure function that takes the previous state and an
-          action, and returns the next state. (previousState, action) => newState
+          action, and returns the next state. (previousState, action) = newState
         </p>
       </>
     ),
   },
-  { 
+  {
     question: "What is an action in Redux and how do you create one?",
     answer: (
       <>
@@ -91,8 +91,9 @@ export const EASY_REDUX = [
     ),
   },
   {
-    question :"How do you use the Redux store to manage state in a React application?",
-    answer : (
+    question:
+      "How do you use the Redux store to manage state in a React application?",
+    answer: (
       <>
         <p className="simple_answers">
           The store is the object that brings them together. The store has the
@@ -100,7 +101,11 @@ export const EASY_REDUX = [
         </p>
         <MakeDifferentiate
           totalColumn={3}
-          headerData={["Holds application state", "Allows access to state via getState()", "Allows state to be updated via dispatch(action)"]}
+          headerData={[
+            "Holds application state",
+            "Allows access to state via getState()",
+            "Allows state to be updated via dispatch(action)",
+          ]}
           columnDataLength={3}
           columnData={{
             0: [
@@ -121,6 +126,6 @@ export const EASY_REDUX = [
           }}
         />
       </>
-    )
+    ),
   },
 ];
