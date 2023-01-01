@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import style from "./DropDown.module.scss";
 import bottom_arrow from "../../assets/dropdown.svg";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { selectQuestionActions } from "../../redux/slices/selectQuestionSlice";
 
 interface IDropDownProps {
   itemList: any;
@@ -11,6 +13,7 @@ interface IDropDownProps {
 function DropDown({ itemList, title }: IDropDownProps) {
   const [show, setShow] = useState(false);
   const router = useRouter();
+  const dispatch = useDispatch();
   const openMenu = () => {
     setShow(!show);
   };
@@ -42,6 +45,9 @@ function DropDown({ itemList, title }: IDropDownProps) {
                 className={style.dropDown_list_item}
                 onClick={() => {
                   router.push("#" + item?.question);
+                  dispatch(
+                    selectQuestionActions.selectQuestion(item?.question)
+                  );
                 }}
               >
                 {item?.question}
