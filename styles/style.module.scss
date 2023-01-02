@@ -1,5 +1,5 @@
 .database {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 96px);
   width: 100%;
   .database_main_container {
     width: 100%;
@@ -10,7 +10,7 @@
       width: 300px;
       position: sticky;
       top: 96px;
-      height: calc(100vh - 70px);
+      height: calc(100vh - 96px);
     }
     .database_container {
       max-width: calc(1024px - 300px);
