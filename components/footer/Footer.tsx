@@ -6,7 +6,7 @@ function Footer() {
     <footer className={style.footer}>
       <div className={style.footer_container}>
         <div className={style.footer_title}>
-          @2021 ClearJobs. All rights reserved.
+          @2023 CarrierBoosts All Rights Reserved
         </div>
       </div>
     </footer>

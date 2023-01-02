@@ -12,7 +12,7 @@ function Header() {
     <header className={style.header}>
       <div className={style.header_container}>
         <div className={style.header_title} onClick={clickOnLogo}>
-          ClearJobs
+          CarrierBoosts🚀
         </div>
         <div className={style.header_menu}>
           <div

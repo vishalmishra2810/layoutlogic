@@ -13,11 +13,11 @@ function Database() {
   return (
     <>
       <Head>
-        <title>ClearJobs</title>
+        <title>CarrierBoosts</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/clearjobs.png" />
+        <link rel="icon" href="/carrierboosts.png" />
       </Head>
       <div className={style.database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (

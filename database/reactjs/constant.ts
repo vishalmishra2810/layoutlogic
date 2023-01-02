@@ -1,6 +1,6 @@
 export const props_pass_string = `
 function ParentComponent() {
-    const [name, setName] = useState('ClearJobs');
+    const [name, setName] = useState('CarrierBoosts');
     return <ChildComponent name={name} />;
   }
   
@@ -11,7 +11,7 @@ function ParentComponent() {
 
 export const context_pass_string = `
 const CustomContext = React.createContext();
-const [name, setName] = useState('ClearJobs');
+const [name, setName] = useState('CarrierBoosts');
 function ParentComponent() {
   
   return (

@@ -156,7 +156,7 @@ export const REACTJS_QUESTIONS_WITH_ANSWERS = [
     return(               
     <div>                
     <h1> hii </h1>
-    <p> welcome to ClearJobs </p>
+    <p> welcome to CarrierBoosts </p>
     </div>
   );`,
     },
