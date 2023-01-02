@@ -1,3 +1,9 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import {
+  nexted_objexts_state_example,
+  server_side_rendering_example,
+} from "./constant";
+
 export const HARD_REDUX = [
   {
     question:
@@ -8,6 +14,17 @@ export const HARD_REDUX = [
           You can implement server-side rendering with a Redux application using
           the react-redux-universal-hot-example project.
         </p>
+        <br />
+        <p className="simple_answers">
+          The react-redux-universal-hot-example project is a boilerplate
+          application that demonstrates how to implement server-side rendering
+          with a Redux application.
+        </p>
+        <br />
+        <CodeSnippet
+          codeString={server_side_rendering_example}
+          language="javascript"
+        />
       </>
     ),
   },
@@ -20,31 +37,16 @@ export const HARD_REDUX = [
           You can handle complex state management in a Redux application using
           the Immer library.
         </p>
-      </>
-    ),
-  },
-  {
-    question: "How do you implement authentication in a Redux application?",
-    answer: (
-      <>
+        <br />
         <p className="simple_answers">
-          You can implement authentication in a Redux application using the
-          react-redux-universal-hot-example project.
+          The Immer library allows you to work with immutable state in a more
+          convenient way. It is based on the copy-on-write mechanism.
         </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "How do you migrate a legacy application to use Redux, including refactoring existing code and integrating with the existing application architecture?",
-    answer: (
-      <>
-        <p className="simple_answers">
-          You can migrate a legacy application to use Redux, including
-          refactoring existing code and integrating with the existing
-          application architecture using the react-redux-universal-hot-example
-          project.
-        </p>
+        <br />
+        <CodeSnippet
+          codeString={nexted_objexts_state_example}
+          language="javascript"
+        />
       </>
     ),
   },

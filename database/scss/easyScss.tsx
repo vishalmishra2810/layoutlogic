@@ -1,4 +1,16 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
+import {
+  functions_dynamic_style_example,
+  functions_example,
+  loop_example,
+  mixins_example,
+  sass_example,
+  scss_example,
+  scss_nested_css_example,
+  scss_variables_example,
+  scss_vs_css_example,
+} from "./constant";
 
 export const EASY_SCSS = [
   {
@@ -6,12 +18,19 @@ export const EASY_SCSS = [
     answer: (
       <>
         <p className="simple_answers">
-          Sass is a CSS preprocessor that allows you to use variables, nested
-          rules, mixins, inline imports, and more. SassScript is the scripting
-          language itself. SCSS is a superset of CSS that adds nesting,
-          variables, mixins, and other features that make writing CSS easier.
-          SCSS files use the extension .scss.
+          The main difference between Sass and SCSS is the syntax.
+          <br /> Sass uses indentation to separate code blocks and newline
+          characters to separate rules, while SCSS uses curly braces and
+          semicolons. So, Sass has a more concise syntax, while SCSS is more
+          similar to CSS.
         </p>
+        <p className="simple_answers">here is an example of a Sass file:</p>
+        <br />
+        <CodeSnippet codeString={sass_example} language="sass" />
+        <br />
+        <p className="simple_answers">And here is an example of a SCSS file:</p>
+        <br />
+        <CodeSnippet codeString={scss_example} language="scss" />
       </>
     ),
   },
@@ -20,25 +39,13 @@ export const EASY_SCSS = [
     answer: (
       <>
         <p className="simple_answers">
-          these are the differences between SCSS and CSS:
+          SCSS is a superset of CSS that adds power and elegance to the basic
+          language. <br /> It allows you to use variables, nested rules, mixins,
+          inline imports, and more, all with a fully CSS-compatible syntax. SCSS
+          files use the extension .scss.
         </p>
-        <MakeDifferentiate
-          totalColumn={2}
-          headerData={["CSS", "SCSS"]}
-          columnDataLength={2}
-          columnData={{
-            0: [
-              "CSS is a language for describing the presentation of Web pages, including colors, layout, and fonts.",
-              "CSS is a language for describing the presentation of Web pages, including colors, layout, and fonts.",
-              "CSS is a language for describing the presentation of Web pages, including colors, layout, and fonts.",
-            ],
-            1: [
-              "SCSS is a superset of CSS that adds nesting, variables, mixins, and other features that make writing CSS easier.",
-              "SCSS is a superset of CSS that adds nesting, variables, mixins, and other features that make writing CSS easier.",
-              "SCSS is a superset of CSS that adds nesting, variables, mixins, and other features that make writing CSS easier.",
-            ],
-          }}
-        />
+        <br />
+        <CodeSnippet codeString={scss_vs_css_example} language="scss" />
       </>
     ),
   },
@@ -49,10 +56,15 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Variables are a way to store information that can be reused throughout
-          your stylesheet. You can use variables to store colors, fonts, or any
-          CSS value that you want to reuse. Variables are declared with a $ and
-          can be used anywhere in your stylesheet.
+          your stylesheet. <br /> <br />
+          You can use variables to store colors, fonts, or any CSS value that
+          you want to reuse. <br />
+          <br />
+          Variables are declared with a $ and can be used anywhere in your
+          stylesheet.
         </p>
+        <br />
+        <CodeSnippet codeString={scss_variables_example} language="scss" />
       </>
     ),
   },
@@ -61,10 +73,13 @@ export const EASY_SCSS = [
     answer: (
       <>
         <p className="simple_answers">
-          Nesting is a way to write CSS that is easier to read and maintain. It
-          allows you to nest one selector inside another. The child selector (&)
-          is used to refer to the parent selector.
+          Nesting is a way to write CSS that is easier to read and maintain.
+          <br />
+          <br /> It allows you to nest one selector inside another. The child
+          selector (&) is used to refer to the parent selector.
         </p>
+        <br />
+        <CodeSnippet codeString={scss_nested_css_example} language="scss" />
       </>
     ),
   },
@@ -75,9 +90,13 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Mixins are a way to store blocks of CSS that can be reused throughout
-          your stylesheet. You can pass values into mixins to make them more
-          flexible. Mixins are declared with @mixin and are used with @include.
+          your stylesheet.
+          <br />
+          <br /> You can pass values into mixins to make them more flexible.
+          Mixins are declared with `@mixin` and are used with `@include`.
         </p>
+        <br />
+        <CodeSnippet codeString={mixins_example} language="scss" />
       </>
     ),
   },
@@ -88,10 +107,12 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Functions are a way to store blocks of CSS that can be reused
-          throughout your stylesheet. You can pass values into functions to make
-          them more flexible. Functions are declared with @function and are used
-          with call().
+          throughout your stylesheet. <br />
+          <br /> You can pass values into functions to make them more flexible.
+          Functions are declared with `@function` and are used with call().
         </p>
+        <br />
+        <CodeSnippet codeString={functions_example} language="scss" />
       </>
     ),
   },
@@ -102,10 +123,15 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Loops are a way to store blocks of CSS that can be reused throughout
-          your stylesheet. You can pass values into loops to make them more
-          flexible. Loops are declared with @for, @each, and @while and are used
-          with @include.
+          your stylesheet.
+          <br />
+          <br /> You can pass values into loops to make them more flexible.
+          Loops are declared with `@for`, `@each`, and `@while` and are used
+          with `@include`.
         </p>
+
+        <br />
+        <CodeSnippet codeString={loop_example} language="scss" />
       </>
     ),
   },
@@ -116,10 +142,16 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Functions are a way to store blocks of CSS that can be reused
-          throughout your stylesheet. You can pass values into functions to make
-          them more flexible. Functions are declared with @function and are used
-          with call().
+          throughout your stylesheet.
+          <br /> <br /> You can pass values into functions to make them more
+          flexible.
+          <br /> Functions are declared with @function and are used with call().
         </p>
+        <br />
+        <CodeSnippet
+          codeString={functions_dynamic_style_example}
+          language="scss"
+        />
       </>
     ),
   },

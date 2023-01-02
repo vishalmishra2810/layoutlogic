@@ -4,6 +4,8 @@ import {
   async_string_first,
   async_string_second,
   controlling_string,
+  use_callback_string,
+  use_memo_string,
 } from "./constant";
 
 export const HARD_REACTJS = [
@@ -185,6 +187,24 @@ export const HARD_REACTJS = [
             re-renders.
           </li>
         </ol>
+        <br />
+        <br />
+        <p className="simple_answers">
+          Here's an example of using useMemo to prevent unnecessary re-renders:
+        </p>
+        <br />
+        <br />
+        <CodeSnippet codeString={use_memo_string} />
+
+        <br />
+        <br />
+        <p className="simple_answers">
+          Here's an example of using useCallback to prevent unnecessary
+          re-renders:
+        </p>
+        <br />
+        <br />
+        <CodeSnippet codeString={use_callback_string} />
       </>
     ),
     top: true,

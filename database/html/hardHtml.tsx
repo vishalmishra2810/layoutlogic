@@ -1,3 +1,6 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import { canvas_string, canvas_string_javascript } from "./constant";
+
 export const HARD_HTML = [
   {
     question:
@@ -11,6 +14,12 @@ export const HARD_HTML = [
           <code>id</code> attribute.
         </p>
         <br />
+        <CodeSnippet codeString={canvas_string} language="html" />
+        <br />
+        <CodeSnippet
+          codeString={canvas_string_javascript}
+          language="javascript"
+        />
       </>
     ),
   },
@@ -26,6 +35,13 @@ export const HARD_HTML = [
           the media source in the <code>src</code> attribute.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        <audio src='audio.mp3' controls></audio>
+        <video src='video.mp4' controls></video>
+        "
+          language="html"
+        />
       </>
     ),
   },
@@ -40,6 +56,26 @@ export const HARD_HTML = [
           svg id in the <code>id</code> attribute.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        <svg id='svg'></svg>
+        "
+          language="html"
+        />
+        <br />
+        <CodeSnippet
+          codeString="
+        const svg = document.getElementById('svg');
+        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        rect.setAttribute('x', '10');
+        rect.setAttribute('y', '10');
+        rect.setAttribute('width', '100');
+        rect.setAttribute('height', '100');
+        rect.setAttribute('fill', 'red');
+        svg.appendChild(rect);
+        "
+          language="javascript"
+        />
       </>
     ),
   },
@@ -55,6 +91,16 @@ export const HARD_HTML = [
           specify the script file in the constructor.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        const worker = new Worker('worker.js');
+        worker.postMessage('Hello World');
+        worker.onmessage = function (event) {
+          console.log(event.data);
+        };
+        "
+          language="javascript"
+        />
       </>
     ),
   },
@@ -71,6 +117,14 @@ export const HARD_HTML = [
           in the constructor.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+        "
+          language="javascript"
+        />
       </>
     ),
   },

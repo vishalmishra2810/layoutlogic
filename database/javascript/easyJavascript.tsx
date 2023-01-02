@@ -1,3 +1,15 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import {
+  array_example,
+  break_example,
+  continue_example,
+  function_example,
+  if_example,
+  loop_example,
+  switch_example,
+  variable_example,
+} from "./constant";
+
 export const EASY_JAVASCRIPT = [
   {
     question: "What is JavaScript?",
@@ -5,12 +17,7 @@ export const EASY_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           JavaScript is a lightweight, interpreted, or just-in-time compiled
-          programming language with first-class functions. While it is most
-          well-known as the scripting language for Web pages, many non-browser
-          environments also use it, such as Node.js, Apache CouchDB and Adobe
-          Acrobat. JavaScript is a prototype-based, multi-paradigm,
-          single-threaded, dynamic language, supporting object-oriented,
-          imperative, and declarative (e.g. functional programming) styles.
+          programming language with first-class functions.
         </p>
       </>
     ),
@@ -22,10 +29,14 @@ export const EASY_JAVASCRIPT = [
         <p className="simple_answers">
           A variable is a container for a value, which can be a number, a
           string, a boolean, an array, an object, or even another function.
-          Variables are declared using the var keyword. You can also declare a
-          variable using the let keyword, which is the preferred way to declare
-          variables in modern JavaScript.
+          <br /> <br /> Variables are declared using the <code> var </code>{" "}
+          keyword. <br /> <br /> You can also declare a variable using the{" "}
+          <code> let </code> and <code> const </code>
+          keyword, which is the preferred way to declare variables in modern
+          JavaScript.
         </p>
+        <br />
+        <CodeSnippet codeString={variable_example} language="javascript" />
       </>
     ),
   },
@@ -35,10 +46,13 @@ export const EASY_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           A function is a block of code designed to perform a particular task. A
-          JavaScript function is executed when "something" invokes it (calls
-          it). You can declare a function using the function keyword. You can
-          also declare a function using the arrow function syntax.
+          JavaScript function is executed when `something` invokes it (calls
+          it). <br /> <br />
+          You can declare a function using the `<code>function</code>` keyword.
+          You can also declare a function using the arrow function syntax.
         </p>
+        <br />
+        <CodeSnippet codeString={function_example} language="javascript" />
       </>
     ),
   },
@@ -51,6 +65,8 @@ export const EASY_JAVASCRIPT = [
           a time. You can create an array using the array literal syntax or the
           Array constructor.
         </p>
+        <br />
+        <CodeSnippet codeString={array_example} language="javascript" />
       </>
     ),
   },
@@ -60,10 +76,14 @@ export const EASY_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           An if statement is used to execute a block of code if a specified
-          condition is true. You can use an if statement to execute a block of
-          code if a condition is true, or to execute a different block of code
-          if that condition is false.
+          condition is true. <br />
+          <br />
+          You can use an if statement to execute a block of code if a condition
+          is true, or to execute a different block of code if that condition is
+          false.
         </p>
+        <br />
+        <CodeSnippet codeString={if_example} language="javascript" />
       </>
     ),
   },
@@ -73,9 +93,12 @@ export const EASY_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           A loop is a programming structure that repeats a sequence of
-          instructions until a specific condition is met. You can use a loop to
-          execute a block of code a number of times.
+          instructions until a specific condition is met. <br />
+          <br /> You can use a loop to execute a block of code a number of
+          times.
         </p>
+        <br />
+        <CodeSnippet codeString={loop_example} language="javascript" />
       </>
     ),
   },
@@ -89,31 +112,30 @@ export const EASY_JAVASCRIPT = [
           different conditions. You can use a switch statement to select one of
           many code blocks to be executed.
         </p>
+        <br />
+        <CodeSnippet codeString={switch_example} language="javascript" />
       </>
     ),
   },
   {
     question:
-      "What is a break statement in JavaScript, and how do you use one?",
+      "What is break statement and continue statement in JavaScript, and how do you use?",
     answer: (
       <>
         <p className="simple_answers">
           A break statement is used to terminate a switch or a loop. You can use
           a break statement to terminate a switch or a loop.
         </p>
-      </>
-    ),
-  },
-  {
-    question:
-      "What is a continue statement in JavaScript, and how do you use one?",
-    answer: (
-      <>
+        <br />
+        <CodeSnippet codeString={break_example} language="javascript" />
+        <br />
         <p className="simple_answers">
           A continue statement is used to skip the current iteration of a loop.
           You can use a continue statement to skip the current iteration of a
           loop.
         </p>
+        <br />
+        <CodeSnippet codeString={continue_example} language="javascript" />
       </>
     ),
   },

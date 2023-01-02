@@ -1,3 +1,13 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ReplaceCode from "../../common/replaceCode/ReplaceCode";
+import {
+  animation_example,
+  center_element,
+  dropdown_menu,
+  responsive_image_galary,
+  responsive_layout,
+} from "./constant";
+
 export const MEDIUM_CSS = [
   {
     question:
@@ -7,8 +17,11 @@ export const MEDIUM_CSS = [
         <p className="simple_answers">
           To center an element horizontally and vertically within its parent
           element using CSS, you will need to specify the selector and the
-          property in the CSS file.
+          property in the CSS file and you can use flex or grid to make it
+          center.
         </p>
+        <br />
+        <CodeSnippet codeString={center_element} language="css" />
       </>
     ),
   },
@@ -16,10 +29,17 @@ export const MEDIUM_CSS = [
     question: "How do you create a responsive layout using CSS?",
     answer: (
       <>
-        <p className="simple_answers">
-          To create a responsive layout using CSS, you will need to specify the
-          selector and the property in the CSS file.
-        </p>
+        <ReplaceCode
+          codeString="To create a responsive layout using CSS, you can use a combination of the width , max-width , and min-width properties, along with media queries ."
+          list={["width", "max-width", "min-width", "media queries"]}
+        />
+        <br />
+        <CodeSnippet codeString={responsive_layout} language="css" />
+        <br />
+        <ReplaceCode
+          codeString="In this example, the .element class would have a width of 100% by default. On devices with a viewport width of 800px or more, the width of the element would be set to 50%. On devices with a viewport width of 400px or more, the width of the element would be set to 75%."
+          list={["width", "max-width", "min-width", "media queries"]}
+        />
       </>
     ),
   },
@@ -27,10 +47,14 @@ export const MEDIUM_CSS = [
     question: "How do you animate an element using CSS?",
     answer: (
       <>
-        <p className="simple_answers">
-          To animate an element using CSS, you will need to specify the selector
-          and the property in the CSS file.
-        </p>
+        <ReplaceCode
+          codeString="
+        To animate an element using CSS, you will need to specify the selector and the property in the CSS file and you can use the @keyframes rule to create the animation.
+        "
+          list={["@keyframes"]}
+        />
+        <br />
+        <CodeSnippet codeString={animation_example} language="css" />
       </>
     ),
   },
@@ -38,10 +62,16 @@ export const MEDIUM_CSS = [
     question: "How do you create a responsive image gallery using CSS?",
     answer: (
       <>
+        <ReplaceCode
+          codeString="To create a responsive image gallery using CSS, you can use the display : flex property and the flex-wrap property, along with media queries ."
+          list={["display", "flex-wrap", "media queries"]}
+        />
+        <br />
         <p className="simple_answers">
-          To create a responsive image gallery using CSS, you will need to
-          specify the selector and the property in the CSS file.
+          here is the code for the image gallery:
         </p>
+        <br />
+        <CodeSnippet codeString={responsive_image_galary} language="css" />
       </>
     ),
   },
@@ -49,10 +79,16 @@ export const MEDIUM_CSS = [
     question: "How do you create a dropdown menu using CSS?",
     answer: (
       <>
+        <ReplaceCode
+          codeString="To create a dropdown menu using CSS, you can use the display : none property and the :hover pseudo-class you can make the dropdown menu appear when the user hovers over the menu item."
+          list={["display", ":hover"]}
+        />
+        <br />
         <p className="simple_answers">
-          To create a dropdown menu using CSS, you will need to specify the
-          selector and the property in the CSS file.
+          here is the code for the dropdown menu:
         </p>
+        <br />
+        <CodeSnippet codeString={dropdown_menu} language="css" />
       </>
     ),
   },

@@ -1,4 +1,6 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
+import { dropdown_string, list_string_numered_or_bullet } from "./constant";
 
 export const MEDIUM_HTML = [
   {
@@ -41,6 +43,7 @@ export const MEDIUM_HTML = [
           <code>href</code> attribute.
         </p>
         <br />
+        <CodeSnippet codeString="<a href='https://www.google.com'>Google</a>" />
       </>
     ),
   },
@@ -158,6 +161,7 @@ export const MEDIUM_HTML = [
           <code>width</code> and <code>height</code> attributes.
         </p>
         <br />
+        <CodeSnippet codeString="<img src='https://www.google.com' width='100' height='100' />" />
       </>
     ),
   },
@@ -176,25 +180,19 @@ export const MEDIUM_HTML = [
         <MakeDifferentiate
           totalColumn={2}
           headerData={["div", "span"]}
-          columnDataLength={2}
+          columnDataLength={4}
           columnData={{
             0: [
               "Block-level element",
               "Used to group block-level or inline elements",
               "Can be styled with CSS",
               "Can contain block-level and inline elements",
-              "Can be used to create a container for a section of a document",
-              "Can be used to create a container for a section of a document",
-              "Can be used to create a container for a section of a document",
             ],
             1: [
               "Inline element",
               "Used to group inline elements",
               "Can be styled with CSS",
               "Can contain inline elements",
-              "Can be used to create a container for a section of a document",
-              "Can be used to create a container for a section of a document",
-              "Can be used to create a container for a section of a document",
             ],
           }}
         />
@@ -214,6 +212,7 @@ export const MEDIUM_HTML = [
           <code>&lt;option&gt;</code> tag.
         </p>
         <br />
+        <CodeSnippet codeString={dropdown_string} language="html" />
       </>
     ),
   },
@@ -229,6 +228,12 @@ export const MEDIUM_HTML = [
           and specify the style properties in the attribute.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        <p style='color: red; font-size: 20px;'>This is a paragraph</p>
+        "
+          language="html"
+        />
       </>
     ),
   },
@@ -244,6 +249,26 @@ export const MEDIUM_HTML = [
           and specify the style properties in the CSS file.
         </p>
         <br />
+        <CodeSnippet
+          codeString="
+        <p class='red'>This is a paragraph</p>
+        <p id='red'>This is a paragraph</p>
+        "
+          language="html"
+        />
+
+        <br />
+        <CodeSnippet
+          codeString="
+        .red {
+          color: red;
+        }
+        #red {
+          color: red;
+        }
+        "
+          language="css"
+        />
       </>
     ),
   },
@@ -260,6 +285,10 @@ export const MEDIUM_HTML = [
           <code>&lt;li&gt;</code> tag.
         </p>
         <br />
+        <CodeSnippet
+          codeString={list_string_numered_or_bullet}
+          language="html"
+        />
       </>
     ),
   },

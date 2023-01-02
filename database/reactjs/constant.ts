@@ -217,3 +217,116 @@ function MyForm() {
 }
 
 `;
+
+export const class_based_string = `
+import React, { Component } from 'react';
+
+class MyComponent
+  extends Component {
+  render() {
+    return <p>Hello, world!</p>;
+  }
+}
+`;
+
+export const functional_based = `
+import React from 'react';
+
+function MyComponent() {
+  return <p>Hello, world!</p>;
+}
+`;
+
+export const check_valid_prop = `import PropTypes from 'prop-types';
+
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+};`;
+
+export const context_api = `
+import React, { createContext, useContext } from 'react';
+
+const MyContext = createContext();
+
+//create a provider
+<MyContext.Provider value={"hello world!"}>
+  <ChildComponent />
+</MyContext.Provider>;  
+
+
+//use the context
+const ChildComponent = () => {
+  const value = useContext(MyContext);
+  return <div>{value}</div>;
+};
+
+`;
+
+export const react_router_example = `
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch,
+} from 'react-router-dom';
+
+const Home = () => <h1>Home</h1>;
+const About = () => <h1>About</h1>;
+const NotFound = () => <h1>404: Not found</h1>;
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route component={NotFound} />
+    </Switch>
+  </Router>
+);
+`;
+
+export const jest_test = `
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+
+});
+`;
+
+export const use_memo_string = `
+import React, { useState, useMemo } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  const expensiveValue = useMemo(() => {
+    // do something expensive
+    return count * 2;
+  }, [count]);
+
+  return (
+
+    <div>
+      <p>{expensiveValue}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+`;
+
+export const use_callback_string = `
+import { useCallback } from 'react';
+
+function MyComponent(props) {
+  const handleClick = useCallback(() => {
+    console.log(props.a);
+  }, [props.a]);
+
+  return <MyChildComponent onClick={handleClick} />;
+}
+`;

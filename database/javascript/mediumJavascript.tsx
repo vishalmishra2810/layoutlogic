@@ -1,4 +1,18 @@
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
+import {
+  callback_example,
+  call_apply_bind_example,
+  closure_example,
+  doble_triple_example,
+  dom_example,
+  event_example,
+  fetch_example,
+  for_forin_forof_example,
+  map_filter_reduce_example,
+  object_example,
+  promise_example,
+} from "./constant";
 
 export const MEDIUM_JAVASCRIPT = [
   {
@@ -7,11 +21,14 @@ export const MEDIUM_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           An object is a collection of properties, and a property is an
-          association between a name (or key) and a value. A property's value
-          can be a function, in which case the property is known as a method.
-          You can create an object using the object literal syntax or the Object
-          constructor.
+          association between a name (or key) and a value.
+          <br />
+          <br />A property's value can be a function, in which case the property
+          is known as a method. <br /> You can create an object using the object
+          literal syntax or the Object constructor.
         </p>
+        <br />
+        <CodeSnippet codeString={object_example} language="javascript" />
       </>
     ),
   },
@@ -22,10 +39,14 @@ export const MEDIUM_JAVASCRIPT = [
         <p className="simple_answers">
           A callback function is a function passed into another function as an
           argument, which is then invoked inside the outer function to complete
-          some kind of routine or action. You can create a callback function
-          using the function keyword. You can also create a callback function
-          using the arrow function syntax.
+          some kind of routine or action.
+          <br />
+          <br /> You can create a callback function using the function keyword.
+          You can also create a callback function using the arrow function
+          syntax.
         </p>
+        <br />
+        <CodeSnippet codeString={callback_example} language="javascript" />
       </>
     ),
   },
@@ -35,9 +56,12 @@ export const MEDIUM_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           A closure is a function having access to the parent scope, even after
-          the parent function has closed. You can create a closure by nesting a
-          function inside another function.
+          the parent function has closed. <br />
+          You can create a closure by nesting a function inside another
+          function.
         </p>
+        <br />
+        <CodeSnippet codeString={closure_example} language="javascript" />
       </>
     ),
   },
@@ -48,9 +72,11 @@ export const MEDIUM_JAVASCRIPT = [
         <p className="simple_answers">
           A promise is an object that may produce a single value some time in
           the future: either a resolved value, or a reason that it's not
-          resolved (e.g., a network error occurred). You can create a promise
-          using the Promise constructor.
+          resolved (e.g., a network error occurred). <br />
+          You can create a promise using the Promise constructor.
         </p>
+        <br />
+        <CodeSnippet codeString={promise_example} language="javascript" />
       </>
     ),
   },
@@ -60,11 +86,13 @@ export const MEDIUM_JAVASCRIPT = [
     answer: (
       <>
         <p className="simple_answers">
-          You can handle events in JavaScript using event listeners. An event
-          listener is a procedure or function in a computer program that waits
-          for an event to occur. You can create an event listener using the
-          addEventListener method.
+          You can handle events in JavaScript using event listeners.
+          <br /> An event listener is a procedure or function in a computer
+          program that waits for an event to occur. <br /> You can create an
+          event listener using the addEventListener method.
         </p>
+        <br />
+        <CodeSnippet codeString={event_example} language="javascript" />
       </>
     ),
   },
@@ -76,9 +104,13 @@ export const MEDIUM_JAVASCRIPT = [
         <p className="simple_answers">
           The fetch API provides a JavaScript interface for accessing and
           manipulating parts of the HTTP pipeline, such as requests and
-          responses. You can make an HTTP request using the fetch API by calling
-          the fetch method.
+          responses.
+          <br />
+          <br /> You can make an HTTP request using the fetch API by calling the
+          fetch method.
         </p>
+        <br />
+        <CodeSnippet codeString={fetch_example} language="javascript" />
       </>
     ),
   },
@@ -91,6 +123,7 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the var, let, and const
           keywords in JavaScript:
         </p>
+        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["var", "let", "const"]}
@@ -129,6 +162,8 @@ export const MEDIUM_JAVASCRIPT = [
           values to a common type. The === operator compares two values for
           equality without converting the values.
         </p>
+        <br />
+        <CodeSnippet codeString={doble_triple_example} language="javascript" />
       </>
     ),
   },
@@ -141,21 +176,14 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the null and undefined
           values in JavaScript:
         </p>
+        <br />
         <MakeDifferentiate
           totalColumn={2}
           headerData={["null", "undefined"]}
           columnDataLength={2}
           columnData={{
-            0: [
-              "null is an assignment value",
-              "null is an object",
-              "null is falsy",
-            ],
-            1: [
-              "undefined is a variable value",
-              "undefined is a primitive",
-              "undefined is falsy",
-            ],
+            0: ["null is an assignment value", "null is an object"],
+            1: ["undefined is a variable value", "undefined is a primitive"],
           }}
         />
       </>
@@ -170,6 +198,8 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the map, filter, and
           reduce methods in JavaScript:
         </p>
+        <br />
+
         <MakeDifferentiate
           totalColumn={3}
           headerData={["map", "filter", "reduce"]}
@@ -192,6 +222,11 @@ export const MEDIUM_JAVASCRIPT = [
             ],
           }}
         />
+        <br />
+        <CodeSnippet
+          codeString={map_filter_reduce_example}
+          language="javascript"
+        />
       </>
     ),
   },
@@ -204,16 +239,19 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the call, apply, and bind
           methods in JavaScript:
         </p>
+        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["call", "apply", "bind"]}
-          columnDataLength={3}
+          columnDataLength={2}
           columnData={{
             0: [
+              "call invokes the function immediately",
               "call invokes the function immediately",
               "call accepts an argument list",
             ],
             1: [
+              "apply invokes the function immediately",
               "apply invokes the function immediately",
               "apply accepts a single array of arguments",
             ],
@@ -223,6 +261,11 @@ export const MEDIUM_JAVASCRIPT = [
               "bind accepts an argument list",
             ],
           }}
+        />
+        <br />
+        <CodeSnippet
+          codeString={call_apply_bind_example}
+          language="javascript"
         />
       </>
     ),
@@ -236,10 +279,11 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the for, for...in, and
           for...of loops in JavaScript:
         </p>
+        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["for", "for...in", "for...of"]}
-          columnDataLength={3}
+          columnDataLength={2}
           columnData={{
             0: [
               "for is used to iterate over arrays",
@@ -255,6 +299,11 @@ export const MEDIUM_JAVASCRIPT = [
             ],
           }}
         />
+        <br />
+        <CodeSnippet
+          codeString={for_forin_forof_example}
+          language="javascript"
+        />
       </>
     ),
   },
@@ -265,10 +314,14 @@ export const MEDIUM_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           You can manipulate the DOM using JavaScript by using the document
-          object. The document object is a global object that represents the
-          HTML document. You can use the document object to access the DOM tree
-          and manipulate it.
+          object.
+          <br /> The document object is a global object that represents the HTML
+          document. <br />
+          You can use the document object to access the DOM tree and manipulate
+          it.
         </p>
+        <br />
+        <CodeSnippet codeString={dom_example} language="javascript" />
       </>
     ),
   },
