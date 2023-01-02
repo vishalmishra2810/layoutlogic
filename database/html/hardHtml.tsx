@@ -120,7 +120,7 @@ export const HARD_HTML = [
         <CodeSnippet
           codeString="
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js');
+          navigator?.serviceWorker?.register('service-worker.js');
         }
         "
           language="javascript"
