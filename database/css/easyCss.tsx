@@ -2,9 +2,12 @@ import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import ReplaceCode from "../../common/replaceCode/ReplaceCode";
 import {
   background_example,
+  border_example,
   example_display,
   padding_margin_example,
   selector_example,
+  selector_example_all,
+  zindex_example,
 } from "./constant";
 
 export const EASY_CSS = [
@@ -34,7 +37,6 @@ export const EASY_CSS = [
           in CSS, you will need to specify the selector and the property in the
           CSS file.
         </p>
-        <br />
         <CodeSnippet codeString={selector_example} language="css" />
       </>
     ),
@@ -49,7 +51,6 @@ export const EASY_CSS = [
           in CSS, you will need to specify the selector and the property in the
           CSS file.
         </p>
-        <br />
         <CodeSnippet codeString={padding_margin_example} language="css" />
       </>
     ),
@@ -93,10 +94,7 @@ export const EASY_CSS = [
       "
           list={["float", "left", "right", "none"]}
         />
-
-        <br />
         <CodeSnippet codeString={example_display} language="css" />
-        <br />
       </>
     ),
   },
@@ -111,6 +109,72 @@ export const EASY_CSS = [
         </p>
         <br />
         <CodeSnippet codeString={background_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question: "How do you select elements using CSS selectors?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are many different ways to select elements some of them are:
+        </p>
+        <br />
+        <ul className="answer_list">
+          <li className="answer_list_item">By element name</li>
+          <li className="answer_list_item">By class name</li>
+          <li className="answer_list_item">By id</li>
+          <li className="answer_list_item">By attribute</li>
+          <li className="answer_list_item">By pseudo-class</li>
+          <li className="answer_list_item">By pseudo-element</li>
+        </ul>
+        <CodeSnippet codeString={selector_example_all} language="css" />
+      </>
+    ),
+  },
+  {
+    question:
+      "Can you explain the difference between the relative, absolute, and fixed position values in CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The relative position value in CSS is used to position an element
+          relative to its normal position.
+          <br />
+          <br /> The absolute position value in CSS is used to position an
+          element relative to its parent element.
+          <br />
+          <br /> The fixed position value in CSS is used to position an element
+          relative to the browser window.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the z-index property to control the stacking order of elements in CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The z-index property in CSS is used to control the stacking order of
+          elements. <br /> It can take on many different values, including auto
+          , number , and inherit .
+        </p>
+        <CodeSnippet codeString={zindex_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question:
+      "Can you explain how to use the border property to style the border of an element in CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The border property in CSS is used to style the border of an element.{" "}
+          <br /> It can take on many different values, including border-width ,
+          border-style , border-color , and border-radius .
+        </p>
+        <CodeSnippet codeString={border_example} language="css" />
       </>
     ),
   },

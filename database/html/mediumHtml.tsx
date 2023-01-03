@@ -1,6 +1,13 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
-import { dropdown_string, list_string_numered_or_bullet } from "./constant";
+import {
+  details_summary_string,
+  dropdown_string,
+  iframe_tag_string,
+  inline_style_html_string,
+  list_string_numered_or_bullet,
+  meta_tag_string,
+} from "./constant";
 
 export const MEDIUM_HTML = [
   {
@@ -11,11 +18,10 @@ export const MEDIUM_HTML = [
         <p className="simple_answers">
           these are the differences between block-level and inline elements:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           headerData={["Block-level element", "Inline element"]}
-          columnDataLength={2}
+          columnDataLength={3}
           columnData={{
             0: [
               "Block-level elements start on a new line and take up the full width available (stretches out to the left and right as far as it can).",
@@ -32,22 +38,6 @@ export const MEDIUM_HTML = [
       </>
     ),
   },
-
-  {
-    question: "How do you create a link to another webpage in HTML?",
-    answer: (
-      <>
-        <p className="simple_answers">
-          To create a link to another webpage in HTML, you will need to use the
-          anchor tag <code>&lt;a&gt;</code> and specify the link in the{" "}
-          <code>href</code> attribute.
-        </p>
-        <br />
-        <CodeSnippet codeString="<a href='https://www.google.com'>Google</a>" />
-      </>
-    ),
-  },
-
   {
     question:
       "How do you create a form in HTML and what are the different types of form elements available?",
@@ -64,81 +54,72 @@ export const MEDIUM_HTML = [
           <br />
           The different types of form elements available are:
           <br />
-          <br />
-          <ul>
-            <li>
+          <ul className="answer_list">
+            <li className="answer_list_item">
               <code>&lt;input type="text"&gt;</code> - creates a single-line
               text input field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="password"&gt;</code> - creates a password
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="radio"&gt;</code> - creates a radio button
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="checkbox"&gt;</code> - creates a checkbox
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="submit"&gt;</code> - creates a submit button
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="reset"&gt;</code> - creates a reset button
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="button"&gt;</code> - creates a button
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="file"&gt;</code> - creates a file upload
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="hidden"&gt;</code> - creates a hidden input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="image"&gt;</code> - creates an image input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="email"&gt;</code> - creates an email input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="number"&gt;</code> - creates a number input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="range"&gt;</code> - creates a range input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="search"&gt;</code> - creates a search input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="tel"&gt;</code> - creates a telephone input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="url"&gt;</code> - creates a URL input field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="date"&gt;</code> - creates a date input
               field
             </li>
-            <li>
+            <li className="answer_list_item">
               <code>&lt;input type="time"&gt;</code> - creates a time input
               field
-            </li>
-            <li>
-              <code>&lt;input type="datetime"&gt;</code> - creates a datetime
-              input field
-            </li>
-            <li>
-              <code>&lt;input type="datetime-local"&gt;</code> - creates a
-              datetime-local input field
             </li>
           </ul>
         </p>
@@ -160,7 +141,6 @@ export const MEDIUM_HTML = [
           You will also need to specify the image dimensions in the{" "}
           <code>width</code> and <code>height</code> attributes.
         </p>
-        <br />
         <CodeSnippet codeString="<img src='https://www.google.com' width='100' height='100' />" />
       </>
     ),
@@ -175,8 +155,6 @@ export const MEDIUM_HTML = [
           The div element is a block-level element and the span element is an
           inline element.
         </p>
-        <br />
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           headerData={["div", "span"]}
@@ -196,7 +174,6 @@ export const MEDIUM_HTML = [
             ],
           }}
         />
-        <br />
       </>
     ),
   },
@@ -211,7 +188,6 @@ export const MEDIUM_HTML = [
           <code>&lt;select&gt;</code> and specify the options in the{" "}
           <code>&lt;option&gt;</code> tag.
         </p>
-        <br />
         <CodeSnippet codeString={dropdown_string} language="html" />
       </>
     ),
@@ -227,13 +203,7 @@ export const MEDIUM_HTML = [
           element, you will need to specify the style attribute in the element
           and specify the style properties in the attribute.
         </p>
-        <br />
-        <CodeSnippet
-          codeString="
-        <p style='color: red; font-size: 20px;'>This is a paragraph</p>
-        "
-          language="html"
-        />
+        <CodeSnippet codeString={inline_style_html_string} language="html" />
       </>
     ),
   },
@@ -248,16 +218,13 @@ export const MEDIUM_HTML = [
           you will need to specify the class and id attributes in the element
           and specify the style properties in the CSS file.
         </p>
-        <br />
         <CodeSnippet
           codeString="
-        <p class='red'>This is a paragraph</p>
-        <p id='red'>This is a paragraph</p>
+        <p class='red'>This is paragraph</p>
+        <p id='red'>This is  paragraph</p>
         "
           language="html"
         />
-
-        <br />
         <CodeSnippet
           codeString="
         .red {
@@ -284,11 +251,50 @@ export const MEDIUM_HTML = [
           <code>&lt;ul&gt;</code> and specify the list items in the{" "}
           <code>&lt;li&gt;</code> tag.
         </p>
-        <br />
         <CodeSnippet
           codeString={list_string_numered_or_bullet}
           language="html"
         />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the details and summary elements to create an expandable section in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the details and summary elements to create an expandable
+          section in HTML, you will need to use the details tag{" "}
+          <code>&lt;details&gt;</code> and summary tag{" "}
+          <code>&lt;summary&gt;</code>.
+        </p>
+        <CodeSnippet codeString={details_summary_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "What is use of meta tag in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The meta tag is used to provide metadata about the HTML document.
+          Metadata will not be displayed on the page but will be machine
+          parsable.
+        </p>
+        <CodeSnippet codeString={meta_tag_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "What is use of iframe tag in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The iframe tag is used to embed another document within the current
+          HTML document.
+        </p>
+        <CodeSnippet codeString={iframe_tag_string} language="html" />
       </>
     ),
   },

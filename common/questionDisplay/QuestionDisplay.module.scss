@@ -5,26 +5,28 @@
   justify-content: center;
   width: 100%;
   height: 100%;
+  background: #ffffff;
   .questionDisplay_container {
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 32px;
+    gap: 52px;
     flex-direction: column;
+    background: #ffffff;
     .questionDisplay_container_title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       color: #666;
       background: #fafafa;
       border: 1px solid#eaeaea;
       padding: 16px;
+      font-family: "Inter", sans-serif;
       border-radius: 4px;
     }
     .questionDisplay_question {
       display: flex;
       flex-direction: column;
-      padding: 16px;
-      gap: 16px;
+      gap: 6px;
       .questionDisplay_question_title {
         font-size: 24px;
         font-weight: 600;
@@ -32,8 +34,12 @@
         font-family: "Roboto";
       }
       .questionDisplay_question_answer {
-        font-size: 1.2rem;
+        line-height: 1.65;
+        font-size: 16px;
         font-weight: 400;
+        direction: ltr;
+        font-feature-settings: "kern";
+        font-family: "Inter", sans-serif;
       }
     }
   }

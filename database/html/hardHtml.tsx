@@ -1,5 +1,10 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
-import { canvas_string, canvas_string_javascript } from "./constant";
+import {
+  canvas_string,
+  canvas_string_javascript,
+  data_value_attributes_example,
+  open_dialog_string,
+} from "./constant";
 
 export const HARD_HTML = [
   {
@@ -13,9 +18,7 @@ export const HARD_HTML = [
           <code>&lt;canvas&gt;</code> and specify the canvas id in the{" "}
           <code>id</code> attribute.
         </p>
-        <br />
         <CodeSnippet codeString={canvas_string} language="html" />
-        <br />
         <CodeSnippet
           codeString={canvas_string_javascript}
           language="javascript"
@@ -34,7 +37,6 @@ export const HARD_HTML = [
           <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> and specify
           the media source in the <code>src</code> attribute.
         </p>
-        <br />
         <CodeSnippet
           codeString="
         <audio src='audio.mp3' controls></audio>
@@ -55,14 +57,12 @@ export const HARD_HTML = [
           will need to use the svg tag <code>&lt;svg&gt;</code> and specify the
           svg id in the <code>id</code> attribute.
         </p>
-        <br />
         <CodeSnippet
           codeString="
         <svg id='svg'></svg>
         "
           language="html"
         />
-        <br />
         <CodeSnippet
           codeString="
         const svg = document.getElementById('svg');
@@ -90,7 +90,6 @@ export const HARD_HTML = [
           create a web worker using the <code>Worker()</code> constructor and
           specify the script file in the constructor.
         </p>
-        <br />
         <CodeSnippet
           codeString="
         const worker = new Worker('worker.js');
@@ -101,6 +100,39 @@ export const HARD_HTML = [
         "
           language="javascript"
         />
+      </>
+    ),
+  },
+  {
+    question:
+      "Can you explain how to use the data and value attributes to provide additional information about an HTML element?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Yes, you can use the data and value attributes to provide additional
+          information about an HTML element. <br /> The data attribute is used
+          to store custom data private to the page or application. <br /> The
+          value attribute is used to specify the value of an input element or
+          value of a option element in a select element.
+        </p>
+        <CodeSnippet
+          codeString={data_value_attributes_example}
+          language="html"
+        />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the dialog element to create a dialog box or popup window in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the dialog element to create a dialog box or popup window in
+          HTML, you will need to use the dialog tag <code>&lt;dialog&gt;</code>{" "}
+          and specify the dialog id in the <code>id</code> attribute.
+        </p>
+        <CodeSnippet codeString={open_dialog_string} language="html" />
       </>
     ),
   },

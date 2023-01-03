@@ -6,7 +6,10 @@ import {
   first_form_string,
   first_test_string,
   higher_order_string,
+  lazy_loading_string,
   props_pass_string,
+  react_memo_string,
+  react_ref_string,
   react_router,
   redux_pass_string,
   second_form_string,
@@ -73,7 +76,6 @@ export const MEDIUM_REACTJS = [
         <p className="simple_answers">
           The main difference between Virtual DOM and Real DOM are as follows:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           columnDataLength={5}
@@ -106,7 +108,6 @@ export const MEDIUM_REACTJS = [
         <p className="simple_answers">
           The main difference between ReactJS and AngularJS are as follows:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           columnDataLength={5}
@@ -159,13 +160,13 @@ export const MEDIUM_REACTJS = [
             <b>Props</b> - Props are used to pass data from one component to
             another. Props are immutable and are passed from parent to child
             components.
-            <br /> <br />
+            <br />
             <CodeSnippet codeString={props_pass_string} />
           </li>
           <li className="answer_list_item">
             <b>Context</b> - Context is used to pass data through the component
             tree without having to pass props down manually at every level.
-            <br /> <br />
+            <br />
             <CodeSnippet codeString={context_pass_string} />
           </li>
           <li className="answer_list_item">
@@ -174,7 +175,7 @@ export const MEDIUM_REACTJS = [
             in different environments (client, server, and native), and are easy
             to test. On top of that, it provides a great developer experience,
             such as live code editing combined with a time traveling debugger.
-            <br /> <br />
+            <br />
             <CodeSnippet codeString={redux_pass_string} />
           </li>
         </ol>
@@ -191,7 +192,6 @@ export const MEDIUM_REACTJS = [
           that manages the application's routing, and a set of `Route`
           components that define the individual routes in your application.
         </p>
-        <br />
         <CodeSnippet codeString={react_router} />
       </>
     ),
@@ -210,13 +210,11 @@ export const MEDIUM_REACTJS = [
           <li className="answer_list_item">
             Create a form element in your render method with an onSubmit event
             handler:
-            <br /> <br />
             <CodeSnippet codeString={first_form_string} />
           </li>
           <li className="answer_list_item">
             Define the `handleSubmit` method in your component class. This
             method will be called when the form is submitted.
-            <br /> <br />
             <CodeSnippet codeString={second_form_string} />
           </li>
           <li className="answer_list_item">
@@ -224,7 +222,6 @@ export const MEDIUM_REACTJS = [
             form fields. In this case, you will need to store the form data in
             the component's state, and update the state whenever the form fields
             change.
-            <br /> <br />
             <CodeSnippet codeString={third_form_string} />
           </li>
         </ol>
@@ -243,32 +240,32 @@ export const MEDIUM_REACTJS = [
         <br />
         <ol className="answer_list">
           <li className="answer_list_item">
-            Use the React.memo higher-order component to wrap functional
+            Use the `React.memo` higher-order component to wrap functional
             components that do not need to re-render when their props don't
             change. This can prevent unnecessary re-renders and improve
             performance.
           </li>
           <li className="answer_list_item">
-            Use the React.useCallback hook to memoize callback functions. This
+            Use the `React.useCallback` hook to memoize callback functions. This
             can prevent unnecessary re-creating of functions on every render,
             improving performance.
           </li>
           <li className="answer_list_item">
-            Use the React.useRef hook to store mutable values that do not need
+            Use the `React.useRef` hook to store mutable values that do not need
             to trigger a re-render when they change. This can prevent
             unnecessary re-renders caused by updates to these values.
           </li>
           <li className="answer_list_item">
-            Use the React.useReducer hook instead of the React.useState hook
+            Use the `React.useReducer` hook instead of the React.useState hook
             when you have complex state logic that involves multiple state
             variables or asynchronous updates. This can improve the performance
             of your application by avoiding unnecessary re-renders.
           </li>
           <li className="answer_list_item">
-            Use the React.lazy and React.Suspense components to implement code
-            splitting and lazy loading in your application. This can improve the
-            performance of your application by only loading the code that is
-            needed for a particular route or component.
+            Use the `React.lazy` and `React.Suspense` components to implement
+            code splitting and lazy loading in your application. This can
+            improve the performance of your application by only loading the code
+            that is needed for a particular route or component.
           </li>
         </ol>
       </>
@@ -287,7 +284,6 @@ export const MEDIUM_REACTJS = [
         <ol className="answer_list">
           <li className="answer_list_item">
             Install the Jest testing framework and the React testing library:
-            <br /> <br />
             <CodeSnippet codeString={first_test_string} language="bash" />
           </li>
           <li className="answer_list_item">
@@ -295,12 +291,11 @@ export const MEDIUM_REACTJS = [
             same name as the component file, but with the .test.js extension.
             For example, if you have a component in a file called Button.js, you
             should create a test file called Button.test.js.
-            <br /> <br />
+            <br />
           </li>
           <li className="answer_list_item">
             Write a test for your component. For example, you can check that
             element present in the component renders correctly.
-            <br /> <br />
             <CodeSnippet codeString={second_test_string} />
           </li>
         </ol>
@@ -313,36 +308,110 @@ export const MEDIUM_REACTJS = [
       <>
         <p className="simple_answers">
           Higher-order components are functions that take a component as an
-          argument and return a new component. They can be used to add
-          functionality to a component, such as adding a new prop or state
-          value, or adding a new method.
+          argument and return a new component. <br />
+          They can be used to add functionality to a component, such as adding a
+          new prop or state value, or adding a new method.
         </p>
-        <br />
         <CodeSnippet codeString={higher_order_string} />
       </>
     ),
     top: true,
   },
-  // {
-  //   question: "How do you use the React Context API?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React Hooks API?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React memoization technique?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React lazy loading technique?",
-  //   answer:()
-  // },{
-  //   question:"How do you use the React error boundaries technique?",
-
-  //   answer:()}
+  {
+    question:
+      "Can you explain how to use the React Suspense and lazy APIs for code splitting and lazy loading components?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The React Suspense and lazy APIs can be used to implement code
+          splitting and lazy loading in a React application. <br />
+          Here is an example of how to use them:
+        </p>
+        <CodeSnippet codeString={lazy_loading_string} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "How do you use the React ref API to access the DOM?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The React ref API can be used to access the DOM. <br />
+          You can use the ref prop to pass a callback function to a component.
+          This callback function will be called with the DOM element as an
+          argument when the component mounts. <br />
+          You can then store the DOM element in a variable and use it to access
+          the DOM. <br />
+        </p>
+        <br />
+        <p className="simple_answers">Here is an example of how to use it:</p>
+        <CodeSnippet codeString={react_ref_string} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the React memo API to optimize functional components?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The React memo API can be used to optimize functional components.{" "}
+          <br />
+          You can use the React.memo higher-order component to wrap a functional
+          component. <br />
+          This will prevent the component from re-rendering when its props do
+          not change. <br />
+          This can improve the performance of your application. <br />
+        </p>
+        <br />
+        <p className="simple_answers">Here is an example of how to use it:</p>
+        <CodeSnippet codeString={react_memo_string} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What are different types of hooks provided by React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are three types of hooks provided by React:
+        </p>
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            <b>State hooks</b> - These hooks can be used to add state to a
+            functional component. <br />
+            The `<b>useState</b>` hook can be used to add a state variable to a
+            functional component. <br />
+            The `<b>useReducer</b>` hook can be used to add a state variable
+            that is managed by a reducer function. <br />
+            The `<b>useContext </b>`hook can be used to add a state variable
+            that is managed by a context object. <br />
+          </li>
+          <li className="answer_list_item">
+            <b>Effect hooks</b> - These hooks can be used to add side effects to
+            a functional component. <br />
+            The `<b>useEffect</b>` hook can be used to add a side effect to a
+            functional component. <br />
+            The `<b>useLayoutEffect</b>` hook can be used to add a side effect
+            to a functional component that is executed after the DOM is updated.{" "}
+            <br />
+          </li>
+          <li className="answer_list_item">
+            <b>Other hooks</b> - These hooks can be used to add other
+            functionality to a functional component. <br />
+            The `<b>useRef</b>` hook can be used to add a mutable ref object to
+            a functional component. <br />
+            The `<b>useImperativeHandle</b>` hook can be used to add a custom
+            method to a functional component. <br />
+            The `<b>useMemo</b>` hook can be used to add a memoized value to a
+            functional component. <br />
+            The `<b>useCallback</b>` hook can be used to add a memoized callback
+            function to a functional component. <br />
+            The `<b>useDebugValue </b>` hook can be used to add a custom label
+            to a functional component in the React DevTools. <br />
+          </li>
+        </ol>
+      </>
+    ),
+  },
 ];

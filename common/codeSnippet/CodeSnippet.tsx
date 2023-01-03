@@ -7,7 +7,7 @@ import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
 import parserHtml from "prettier/parser-html";
 import parserCss from "prettier/parser-postcss";
-import parserSass from "prettier/parser-scss";
+import parserjson from "prettier/parser-yaml";
 
 interface ICodeSnippetProps {
   codeString?: string;
@@ -36,6 +36,11 @@ function CodeSnippet({
             ? prettier.format(codeString, {
                 parser: "css",
                 plugins: [parserCss],
+              })
+            : language === "bash"
+            ? prettier.format(codeString, {
+                parser: "yaml",
+                plugins: [parserjson],
               })
             : codeString}
         </SyntaxHighlighter>

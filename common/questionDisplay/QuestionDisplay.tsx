@@ -32,7 +32,7 @@ function QuestionDisplay({ questionData, database }: IQuestionDispalayProps) {
             id={questions?.question}
           >
             <div className={style.questionDisplay_question_title}>
-              {index + 1 + ". "} {questions?.question}
+              {questions?.question}
             </div>
             <div className={style.questionDisplay_question_answer}>
               {questions?.answer}

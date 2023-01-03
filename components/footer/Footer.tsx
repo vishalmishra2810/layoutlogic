@@ -6,7 +6,7 @@ function Footer() {
     <footer className={style.footer}>
       <div className={style.footer_container}>
         <div className={style.footer_title}>
-          @2023 CarrierBoosts All Rights Reserved
+          @2023 CareerBoosts All Rights Reserved
         </div>
       </div>
     </footer>

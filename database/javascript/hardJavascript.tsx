@@ -117,15 +117,52 @@ export const HARD_JAVASCRIPT = [
           JavaScript by using the indexOf method, the findIndex method, or the
           find method.
         </p>
-        <br/>
+        <br />
         <p className="simple_answers">
           You can also implement a search algorithm, such as binary search, in
-          JavaScript by using the includes method, the some method, or the
-          every method.
+          JavaScript by using the includes method, the some method, or the every
+          method.
         </p>
-        <br/>
+        <br />
         <CodeSnippet codeString={binary_search_example} language="javascript" />
       </>
     ),
+  },
+  {
+    question: "What is event delegation in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question:
+      "What is the difference between a variable that is: null, undefined or undeclared?",
+    answer: <></>,
+  },
+  {
+    question: "How do you perform deep copying of objects in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question: "How do you create private variables in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you optimize an algorithm for time and space complexity in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you design and implement a real-time system in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you design and implement a machine learning model in JavaScript?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you design and implement a distributed system in JavaScript?",
+    answer: <></>,
   },
 ];

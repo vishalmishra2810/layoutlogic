@@ -11,9 +11,9 @@ function ReplaceCode({ codeString, list }: IReplaceCodeProps) {
       {codeString.split(" ").map((word, index) => {
         if (list?.includes(word)) {
           return (
-            <span key={index} className={style.replace_code}>
+            <code key={index} className={style.replace_code}>
               {" `" + word + "` "}
-            </span>
+            </code>
           );
         }
         return " " + word + " ";

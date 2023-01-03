@@ -325,4 +325,75 @@ export const MEDIUM_JAVASCRIPT = [
       </>
     ),
   },
+  {
+    question :"How does prototypal inheritance work in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"What is the difference between a forEach loop and a for loop in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"How do you handle exceptions in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"What is difference between a function declaration and a function expression in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"What is the difference between shallow and deep copying in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"How do you implement debouncing in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"How do you implement throttling in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"What is the difference between a promise and a callback in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"How do you handle asynchronous code using async/await in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question :"What is the difference between a class and a function in JavaScript?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+
 ];
