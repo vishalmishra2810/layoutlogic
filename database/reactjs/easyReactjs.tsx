@@ -8,6 +8,9 @@ import {
   functional_based,
   jest_test,
   react_router_example,
+  usestate_example,
+  use_effect_example,
+  use_reducer_example,
 } from "./constant";
 
 export const EASY_REACTJS = [
@@ -51,9 +54,7 @@ export const EASY_REACTJS = [
           <br /> Props are arguments passed into React components.
           <br /> Props are passed to components via HTML attributes.
         </p>
-        <br />
         <CodeSnippet codeString={`<ChildComponent name="John Doe" />`} />
-        <br />
         <ReplaceCode
           codeString={`In the above example, the name prop is passed to the 
          ChildComponent component. The ChildComponent component
@@ -72,10 +73,10 @@ export const EASY_REACTJS = [
         <p className="simple_answers">
           JSX (JavaScript XML) is a syntax extension for JavaScript that allows
           developers to write HTML-like code in their JavaScript files.
+          <br />
           <br /> It is used in conjunction with React, a JavaScript library for
           building user interfaces, to define the UI components of an app.
         </p>
-        <br />
         <CodeSnippet codeString={`const element = <h1>Hello, world!</h1>`} />
       </>
     ),
@@ -89,7 +90,6 @@ export const EASY_REACTJS = [
           The main difference between a class component and a functional
           component in ReactJS are as follows:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           columnDataLength={3}
@@ -109,13 +109,11 @@ export const EASY_REACTJS = [
         />
         <br />
         <p className="simple_answers">Here is Example of Class Component:</p>
-        <br />
         <CodeSnippet codeString={class_based_string} />
         <br />
         <p className="simple_answers">
           Here is Example of Functional Component:
         </p>
-        <br />
         <CodeSnippet codeString={functional_based} />
       </>
     ),
@@ -131,9 +129,9 @@ export const EASY_REACTJS = [
           <br /> Event handlers are passed as attributes to the elements that we
           want to handle events on.
         </p>
-        <br />
         <CodeSnippet
           codeString={`<button onClick={handleClick}>Click Me</button>`}
+          language="javascript"
         />
       </>
     ),
@@ -148,15 +146,12 @@ export const EASY_REACTJS = [
         </p>
         <br />
         <p className="simple_answers">Inline Styles:</p>
-        <br />
         <CodeSnippet codeString={`<div style={{color: 'red'}}></div>`} />
         <br />
         <p className="simple_answers">CSS Stylesheets:</p>
-        <br />
         <CodeSnippet codeString={`import './styles.css';`} />
         <br />
         <p className="simple_answers">CSS-in-JS:</p>
-        <br />
         <CodeSnippet codeString={`import styled from 'styled-components';`} />
       </>
     ),
@@ -185,18 +180,16 @@ export const EASY_REACTJS = [
     ),
   },
   {
-    question: "What is the purpose of the ReactJS PropTypes module?",
+    question: "What is the purpose of PropTypes module in Reactjs?",
     answer: (
       <>
         <p className="simple_answers">
-          The ReactJS PropTypes module is used to check the type of props passed
-          to a component.
+          PropTypes module is used to check the type of props passed to a
+          component.
           <br /> It is used to ensure that the props passed to a component are
           of the correct type.
         </p>
-        <br />
         <CodeSnippet codeString={check_valid_prop} />
-        <br />
         <ReplaceCode
           codeString={
             "If someone uses the MyComponent component and passes it a prop called name that is not a string, then PropTypes will log a warning in the developer console."
@@ -208,16 +201,15 @@ export const EASY_REACTJS = [
   },
   {
     question:
-      "How do you use the ReactJS Context API to pass data through the component tree?",
+      "How do you use Context API to pass data through the component tree?",
     answer: (
       <>
         <p className="simple_answers">
-          The ReactJS Context API is used to pass data through the component
-          tree without having to pass props down manually at every level.
-          <br /> The Context API is used to share data that can be considered
+          Context API is used to pass data through the component tree without
+          having to pass props down manually at every level.
+          <br /> Context API is used to share data that can be considered
           “global” for a tree of React components.
         </p>
-        <br />
         <CodeSnippet codeString={context_api} />
       </>
     ),
@@ -225,18 +217,16 @@ export const EASY_REACTJS = [
   },
   {
     question:
-      "What is the ReactJS Router and how is it used to manage navigation in a single-page app?",
+      "What is Router and how is it used to manage navigation in a single-page app?",
     answer: (
       <>
         <p className="simple_answers">
-          The ReactJS Router is a library that is used to manage navigation in a
-          single-page app.
+          Router is a library that is used to manage navigation in a single-page
+          app.
           <br /> It is used to define the routes of an app and to render the
           appropriate components when a route is matched.
         </p>
-        <br />
         <CodeSnippet codeString={react_router_example} />
-        <br />
         <ReplaceCode
           codeString={
             "The BrowserRouter component is used to define the routes of the app. The Route component is used to define the path of a route and the component that should be rendered when the route is matched. The Switch component is used to render the first route that matches the current URL."
@@ -256,7 +246,6 @@ export const EASY_REACTJS = [
           <br /> Jest is a JavaScript testing framework that is used to test
           React apps.
         </p>
-        <br />
         <CodeSnippet codeString={jest_test} />
       </>
     ),
@@ -283,8 +272,6 @@ export const EASY_REACTJS = [
           <br /> It is used in conjunction with React, a JavaScript library for
           building user interfaces, to define the UI components of an app.
         </p>
-        <br />
-        <br />
         <CodeSnippet
           codeString={`
           return (
@@ -300,15 +287,75 @@ export const EASY_REACTJS = [
   },
   {
     question: "What is use of key in ReactJS?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          The key attribute is used to give a unique identifier to each element
+          in a list.
+          <br /> It is used by React to identify which items have changed, are
+          added, or are removed.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Why should you not use index as a key in ReactJS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Keys are used by React to determine which elements in a list have
+          changed, added, or been removed.
+          <br /> When an element is added or removed, React uses the key to
+          determine which element has changed, and re-renders the appropriate
+          components.
+          <br /> If you use the index of an element as the key, React will have
+          to re-render all elements in the list whenever the list changes,
+          because the index of every element will have changed.
+        </p>
+      </>
+    ),
   },
   {
     question:
       "Can you explain the difference between the useState and useReducer Hooks?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useState Hook is used to manage the state of a component.
+          <br /> It is used to store the state of a component and to update the
+          state of a component.
+          <br />
+          <br /> The useReducer Hook is used to manage the state of a component
+          in a more complex way.
+          <br /> It is used to store the state of a component and to update the
+          state of a component in a more complex way.
+        </p>
+        <p className="simple_answers">
+          here is an example of the useState Hook:
+        </p>
+        <CodeSnippet codeString={usestate_example} language="javascript" />
+        <br />
+        <p className="simple_answers">
+          here is an example of the useReducer Hook:
+        </p>
+        <CodeSnippet codeString={use_reducer_example} language="javascript" />
+      </>
+    ),
   },
   {
-    question: "How to use useEffect Hook?",
-    answer: <></>,
+    question:
+      "How to use the useEffect Hook to perform side effects in a function component?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useEffect Hook is used to perform side effects in a function
+          component.
+          <br /> It is used to perform side effects such as fetching data from
+          an API, setting up a subscription, or manually changing the DOM in
+          React components.
+        </p>
+        <CodeSnippet codeString={use_effect_example} language="javascript" />
+      </>
+    ),
   },
 ];

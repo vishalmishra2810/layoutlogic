@@ -276,3 +276,131 @@ export const full_screen_background_image = `
     }
 
 `;
+export const selector_example_all = `
+  /* select by element name */
+    p {
+        color: red;
+    }
+
+    /* select by id */
+    #id-example {
+        color: red;
+    }
+
+    /* select by class */
+    .class-example {
+        color: red;
+    }
+
+    /* select by attribute */
+    [attribute-example] {
+        color: red;
+    }
+
+   /* select by pseudo-class */
+    a:hover {
+        color: red;
+    }
+
+    /* select by pseudo-element */
+    p::first-line {
+        color: red;
+    }
+
+    `;
+export const zindex_example = `
+    .z-index-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        z-index: 2;
+    }
+ `;
+
+export const border_example = `
+    .border-example {
+        border: 1px solid red;
+    }
+
+    .border-example {
+        border-width: 1px;
+        border-style: solid;
+        border-color: red;
+        border-radius: 5px;
+    }
+
+    .border-example {
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        border-bottom: 1px solid red;
+        border-left: 1px solid red;
+    }
+`;
+
+export const box_sizing_exmaple = `
+    .box-sizing-example {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+
+    .box-sizing-example {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        border: 1px solid red;
+        box-sizing: content-box;
+    }
+`;
+
+export const box_shadow_exmaple = `
+    .box-shadow-example {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        box-shadow: 10px 10px 5px #888888;
+    }
+`;
+
+export const before_pseudo_element_example = `
+    .before-pseudo-element-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .before-pseudo-element-example::before {
+        content: "Hello World";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        opacity: 0.5;
+    }
+`;
+
+export const after_pseudo_element_example = `
+    .after-pseudo-element-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .after-pseudo-element-example::after {
+        content: "Hello World";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        opacity: 0.5;
+    }
+`;

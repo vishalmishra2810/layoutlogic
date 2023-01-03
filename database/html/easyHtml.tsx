@@ -1,5 +1,11 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
-import { form_string, html_str, table_str, xhtml_str } from "./constant";
+import {
+  form_string,
+  html_str,
+  semantic_tags_html_example,
+  table_str,
+  xhtml_str,
+} from "./constant";
 
 export const EASY_HTML = [
   {
@@ -33,7 +39,6 @@ export const EASY_HTML = [
           <code>&lt;a&gt;</code> and specify the link in the <code>href</code>{" "}
           attribute.
         </p>
-        <br />
         <CodeSnippet codeString="<a href='https://www.google.com'>Google</a>" />
       </>
     ),
@@ -50,12 +55,10 @@ export const EASY_HTML = [
           and that all elements are properly nested.
         </p>
         <br />
-        <p className="simple_answers">
-          The following example shows the difference between HTML and XHTML:
-        </p>
-        <br />
+        <p className="simple_answers">Here is the example of XHTML:</p>{" "}
         <CodeSnippet codeString={xhtml_str} language="html" />
         <br />
+        <p className="simple_answers">Here is the example of HTML:</p>
         <CodeSnippet codeString={html_str} language="html" />
       </>
     ),
@@ -65,14 +68,13 @@ export const EASY_HTML = [
     answer: (
       <>
         <p className="simple_answers">
-          To create a table in HTML, you will need to use the table tag{" "}
-          <code>&lt;table&gt;</code> and specify the table rows in the{" "}
-          <code>&lt;tr&gt;</code> tag.
-          <br />
-          You will also need to specify the table data in the{" "}
-          <code>&lt;td&gt;</code> tag.
+          To create a table in HTML, you can use the table element and its
+          related elements, such as `thead`, `tbody`, and `td`.
         </p>
         <br />
+        <p className="simple_answers">
+          Here's an example of how you might create a table in HTML:
+        </p>
         <CodeSnippet codeString={table_str} language="html" />
       </>
     ),
@@ -86,7 +88,6 @@ export const EASY_HTML = [
           <code>&lt;img&gt;</code> and specify the image source in the{" "}
           <code>src</code> attribute.
         </p>
-        <br />
         <CodeSnippet codeString="<img src='https://images.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' />" />
       </>
     ),
@@ -103,7 +104,6 @@ export const EASY_HTML = [
           You will also need to specify the form action in the{" "}
           <code>action</code> attribute.
         </p>
-        <br />
         <CodeSnippet codeString={form_string} language="html" />
       </>
     ),
@@ -117,7 +117,6 @@ export const EASY_HTML = [
           <code>&lt;ul&gt;</code> and specify the list items in the{" "}
           <code>&lt;li&gt;</code> tag.
         </p>
-        <br />
         <CodeSnippet codeString="<ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>" />
       </>
     ),
@@ -131,7 +130,6 @@ export const EASY_HTML = [
           <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> and specify the
           heading text in the <code>&lt;h1&gt;</code> tag.
         </p>
-        <br />
         <CodeSnippet
           codeString="<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>"
           language="html"
@@ -142,15 +140,50 @@ export const EASY_HTML = [
   {
     question:
       "Can you explain the difference between id and class attributes in HTML?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          The id attribute is used to specify a unique id for an HTML element.
+          <br />
+          The class attribute is used to specify one or more class names for an
+          HTML element.
+          <br />
+          The id attribute is used to point to a style in a style sheet, and the
+          class attribute can be used to point to a style in a style sheet, or
+          to be used by a script.
+        </p>
+      </>
+    ),
   },
   {
     question:
       "What is difference between `display:none` and `visibility:hidden`?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          The `<code>display:none</code>` property hides the element, and the
+          element will not take up any space.
+        </p>
+        <p className="simple_answers">
+          The `<code>visibility:hidden</code>` property hides the element, but
+          the element will still take up the original space.
+        </p>
+      </>
+    ),
   },
   {
     question: "What is semantic tags in HTML?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          Semantic tags are HTML tags that have a specific meaning.
+        </p>
+        <p className="simple_answers">
+          For example, the <code>&lt;header&gt;</code> tag defines a header for
+          a document or a section.
+        </p>
+        <CodeSnippet codeString={semantic_tags_html_example} language="html" />
+      </>
+    ),
   },
 ];

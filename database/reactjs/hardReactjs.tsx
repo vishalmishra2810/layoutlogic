@@ -4,7 +4,9 @@ import {
   async_string_first,
   async_string_second,
   controlling_string,
+  error_boundary_string,
   use_callback_string,
+  use_effect_to_achieve_component_did_mount,
   use_memo_string,
 } from "./constant";
 
@@ -16,16 +18,16 @@ export const HARD_REACTJS = [
       <>
         <p className="simple_answers">
           The virtual DOM is a copy of the actual DOM. It is a lightweight
-          representation of the actual DOM. It is a JavaScript object that is
-          kept in memory. It is synced with the actual DOM by a library such as
-          ReactDOM. This process is called reconciliation.
+          representation of the actual DOM. <br />
+          It is a JavaScript object that is kept in memory. It is synced with
+          the actual DOM by a library such as ReactDOM. This process is called
+          reconciliation.
           <br /> The virtual DOM is faster than the actual DOM because it is a
-          lightweight representation of the actual DOM. It is faster because it
-          does not need to be updated as often as the actual DOM. It is updated
-          only when there is a change in the state of the application.
+          lightweight representation of the actual DOM. <br /> It is faster
+          because it does not need to be updated as often as the actual DOM. It
+          is updated only when there is a change in the state of the
+          application.
         </p>
-        <br />
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           columnDataLength={7}
@@ -71,11 +73,7 @@ export const HARD_REACTJS = [
           which approach to use will depend on your specific needs and
           preferences.
         </p>
-        <br />
-        <br />
         <CodeSnippet codeString={async_string_first} />
-        <br />
-        <br />
         <p className="simple_answers">
           In the above example, we are using the `async` and `await` keywords to
           handle asynchronous actions in a React application. We are using the
@@ -85,14 +83,11 @@ export const HARD_REACTJS = [
         </p>
 
         <br />
-        <br />
         <p className="simple_answers">
           Another common way to handle asynchronous actions in a React
           application is to use a library like axios to make HTTP requests. For
           example:
         </p>
-        <br />
-        <br />
         <CodeSnippet codeString={async_string_second} />
       </>
     ),
@@ -113,8 +108,6 @@ export const HARD_REACTJS = [
           have its value controlled by the user, and would not update its value
           based on React state.
         </p>
-        <br />
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           columnDataLength={7}
@@ -140,17 +133,12 @@ export const HARD_REACTJS = [
             ],
           }}
         />
-        <br />
-        <br />
         <p className="simple_answers">
           Here's an example of a controlled form element in a React component:
         </p>
-        <br />
-        <br />
         <CodeSnippet codeString={controlling_string} />
       </>
     ),
-    top: true,
   },
   {
     question:
@@ -165,14 +153,14 @@ export const HARD_REACTJS = [
         <br />
         <ol className="answer_list">
           <li className="answer_list_item">
-            Using the React.lazy and React.Suspense components to implement
+            Using the `React.lazy` and `React.Suspense` components to implement
             code-splitting and lazy-loading of components.
           </li>
           <li className="answer_list_item">
             Using the `PureComponent` class to prevent unnecessary re-renders.
           </li>
           <li className="answer_list_item">
-            Using the React.memo higher-order component to memoize functional
+            Using the `React.memo` higher-order component to memoize functional
             components and avoid unnecessary re-renders.
           </li>
           <li className="answer_list_item">
@@ -182,29 +170,23 @@ export const HARD_REACTJS = [
             Using the `useCallback` hook to prevent unnecessary re-renders.
           </li>
           <li className="answer_list_item">
-            Using the key prop when rendering a list of elements to help React
+            Using the `key` prop when rendering a list of elements to help React
             identify which elements have changed and avoid unnecessary
             re-renders.
           </li>
         </ol>
         <br />
-        <br />
-        <p className="simple_answers">
-          Here's an example of using useMemo to prevent unnecessary re-renders:
-        </p>
-        <br />
-        <br />
-        <CodeSnippet codeString={use_memo_string} />
 
-        <br />
-        <br />
         <p className="simple_answers">
-          Here's an example of using useCallback to prevent unnecessary
+          Here's an example of using `useMemo` to prevent unnecessary
           re-renders:
         </p>
-        <br />
-        <br />
-        <CodeSnippet codeString={use_callback_string} />
+        <CodeSnippet codeString={use_memo_string} />
+        <p className="simple_answers">
+          Here's an example of using `useCallback` to prevent unnecessary
+          re-renders:
+        </p>
+        <CodeSnippet codeString={use_callback_string} language="javascript" />
       </>
     ),
     top: true,
@@ -212,10 +194,55 @@ export const HARD_REACTJS = [
   {
     question:
       "Can you explain how to use the React Error Boundary component to handle errors in a React application?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          An Error Boundary is a component that can catch JavaScript errors
+          anywhere in its child component tree, log those errors, and display a
+          fallback UI instead of the component tree that crashed. <br /> Error
+          boundaries catch errors during rendering, in lifecycle methods, and in
+          constructors of the whole tree below them.
+        </p>
+        <br />
+        <p className="simple_answers">
+          Here's an example of using an Error Boundary component to handle
+          errors in a React application:
+        </p>
+        <CodeSnippet codeString={error_boundary_string} language="javascript" />
+      </>
+    ),
   },
   {
     question: "How to achieve lifecycle methods in functional components?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are a few ways to achieve lifecycle methods in functional
+          components. Some of the most common techniques include:
+        </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            Using the `useEffect` hook to implement the `componentDidMount`,
+            `componentDidUpdate`, and `componentWillUnmount` lifecycle methods.
+          </li>
+
+          <li className="answer_list_item">
+            Using the `useLayoutEffect` hook to implement the
+            `componentDidMount` and `componentDidUpdate` lifecycle methods.
+          </li>
+        </ol>
+        <br />
+        <p className="simple_answers">
+          Here's an example of using the `useEffect` hook to implement the
+          `componentDidMount` , `componentDidUpdate`, and `componentWillUnmount`
+          lifecycle methods:
+        </p>
+        <CodeSnippet
+          codeString={use_effect_to_achieve_component_did_mount}
+          language="javascript"
+        />
+      </>
+    ),
   },
 ];
