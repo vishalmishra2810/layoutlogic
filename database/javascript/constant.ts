@@ -318,20 +318,6 @@ export const generator_example = `
 
     //output: 1 2 3
     `;
-export const proxy_example = `
-    // proxy function
-    const target = {};
-    const handler = {
-        get: function(obj, prop) {
-            return prop in obj ? obj[prop] : 37;
-        }
-    };
-    const p = new Proxy(target, handler);
-    p.a = 1;
-    p.b = undefined;
-    console.log(p.a, p.b); // 1, undefined
-    console.log('c' in p, p.c); // false, 37
-    `;
 export const set_example = `
     // set function
     const set = new Set([1, 2, 3, 4, 5]);

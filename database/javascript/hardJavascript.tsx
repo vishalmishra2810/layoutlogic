@@ -4,7 +4,6 @@ import {
   generator_example,
   higher_order_function_example,
   integrate_third_party_api_example,
-  proxy_example,
   set_example,
 } from "./constant";
 
@@ -75,19 +74,6 @@ export const HARD_JAVASCRIPT = [
         </p>
         <br />
         <CodeSnippet codeString={generator_example} language="javascript" />
-      </>
-    ),
-  },
-  {
-    question: "How do you create and use a proxy in JavaScript?",
-    answer: (
-      <>
-        <p className="simple_answers">
-          A proxy is an object that controls access to another object. You can
-          create a proxy using the Proxy constructor.
-        </p>
-        <br />
-        <CodeSnippet codeString={proxy_example} language="javascript" />
       </>
     ),
   },
