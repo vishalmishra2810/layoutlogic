@@ -298,4 +298,17 @@ export const EASY_REACTJS = [
       </>
     ),
   },
+  {
+    question: "What is use of key in ReactJS?",
+    answer: <></>,
+  },
+  {
+    question:
+      "Can you explain the difference between the useState and useReducer Hooks?",
+    answer: <></>,
+  },
+  {
+    question: "How to use useEffect Hook?",
+    answer: <></>,
+  },
 ];

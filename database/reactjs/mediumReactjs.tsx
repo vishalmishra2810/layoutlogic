@@ -323,26 +323,22 @@ export const MEDIUM_REACTJS = [
     ),
     top: true,
   },
-  // {
-  //   question: "How do you use the React Context API?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React Hooks API?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React memoization technique?",
-  //   answer:()
-  // }
-  // ,
-  // {
-  //   question: "How do you use the React lazy loading technique?",
-  //   answer:()
-  // },{
-  //   question:"How do you use the React error boundaries technique?",
-
-  //   answer:()}
+  {
+    question:
+      "Can you explain how to use the React Suspense and lazy APIs for code splitting and lazy loading components?",
+    answer: <></>,
+  },
+  {
+    question: "How do you use the React ref API to access the DOM?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you use the React memo API to optimize functional components?",
+    answer: <></>,
+  },
+  {
+    question: "What are different types of hooks provided by React?",
+    answer: <></>,
+  },
 ];

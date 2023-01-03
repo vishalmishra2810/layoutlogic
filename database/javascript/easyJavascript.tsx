@@ -139,4 +139,34 @@ export const EASY_JAVASCRIPT = [
       </>
     ),
   },
+  {
+    question: "What is an anonymous function in JavaScript?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          An anonymous function is a function without a name. Anonymous
+          functions are often not accessible after their initial creation.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "what is event loop in JavaScript?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The event loop is a programming construct or design pattern that waits
+          for and dispatches events or messages in a program. It works by making
+          a request to some internal or external "event provider" (that
+          generally blocks the request until an event has arrived), and then it
+          calls the relevant event handler ("dispatches the event").
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "What is the difference between synchronous and asynchronous code in JavaScript?",
+    answer: <></>,
+  },
 ];

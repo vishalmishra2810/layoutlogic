@@ -104,4 +104,14 @@ export const HARD_HTML = [
       </>
     ),
   },
+  {
+    question:
+      "Can you explain how to use the data and value attributes to provide additional information about an HTML element?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you use the dialog element to create a dialog box or popup window in HTML?",
+    answer: <></>,
+  },
 ];

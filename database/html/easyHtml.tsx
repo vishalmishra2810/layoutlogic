@@ -139,4 +139,18 @@ export const EASY_HTML = [
       </>
     ),
   },
+  {
+    question:
+      "Can you explain the difference between id and class attributes in HTML?",
+    answer: <></>,
+  },
+  {
+    question:
+      "What is difference between `display:none` and `visibility:hidden`?",
+    answer: <></>,
+  },
+  {
+    question: "What is semantic tags in HTML?",
+    answer: <></>,
+  },
 ];

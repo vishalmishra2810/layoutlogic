@@ -114,4 +114,40 @@ export const EASY_CSS = [
       </>
     ),
   },
+  {
+    question:"How do you select elements using CSS selectors?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question:"How do you use the display, float, and clear properties to control the layout of elements in CSS?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question:"Can you explain the difference between the relative, absolute, and fixed position values in CSS?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question:"How do you use the z-index property to control the stacking order of elements in CSS?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  {
+    question:"Can you explain how to use the border property to style the border of an element in CSS?",
+    answer: (
+      <>
+      </>
+    ),
+  },
+  
 ];

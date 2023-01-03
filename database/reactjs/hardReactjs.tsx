@@ -209,4 +209,13 @@ export const HARD_REACTJS = [
     ),
     top: true,
   },
+  {
+    question:
+      "Can you explain how to use the React Error Boundary component to handle errors in a React application?",
+    answer: <></>,
+  },
+  {
+    question: "How to achieve lifecycle methods in functional components?",
+    answer: <></>,
+  },
 ];

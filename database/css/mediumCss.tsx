@@ -92,4 +92,24 @@ export const MEDIUM_CSS = [
       </>
     ),
   },
+  {
+    question:
+      "Can you explain the difference between the box-sizing property and the width and height properties in CSS?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you use the position, top, right, bottom, and left properties to position elements in CSS?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you use the box-shadow property to add a shadow to an element in CSS?",
+    answer: <></>,
+  },
+  {
+    question:
+      "Can you explain the difference between the ::before and ::after pseudo-elements in CSS?",
+    answer: <></>,
+  },
 ];

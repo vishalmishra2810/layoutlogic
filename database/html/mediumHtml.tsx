@@ -292,4 +292,22 @@ export const MEDIUM_HTML = [
       </>
     ),
   },
+  {
+    question:
+      "How do you use the details and summary elements to create an expandable section in HTML?",
+    answer: <></>,
+  },
+  {
+    question:
+      "How do you create a table in HTML using the table, tr, td, and th elements?",
+    answer: <></>,
+  },
+  {
+    question: "What is use of meta tag in HTML?",
+    answer: <></>,
+  },
+  {
+    question: "What is use of iframe tag in HTML?",
+    answer: <></>,
+  },
 ];
