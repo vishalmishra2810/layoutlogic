@@ -20,7 +20,6 @@ export const HARD_REDUX = [
           application that demonstrates how to implement server-side rendering
           with a Redux application.
         </p>
-        <br />
         <CodeSnippet
           codeString={server_side_rendering_example}
           language="javascript"
@@ -42,7 +41,6 @@ export const HARD_REDUX = [
           The Immer library allows you to work with immutable state in a more
           convenient way. It is based on the copy-on-write mechanism.
         </p>
-        <br />
         <CodeSnippet
           codeString={nexted_objexts_state_example}
           language="javascript"

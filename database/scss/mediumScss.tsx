@@ -16,13 +16,11 @@ export const MEDIUM_SCSS = [
         <p className="simple_answers">
           Control directives are a way to store blocks of CSS that can be reused
           throughout your stylesheet.
-          <br />
           <br /> You can pass values into control directives to make them more
           flexible. <br />
           Control directives are declared with `@if`, `@for`, `@each`, and
           `@while` and are used with `@include`.
         </p>
-        <br />
         <CodeSnippet codeString={control_directives_example} language="scss" />
       </>
     ),
@@ -36,9 +34,8 @@ export const MEDIUM_SCSS = [
           Extend is a way to store blocks of CSS that can be reused throughout
           your stylesheet. <br />
           You can pass values into extend to make them more flexible. Extend is
-          declared with `@extend` and is used with `@include`.
+          declared with `@extend`.
         </p>
-        <br />
         <CodeSnippet codeString={extend_example} language="scss" />
       </>
     ),
@@ -51,12 +48,10 @@ export const MEDIUM_SCSS = [
         <p className="simple_answers">
           The @each directive is a way to store blocks of CSS that can be reused
           throughout your stylesheet.
-          <br />
           <br /> You can pass values into the @each directive to make them more
           flexible. The @each directive is declared with @each and is used with
           @include.
         </p>
-        <br />
         <CodeSnippet codeString={each_example} language="scss" />
       </>
     ),
@@ -68,12 +63,11 @@ export const MEDIUM_SCSS = [
       <>
         <p className="simple_answers">
           The @for directive is a way to store blocks of CSS that can be reused
-          throughout your stylesheet. <br />
+          throughout your stylesheet.
           <br /> You can pass values into the @for directive to make them more
           flexible. <br /> The @for directive is declared with @for and is used
           with @include.
         </p>
-        <br />
         <CodeSnippet
           codeString={for_loop_based_on_list_example}
           language="scss"
@@ -89,13 +83,11 @@ export const MEDIUM_SCSS = [
         <p className="simple_answers">
           The @import directive is a way to store blocks of CSS that can be
           reused throughout your stylesheet.
-          <br />
           <br /> You can pass values into the @import directive to make them
           more flexible.
           <br /> The @import directive is declared with @import and is used with
           @include.
         </p>
-        <br />
         <CodeSnippet codeString={import_example} language="scss" />
       </>
     ),

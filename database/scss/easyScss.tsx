@@ -25,11 +25,8 @@ export const EASY_SCSS = [
           similar to CSS.
         </p>
         <p className="simple_answers">here is an example of a Sass file:</p>
-        <br />
         <CodeSnippet codeString={sass_example} language="sass" />
-        <br />
         <p className="simple_answers">And here is an example of a SCSS file:</p>
-        <br />
         <CodeSnippet codeString={scss_example} language="scss" />
       </>
     ),
@@ -44,7 +41,6 @@ export const EASY_SCSS = [
           inline imports, and more, all with a fully CSS-compatible syntax. SCSS
           files use the extension .scss.
         </p>
-        <br />
         <CodeSnippet codeString={scss_vs_css_example} language="scss" />
       </>
     ),
@@ -56,14 +52,13 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Variables are a way to store information that can be reused throughout
-          your stylesheet. <br /> <br />
+          your stylesheet. <br />
           You can use variables to store colors, fonts, or any CSS value that
-          you want to reuse. <br />
+          you want to reuse.
           <br />
           Variables are declared with a $ and can be used anywhere in your
           stylesheet.
         </p>
-        <br />
         <CodeSnippet codeString={scss_variables_example} language="scss" />
       </>
     ),
@@ -74,11 +69,9 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Nesting is a way to write CSS that is easier to read and maintain.
-          <br />
           <br /> It allows you to nest one selector inside another. The child
           selector (&) is used to refer to the parent selector.
         </p>
-        <br />
         <CodeSnippet codeString={scss_nested_css_example} language="scss" />
       </>
     ),
@@ -91,11 +84,9 @@ export const EASY_SCSS = [
         <p className="simple_answers">
           Mixins are a way to store blocks of CSS that can be reused throughout
           your stylesheet.
-          <br />
           <br /> You can pass values into mixins to make them more flexible.
           Mixins are declared with `@mixin` and are used with `@include`.
         </p>
-        <br />
         <CodeSnippet codeString={mixins_example} language="scss" />
       </>
     ),
@@ -107,11 +98,10 @@ export const EASY_SCSS = [
       <>
         <p className="simple_answers">
           Functions are a way to store blocks of CSS that can be reused
-          throughout your stylesheet. <br />
+          throughout your stylesheet.
           <br /> You can pass values into functions to make them more flexible.
           Functions are declared with `@function` and are used with call().
         </p>
-        <br />
         <CodeSnippet codeString={functions_example} language="scss" />
       </>
     ),
@@ -124,13 +114,10 @@ export const EASY_SCSS = [
         <p className="simple_answers">
           Loops are a way to store blocks of CSS that can be reused throughout
           your stylesheet.
-          <br />
           <br /> You can pass values into loops to make them more flexible.
           Loops are declared with `@for`, `@each`, and `@while` and are used
           with `@include`.
         </p>
-
-        <br />
         <CodeSnippet codeString={loop_example} language="scss" />
       </>
     ),
@@ -143,11 +130,10 @@ export const EASY_SCSS = [
         <p className="simple_answers">
           Functions are a way to store blocks of CSS that can be reused
           throughout your stylesheet.
-          <br /> <br /> You can pass values into functions to make them more
-          flexible.
+          <br />
+          You can pass values into functions to make them more flexible.
           <br /> Functions are declared with @function and are used with call().
         </p>
-        <br />
         <CodeSnippet
           codeString={functions_dynamic_style_example}
           language="scss"

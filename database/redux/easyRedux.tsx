@@ -56,7 +56,6 @@ export const EASY_REDUX = [
           A reducer is a pure function that takes the previous state and an
           action, and returns the next state. (previousState, action) = newState
         </p>
-        <br />
         <CodeSnippet
           codeString={reducer_function_example}
           language="javascript"
@@ -74,7 +73,6 @@ export const EASY_REDUX = [
           <br /> They are the only source of information for the store. You send
           them to the store using store.dispatch().
         </p>
-        <br />
         <CodeSnippet codeString={action_in_redux} language="javascript" />
       </>
     ),
@@ -89,29 +87,29 @@ export const EASY_REDUX = [
           following responsibilities:
         </p>
         <br />
-        <ul className="simple_answers">
-          <li>Holds application state</li>
-          <li>
+        <ul className="answer_list">
+          <li className="answer_list_item">Holds application state</li>
+          <li className="answer_list_item">
             Allows access to state via getState()
             <br />
             You can retrieve the current state of the Redux store by calling
             getState().
           </li>
-          <li>
+          <li className="answer_list_item">
             Allows state to be updated via dispatch(action)
             <br />
             The only way to update the state is to emit an action, an object
             describing what happened. You can send actions to the store by
             calling dispatch(action).
           </li>
-          <li>
+          <li className="answer_list_item">
             Registers listeners via subscribe(listener)
             <br />
             The store allows you to register listeners via the subscribe method.
             The listeners are called whenever an action is dispatched, and some
             part of the state tree may potentially have changed.
           </li>
-          <li>
+          <li className="answer_list_item">
             Handles unregistering of listeners via the function returned by
             subscribe(listener)
             <br />

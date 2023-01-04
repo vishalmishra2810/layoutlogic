@@ -10,12 +10,10 @@ export const HARD_SCSS = [
         <p className="simple_answers">
           The @media directive is a way to store blocks of CSS that can be
           reused throughout your stylesheet. <br />
-          <br />
           You can pass values into the @media directive to make them more
           flexible. <br /> The @media directive is declared with @media and is
           used with @include.
         </p>
-        <br />
         <CodeSnippet codeString={media_example} language="scss" />
       </>
     ),
@@ -28,12 +26,11 @@ export const HARD_SCSS = [
         <p className="simple_answers">
           The @at-root directive is a way to store blocks of CSS that can be
           reused throughout your stylesheet. <br />
-          <br /> You can pass values into the @at-root directive to make them
-          more flexible. <br />
+          You can pass values into the @at-root directive to make them more
+          flexible. <br />
           The @at-root directive is declared with @at-root and is used with
           @include.
         </p>
-        <br />
         <CodeSnippet codeString={at_root_example} language="scss" />
       </>
     ),
