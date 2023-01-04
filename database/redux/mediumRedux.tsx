@@ -21,7 +21,6 @@ export const MEDIUM_REDUX = [
         <p className="simple_answers">
           The connect() function connects a React component to a Redux store.
         </p>
-        <br />
         <CodeSnippet
           codeString={connect_function_example}
           language="javascript"
@@ -36,7 +35,6 @@ export const MEDIUM_REDUX = [
         <p className="simple_answers">
           You can create a Redux store using the createStore() function.
         </p>
-        <br />
         <CodeSnippet codeString={create_store_example} language="javascript" />
       </>
     ),
@@ -48,7 +46,6 @@ export const MEDIUM_REDUX = [
         <p className="simple_answers">
           You can create a Redux action using the createAction() function.
         </p>
-        <br />
         <CodeSnippet
           codeString={create_redux_action_example}
           language="javascript"
@@ -65,7 +62,6 @@ export const MEDIUM_REDUX = [
           You can dispatch actions from a React component using the
           useDispatch() hook.
         </p>
-        <br />
         <CodeSnippet
           codeString={dispatch_action_example}
           language="javascript"
@@ -90,7 +86,6 @@ export const MEDIUM_REDUX = [
           is met. <br /> The inner function receives the store methods dispatch
           and getState as parameters.
         </p>
-        <br />
         <CodeSnippet
           codeString={thunk_asynchronours_actions_example}
           language="javascript"
@@ -107,7 +102,6 @@ export const MEDIUM_REDUX = [
           You can split a Redux application into multiple reducers and combine
           them using the combineReducers function.
         </p>
-        <br />
         <CodeSnippet
           codeString={combine_reducers_example}
           language="javascript"
@@ -129,7 +123,6 @@ export const MEDIUM_REDUX = [
           The redux-mock-store library allows you to create a mock Redux store
           that you can use to test your Redux actions and reducers.
         </p>
-        <br />
         <CodeSnippet
           codeString={redux_mock_store_example}
           language="javascript"

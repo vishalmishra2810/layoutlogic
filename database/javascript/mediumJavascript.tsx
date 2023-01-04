@@ -1,17 +1,24 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
+  async_await_example,
   callback_example,
   call_apply_bind_example,
   closure_example,
+  debouncing_example,
   doble_triple_example,
   dom_example,
   event_example,
+  exception_example,
   fetch_example,
   for_forin_forof_example,
+  function_declaration_expression_example,
   map_filter_reduce_example,
   object_example,
   promise_example,
+  prototype_inheritance_chaingin_example,
+  shallow_deep_copying_example,
+  throttling_example,
 } from "./constant";
 
 export const MEDIUM_JAVASCRIPT = [
@@ -27,7 +34,6 @@ export const MEDIUM_JAVASCRIPT = [
           is known as a method. <br /> You can create an object using the object
           literal syntax or the Object constructor.
         </p>
-        <br />
         <CodeSnippet codeString={object_example} language="javascript" />
       </>
     ),
@@ -45,7 +51,6 @@ export const MEDIUM_JAVASCRIPT = [
           You can also create a callback function using the arrow function
           syntax.
         </p>
-        <br />
         <CodeSnippet codeString={callback_example} language="javascript" />
       </>
     ),
@@ -60,7 +65,6 @@ export const MEDIUM_JAVASCRIPT = [
           You can create a closure by nesting a function inside another
           function.
         </p>
-        <br />
         <CodeSnippet codeString={closure_example} language="javascript" />
       </>
     ),
@@ -75,7 +79,6 @@ export const MEDIUM_JAVASCRIPT = [
           resolved (e.g., a network error occurred). <br />
           You can create a promise using the Promise constructor.
         </p>
-        <br />
         <CodeSnippet codeString={promise_example} language="javascript" />
       </>
     ),
@@ -91,7 +94,6 @@ export const MEDIUM_JAVASCRIPT = [
           program that waits for an event to occur. <br /> You can create an
           event listener using the addEventListener method.
         </p>
-        <br />
         <CodeSnippet codeString={event_example} language="javascript" />
       </>
     ),
@@ -109,7 +111,6 @@ export const MEDIUM_JAVASCRIPT = [
           <br /> You can make an HTTP request using the fetch API by calling the
           fetch method.
         </p>
-        <br />
         <CodeSnippet codeString={fetch_example} language="javascript" />
       </>
     ),
@@ -123,7 +124,6 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the var, let, and const
           keywords in JavaScript:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["var", "let", "const"]}
@@ -162,7 +162,6 @@ export const MEDIUM_JAVASCRIPT = [
           values to a common type. The === operator compares two values for
           equality without converting the values.
         </p>
-        <br />
         <CodeSnippet codeString={doble_triple_example} language="javascript" />
       </>
     ),
@@ -176,7 +175,6 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the null and undefined
           values in JavaScript:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={2}
           headerData={["null", "undefined"]}
@@ -198,8 +196,6 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the map, filter, and
           reduce methods in JavaScript:
         </p>
-        <br />
-
         <MakeDifferentiate
           totalColumn={3}
           headerData={["map", "filter", "reduce"]}
@@ -222,7 +218,6 @@ export const MEDIUM_JAVASCRIPT = [
             ],
           }}
         />
-        <br />
         <CodeSnippet
           codeString={map_filter_reduce_example}
           language="javascript"
@@ -239,7 +234,6 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the call, apply, and bind
           methods in JavaScript:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["call", "apply", "bind"]}
@@ -262,7 +256,6 @@ export const MEDIUM_JAVASCRIPT = [
             ],
           }}
         />
-        <br />
         <CodeSnippet
           codeString={call_apply_bind_example}
           language="javascript"
@@ -279,7 +272,6 @@ export const MEDIUM_JAVASCRIPT = [
           these are the following differences between the for, for...in, and
           for...of loops in JavaScript:
         </p>
-        <br />
         <MakeDifferentiate
           totalColumn={3}
           headerData={["for", "for...in", "for...of"]}
@@ -299,7 +291,6 @@ export const MEDIUM_JAVASCRIPT = [
             ],
           }}
         />
-        <br />
         <CodeSnippet
           codeString={for_forin_forof_example}
           language="javascript"
@@ -320,80 +311,191 @@ export const MEDIUM_JAVASCRIPT = [
           You can use the document object to access the DOM tree and manipulate
           it.
         </p>
-        <br />
         <CodeSnippet codeString={dom_example} language="javascript" />
       </>
     ),
   },
   {
-    question :"How does prototypal inheritance work in JavaScript?",
+    question: "How does prototypal inheritance work in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          Prototypal inheritance is a way of implementing inheritance in
+          JavaScript. <br />
+          It is based on the concept of prototypes. <br />
+          It is an alternative to classical inheritance, which is implemented in
+          many object-oriented programming languages
+        </p>
+        <CodeSnippet
+          codeString={prototype_inheritance_chaingin_example}
+          language="javascript"
+        />
       </>
     ),
   },
   {
-    question :"What is the difference between a forEach loop and a for loop in JavaScript?",
+    question: "How do you handle exceptions in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          You can handle exceptions using the try...catch statement.
+          <br />
+          The try...catch statement allows you to define a block of code to be
+          tested for errors while it is being executed.
+          <br />
+          The try...catch statement has two main parts: the try block and the
+          catch block.
+          <br />
+          The try block contains the code that you want to test for errors.
+          <br />
+          The catch block contains the code that you want to run if an error
+          occurs in the try block.
+        </p>
+        <CodeSnippet codeString={exception_example} language="javascript" />
       </>
     ),
   },
   {
-    question :"How do you handle exceptions in JavaScript?",
+    question:
+      "What is difference between a function declaration and a function expression in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          The main difference between a function declaration and a function
+          expression is the function name, which can be omitted in function
+          expressions to create anonymous functions.
+          <br />
+          Function declarations are hoisted and can be called before they are
+          defined.
+          <br />
+          Function expressions are not hoisted and cannot be called before they
+          are defined.
+        </p>
+        <CodeSnippet
+          codeString={function_declaration_expression_example}
+          language="javascript"
+        />
       </>
     ),
   },
   {
-    question :"What is difference between a function declaration and a function expression in JavaScript?",
+    question:
+      "What is the difference between shallow and deep copying in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          The main difference between shallow and deep copying is that shallow
+          copying creates a new object that stores references to the original
+          object’s properties, while deep copying creates a new object and
+          copies the original object’s properties.
+          <br />
+          Shallow copying is faster than deep copying.
+          <br />
+          Deep copying is preferred over shallow copying when you want to make
+          sure that changes to a copied object don’t affect the original object.
+        </p>
+        <CodeSnippet
+          codeString={shallow_deep_copying_example}
+          language="javascript"
+        />
       </>
     ),
   },
   {
-    question :"What is the difference between shallow and deep copying in JavaScript?",
+    question: "How do you implement debouncing in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          You can implement debouncing in JavaScript by using the setTimeout()
+          function.
+          <br />
+          The setTimeout() function is used to delay the execution of a function
+          for a specified number of milliseconds.
+          <br />
+          The setTimeout() function is called at the beginning of the debounced
+          function.
+          <br />
+          The setTimeout() function is called with the delay time as the first
+          argument and the debounced function as the second argument.
+          <br />
+          The setTimeout() function returns a timer ID.
+          <br />
+          The timer ID is stored in a variable.
+          <br />
+          If the setTimeout() function is called again before the delay time has
+          passed, the timer ID is cleared.
+        </p>
+        <CodeSnippet codeString={debouncing_example} language="javascript" />
       </>
     ),
   },
   {
-    question :"How do you implement debouncing in JavaScript?",
+    question: "How do you implement throttling in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          You can implement throttling in JavaScript by using the setTimeout()
+          function.
+          <br />
+          The setTimeout() function is used to delay the execution of a function
+          for a specified number of milliseconds.
+          <br />
+          The setTimeout() function is called at the beginning of the throttled
+          function.
+          <br />
+          The setTimeout() function is called with the delay time as the first
+          argument and the throttled function as the second argument.
+          <br />
+          The setTimeout() function returns a timer ID.
+          <br />
+          The timer ID is stored in a variable.
+          <br />
+          If the setTimeout() function is called again before the delay time has
+          passed, the timer ID is cleared.
+        </p>
+        <CodeSnippet codeString={throttling_example} language="javascript" />
       </>
     ),
   },
   {
-    question :"How do you implement throttling in JavaScript?",
+    question:
+      "What is the difference between a promise and a callback in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          The main difference between a promise and a callback is that a promise
+          can be resolved or rejected only once, while a callback can be called
+          multiple times.
+          <br />
+          A promise is an object that represents the eventual completion or
+          failure of an asynchronous operation.
+          <br />
+          A promise can be in one of three states: pending, fulfilled, or
+          rejected.
+          <br />
+          A callback is a function passed as an argument to another function.
+          <br />A callback is executed after another function has finished.
+        </p>
       </>
     ),
   },
   {
-    question :"What is the difference between a promise and a callback in JavaScript?",
+    question:
+      "How do you handle asynchronous code using async/await in JavaScript?",
     answer: (
       <>
+        <p className="simple_answers">
+          You can handle asynchronous code using async/await in JavaScript by
+          using the async and await keywords.
+          <br />
+          The async keyword is used to define an asynchronous function.
+          <br />
+          The await keyword is used to wait for a Promise.
+          <br />
+          The await keyword can only be used inside an asynchronous function.
+        </p>
+        <CodeSnippet codeString={async_await_example} language="javascript" />
       </>
     ),
   },
-  {
-    question :"How do you handle asynchronous code using async/await in JavaScript?",
-    answer: (
-      <>
-      </>
-    ),
-  },
-  {
-    question :"What is the difference between a class and a function in JavaScript?",
-    answer: (
-      <>
-      </>
-    ),
-  },
-
 ];

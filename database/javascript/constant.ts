@@ -125,8 +125,7 @@ export const closure_example = `
         function plus() {
             counter += 1;
         }
-        plus();
-        return counter;
+        return plus;
     }
     `;
 export const promise_example = `
@@ -368,3 +367,244 @@ export const binary_search_example = `
 
 
     `;
+
+export const prototype_inheritance_chaingin_example = `
+   
+// Create an object with a prototype
+const animal = {
+  eats: true,
+  walk() {
+    console.log('Animal walking');
+  }
+};
+
+// Create a rabbit object with the animal prototype
+const rabbit = Object.create(animal);
+
+// Add a new property to the rabbit object
+rabbit.jumps = true;
+
+// Outputs: true
+console.log(rabbit.eats);
+
+// Outputs: true
+console.log(rabbit.jumps);
+
+// Call the walk method on the rabbit object
+rabbit.walk();
+
+// Outputs: Animal walking
+
+`;
+
+export const exception_example = `
+    // exception function
+    try {
+        console.log('This line is executed...');
+        throw new Error('Whoops!');
+        console.log('This line is not...');
+    } catch (err) {
+        console.log('There was an error...');
+    }
+
+    //output: This line is executed...
+    //output: There was an error...
+    `;
+export const function_declaration_expression_example = `
+
+    // function declaration
+    function sum(a, b) {
+        return a + b;
+    }
+
+    // function expression
+
+    const sum = function(a, b) {
+        return a + b;
+    }
+`;
+
+export const shallow_deep_copying_example = `
+    // shallow copy
+    const person = {
+        name: 'John',
+        age: 25,
+        address: {
+            city: 'New York',
+            state: 'NY'
+        }
+    };
+
+    const person2 = { ...person };
+    person2.name = 'Peter';
+    person2.address.city = 'Boston';
+
+    console.log(person);
+    console.log(person2);
+
+    //output: { name: 'John', age: 25, address: { city: 'Boston', state: 'NY' } }
+    //output: { name: 'Peter', age: 25, address: { city: 'Boston', state: 'NY' } }
+
+    // deep copy
+
+    const person = {
+        name: 'John',
+        age: 25,
+        address: {
+            city: 'New York',
+            state: 'NY'
+        }
+    };
+
+    const person2 = JSON.parse(JSON.stringify(person));
+    person2.name = 'Peter';
+    person2.address.city = 'Boston';
+
+    console.log(person);
+    console.log(person2);
+
+    //output: { name: 'John', age: 25, address: { city: 'New York', state: 'NY' } }
+    //output: { name: 'Peter', age: 25, address: { city: 'Boston', state: 'NY' } }
+
+    `;
+
+export const debouncing_example = `
+    // debouncing function
+    function debounce(func, delay) {
+        let inDebounce;
+        return function() {
+            const context = this;
+            const args = arguments;
+            clearTimeout(inDebounce);
+            inDebounce = setTimeout(() => func.apply(context, args), delay);
+        };
+    }
+
+    const run = debounce(() => console.log('debounce'), 1000);
+    run();
+    run();
+    run();
+
+    //output: debounce
+    `;
+export const throttling_example = `
+    // throttling function
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => (inThrottle = false), limit);
+            }
+        };
+    }
+
+    const run = throttle(() => console.log('throttle'), 1000);
+    run();
+    run();
+    run();
+
+    `;
+export const async_await_example = `
+    // async await function
+    async function getTodos() {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        const data = await response.json();
+        console.log(data);
+    }
+    getTodos();
+
+    //output: [{ userId: 1, id: 1, title: 'delectus aut autem', completed: false }, ...]
+    `;
+
+export const lodash_deep_copy_example = `
+    // lodash deep copy
+    const person = {
+        name: 'John',
+        age: 25,
+        address: {
+            city: 'New York',
+            state: 'NY'
+        }
+    };
+
+    const person2 = _.cloneDeep(person);
+    person2.name = 'Peter';
+    person2.address.city = 'Boston';
+
+    console.log(person);
+    console.log(person2);
+
+    //output: { name: 'John', age: 25, address: { city: 'New York', state: 'NY' } }
+    //output: { name: 'Peter', age: 25, address: { city: 'Boston', state: 'NY' } }
+
+`;
+
+export const private_variables_example = `
+    // private variables
+    const Person = (function() {
+        const privateData = new WeakMap();
+        class Person {
+            constructor(name) {
+                privateData.set(this, { name });
+            }
+            getName() {
+                return privateData.get(this).name;
+            }
+        }
+        return Person;
+    }
+    )();
+
+    const person = new Person('John');
+    console.log(person.getName());
+
+    //output: John
+`;
+
+export const memoization_example = `
+    // memoization function
+    function memoize(fn) {
+        const cache = {};
+        return function(...args) {
+            if (cache[args]) {
+                return cache[args];
+            }
+            const result = fn.apply(this, args);
+            cache[args] = result;
+            return result;
+        };
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    const memoizedAdd = memoize(add);
+
+    console.log(memoizedAdd(1, 2));
+    console.log(memoizedAdd(1, 2));
+
+    //output: 3
+    //output: 3
+`;
+
+export const event_delegation_example = `
+<ul id="parent-element">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  document.getElementById('parent-element').addEventListener('click', function(event) {
+    // Check if the clicked element is a list item
+    if (event.target.tagName === 'LI') {
+      // The clicked element is a list item, do something here
+    }
+  });
+</script>
+`;

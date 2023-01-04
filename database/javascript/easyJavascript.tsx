@@ -35,7 +35,6 @@ export const EASY_JAVASCRIPT = [
           keyword, which is the preferred way to declare variables in modern
           JavaScript.
         </p>
-        <br />
         <CodeSnippet codeString={variable_example} language="javascript" />
       </>
     ),
@@ -51,7 +50,6 @@ export const EASY_JAVASCRIPT = [
           You can declare a function using the `<code>function</code>` keyword.
           You can also declare a function using the arrow function syntax.
         </p>
-        <br />
         <CodeSnippet codeString={function_example} language="javascript" />
       </>
     ),
@@ -65,7 +63,6 @@ export const EASY_JAVASCRIPT = [
           a time. You can create an array using the array literal syntax or the
           Array constructor.
         </p>
-        <br />
         <CodeSnippet codeString={array_example} language="javascript" />
       </>
     ),
@@ -82,7 +79,6 @@ export const EASY_JAVASCRIPT = [
           is true, or to execute a different block of code if that condition is
           false.
         </p>
-        <br />
         <CodeSnippet codeString={if_example} language="javascript" />
       </>
     ),
@@ -97,7 +93,6 @@ export const EASY_JAVASCRIPT = [
           <br /> You can use a loop to execute a block of code a number of
           times.
         </p>
-        <br />
         <CodeSnippet codeString={loop_example} language="javascript" />
       </>
     ),
@@ -112,7 +107,6 @@ export const EASY_JAVASCRIPT = [
           different conditions. You can use a switch statement to select one of
           many code blocks to be executed.
         </p>
-        <br />
         <CodeSnippet codeString={switch_example} language="javascript" />
       </>
     ),
@@ -126,15 +120,12 @@ export const EASY_JAVASCRIPT = [
           A break statement is used to terminate a switch or a loop. You can use
           a break statement to terminate a switch or a loop.
         </p>
-        <br />
         <CodeSnippet codeString={break_example} language="javascript" />
-        <br />
         <p className="simple_answers">
           A continue statement is used to skip the current iteration of a loop.
           You can use a continue statement to skip the current iteration of a
           loop.
         </p>
-        <br />
         <CodeSnippet codeString={continue_example} language="javascript" />
       </>
     ),
@@ -156,8 +147,8 @@ export const EASY_JAVASCRIPT = [
       <>
         <p className="simple_answers">
           The event loop is a programming construct or design pattern that waits
-          for and dispatches events or messages in a program. It works by making
-          a request to some internal or external "event provider" (that
+          for and dispatches events or messages in a program. <br /> It works by
+          making a request to some internal or external "event provider" (that
           generally blocks the request until an event has arrived), and then it
           calls the relevant event handler ("dispatches the event").
         </p>
@@ -167,6 +158,14 @@ export const EASY_JAVASCRIPT = [
   {
     question:
       "What is the difference between synchronous and asynchronous code in JavaScript?",
-    answer: <></>,
+    answer: (
+      <>
+        <p className="simple_answers">
+          Synchronous code is executed line by line, one after the other. <br />
+          Asynchronous code is executed in a non-blocking way, which means that
+          other code can run while it is waiting for a response.
+        </p>
+      </>
+    ),
   },
 ];
