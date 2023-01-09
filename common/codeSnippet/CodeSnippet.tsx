@@ -12,15 +12,22 @@ import parserjson from "prettier/parser-yaml";
 interface ICodeSnippetProps {
   codeString?: string;
   language?: string;
+  removeTopMargin?: boolean;
 }
 
 function CodeSnippet({
   codeString,
   language = "javascript",
+  removeTopMargin = false,
 }: ICodeSnippetProps) {
   return (
     <div className={style.codeSnippet}>
-      <div className={style.codeSnippet_container}>
+      <div
+        className={style.codeSnippet_container}
+        style={{
+          marginTop: removeTopMargin ? 0 : "",
+        }}
+      >
         <SyntaxHighlighter language={language} style={atomOneDark}>
           {language === "javascript"
             ? prettier.format(codeString, {

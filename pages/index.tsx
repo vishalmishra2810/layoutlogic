@@ -11,6 +11,7 @@ export default function Home() {
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/careerboosts.png" />
       </Head>
       <Dashboard />

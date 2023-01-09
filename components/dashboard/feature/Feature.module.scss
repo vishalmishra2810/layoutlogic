@@ -21,6 +21,26 @@
       font-family: "Roboto", sans-serif;
     }
   }
+  .startLearning__container__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    .startLearning__container__button__text {
+      width: 300px;
+      height: 50px;
+      background: rgb(242, 71, 71);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+  }
 }
 .embed-nav .logo-wrap {
   display: none !important;

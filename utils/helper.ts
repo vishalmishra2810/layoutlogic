@@ -8,6 +8,9 @@ import { MEDIUM_HTML } from "../database/html/mediumHtml";
 import { EASY_JAVASCRIPT } from "../database/javascript/easyJavascript";
 import { HARD_JAVASCRIPT } from "../database/javascript/hardJavascript";
 import { MEDIUM_JAVASCRIPT } from "../database/javascript/mediumJavascript";
+import { EASY_MACHINE_QUESTIONS } from "../database/machineRoundQuestions/easyMachineQuestions";
+import { HARD_MACHINE_QUESTIONS } from "../database/machineRoundQuestions/hardMachineQuestions";
+import { MEDIUM_MACHINE_QUESTIONS } from "../database/machineRoundQuestions/mediumMachineQuestions";
 import { EASY_REACTJS } from "../database/reactjs/easyReactjs";
 import { HARD_REACTJS } from "../database/reactjs/hardReactjs";
 import { MEDIUM_REACTJS } from "../database/reactjs/mediumReactjs";
@@ -18,6 +21,12 @@ import { EASY_SCSS } from "../database/scss/easyScss";
 import { HARD_SCSS } from "../database/scss/hardScss";
 import { MEDIUM_SCSS } from "../database/scss/mediumScss";
 import { TOPICS_DIFFICULTY } from "./constant";
+import reactIcon from "../assets/react.svg";
+import javascriptIcon from "../assets/javascript.svg";
+import cssIcon from "../assets/css.svg";
+import htmlIcon from "../assets/html.svg";
+import scssIcon from "../assets/scss.svg";
+import reduxIcon from "../assets/redux.svg";
 
 export const getQuestionWithSearchText = (searchText: string, list: any) => {
   if (searchText?.trim()?.length === 0) return list;
@@ -153,4 +162,46 @@ export const getDescription = (technologyUsed: string) => {
         return "";
     }
   }
+};
+
+export const getAllMachineRountQuestions = () => {
+  return [
+    ...EASY_MACHINE_QUESTIONS,
+    ...MEDIUM_MACHINE_QUESTIONS,
+    ...HARD_MACHINE_QUESTIONS,
+  ];
+};
+
+export const getTechIcon = (technologyUsed: string) => {
+  if (technologyUsed) {
+    technologyUsed = technologyUsed.toLowerCase();
+    switch (technologyUsed) {
+      case ALL_TECH.REACTJS:
+        return reactIcon;
+      case ALL_TECH.HTML:
+        return htmlIcon;
+      case ALL_TECH.CSS:
+        return cssIcon;
+      case ALL_TECH.JAVASCRIPT:
+        return javascriptIcon;
+      case ALL_TECH.SCSS:
+        return scssIcon;
+      case ALL_TECH.REDUX:
+        return reduxIcon;
+      default:
+        return "";
+    }
+  }
+};
+
+export const getQuestionsInormation = (slug: string) => {
+  let all_questions = [
+    ...EASY_MACHINE_QUESTIONS,
+    ...MEDIUM_MACHINE_QUESTIONS,
+    ...HARD_MACHINE_QUESTIONS,
+  ];
+  let question = all_questions?.filter(
+    (question: any) => question?.slug === slug
+  );
+  return question[0];
 };

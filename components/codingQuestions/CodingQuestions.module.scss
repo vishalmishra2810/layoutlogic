@@ -1,0 +1,32 @@
+.codingQuestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .codingQuestions__container {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%),
+      0 12px 24px rgb(0 0 0 / 5%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .codingQuestions__container_questions {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      font-family: "Roboto";
+    }
+    .codingQuestions__container__answer {
+      line-height: 1.65;
+      font-size: 16px;
+      font-weight: 400;
+      direction: ltr;
+      font-feature-settings: "kern";
+      font-family: "Inter", sans-serif;
+    }
+  }
+}
