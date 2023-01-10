@@ -6,6 +6,7 @@ import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { META_TAGS, READY_STATES_LABELS } from "../utils/constant";
+import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
 
 function Database() {
   const router = useRouter();
@@ -13,11 +14,12 @@ function Database() {
   return (
     <>
       <Head>
-        <title>CareerBoosts</title>
+        <title>LayoutLogic</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/careerboosts.png" />
+        <meta name="author" content="Sumit Kumar Singh" />
+        <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
       <div className={style.database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
@@ -32,6 +34,8 @@ function Database() {
               />
             </div>
           </div>
+        ) : database?.toLowerCase() === "top-front-end-coding-questions" ? (
+          <FrontEndCodingQuestions />
         ) : (
           <div className={style.database_coming_soon_container}>
             <h1>Coming Soon</h1>

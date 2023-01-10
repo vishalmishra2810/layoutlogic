@@ -1,9 +1,12 @@
 import Head from "next/head";
-import Dashboard from "../components/dashboard/Dashboard";
-import Footer from "../components/footer/Footer";
-import { META_TAGS } from "../utils/constant";
+import { useRouter } from "next/router";
+import React from "react";
+import CodingQuestions from "../../components/codingQuestions/CodingQuestions";
+import { META_TAGS, URLPaths } from "../../utils/constant";
 
-export default function Home() {
+function Questions() {
+  const router = useRouter();
+  const { question }: any = router.query;
   return (
     <>
       <Head>
@@ -14,8 +17,9 @@ export default function Home() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <Dashboard />
-      <Footer />
+      <CodingQuestions slug={question} />
     </>
   );
 }
+
+export default Questions;
