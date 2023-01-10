@@ -10,7 +10,7 @@ import style from "./MachineCodingList.module.scss";
 function MachineCodingList() {
   const router = useRouter();
   return (
-    <div className={style.machineCodingList}>
+    <div className={style.machineCodingList} id="frontend_machine_coding_round">
       <div className={style.machineCodingList__container}>
         <div className={style.machineCodingList__container__header}>
           <h1 className={style.machineCodingList__container__header__title}>

@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CareerBoosts</title>
+        <title>LayoutLogic</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Sumit Kumar Singh" />
-        <link rel="icon" href="/careerboosts.png" />
+        <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
       <Dashboard />
       <Footer />

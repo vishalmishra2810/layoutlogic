@@ -7,22 +7,16 @@ import { META_TAGS, URLPaths } from "../../utils/constant";
 function Questions() {
   const router = useRouter();
   const { question }: any = router.query;
-  const sendToHomePage = () => {
-    router.push(URLPaths.HOME);
-  };
   return (
     <>
       <Head>
-        <title>CareerBoosts</title>
+        <title>LayoutLogic</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Sumit Kumar Singh" />
-        <link rel="icon" href="/careerboosts.png" />
+        <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      {/* <div className="go_back_class" onClick={sendToHomePage}>
-        Go Back
-      </div> */}
       <CodingQuestions slug={question} />
     </>
   );
