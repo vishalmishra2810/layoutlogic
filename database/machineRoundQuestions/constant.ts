@@ -66,7 +66,7 @@ export const navigation_html = `
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <!-- make a custom navigatin bar with hamburger icon -->
+    <!-- make a custom navigation bar with hamburger icon -->
     <nav class="navbar" id="nav_bar">
       <!-- Desktop Design -->
       <div class="nav-center">
@@ -84,7 +84,7 @@ export const navigation_html = `
       </div>
 
       <!-- Mobile Design -->
-      <div class="nav-toggle" id="humberger_btn">
+      <div class="nav-toggle" id="humbugger_btn">
         <span class="toggle"></span>
         <span class="toggle"></span>
         <span class="toggle"></span>
@@ -373,8 +373,8 @@ let images = [
   "https://i.picsum.photos/id/966/500/500.jpg?hmac=oGdKcKaNxPeQYOBIciLtIWBI-OqK_N_eoPODQp4iRR0",
 ];
 
-let img_indecator = document.createElement("div");
-img_indecator.classList.add("carousel__indicator");
+let img_indicator = document.createElement("div");
+img_indicator.classList.add("carousel__indicator");
 for (let i = 0; i < images.length; i++) {
   if (i == 0) {
     carousel.innerHTML += \`
@@ -382,7 +382,7 @@ for (let i = 0; i < images.length; i++) {
       <img src=\${images[i]}>
     </div>
     \`;
-    img_indecator.innerHTML += \`
+    img_indicator.innerHTML += \`
     <button class="carousel__indicator-btn"></button>\`;
   } else {
     carousel.innerHTML += \`
@@ -390,15 +390,15 @@ for (let i = 0; i < images.length; i++) {
       <img src=\${images[i]}>
     </div>
     \`;
-    img_indecator.innerHTML += \`
+    img_indicator.innerHTML += \`
     <button class="carousel__indicator-btn"></button>\`;
   }
 }
-carousel.appendChild(img_indecator);
+carousel.appendChild(img_indicator);
 (() => {
   let all_img = document.querySelectorAll(".carousel-item");
-  let all_img_indecator = document.querySelectorAll(".carousel__indicator-btn");
-  all_img_indecator[0].classList.add("active_indicator");
+  let all_img_indicator = document.querySelectorAll(".carousel__indicator-btn");
+  all_img_indicator[0].classList.add("active_indicator");
   all_img[0].classList.add("active_img");
 })();
 
@@ -408,16 +408,16 @@ carousel.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("fa-angle-right")) {
     rightClick();
   } else if (e.target.classList.contains("carousel__indicator-btn")) {
-    // check whihc button is clicked
+    // check which button is clicked
     let all_img = document.querySelectorAll(".carousel-item");
-    let all_img_indecator = document.querySelectorAll(".carousel__indicator-btn");
-    for (let i = 0; i < all_img_indecator?.length; i++) {
-      if (all_img_indecator[i] == e.target) {
+    let all_img_indicator = document.querySelectorAll(".carousel__indicator-btn");
+    for (let i = 0; i < all_img_indicator?.length; i++) {
+      if (all_img_indicator[i] == e.target) {
         all_img[i].classList.add("active_img");
-        all_img_indecator[i].classList.add("active_indicator");
+        all_img_indicator[i].classList.add("active_indicator");
       } else {
         all_img[i].classList.remove("active_img");
-        all_img_indecator[i].classList.remove("active_indicator");
+        all_img_indicator[i].classList.remove("active_indicator");
       }
     }
   }
@@ -426,17 +426,17 @@ carousel.addEventListener("click", (e) => {
 // when click on right arrow
 function rightClick() {
   let all_img = document.querySelectorAll(".carousel-item");
-  let all_img_indecator = document.querySelectorAll(".carousel__indicator-btn");
+  let all_img_indicator = document.querySelectorAll(".carousel__indicator-btn");
   for (let i = 0; i < all_img?.length; i++) {
     if (all_img[i].classList.contains("active_img")) {
       all_img[i].classList.remove("active_img");
-      all_img_indecator[i].classList.remove("active_indicator");
+      all_img_indicator[i].classList.remove("active_indicator");
       if (i == all_img.length - 1) {
         all_img[0].classList.add("active_img");
-        all_img_indecator[0].classList.add("active_indicator");
+        all_img_indicator[0].classList.add("active_indicator");
       } else {
         all_img[i + 1].classList.add("active_img");
-        all_img_indecator[i + 1].classList.add("active_indicator");
+        all_img_indicator[i + 1].classList.add("active_indicator");
       }
       break;
     }
@@ -446,17 +446,17 @@ function rightClick() {
 // when click on left arrow
 function leftClick() {
   let all_img = document.querySelectorAll(".carousel-item");
-  let all_img_indecator = document.querySelectorAll(".carousel__indicator-btn");
+  let all_img_indicator = document.querySelectorAll(".carousel__indicator-btn");
   for (let i = 0; i < all_img?.length; i++) {
     if (all_img[i].classList.contains("active_img")) {
       all_img[i].classList.remove("active_img");
-      all_img_indecator[i].classList.remove("active_indicator");
+      all_img_indicator[i].classList.remove("active_indicator");
       if (i == 0) {
         all_img[all_img.length - 1].classList.add("active_img");
-        all_img_indecator[all_img.length - 1].classList.add("active_indicator");
+        all_img_indicator[all_img.length - 1].classList.add("active_indicator");
       } else {
         all_img[i - 1].classList.add("active_img");
-        all_img_indecator[i - 1].classList.add("active_indicator");
+        all_img_indicator[i - 1].classList.add("active_indicator");
       }
       break;
     }
@@ -1315,7 +1315,7 @@ import "./styles.css";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  // change one day to miliseconds
+  // change one day to milliseconds
   const [timer, setTimer] = useState(() => {
     return 60 * 60 * 24;
   });

@@ -65,7 +65,7 @@ export const dispatch_action_example = `
     dispatch(action(payload));
     `;
 export const thunk_asynchronours_actions_example = `
-    /* thunk asynchronours actions example */
+    /* thunk asynchronous actions example */
     export const action = (payload) => {
         return (dispatch) => {
             dispatch({ type: 'ACTION_TYPE', payload });
@@ -104,7 +104,7 @@ export const server_side_rendering_example = `
     );
     `;
 export const nexted_objexts_state_example = `
-    /* nexted objexts state example */
+    /* nested object state example */
     const initialState = {
         property1: {
             property2: {

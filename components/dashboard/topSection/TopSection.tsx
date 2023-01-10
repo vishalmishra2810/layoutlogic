@@ -13,7 +13,7 @@ function TopSection() {
         From beginners to advanced, we have covered all the questions.
       </h1>
       <p className={style.topSection_description}>
-        with the help of our website, you can learn all the questions that you
+        With the help of our application, You will learn the questions that you
         might need to know for your interview. We have covered all the questions
         from the basics to the advanced level.
       </p>

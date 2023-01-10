@@ -38,7 +38,7 @@ export enum URLPaths {
 
 export const META_TAGS = {
   DESCRIPTION:
-    "Best Website to learn Reactjs, HTML, CSS, Javascript, Scss, Redux with examples and quiz",
+    "Best Website to learn Reactjs, HTML, CSS, Javascript, Scss, Redux, FrontEnd Machine Coding Round, and Top FrontEnd Coding Questions",
   KEYWORDS:
-    "reactjs, html, css, javascript, scss, redux, nextjs, typescript, frontend, particles effect, machine coding round,,examples, quiz, learn, tutorial, web development, web development tutorial, web development examples, web development quiz, best website to learn web development",
+    "reactjs, html, css, javascript, scss, redux, nextjs, typescript, frontend, machine coding round,,examples, quiz, learn, tutorial, web development, web development tutorial, web development examples, web development quiz, best website to learn web development",
 };

@@ -330,7 +330,7 @@ export const integrate_third_party_api_example = `
     .then(response => response.json())
     .then(json => console.log(json))
 
-    // intergrate third party api using XMLHttpRequest
+    // integrate third party api using XMLHttpRequest
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos/1');
     xhr.responseType = 'json';
@@ -339,7 +339,7 @@ export const integrate_third_party_api_example = `
     };
     xhr.send();
 
-    // intergrate third party api using jQuery
+    // integrate third party api using jQuery
     $.getJSON('https://jsonplaceholder.typicode.com/todos/1', function(json) {
         console.log(json);
     });
