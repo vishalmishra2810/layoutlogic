@@ -20,9 +20,9 @@ function Questions() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/careerboosts.png" />
       </Head>
-      <div className="go_back_class" onClick={sendToHomePage}>
+      {/* <div className="go_back_class" onClick={sendToHomePage}>
         Go Back
-      </div>
+      </div> */}
       <CodingQuestions slug={question} />
     </>
   );

@@ -27,6 +27,9 @@ import cssIcon from "../assets/css.svg";
 import htmlIcon from "../assets/html.svg";
 import scssIcon from "../assets/scss.svg";
 import reduxIcon from "../assets/redux.svg";
+import { EASY_CODING_QUESTIONS } from "../database/codingQuestions/easyCodingQuestions";
+import { MEDIUM_CODING_QUESTIONS } from "../database/codingQuestions/mediumCodingQuestions";
+import { HARD_CODING_QUESTIONS } from "../database/codingQuestions/hardCodingQuestions";
 
 export const getQuestionWithSearchText = (searchText: string, list: any) => {
   if (searchText?.trim()?.length === 0) return list;
@@ -204,4 +207,12 @@ export const getQuestionsInormation = (slug: string) => {
     (question: any) => question?.slug === slug
   );
   return question[0];
+};
+
+export const getAllFrontEndCodingQuestions = () => {
+  return [
+    ...EASY_CODING_QUESTIONS,
+    ...MEDIUM_CODING_QUESTIONS,
+    ...HARD_CODING_QUESTIONS,
+  ];
 };

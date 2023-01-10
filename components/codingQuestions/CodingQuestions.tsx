@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import { getQuestionsInormation } from "../../utils/helper";
 import style from "./CodingQuestions.module.scss";
 

@@ -1,9 +1,8 @@
 import React from "react";
 import style from "./Dashboard.module.scss";
-import Feature from "./feature/Feature";
+import FamousQuestions from "./famousQuestions/FamousQuestions";
 import FeaturedQuestions from "./featuredQuestions/FeaturedQuestions";
 import MachineCodingList from "./featureMachineCoding/MachineCodingList";
-import StartLearning from "./startLearning/StartLearning";
 import TopSection from "./topSection/TopSection";
 
 function Dashboard() {
@@ -12,8 +11,7 @@ function Dashboard() {
       <TopSection />
       <FeaturedQuestions />
       <MachineCodingList />
-      <Feature />
-      <StartLearning />
+      <FamousQuestions />
     </div>
   );
 }

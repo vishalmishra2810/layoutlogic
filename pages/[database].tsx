@@ -6,6 +6,7 @@ import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { META_TAGS, READY_STATES_LABELS } from "../utils/constant";
+import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
 
 function Database() {
   const router = useRouter();
@@ -33,6 +34,8 @@ function Database() {
               />
             </div>
           </div>
+        ) : database?.toLowerCase() === "top-front-end-coding-questions" ? (
+          <FrontEndCodingQuestions />
         ) : (
           <div className={style.database_coming_soon_container}>
             <h1>Coming Soon</h1>

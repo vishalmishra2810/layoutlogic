@@ -9,17 +9,21 @@ interface IModalProps {
   url: string;
   width: number;
   height: number;
+  slug?: string;
 }
 
-function Modal({ title, description, url, width, height }: IModalProps) {
+function Modal({ title, description, url, width, height, slug }: IModalProps) {
   const router = useRouter();
   const startQuestions = () => {
+    if (slug) {
+      router.push("/" + slug);
+      return;
+    }
     router.push("/" + title.toLowerCase());
   };
   return (
     <div className={style.modal} onClick={startQuestions}>
       <div
-        title={title}
         className={style.modal_box}
         style={{
           width: width,

@@ -14,47 +14,6 @@ import {
 import { fetch_js, todo_css, todo_html, todo_js } from "./easyConstant";
 
 export const EASY_MACHINE_QUESTIONS = [
-  // {
-  //   question:
-  //     "Write a program that checks if a given string is a palindrome (a word or phrase that reads the same backwards as forwards).",
-  //   answer: (
-  //     <>
-  //       <p className="simple-answer">
-  //         Palindrome is a word or phrase that reads the same backwards as
-  //         forwards. For example, “madam” is a palindrome. Because it reads the
-  //         same backwards as forwards.
-  //       </p>
-  //       <CodeSnippet
-  //         codeString={palindrome_string_example}
-  //         language="javascript"
-  //       />
-  //     </>
-  //   ),
-  //   language: ["JavaScript"],
-  //   slug: "check_palindrome",
-  // },
-  // {
-  //   question:
-  //     "Write a polyfill for Array.flat() , Array.flatMap() methods if it doesn't exist.",
-  //   answer: (
-  //     <>
-  //       <p className="simple-answer">
-  //         Array.flat() method is used to flatten an array of nested arrays into
-  //         a single array.
-  //       </p>
-  //       <p className="simple-answer">
-  //         Array.flatMap() method is used to apply a function to each element in
-  //         an array and then flatten the result into a new array.
-  //       </p>
-  //       <p className="simple-answer">
-  //         Here is an example of using Array.flat() and Array.flatMap() method:
-  //       </p>
-  //       <CodeSnippet codeString={array_flat_example} language="javascript" />
-  //     </>
-  //   ),
-  //   language: ["JavaScript"],
-  //   slug: "polyfill_array_flat",
-  // },
   {
     question:
       "Write a program that implements a simple to-do list using HTML, CSS, and JavaScript. The program should allow the user to add ,remove and complete items from the list.",
