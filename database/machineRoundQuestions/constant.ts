@@ -1054,6 +1054,13 @@ export const rating_html = `
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -1062,17 +1069,17 @@ export const rating_html = `
     <div class="rating">
       <h1>Rate our service</h1>
       <div class="stars" id="stars">
-        <span class="star" data-index="1">&#9733</span>
-        <span class="star" data-index="2">&#9733</span>
-        <span class="star" data-index="3">&#9733</span>
-        <span class="star" data-index="4">&#9733</span>
-        <span class="star" data-index="5">&#9733</span>
+        <i class="fa-solid fa-star star" data-index="1"></i>
+        <i class="fa-solid fa-star star" data-index="2"></i>
+        <i class="fa-solid fa-star star" data-index="3"></i>
+        <i class="fa-solid fa-star star" data-index="4"></i>
+        <i class="fa-solid fa-star star" data-index="5"></i>
       </div>
-      <div id="rated"></div>
     </div>
     <script src="index.js"></script>
   </body>
 </html>
+
 `;
 
 export const rating_css = `
@@ -1099,7 +1106,7 @@ export const rating_css = `
   align-items: center;
 }
 
-.stars span {
+.star {
   font-size: 32px;
   color: rgb(42, 41, 41);
   cursor: pointer;
@@ -1108,40 +1115,47 @@ export const rating_css = `
 .yellow_clr {
   color: rgb(236, 236, 71) !important;
 }
+
 `;
 
 export const rating_js = `
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+let stars = document.getElementById("stars");
+let ratedStar = "";
+
+stars.addEventListener("click", function (e) {
+  if (e.target.classList.contains("star")) {
+    let index = e.target.dataset.index;
+    removeStar();
+    addStar(index);
+    ratedStar = index;
+  }
+});
+
+stars.addEventListener("mouseover", function (e) {
+  if (e.target.classList.contains("star")) {
+    let index = e.target.dataset.index;
+    removeStar();
+    addStar(index);
+  }
+});
+
+stars.addEventListener("mouseout", function (e) {
+  if (e.target.classList.contains("star")) {
+    removeStar();
+    addStar(ratedStar);
+  }
+});
+
+function addStar(index) {
+  for (let i = 0; i < index; i++) {
+    stars.children[i].classList.add("yellow_clr");
+  }
 }
 
-.rating {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.stars {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-}
-
-.stars span {
-  font-size: 32px;
-  color: rgb(42, 41, 41);
-  cursor: pointer;
-}
-
-.yellow_clr {
-  color: rgb(236, 236, 71) !important;
+function removeStar() {
+  for (let i = 0; i < 5; i++) {
+    stars.children[i].classList.remove("yellow_clr");
+  }
 }
 `;
 

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import { URLPaths } from "../../../utils/constant";
 import {
-  getAllMachineRountQuestions,
+  getAllMachineRoundQuestions,
   getTechIcon,
 } from "../../../utils/helper";
 import style from "./MachineCodingList.module.scss";
@@ -22,10 +23,19 @@ function MachineCodingList() {
             These are the top questions that are asked in the FrontEnd Machine
             Coding Round. You can practice these questions to get better.
           </p>
+          <div
+            className={style.machineCodingList__container__header__btn}
+            onClick={() => {
+              router.push(URLPaths.FRONTEND_MACHINE_CODING_ROUND);
+            }}
+          >
+            Open All Machine Coding Round Questions
+          </div>
         </div>
         <div className={style.machineCodingList__container__list}>
-          {getAllMachineRountQuestions()?.map(
-            (question: any, index: number) => (
+          {getAllMachineRoundQuestions()
+            ?.slice(0, 14)
+            ?.map((question: any, index: number) => (
               <div
                 className={style.machineCodingList__container__list__item}
                 key={index}
@@ -78,8 +88,7 @@ function MachineCodingList() {
                   ))}
                 </div>
               </div>
-            )
-          )}
+            ))}
         </div>
       </div>
     </div>

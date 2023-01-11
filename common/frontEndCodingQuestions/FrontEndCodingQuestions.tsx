@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { getAllFrontEndCodingQuestions } from "../../utils/helper";
+import {
+  getAllFrontEndCodingQuestions,
+  getAllMachineRoundQuestions,
+} from "../../utils/helper";
 import style from "./FrontEndCodingQuestions.module.scss";
 
-function FrontEndCodingQuestions() {
+function FrontEndCodingQuestions({ slug }: any) {
   const [listData, setListData] = useState<any>([]);
-  useEffect(() => {
-    setListData(getAllFrontEndCodingQuestions());
-  }, []);
 
+  useEffect(() => {
+    if (slug) {
+      if (slug === "top-front-end-coding-questions") {
+        setListData(getAllFrontEndCodingQuestions());
+      } else if (slug === "front-end-machine-coding-round-questions") {
+        setListData(getAllMachineRoundQuestions());
+      }
+    }
+  }, [slug]);
+
+  console.log("listData", listData);
   return (
     <div className={style.frontEndCodingQuestions}>
       <div className={style.frontEndCodingQuestions__container}>
