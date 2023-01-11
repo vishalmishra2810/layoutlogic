@@ -77,6 +77,7 @@ export const HARD_MACHINE_QUESTIONS = [
         <p className="simple-answer">
           The application should have a button to reset the game.
         </p>
+        <br />
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[tic_toe_html, tic_toe_css, tic_toe_js]}
@@ -125,6 +126,7 @@ export const HARD_MACHINE_QUESTIONS = [
         <p className="simple-answer">
           The application should have a search input.
         </p>
+        <br />
         <TabView
           tabList={["ReactJs", "CSS"]}
           tabComponentList={[search_filter_js, search_filter_css]}

@@ -169,9 +169,9 @@ export const getDescription = (technologyUsed: string) => {
 
 export const getAllMachineRoundQuestions = () => {
   return [
-    ...EASY_MACHINE_QUESTIONS,
-    ...MEDIUM_MACHINE_QUESTIONS,
     ...HARD_MACHINE_QUESTIONS,
+    ...MEDIUM_MACHINE_QUESTIONS,
+    ...EASY_MACHINE_QUESTIONS,
   ];
 };
 
