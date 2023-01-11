@@ -34,8 +34,10 @@ function Database() {
               />
             </div>
           </div>
-        ) : database?.toLowerCase() === "top-front-end-coding-questions" ? (
-          <FrontEndCodingQuestions />
+        ) : database?.toLowerCase() === "top-front-end-coding-questions" ||
+          database?.toLowerCase() ===
+            "front-end-machine-coding-round-questions" ? (
+          <FrontEndCodingQuestions slug={database.toLowerCase()} />
         ) : (
           <div className={style.database_coming_soon_container}>
             <h1>Coming Soon</h1>

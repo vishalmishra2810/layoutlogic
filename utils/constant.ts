@@ -33,7 +33,8 @@ export enum URLPaths {
   JAVASCRIPT = "/javascript",
   SCSS = "/scss",
   REDUX = "/redux",
-  TOP_FRONTEND_QUESTIONS ="/top-front-end-coding-questions"
+  TOP_FRONTEND_QUESTIONS = "/top-front-end-coding-questions",
+  FRONTEND_MACHINE_CODING_ROUND = "/front-end-machine-coding-round-questions",
 }
 
 export const META_TAGS = {
