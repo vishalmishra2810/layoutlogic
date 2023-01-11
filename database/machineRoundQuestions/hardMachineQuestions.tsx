@@ -50,18 +50,6 @@ export const HARD_MACHINE_QUESTIONS = [
         <p className="simple-answer">
           The application should have a button to resize the grid.
         </p>
-        <p className="simple-answer">
-          The application should have a button to save the grid.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to load the grid.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to download the grid.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to upload the grid.
-        </p>
         <br />
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
@@ -136,15 +124,6 @@ export const HARD_MACHINE_QUESTIONS = [
         </p>
         <p className="simple-answer">
           The application should have a search input.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to reset the search.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to load more data.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to load previous data.
         </p>
         <TabView
           tabList={["ReactJs", "CSS"]}
@@ -225,13 +204,8 @@ export const HARD_MACHINE_QUESTIONS = [
           A pagination is a web application that allows users to paginate.
         </p>
         <p className="simple-answer">
-          The application should have a grid of squares.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to load more data.
-        </p>
-        <p className="simple-answer">
-          The application should have a button to load previous data.
+          The application should have a pagination component so that users can
+          navigate between pages.
         </p>
         <br />
         <TabView
