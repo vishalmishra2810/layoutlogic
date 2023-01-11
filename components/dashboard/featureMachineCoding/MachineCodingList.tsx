@@ -34,7 +34,7 @@ function MachineCodingList() {
         </div>
         <div className={style.machineCodingList__container__list}>
           {getAllMachineRoundQuestions()
-            ?.slice(0, 14)
+            ?.slice(0, 10)
             ?.map((question: any, index: number) => (
               <div
                 className={style.machineCodingList__container__list__item}

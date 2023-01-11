@@ -43,3 +43,8 @@ export const META_TAGS = {
   KEYWORDS:
     "reactjs, html, css, javascript, scss, redux, nextjs, typescript, frontend, machine coding round,,examples, quiz, learn, tutorial, web development, web development tutorial, web development examples, web development quiz, best website to learn web development",
 };
+
+export const CONSTANT_VALUE = {
+  TOP_FRONTEND_QUESTIONS: "top-front-end-coding-questions",
+  FRONTEND_MACHINE_CODING_ROUND: "front-end-machine-coding-round-questions",
+};
