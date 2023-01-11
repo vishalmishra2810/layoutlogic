@@ -89,6 +89,8 @@
 *,
 h1,
 p,
+h2,
+h3,
 ul,
 li {
   box-sizing: border-box;
@@ -126,11 +128,15 @@ a {
 }
 .answer_list_item {
   margin-left: 32px;
+  color: #000;
 }
 .simple_answers {
   margin-left: 0px;
+  color: #000;
 }
-
+.simple-answer {
+  color: #000;
+}
 code {
   font-family: "Menlo", monospace;
   font-size: 14px;
@@ -142,6 +148,10 @@ pre {
   border-radius: 3px;
   padding: 1.5rem !important;
   background: #1d1f21 !important;
+}
+
+pre p {
+  color: rgb(171, 178, 191);
 }
 nav {
   display: none;
