@@ -152,14 +152,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[chess_html, chess_css, chess_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211242618-ef01262a-7d01-49ca-9bbf-631ff58f5119.png"
+          result_url="https://user-images.githubusercontent.com/76992713/211716374-094fdff0-ed80-472b-9cab-b7d49188f2d1.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "bishop-on-chessboard",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211242618-ef01262a-7d01-49ca-9bbf-631ff58f5119.png",
+      "https://user-images.githubusercontent.com/76992713/211716374-094fdff0-ed80-472b-9cab-b7d49188f2d1.png",
   },
   {
     question:
