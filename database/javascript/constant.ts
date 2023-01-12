@@ -608,3 +608,46 @@ export const event_delegation_example = `
   });
 </script>
 `;
+
+export const strict_mode_example = `
+
+// Strict mode can be enabled in two ways:
+
+// 1. On the entire script: Add the string "use strict" as the first statement in a JavaScript file or at the top of a script block.
+
+"use strict";
+// code here
+
+
+
+// 2. On a function: Add the string "use strict" as the first statement in a function.
+
+function strict() {
+    "use strict";
+    // code here
+    }
+`;
+
+export const implicit_example = `
+
+// 1. Number + String
+const num = 5;
+const str = '5';
+console.log(num + str); // 55
+
+// 2. String + Boolean
+const str = '5';
+const bool = true;
+console.log(str + bool); // 5true
+
+// 3. Number + Boolean
+const num = 5;
+const bool = true;
+console.log(num + bool); // 6
+
+// 4. Number + Object
+const num = 5;
+const obj = { name: 'John' };
+console.log(num + obj); // 5[object Object]
+
+`;

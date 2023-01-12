@@ -18,6 +18,7 @@ import {
   promise_example,
   prototype_inheritance_chaingin_example,
   shallow_deep_copying_example,
+  strict_mode_example,
   throttling_example,
 } from "./constant";
 
@@ -495,6 +496,113 @@ export const MEDIUM_JAVASCRIPT = [
           The await keyword can only be used inside an asynchronous function.
         </p>
         <CodeSnippet codeString={async_await_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question:
+      "What is `strict mode` in JavaScript, and what are the advantages of using it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Strict mode is a new feature in ECMAScript 5 that allows you to place
+          a program, or a function, in a “strict” operating context.
+        </p>
+        <br />
+        <p className="simple_answers">
+          This strict context prevents certain actions from being taken and
+          throws more exceptions.
+          <br />
+          It is not a statement, but a literal expression, ignored by earlier
+          versions of JavaScript.
+          <br />
+          The purpose of “use strict” is to indicate that the code should be
+          executed in “strict mode”.
+        </p>
+        <br />
+        <p className="simple_answers">
+          With strict mode, you can not, for example, use undeclared variables.
+          <br />
+          Strict mode makes it easier to write “secure” JavaScript.
+        </p>
+        <CodeSnippet codeString={strict_mode_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is difference between Window and Document in JavaScript?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The difference between Window and Document in JavaScript is that the
+          Window object represents an open window in a browser and the Document
+          object represents the HTML document loaded in a window.
+        </p>
+        <br />
+        <p className="simple_answers">
+          The Window object is the global object in JavaScript.
+          <br />
+          The Document object is the root node of the HTML document.
+        </p>
+        <br />
+        <p className="simple_answers">
+          Window is the global object which contains all the global variables,
+          functions, location, history, etc.
+          <br />
+          Document come under the window object and it is the root node of the
+          HTML document.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "What is difference between `Local Storage` and `Session Storage` in JavaScript?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          These are the differences between Local Storage and Session Storage in
+          JavaScript:
+        </p>
+        <br />
+        <MakeDifferentiate
+          headerData={["Local Storage", "Session Storage"]}
+          columnDataLength={2}
+          totalColumn={2}
+          columnData={{
+            0: [
+              "Local Storage is a permanent storage.",
+              "Local Storage is not cleared when the browser is closed.",
+            ],
+            1: [
+              "Session Storage is a temporary storage.",
+              "Session Storage is cleared when the browser is closed.",
+            ],
+          }}
+        />
+      </>
+    ),
+  },
+  {
+    question:
+      "What is cookie in JavaScript?, and what are the advantages of using it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          A cookie is a small piece of data that is stored on the user's
+          computer by the web browser while browsing a website.
+          <br />
+          Cookies are mainly used for authentication, maintaining user sessions,
+          and storing site preferences.
+          <br />
+          Cookies are small text files that are stored on your computer by
+          websites that you visit.
+          <br />
+          Cookies are widely used to make websites work, or work more
+          efficiently, as well as to provide information to the owners of the
+          site.
+        </p>
+        <br />
       </>
     ),
   },

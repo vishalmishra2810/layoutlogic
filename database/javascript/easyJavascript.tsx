@@ -1,10 +1,12 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
 import {
   array_example,
   break_example,
   continue_example,
   function_example,
   if_example,
+  implicit_example,
   loop_example,
   switch_example,
   variable_example,
@@ -36,6 +38,42 @@ export const EASY_JAVASCRIPT = [
           JavaScript.
         </p>
         <CodeSnippet codeString={variable_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What are JavaScript Data Types?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Data types are the classifications we give to the different kinds of
+          data that we use in programming.
+        </p>
+        <br />
+        <p className="simple_answers">
+          JavaScript has dynamic typing: you don't have to specify the data type
+          of a variable when you declare it, as it is determined automatically.
+          JavaScript has five primitive data types:
+          <ListShow
+            list={["Boolean", "Null", "Undefined", "Number", "String"]}
+            typeOfList="ul"
+          />
+        </p>
+        <br />
+        <p className="simple_answers">
+          In addition to those, JavaScript has two special values, `
+          <code>Infinity</code>` and `<code>NaN</code>` (not a number).
+        </p>
+        <p className="simple_answers">
+          JavaScript has three types of objects:
+          <ListShow list={["Object", "Date", "Array"]} typeOfList="ul" />
+        </p>
+        <br />
+        <p className="simple_answers">
+          JavaScript has one type used for storing regular expressions: `
+          <code>RegExp</code>`.
+        </p>
+        <br />
       </>
     ),
   },
@@ -165,6 +203,63 @@ export const EASY_JAVASCRIPT = [
           Asynchronous code is executed in a non-blocking way, which means that
           other code can run while it is waiting for a response.
         </p>
+      </>
+    ),
+  },
+  {
+    question:
+      " How do JavaScript primitive/object types passed in functions? or What is pass by value and pass by reference?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Primitive types are passed to functions by value, and objects are
+          passed by reference.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <strong>Pass by value : </strong> Pass by value means that the
+          function gets a copy of the value. If a function changes the value of
+          an argument, it does not change the original variable.
+        </p>
+        <p className="simple_answers">
+          <strong>Pass by reference :</strong> Pass by reference means that the
+          function gets a reference to the value. If a function changes the
+          value of an argument, it changes the original variable.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: 'What is NaN in JavaScript?"',
+    answer: (
+      <>
+        <p className="simple_answers">
+          `NaN` stands for Not a Number. It is a property of the global object.
+          In other words, it is a variable in global scope. The initial value of
+          NaN is Not a Number.
+        </p>
+        <br />
+        <p className="simple_answers">
+          When you try to convert a non-numeric string to a number, you get NaN.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Explain Implicit Type Coercion in javascript.",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Implicit type coercion is the automatic or implicit conversion of
+          values from one data type to another (such as strings to numbers,
+          object to primitive types, and so on).
+        </p>
+        <br />
+        <p className="simple_answers">
+          For example, when you use the + operator on a string and a number, the
+          number is converted to a string.
+        </p>
+        <CodeSnippet codeString={implicit_example} language="javascript" />
       </>
     ),
   },
