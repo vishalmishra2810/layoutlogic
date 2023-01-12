@@ -51,6 +51,7 @@ function TabView({ tabList, tabComponentList, result_url }: any) {
                 style={{
                   objectFit: "contain",
                 }}
+                className={style.tabView__container__content__result__image}
               />
             </div>
           ) : (

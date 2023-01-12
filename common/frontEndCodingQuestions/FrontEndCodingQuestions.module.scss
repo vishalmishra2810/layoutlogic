@@ -74,3 +74,11 @@
   flex-wrap: wrap;
   gap: 32px;
 }
+
+@media screen and (max-width: 768px) {
+  .frontEndCodingQuestions {
+    .frontEndCodingQuestions__container {
+      padding: 0px;
+    }
+  }
+}

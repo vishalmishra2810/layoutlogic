@@ -286,6 +286,18 @@ export const EASY_REACTJS = [
     ),
   },
   {
+    question: "Can web browsers read JSX directly?",
+    answer: (
+      <p className="simple_answers">
+        No, web browsers cannot read JSX directly.
+        <br /> JSX is a syntax extension for JavaScript and is not a valid
+        JavaScript code.
+        <br /> JSX code is compiled to JavaScript code using a tool called
+        Babel.
+      </p>
+    ),
+  },
+  {
     question: "What is use of key in ReactJS?",
     answer: (
       <>
