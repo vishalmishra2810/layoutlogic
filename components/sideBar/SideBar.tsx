@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import DropDown from "../../common/dropDown/DropDown";
 import {
   TOPICS_DIFFICULTY,

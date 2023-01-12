@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { getDescription } from "../../utils/helper";
 import style from "./QuestionDisplay.module.scss";
 
-interface IQuestionDispalayProps {
+interface IQuestionDisplayProps {
   questionData: any;
   database: string;
 }
 
-function QuestionDisplay({ questionData, database }: IQuestionDispalayProps) {
+function QuestionDisplay({ questionData, database }: IQuestionDisplayProps) {
   return (
     <div className={style.questionDisplay}>
       <div className={style.questionDisplay_container}>

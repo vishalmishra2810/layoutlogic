@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getQuestionsInormation } from "../../utils/helper";
+import { getQuestionsInformation } from "../../utils/helper";
 import style from "./CodingQuestions.module.scss";
 
 interface ICodingQuestionsProps {
@@ -10,7 +10,7 @@ function CodingQuestions({ slug }: ICodingQuestionsProps) {
   const [listData, setListData] = useState<any>([]);
   useEffect(() => {
     if (slug) {
-      setListData(getQuestionsInormation(slug));
+      setListData(getQuestionsInformation(slug));
     }
   }, [slug]);
   return (

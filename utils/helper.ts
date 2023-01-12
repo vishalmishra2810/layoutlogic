@@ -197,7 +197,7 @@ export const getTechIcon = (technologyUsed: string) => {
   }
 };
 
-export const getQuestionsInormation = (slug: string) => {
+export const getQuestionsInformation = (slug: string) => {
   let all_questions = [
     ...EASY_MACHINE_QUESTIONS,
     ...MEDIUM_MACHINE_QUESTIONS,
