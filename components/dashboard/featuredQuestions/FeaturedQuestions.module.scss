@@ -35,3 +35,28 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .featuredQuestions {
+    .featuredQuestions_box {
+      flex-direction: column;
+      width: 100%;
+      .featuredQuestions_left_box {
+        flex-direction: column;
+        width: 100%;
+      }
+      .featuredQuestions_right_box {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    .featuredQuestions_bottom {
+      flex-direction: column;
+      width: 100%;
+      .featuredQuestions_bottom_left {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}

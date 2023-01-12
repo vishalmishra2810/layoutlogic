@@ -46,3 +46,13 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .modal {
+    padding: 0px 16px;
+    width: 100%;
+    .modal_box {
+      width: 100% !important;
+    }
+  }
+}

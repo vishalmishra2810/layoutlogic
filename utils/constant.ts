@@ -48,3 +48,7 @@ export const CONSTANT_VALUE = {
   TOP_FRONTEND_QUESTIONS: "top-front-end-coding-questions",
   FRONTEND_MACHINE_CODING_ROUND: "front-end-machine-coding-round-questions",
 };
+
+export enum DEVICE_TYPE {
+  MOBILE = 800,
+}

@@ -86,3 +86,22 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  .machineCodingList__container {
+    padding: 0px 16px;
+    .machineCodingList__container__header {
+      .machineCodingList__container__header__title {
+        text-align: center;
+      }
+      .machineCodingList__container__header__description {
+        padding: 0px 0px;
+      }
+    }
+    .machineCodingList__container__list {
+      .machineCodingList__container__list__item {
+        width: 100%;
+      }
+    }
+  }
+}

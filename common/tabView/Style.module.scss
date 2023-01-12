@@ -44,3 +44,9 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .tabView__container__content__result__image {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}

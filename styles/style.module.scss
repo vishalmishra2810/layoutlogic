@@ -31,3 +31,14 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .database {
+    padding: 0px 16px;
+    .database_main_container {
+      .database_sideBar {
+        margin-right: 0px;
+      }
+    }
+  }
+}
