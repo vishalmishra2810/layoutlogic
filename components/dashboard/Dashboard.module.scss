@@ -1,9 +1,12 @@
 .dashboard {
-  width: var(--max-width);
-  margin: 0 auto;
   background: #ffffff;
   overflow-y: scroll;
-  min-height: 100vh;
+  height: calc(100vh - 70px);
+  width: 100%;
+  .dashboard__container {
+    width: var(--max-width);
+    margin: 0 auto;
+  }
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -16,6 +19,10 @@
 @media screen and (max-width: 768px) {
   .dashboard {
     width: 100%;
+    .dashboard__container {
+      width: 100%;
+      margin: 0 auto;
+    }
     &::-webkit-scrollbar {
       width: 0px;
       display: none;
