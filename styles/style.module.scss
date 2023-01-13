@@ -1,25 +1,34 @@
 .database {
-  height: calc(100vh - 96px);
+  height: calc(100vh - 70px);
   width: 100%;
   background: #ffffff;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(157, 153, 153);
+    border-radius: 4px;
+  }
   .database_main_container {
-    width: 100%;
+    width: var(--max-width);
+    margin: 0px auto;
     display: flex;
     justify-content: center;
-    margin-top: 96px;
     background: #ffffff;
     .database_sideBar {
       width: 300px;
       position: sticky;
       margin-right: 16px;
-      top: 96px;
-      height: calc(100vh - 96px);
+      top: 24px;
+      height: calc(100vh - 94px);
       background: #ffffff;
     }
     .database_container {
       max-width: calc(1024px - 300px);
       width: 100%;
       background: #ffffff;
+      margin: 24px 0px;
     }
   }
   .database_coming_soon_container {
@@ -34,8 +43,13 @@
 
 @media screen and (max-width: 768px) {
   .database {
-    padding: 0px 16px;
+    padding: 16px;
+    &::-webkit-scrollbar {
+      width: 0px;
+      display: none;
+    }
     .database_main_container {
+      width: 100%;
       .database_sideBar {
         margin-right: 0px;
       }

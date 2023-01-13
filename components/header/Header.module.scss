@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 24px;
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
   width: 100%;
   top: 0;
   z-index: 100;

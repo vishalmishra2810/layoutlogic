@@ -2,7 +2,7 @@
   width: 100%;
   margin: 120px auto;
   .codingQuestions__container {
-    width: 1024px;
+    width: 100%;
     margin: 0 auto;
     .codingQuestions__container__header {
       text-align: center;
@@ -13,13 +13,18 @@
       font-family: "Roboto", sans-serif;
       padding: 0px 32px;
     }
+    .codingQuestions__container__questions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .codingQuestions {
     width: 100%;
-    padding: 0px 16px;
+    padding: 0px 0px;
     .codingQuestions__container {
       width: 100%;
       .codingQuestions__container__header {

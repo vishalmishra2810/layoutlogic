@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Modal from "../../../common/modal/Modal";
 import style from "./FamousQuestions.module.scss";
 import sourceIcon from "../../../assets/sourceCode.jpg";
@@ -24,7 +24,7 @@ function FamousQuestions() {
             height={600}
             //@ts-ignore
             url={sourceIcon}
-            width={1024}
+            width={1016}
           />
         </div>
       </div>
@@ -32,4 +32,4 @@ function FamousQuestions() {
   );
 }
 
-export default FamousQuestions;
+export default memo(FamousQuestions);

@@ -52,3 +52,4 @@ export const CONSTANT_VALUE = {
 export enum DEVICE_TYPE {
   MOBILE = 800,
 }
+

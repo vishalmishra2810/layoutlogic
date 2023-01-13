@@ -17,7 +17,6 @@ export default function Home() {
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
       <Dashboard />
-      <Footer />
     </>
   );
 }

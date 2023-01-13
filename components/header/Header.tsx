@@ -71,7 +71,7 @@ function Header() {
           </div>
         </div>
       ) : (
-        <HeaderMobile/>
+        <HeaderMobile />
       )}
     </header>
   );

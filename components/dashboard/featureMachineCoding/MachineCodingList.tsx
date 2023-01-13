@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { memo } from "react";
 import { URLPaths } from "../../../utils/constant";
 import {
   getAllMachineRoundQuestions,
@@ -95,4 +95,4 @@ function MachineCodingList() {
   );
 }
 
-export default MachineCodingList;
+export default memo(MachineCodingList);
