@@ -43,4 +43,12 @@ export const HARD_CSS = [
       </>
     ),
   },
+  // {
+  //   question:
+  //     "How do you use the CSS @supports rule to apply styles based on browser support for specific CSS features?",
+  // },
+  // {
+  //   question:
+  //     "How do you use the CSS filter property to apply visual effects such as blur, brightness, and contrast to elements.",
+  // },
 ];

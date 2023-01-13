@@ -3,11 +3,16 @@ import ReplaceCode from "../../common/replaceCode/ReplaceCode";
 import {
   after_pseudo_element_example,
   animation_example,
+  before_after_example,
   before_pseudo_element_example,
   box_shadow_exmaple,
   box_sizing_exmaple,
   center_element,
+  css_grid_example,
   dropdown_menu,
+  flexbox_example,
+  font_face_example,
+  hover_active_focus_example,
   responsive_image_galary,
   responsive_layout,
 } from "./constant";
@@ -219,10 +224,10 @@ export const MEDIUM_CSS = [
       <>
         <p className="simple_answers">
           The ::before and ::after pseudo-elements are used to insert generated
-          content in an element. <br />The ::before pseudo-element is
-          used to insert generated content before the content of an element.{" "}
-          <br /> The ::after pseudo-element is used to insert generated
-          content after the content of an element.
+          content in an element. <br />
+          The ::before pseudo-element is used to insert generated content before
+          the content of an element. <br /> The ::after pseudo-element is used
+          to insert generated content after the content of an element.
         </p>
         <br />
         <p className="simple_answers">
@@ -237,6 +242,93 @@ export const MEDIUM_CSS = [
           here is the code for the ::after pseudo-element:
         </p>
         <CodeSnippet codeString={after_pseudo_element_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question: "How do you use CSS Grid and Flexbox to create advanced layouts?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          CSS Grid and Flexbox are used to create advanced layouts. <br /> CSS
+          Grid is used to create two-dimensional layouts. <br /> Flexbox is used
+          to create one-dimensional layouts.
+        </p>
+        <br />
+        <p className="simple_answers">here is the code for the CSS Grid:</p>
+        <CodeSnippet codeString={css_grid_example} language="css" />
+        <br />
+        <p className="simple_answers">here is the code for the Flexbox:</p>
+        <CodeSnippet codeString={flexbox_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question: "What is pseudo-classes and pseudo-elements in CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Pseudo-classes and pseudo-elements are used to style specific states
+          of an element. <br /> The pseudo-classes are used to style an element
+          when a user mouses over it, clicks on it, etc. <br /> The
+          pseudo-elements are used to style the first letter, or line, etc. of
+          an element.
+        </p>
+        <br />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the CSS :hover, :active, and :focus pseudo-classes to create interactive effects?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The CSS :hover, :active, and :focus pseudo-classes are used to create
+          interactive effects. <br />
+          <br /> The <strong> :hover pseudo-class </strong> is used to create an
+          effect when the user hovers over an element. <br /> The{" "}
+          <strong>:active pseudo-class </strong> is used to create an effect
+          when the user clicks on an element. <br /> The{" "}
+          <strong> :focus pseudo-class </strong>
+          is used to create an effect when the user focuses on an element.
+        </p>
+        <br />
+        <p className="simple_answers">here is the code :</p>
+        <CodeSnippet codeString={hover_active_focus_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the CSS pseudo-elements ::before and ::after to add content to an element?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The CSS pseudo-elements ::before and ::after are used to add content
+          to an element. <br /> The <strong>::before</strong> pseudo-element is
+          used to add content before the content of an element. <br /> The{" "}
+          <strong>::after</strong> pseudo-element is used to add content after
+          the content of an element.
+        </p>
+        <br />
+
+        <p className="simple_answers">here is the code :</p>
+        <CodeSnippet codeString={before_after_example} language="css" />
+      </>
+    ),
+  },
+  {
+    question: "How do you use the CSS @font-face rule to import custom fonts?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The CSS @font-face rule is used to import custom fonts. <br /> The
+          @font-face rule is used to import a font from a URL or a local file.
+        </p>
+        <br />
+        <p className="simple_answers">here is the code :</p>
+        <CodeSnippet codeString={font_face_example} language="css" />
       </>
     ),
   },

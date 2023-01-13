@@ -404,3 +404,97 @@ export const after_pseudo_element_example = `
         opacity: 0.5;
     }
 `;
+
+export const css_grid_example = `
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+`;
+
+export const flexbox_example = `
+    .flex-container {
+        display: flex;
+        background-color: DodgerBlue;
+    }
+
+    .flex-container > div {
+        background-color: #f1f1f1;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+    }
+`;
+
+export const hover_active_focus_example = `
+    .hover-active-focus-example {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+    }
+
+    .hover-active-focus-example:hover {
+        background-color: blue;
+    }
+
+    .hover-active-focus-example:active {
+        background-color: green;
+    }
+
+    .hover-active-focus-example:focus {
+        background-color: yellow;
+    }
+`;
+
+export const before_after_example = `
+    .before-after-example {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    .before-after-example::before {
+        content: "Hello World";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        opacity: 0.5;
+    }
+
+    .before-after-example::after {
+        content: "Hello World";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        opacity: 0.5;
+    }
+`;
+
+export const font_face_example = `
+    @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+    }
+
+    .font-face-example {
+        font-family: myFirstFont;
+    }
+`;

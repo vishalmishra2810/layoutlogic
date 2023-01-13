@@ -651,3 +651,26 @@ const obj = { name: 'John' };
 console.log(num + obj); // 5[object Object]
 
 `;
+
+export const arrow_template_literal_example = `
+// arrow function
+const add = (a, b) => a + b;
+console.log(add(1, 2)); // 3
+
+// template literal
+const name = 'John';
+console.log(\`Hello \${name}\`); // Hello John
+
+//destructuring 
+const person = {
+    name: 'John',
+    age: 25,
+    address: {
+        city: 'New York',
+        state: 'NY'
+    }
+};
+
+const { name, age, address: { city } } = person;
+console.log(name, age, city); // John 25 New York
+`;
