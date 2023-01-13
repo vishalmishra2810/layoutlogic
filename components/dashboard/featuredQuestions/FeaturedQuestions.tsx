@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Modal from "../../../common/modal/Modal";
 import style from "./FeaturedQuestions.module.scss";
 import reactIcon from "../../../assets/react.svg";
@@ -16,25 +16,25 @@ function FeaturedQuestions() {
           <Modal
             title="Reactjs"
             description="Reactjs is a JavaScript library for building user interfaces."
-            width={500}
+            width={490}
             height={650}
             url={reactIcon}
           />
         </div>
         <div className={style.featuredQuestions_right_box}>
-          <Modal title="Redux" width={500} height={309} url={reduxIcon} />
-          <Modal title="SCSS" width={500} height={309} url={scssIcon} />
+          <Modal title="Redux" width={490} height={309} url={reduxIcon} />
+          <Modal title="SCSS" width={496} height={309} url={scssIcon} />
         </div>
       </div>
       <div className={style.featuredQuestions_bottom}>
         <div className={style.featuredQuestions_bottom_left}>
-          <Modal title="CSS" width={500} height={309} url={cssIcon} />
-          <Modal title="HTML" width={500} height={309} url={htmlIcon} />
+          <Modal title="CSS" width={490} height={309} url={cssIcon} />
+          <Modal title="HTML" width={490} height={309} url={htmlIcon} />
         </div>
         <div className={style.featuredQuestions_bottom_right}>
           <Modal
             title="Javascript"
-            width={500}
+            width={490}
             height={650}
             url={javascriptIcon}
             description="JavaScript is the world's most popular programming language."
@@ -45,4 +45,4 @@ function FeaturedQuestions() {
   );
 }
 
-export default FeaturedQuestions;
+export default memo(FeaturedQuestions);

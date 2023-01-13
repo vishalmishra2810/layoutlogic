@@ -5,7 +5,7 @@
   justify-content: center;
   .codingQuestions__container {
     max-width: 1000px;
-    margin: 120px auto;
+    margin: 0px auto;
     padding: 32px;
     background-color: #fff;
     width: 1000px;
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 768px) {
   .codingQuestions {
-    padding: 0px 16px;
+    padding: 16px;
     .codingQuestions__container {
       padding: 0px;
       width: 100%;

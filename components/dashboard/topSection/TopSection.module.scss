@@ -1,14 +1,11 @@
 .topSection {
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
-  max-width: 1024px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 42px;
-  background: #ffffff;
-  margin-top: 32px;
   .topSection_title {
     font-size: 60px;
     font-weight: 800;
@@ -47,12 +44,12 @@
 
 @media screen and (max-width: 768px) {
   .topSection {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 120px);
     padding: 0px 16px;
     gap: 36px;
     margin-top: 0px;
     .topSection_title {
-      font-size: 42px;
+      font-size: 36px;
       text-align: center;
     }
     .topSection_description {

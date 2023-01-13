@@ -2,7 +2,7 @@
   width: 100%;
   margin: 120px auto;
   .codingQuestions__container {
-    width: 1024px;
+    width: 100%;
     margin: 0 auto;
     .codingQuestions__container__header {
       text-align: center;
@@ -12,6 +12,11 @@
       color: #000000;
       font-family: "Roboto", sans-serif;
       padding: 0px 32px;
+    }
+    .codingQuestions__container__questions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

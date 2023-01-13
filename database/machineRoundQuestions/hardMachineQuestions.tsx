@@ -104,10 +104,6 @@ export const HARD_MACHINE_QUESTIONS = [
           tabComponentList={[countdown_js, countdown_css]}
           result_url="https://user-images.githubusercontent.com/76992713/211242465-dbcfd29c-cb29-45f6-8c5f-9cd24298a703.png"
         />
-        <p className="simple-answer">Here is the code for ReactJs :</p>
-        <CodeSnippet codeString={countdown_js} language="javascript" />
-        <p className="simple-answer">Here is the code for CSS :</p>
-        <CodeSnippet codeString={countdown_css} language="css" />
       </>
     ),
     language: ["ReactJs", "CSS"],

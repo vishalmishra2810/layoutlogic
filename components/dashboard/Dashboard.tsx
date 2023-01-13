@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import style from "./Dashboard.module.scss";
 import FamousQuestions from "./famousQuestions/FamousQuestions";
 import FeaturedQuestions from "./featuredQuestions/FeaturedQuestions";
@@ -16,4 +16,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default memo(Dashboard);
