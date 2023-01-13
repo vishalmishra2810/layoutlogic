@@ -31,6 +31,39 @@ export const EASY_HTML = [
     ),
   },
   {
+    question: "What are Tags?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Tags are used to define the structure of a web page. Tags are enclosed
+          in angle brackets, and they come in pairs. The first tag in a pair is
+          called the opening tag, and the second tag is called the closing tag.
+        </p>
+        <br />
+        <p className="simple_answers">
+          The opening tag contains the name of the element, and the closing tag
+          contains a forward slash before the element name.
+        </p>
+        <CodeSnippet codeString="<p> hello world </p>" language="html" />
+      </>
+    ),
+  },
+  {
+    question: "Do all HTML tags have an end tag?",
+    answer: (
+      <p className="simple_answers">
+        No, not all HTML tags have an end tag. Some HTML tags have no end tag.
+        <br />
+        Some of them are following:
+        <br />
+        <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>,{" "}
+        <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>,{" "}
+        <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>,{" "}
+        <code>&lt;param&gt;</code>
+      </p>
+    ),
+  },
+  {
     question: "How do you create a hyperlink in HTML?",
     answer: (
       <>
@@ -39,7 +72,10 @@ export const EASY_HTML = [
           <code>&lt;a&gt;</code> and specify the link in the <code>href</code>{" "}
           attribute.
         </p>
-        <CodeSnippet codeString="<a href='https://www.google.com'>Google</a>" />
+        <CodeSnippet
+          codeString="<a href='https://www.google.com'>Google</a>"
+          language="html"
+        />
       </>
     ),
   },
@@ -88,7 +124,10 @@ export const EASY_HTML = [
           <code>&lt;img&gt;</code> and specify the image source in the{" "}
           <code>src</code> attribute.
         </p>
-        <CodeSnippet codeString="<img src='https://images.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' />" />
+        <CodeSnippet
+          codeString="<img src='https://images.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png' />"
+          language="html"
+        />
       </>
     ),
   },
@@ -117,7 +156,10 @@ export const EASY_HTML = [
           <code>&lt;ul&gt;</code> and specify the list items in the{" "}
           <code>&lt;li&gt;</code> tag.
         </p>
-        <CodeSnippet codeString="<ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>" />
+        <CodeSnippet
+          codeString="<ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>"
+          language="html"
+        />
       </>
     ),
   },
@@ -183,6 +225,37 @@ export const EASY_HTML = [
           a document or a section.
         </p>
         <CodeSnippet codeString={semantic_tags_html_example} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "Why is a URL encoded in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          A URL is encoded in HTML to make it safe to use in a web page.
+        </p>
+        <p className="simple_answers">
+          For example, if you have a URL that contains a space, you will need to
+          encode the space as <code>%20</code> to make it safe to use in a web
+          page.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Why do use <!DOCTYPE html> in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The <code>!DOCTYPE html</code> declaration is not an HTML tag. It is
+          an instruction to the web browser about what version of HTML the page
+          is written in.
+        </p>
+        <p className="simple_answers">
+          The <code>!DOCTYPE html</code> declaration must only be at the top of
+          the page (before any HTML tags).
+        </p>
       </>
     ),
   },

@@ -3,10 +3,12 @@ import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate"
 import {
   details_summary_string,
   dropdown_string,
+  geolocation_string,
   iframe_tag_string,
   inline_style_html_string,
   list_string_numered_or_bullet,
   meta_tag_string,
+  web_worker_string,
 } from "./constant";
 
 export const MEDIUM_HTML = [
@@ -141,7 +143,10 @@ export const MEDIUM_HTML = [
           You will also need to specify the image dimensions in the{" "}
           <code>width</code> and <code>height</code> attributes.
         </p>
-        <CodeSnippet codeString="<img src='https://www.google.com' width='100' height='100' />" />
+        <CodeSnippet
+          codeString="<img src='https://www.google.com' width='100' height='100' />"
+          language="html"
+        />
       </>
     ),
   },
@@ -295,6 +300,34 @@ export const MEDIUM_HTML = [
           HTML document.
         </p>
         <CodeSnippet codeString={iframe_tag_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the Web Workers API to run background tasks in a web page?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the Web Workers API to run background tasks in a web page, you
+          will need to create a new Worker object and specify the script to be
+          run in the worker.
+        </p>
+        <CodeSnippet codeString={web_worker_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the HTML5 Geolocation API to access the user's location?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the HTML5 Geolocation API to access the user's location, you
+          will need to use the navigator.geolocation object and specify the
+          function to be executed when the location is available.
+        </p>
+        <CodeSnippet codeString={geolocation_string} language="html" />
       </>
     ),
   },

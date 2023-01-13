@@ -4,6 +4,7 @@ import {
   canvas_string_javascript,
   data_value_attributes_example,
   open_dialog_string,
+  webrtc_html5_example,
 } from "./constant";
 
 export const HARD_HTML = [
@@ -133,6 +134,21 @@ export const HARD_HTML = [
           and specify the dialog id in the <code>id</code> attribute.
         </p>
         <CodeSnippet codeString={open_dialog_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How do you use the HTML5 WebRTC API for real-time peer-to-peer communication?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the HTML5 WebRTC API for real-time peer-to-peer communication,
+          you will need to use the <code>RTCPeerConnection</code> constructor to
+          create a peer connection and the <code>getUserMedia()</code> method to
+          get the local media stream.
+        </p>
+        <CodeSnippet codeString={webrtc_html5_example} language="html" />
       </>
     ),
   },

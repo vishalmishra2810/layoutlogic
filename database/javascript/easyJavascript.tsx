@@ -2,6 +2,7 @@ import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import ListShow from "../../common/listShow/ListShow";
 import {
   array_example,
+  arrow_template_literal_example,
   break_example,
   continue_example,
   function_example,
@@ -260,6 +261,40 @@ export const EASY_JAVASCRIPT = [
           number is converted to a string.
         </p>
         <CodeSnippet codeString={implicit_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question:
+      "How to use and implement ES6 features such as arrow functions, template literals, and destructuring?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          <strong>Arrow functions</strong> are a new way to write functions in
+          JavaScript. They are a shorter syntax for writing function
+          expressions. <br />
+          <br />
+          Arrow functions are always anonymous. You cannot use an arrow function
+          as a constructor.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <strong>Template literals</strong> are string literals allowing
+          embedded expressions. You can use multi-line strings and string
+          interpolation features with them. <br />
+          They were called "template strings" in prior editions of the ES2015
+          specification.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <strong>Destructuring</strong> is a JavaScript expression that makes
+          it possible to unpack values from arrays, or properties from objects,
+          into distinct variables.
+        </p>
+        <CodeSnippet
+          codeString={arrow_template_literal_example}
+          language="javascript"
+        />
       </>
     ),
   },

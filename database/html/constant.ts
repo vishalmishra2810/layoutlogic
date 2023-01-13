@@ -202,3 +202,52 @@ export const data_value_attributes_example = `
 </select>
 
 `;
+
+export const web_worker_string = `
+<script>
+// Create a new worker
+var worker = new Worker("demo_workers.js");
+
+// Send message to worker
+worker.postMessage("Hello World");
+
+// Receive message from worker
+worker.onmessage = function(event) {
+  document.getElementById("result").innerHTML = event.data;
+}
+</script>
+`;
+
+export const geolocation_string = `
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
+`;
+
+export const webrtc_html5_example = `
+<script>
+var constraints = { audio: true, video: { width: 1280, height: 720 } };
+
+navigator.mediaDevices.getUserMedia(constraints)
+.then(function(mediaStream) {
+  var video = document.querySelector('video');
+  video.srcObject = mediaStream;
+  video.onloadedmetadata = function(e) {
+    video.play();
+  };
+}
+</script>
+`;
