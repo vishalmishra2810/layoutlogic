@@ -49,6 +49,118 @@ export const EASY_REDUX = [
     ),
   },
   {
+    question: "What are advantages of using Redux?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          <b>1. Predictable state management</b>
+          <br />
+          <b>2. Centralized state management</b>
+          <br />
+          <b>3. Easy to debug</b>
+          <br />
+          <b>4. Easy to test</b>
+          <br />
+          <b>5. Easy to maintain</b>
+          <br />
+          <b>6. Easy to scale</b>
+          <br />
+          <b>7. Easy to integrate with other libraries</b>
+          <br />
+          <b>8. Easy to integrate with server side</b>
+          <br />
+          <b>9. Easy to integrate with native apps</b>
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "Can you use Redux only with React or can you use it with other libraries?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Yes, you can use Redux with other libraries like Angular, Vue, etc.
+          <br />
+          Because Redux is a state management library, it can be used with any
+          other library or framework.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is React Toolkit?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Redux Toolkit is the official, opinionated, batteries-included toolset
+          for efficient Redux development. <br />
+          It is intended to be the standard way to write Redux logic.
+        </p>
+        <p className="simple_answers">
+          <b>Features of Redux Toolkit:</b>
+        </p>
+        <br />
+        <p className="simple_answers">
+          <b>1. Configure Store</b>
+          <br />
+          <b>2. Create Slice</b>
+          <br />
+          <b>3. Create Async Thunks</b>
+          <br />
+          <b>4. Create Async Hooks</b>
+          <br />
+          <b>5. Create Async Entities</b>
+          <br />
+          <b>6. Create Async Queries</b>
+          <br />
+          <b>7. Create Async Mutations</b>
+          <br />
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is flux?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          In simple terms, Flux is an application architecture for React
+          utilizing a unidirectional data flow.
+        </p>
+        <p className="simple_answers">
+          <b>Flux</b> has multiple stores, one for each domain of the app.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is the difference between Redux and Flux?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          <b>Flux</b> is an application architecture for React utilizing a
+          unidirectional data flow.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <b>Redux</b> is a predictable state container for JavaScript apps.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <b>Flux</b> and <b>Redux</b> are both unidirectional data flow
+          architectures. <br /> The main difference between them is that Redux
+          uses a single store to hold the state of the entire application.
+        </p>
+        <br />
+        <p className="simple_answers">
+          <b>Flux</b> has multiple stores, one for each domain of the app.
+        </p>
+        <br />
+      </>
+    ),
+  },
+  {
     question: "What is a reducer in Redux and how do you create one?",
     answer: (
       <>
@@ -118,6 +230,61 @@ export const EASY_REDUX = [
           </li>
         </ul>
         <br />
+      </>
+    ),
+  },
+  {
+    question: "What is Redux Thunk?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Redux Thunk is a middleware that allows you to write action creators
+          that return a function instead of an action.
+        </p>
+        <p className="simple_answers">
+          The thunk can be used to delay the dispatch of an action, or to
+          dispatch only if a certain condition is met. The inner function
+          receives the store methods dispatch and getState as parameters.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is middleware in Redux?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Middleware provides a third-party extension point between dispatching
+          an action, and the moment it reaches the reducer.
+        </p>
+        <p className="simple_answers">
+          It is a way to extend Redux with custom functionality. Middleware lets
+          you wrap the store's dispatch method for fun and profit.
+        </p>
+        <p className="simple_answers">
+          The key feature of middleware is that it is composable. Multiple
+          middleware can be combined together, where each middleware requires no
+          knowledge of what comes before or after it in the chain.
+        </p>
+        <p className="simple_answers">
+          Redux ships with a applyMiddleware() function to facilitate the use of
+          middleware.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is purpose of constants in Redux?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Constants are used to define action types. They are used to avoid
+          typos and duplication when writing action types.
+        </p>
+        <p className="simple_answers">
+          They are also used to keep the naming consistent between different
+          parts of the codebase.
+        </p>
       </>
     ),
   },

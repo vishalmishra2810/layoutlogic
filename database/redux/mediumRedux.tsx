@@ -1,4 +1,6 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
+import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
   combine_reducers_example,
   connect_function_example,
@@ -126,6 +128,74 @@ export const MEDIUM_REDUX = [
         <CodeSnippet
           codeString={redux_mock_store_example}
           language="javascript"
+        />
+      </>
+    ),
+  },
+  {
+    question: "What is feature of Redux devtools?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Redux DevTools is a live-editing time travel environment for Redux
+          with hot reloading, action replay, and customizable UI. It provides
+          power-ups for your Redux development workflow.
+        </p>
+        <br />
+        <p className="simple_answers">
+          Redux DevTools is a set of packages that can be used to monitor and
+          debug your Redux application. It is available as a browser extension
+          for Chrome, Firefox, and Edge, as well as a standalone app for macOS,
+          Windows, and Linux.
+        </p>
+        <p className="simple_answers">
+          Redux DevTools features are as follows:
+        </p>
+        <br />
+        <ListShow
+          list={[
+            "Time travel debugging",
+            "Live code editing",
+            "Undo and redo actions",
+            "Jump to a specific state",
+            "Dispatch actions manually",
+            "Drag and drop actions",
+            "Import and export state",
+            "Lock/unlock changes",
+            "Pause recording",
+            "Diffing of states",
+            "Customize UI",
+          ]}
+          typeOfList={"ol"}
+        />
+      </>
+    ),
+  },
+  {
+    question: "What is difference between React Redux and React Context API?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          These are the main differences between Redux and React Context API:
+        </p>
+        <MakeDifferentiate
+          headerData={["React Redux", "React Context API"]}
+          totalColumn={2}
+          columnDataLength={4}
+          columnData={{
+            0: [
+              "Redux is a third-party library",
+              "Provides more features than React Context API",
+              "More complex to use than React Context API",
+              "More suitable for large applications",
+            ],
+            1: [
+              "React Context API is a built-in feature of React",
+              "Provides less features than React Redux",
+              "Easier to use than React Redux",
+              "More suitable for small applications",
+            ],
+          }}
         />
       </>
     ),
