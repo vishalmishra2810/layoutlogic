@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Dashboard from "../components/dashboard/Dashboard";
-import Footer from "../components/footer/Footer";
 import { META_TAGS } from "../utils/constant";
 
 export default function Home() {
@@ -15,6 +14,12 @@ export default function Home() {
         <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
+        <script
+          data-ad-client="ca-pub-1953898602810770"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1953898602810770"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
       <Dashboard />
     </>
