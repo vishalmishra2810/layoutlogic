@@ -1,4 +1,6 @@
+import Link from "next/link";
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
   async_string_first,
@@ -242,6 +244,94 @@ export const HARD_REACTJS = [
           codeString={use_effect_to_achieve_component_did_mount}
           language="javascript"
         />
+      </>
+    ),
+  },
+  {
+    question: "Build a countdown timer using ReactJs",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Here's an example of a countdown timer built using ReactJs:
+        </p>
+        <br />
+        <Link
+          className="simple_answers_link_btn"
+          href={"questions/reactjs-countdown-timer"}
+        >
+          Open Project
+        </Link>
+      </>
+    ),
+  },
+  {
+    question:
+      "Create a React Project with Optimize search filter in ReactJs using debounce and infinite scroll(Pagination).",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Here's an example of a React Project with Optimize search filter in
+          ReactJs using debounce and infinite scroll(Pagination):
+        </p>
+        <br />
+        <Link
+          className="simple_answers_link_btn"
+          href={
+            "questions/optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll"
+          }
+        >
+          Open Project
+        </Link>
+      </>
+    ),
+  },
+  {
+    question:
+      "How to create a React counter application with start, reset, and pause functionality?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Here's an example of a React counter application with start, reset,
+          and pause functionality:
+        </p>
+        <br />
+        <Link
+          className="simple_answers_link_btn"
+          href={"/questions/reactjs-counter-application"}
+        >
+          Open Project
+        </Link>
+      </>
+    ),
+  },
+  {
+    question: "If you know all of the above, these are the next steps to take:",
+    answer: (
+      <>
+        <p className="simple_answers">
+          First of all, if you know all of the above, what are you doing here
+          dude! <br />
+          You should be working on your own projects.
+        </p>
+        <br />
+        <p className="simple_answers">
+          OtherWise you can check out these projects to get started with
+          ReactJs:
+        </p>
+        <br />
+        <ListShow
+          list={[
+            "A web-based game: Develop a web-based game using React that utilizes the latest web technologies, such as WebSockets and WebRTC, to create a real-time, multiplayer experience.",
+            "A social media platform for connecting with other gardeners and sharing tips and plant recommendations.",
+            "A budgeting app that integrates with bank accounts and tracks spending in real-time.",
+            "A language learning app that uses augmented reality to create immersive, interactive lessons.",
+            "A real estate app that uses VR technology to allow users to virtually `visit` properties before scheduling a physical tour.",
+            "A virtual wardrobe app that allows users to upload images of their clothing, create outfits, and plan their outfits for upcoming events.",
+            "A real-time collaborative code editor: Allow multiple users to work on the same codebase simultaneously, with the changes being synced in real-time.",
+          ]}
+          typeOfList={"ol"}
+        />
+        <br />
       </>
     ),
   },

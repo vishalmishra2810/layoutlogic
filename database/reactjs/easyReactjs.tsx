@@ -1,16 +1,22 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import ReplaceCode from "../../common/replaceCode/ReplaceCode";
 import {
   check_valid_prop,
   class_based_string,
   context_api,
+  es5_es6,
   functional_based,
   jest_test,
   react_router_example,
   usestate_example,
+  use_callback_example,
+  use_context_example,
   use_effect_example,
+  use_memo_example,
   use_reducer_example,
+  use_ref_example,
 } from "./constant";
 
 export const EASY_REACTJS = [
@@ -133,6 +139,26 @@ export const EASY_REACTJS = [
           codeString={`<button onClick={handleClick}>Click Me</button>`}
           language="javascript"
         />
+      </>
+    ),
+  },
+  {
+    question: "What is synthetic event in ReactJS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Synthetic events are cross-browser wrapper around the browser’s native
+          event.
+          <br /> They work identically across all browsers.
+          <br /> Synthetic events are pooled, which means that the synthetic
+          event object will be reused and all properties will be nullified after
+          the event callback has been invoked.
+          <br /> This is for performance reasons.
+          <br /> To access the event properties in an asynchronous way, you
+          should call event.persist() on the event, which will remove the event
+          from the synthetic event pool and allow references to the event to be
+          retained by user code.
+        </p>
       </>
     ),
   },
@@ -328,6 +354,23 @@ export const EASY_REACTJS = [
     ),
   },
   {
+    question: "What is difference between ES5 and ES6 syntax?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          ES5 is the fifth edition of the ECMAScript standard.
+          <br /> It was standardized in 2009 and is the most widely used version
+          of JavaScript.
+          <br /> ES5 is supported by all modern browsers.
+          <br />
+          <br /> ES6 is the sixth edition of the ECMAScript standard.
+          <br /> It was standardized in 2015.
+        </p>
+        <CodeSnippet codeString={es5_es6} language="javascript" />
+      </>
+    ),
+  },
+  {
     question:
       "Can you explain the difference between the useState and useReducer Hooks?",
     answer: (
@@ -367,6 +410,162 @@ export const EASY_REACTJS = [
           React components.
         </p>
         <CodeSnippet codeString={use_effect_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is difference between ReactJS and AngularJS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          These are the main differences between ReactJS and AngularJS:
+        </p>
+        <MakeDifferentiate
+          headerData={["ReactJS", "AngularJS"]}
+          totalColumn={2}
+          columnDataLength={3}
+          columnData={{
+            0: [
+              "Server-side rendering is supported by ReactJS.",
+              "ReactJS uses Virtual DOM.",
+              "It is a library developed by Facebook.",
+            ],
+            1: [
+              "Server-side rendering is not supported by AngularJS.",
+              "AngularJS uses Real DOM.",
+              "It is a framework developed by Google.",
+            ],
+          }}
+        />
+      </>
+    ),
+  },
+  {
+    question: "What is `useState` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useState Hook is used to manage the state of a component.
+          <br /> It is used to store the state of a component and to update the
+          state of a component.
+        </p>
+        <p className="simple_answers">
+          here is an example of the useState Hook:
+        </p>
+        <CodeSnippet codeString={usestate_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useEffect` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useEffect Hook is used to perform side effects in a function
+          component.
+          <br /> It is used to perform side effects such as fetching data from
+          an API, setting up a subscription, or manually changing the DOM in
+          React components.
+        </p>
+        <CodeSnippet codeString={use_effect_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useRef` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          In React, useRef() is a hook that allows you to create a reference to
+          a DOM element or a component instance. It can be used to access and
+          manipulate the element or component after it has been rendered.
+        </p>
+        <p className="simple_answers">
+          The useRef Hook is used to create a reference to a DOM element.
+          <br /> It is used to access the DOM nodes directly.
+        </p>
+        <p className="simple_answers">
+          For example, you can use useRef() to create a reference to a text
+          input element, and then use the current property to access the value
+          of the input or focus the input.
+        </p>
+        <CodeSnippet codeString={use_ref_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useContext` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useContext Hook is used to access the context value from a context
+          object.
+          <br /> It is used to access the context value from a context object
+          created by the React.createContext() method.
+        </p>
+        <p className="simple_answers">
+          For example, you can use useContext() to access the context value from
+          a context object created by the React.createContext() method.
+        </p>
+        <CodeSnippet codeString={use_context_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useReducer` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useReducer Hook is used to manage the state of a component in a
+          more complex way.
+          <br /> It is used to store the state of a component and to update the
+          state of a component in a more complex way.
+        </p>
+        <p className="simple_answers">
+          here is an example of the useReducer Hook:
+        </p>
+        <CodeSnippet codeString={use_reducer_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useCallback` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useCallback Hook is used to return a memoized callback.
+          <br /> It is used to return a memoized callback.
+        </p>
+        <p className="simple_answers">
+          useCallback will return a memoized version of the callback that only
+          changes if one of the dependencies has changed. This is useful when
+          passing callbacks to optimized child components that rely on reference
+          equality to prevent unnecessary renders (e.g. shouldComponentUpdate).
+        </p>
+        <p className="simple_answers">
+          here is an example of the useCallback Hook:
+        </p>
+        <CodeSnippet codeString={use_callback_example} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is `useMemo` Hook, and how to use it?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The useMemo Hook is used to return a memoized value.
+          <br /> It is used to return a memoized value.
+        </p>
+        <p className="simple_answers">
+          useMemo will only recompute the memoized value when one of the
+          dependencies has changed. This optimization helps to avoid expensive
+          calculations on every render.
+        </p>
+        <p className="simple_answers">
+          here is an example of the useMemo Hook:
+        </p>
+        <CodeSnippet codeString={use_memo_example} language="javascript" />
       </>
     ),
   },

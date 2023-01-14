@@ -493,3 +493,123 @@ function MyComponent() {
   );
 }
 `;
+
+export const es5_es6 = `
+// 1. Require VS Import
+
+// ES5
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+// ES6
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// 2. exports VS export
+
+// ES5
+module.exports = MyComponent;
+
+// ES6
+export default MyComponent;
+
+`;
+
+export const hoc_string = `
+  const MyComponent = (props) => {
+    return <div>{props.name}</div>;
+  };
+
+  export default withMyHOC(MyComponent);
+`;
+
+export const pure_component_string = `
+import React, { PureComponent } from 'react';
+
+class MyComponent
+  extends PureComponent {
+  render() {
+    return <div>{this.props.name}</div>;
+  }
+}
+`;
+
+export const use_ref_example = `
+import React, { useRef } from 'react';
+
+function MyComponent() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Focus the input</button>
+    </div>
+  );
+}
+`;
+
+export const use_context_example = `
+import React, { useContext } from 'react';
+
+const MyContext = React.createContext();
+
+function MyComponent() {
+  const value = useContext(MyContext);
+  return <div>{value}</div>;
+}
+
+function App() {
+  return (
+    <MyContext.Provider value={42}>
+      <MyComponent />
+    </MyContext.Provider>
+  );
+}
+`;
+
+export const use_memo_example = `
+import React, { useState, useMemo } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const expensiveValue = useMemo(() => {
+    return count * 2;
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <p>Count2: {count2}</p>
+      <p>Expensive Value: {expensiveValue}</p>
+      <button onClick={() => setCount(count + 1)}>Increment count</button>
+      <button onClick={() => setCount2(count2 + 1)}>Increment count2</button>
+    </div>
+  );
+}
+`;
+
+export const use_callback_example = `
+import React, { useState, useCallback } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(() => {
+    setCount(count + 1);
+  }, [count]);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment count</button>
+    </div>
+  );
+}
+`;
