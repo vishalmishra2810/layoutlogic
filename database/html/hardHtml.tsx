@@ -1,4 +1,5 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
 import {
   canvas_string,
   canvas_string_javascript,
@@ -8,6 +9,32 @@ import {
 } from "./constant";
 
 export const HARD_HTML = [
+  {
+    question: "How to optimize the performance of a webpage?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To optimize the performance of a webpage, you will need to use the
+          following techniques:
+        </p>
+        <br />
+        <ListShow
+          list={[
+            "Use a CDN to host static files.",
+            "Minify and compress static files.",
+            "Use a service worker to cache static files.",
+            "Use a preprocessor to compile CSS and JavaScript.",
+            "Use a bundler to bundle CSS and JavaScript.",
+            "Use a minifier to minify CSS and JavaScript and remove unused code.",
+            "Use a linter to check for errors in CSS and JavaScript.",
+            "Use a compiler to compile TypeScript to JavaScript.",
+            "Lazy load images and videos.",
+          ]}
+          typeOfList="ol"
+        />
+      </>
+    ),
+  },
   {
     question:
       "How do you use the canvas element in HTML to create graphics and animations using JavaScript?",

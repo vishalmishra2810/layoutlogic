@@ -281,4 +281,60 @@ export const EASY_HTML = [
       </>
     ),
   },
+  {
+    question: "What is difference between HTML elements and HTML tags?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          HTML elements are the content between the opening and closing tags.
+        </p>
+        <p className="simple_answers">
+          HTML tags are the opening and closing tags.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is empty element in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          An empty element is an element with no content.
+        </p>
+        <p className="simple_answers">
+          For example, the <code>&lt;br&gt;</code> tag defines a single line
+          break.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What are the entities in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Entities are characters that are not allowed in HTML.
+        </p>
+        <p className="simple_answers">
+          For example, the <code>&lt;</code> character is not allowed in HTML.
+          You will need to use the <code>&amp;lt;</code> entity instead.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is multipart/form-data in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The <code>multipart/form-data</code> value is used to specify that the
+          form data should be encoded as MIME data.
+        </p>
+        <p className="simple_answers">
+          The <code>multipart/form-data</code> value is only used when the
+          <code>method</code> attribute is set to <code>post</code>.
+        </p>
+      </>
+    ),
+  },
 ];

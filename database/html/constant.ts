@@ -251,3 +251,21 @@ navigator.mediaDevices.getUserMedia(constraints)
 }
 </script>
 `;
+
+export const figure_tag_string = `
+<figure>
+  <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+  <figcaption>Fig.1 - A picture of a mountain.</figcaption>
+</figure>
+`;
+
+export const datalist_tag_string = `
+<input list="browsers">
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+`;

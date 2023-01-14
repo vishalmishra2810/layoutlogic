@@ -1,8 +1,10 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
+  datalist_tag_string,
   details_summary_string,
   dropdown_string,
+  figure_tag_string,
   geolocation_string,
   iframe_tag_string,
   inline_style_html_string,
@@ -328,6 +330,30 @@ export const MEDIUM_HTML = [
           function to be executed when the location is available.
         </p>
         <CodeSnippet codeString={geolocation_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "What is use of figure tag in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The figure tag is used to specify self-contained content, like
+          illustrations, diagrams, photos, code listings, etc.
+        </p>
+        <CodeSnippet codeString={figure_tag_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "What is datalist tag in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The datalist tag is used to provide a predefined list of values for an
+          input element.
+        </p>
+        <CodeSnippet codeString={datalist_tag_string} language="html" />
       </>
     ),
   },
