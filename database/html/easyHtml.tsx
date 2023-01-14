@@ -259,4 +259,26 @@ export const EASY_HTML = [
       </>
     ),
   },
+  {
+    question: "What is different between async and defer in script tag?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The `<code>async</code>` attribute is a boolean attribute.
+        </p>
+        <p className="simple_answers">
+          When present, it specifies that the script is executed asynchronously
+          as soon as it is available.
+        </p>
+        <br />
+        <p className="simple_answers">
+          The `<code>defer</code>` attribute is a boolean attribute.
+        </p>
+        <p className="simple_answers">
+          When present, it specifies that the script is executed when the page
+          has finished parsing.
+        </p>
+      </>
+    ),
+  },
 ];

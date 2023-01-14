@@ -6,8 +6,10 @@ import {
   first_form_string,
   first_test_string,
   higher_order_string,
+  hoc_string,
   lazy_loading_string,
   props_pass_string,
+  pure_component_string,
   react_memo_string,
   react_ref_string,
   react_router,
@@ -102,30 +104,26 @@ export const MEDIUM_REACTJS = [
     top: true,
   },
   {
-    question: "What is the difference between ReactJS and AngularJS?",
+    question: "What is difference between Stateful and Stateless components?",
     answer: (
       <>
         <p className="simple_answers">
-          The main difference between ReactJS and AngularJS are as follows:
+          The main difference between Stateful and Stateless components are as
         </p>
         <MakeDifferentiate
           totalColumn={2}
-          columnDataLength={5}
-          headerData={["ReactJS", "AngularJS"]}
+          columnDataLength={3}
+          headerData={["Stateful Component", "Stateless Component"]}
           columnData={{
             0: [
-              "ReactJS is a JavaScript library for building user interfaces.",
-              "ReactJS is a front-end library developed by Facebook.",
-              "ReactJS allows us to create reusable UI components.",
-              "ReactJS is used to handle the view layer for web and mobile apps.",
-              "ReactJS is a component-based library.",
+              "Stateful components are also known as <b>Smart Components</b>.",
+              "Have authority to change the state of the application.",
+              "Contains the knowledge of past, present and future states of the application.",
             ],
             1: [
-              "AngularJS is a JavaScript framework for building web applications.",
-              "AngularJS is a front-end framework developed by Google.",
-              "AngularJS allows us to create reusable UI components.",
-              "AngularJS is used to handle the view layer for web apps.",
-              "AngularJS is a component-based framework.",
+              "Stateless components are also known as <b>Dumb Components</b>.",
+              "Do not have authority to change the state of the application.",
+              "Contains no knowledge of past, present and future states of the application.",
             ],
           }}
         />
@@ -192,10 +190,76 @@ export const MEDIUM_REACTJS = [
           that manages the application's routing, and a set of `Route`
           components that define the individual routes in your application.
         </p>
-        <CodeSnippet codeString={react_router} />
+        <CodeSnippet codeString={react_router} language="javascript" />
       </>
     ),
     top: true,
+  },
+  {
+    question: "What is HOC in React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          A higher-order component (HOC) is an advanced technique in React for
+          reusing component logic. HOCs are not part of the React API, per se.
+          They are a pattern that emerges from React’s compositional nature.
+        </p>
+        <CodeSnippet codeString={hoc_string} language="javascript" />
+      </>
+    ),
+  },
+  {
+    question: "What is advantage of using HOC in React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The main advantage of using HOC in React are as follows:
+        </p>
+        <ListShow
+          typeOfList={"ul"}
+          list={[
+            "HOCs are a great way to reuse code.",
+            "HOCs are a great way to abstract state.",
+            "Props manipulation.",
+          ]}
+        />
+      </>
+    ),
+  },
+  {
+    question: "How do you modularize your React application?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are many ways to modularize your React application. Here are a
+          few ways to do it:
+        </p>
+        <br />
+        <ol className="answer_list">
+          <li className="answer_list_item">
+            <b>Components</b> - Components are the building blocks of a React
+            application. They are the smallest units of code that can be reused
+            in a React application. Components are the building blocks of a
+            React application. They are the smallest units of code that can be
+            reused in a React application.
+            <br />
+          </li>
+          <li className="answer_list_item">
+            <b>Containers</b> - Containers are components that are connected to
+            the Redux store. They are responsible for fetching data from the
+            store and passing it to the presentational components.
+            <br />
+          </li>
+          <li className="answer_list_item">
+            <b>Presentational Components</b> - Presentational components are
+            components that are responsible for displaying data. They are
+            typically stateless components that receive data and callbacks
+            exclusively via props.
+            <br />
+          </li>
+        </ol>
+      </>
+    ),
   },
   {
     question: "How do you handle forms in React?",
@@ -411,6 +475,26 @@ export const MEDIUM_REACTJS = [
             to a functional component in the React DevTools. <br />
           </li>
         </ol>
+      </>
+    ),
+  },
+  {
+    question: "What are pure components in React?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Pure components are components that do not re-render when their props
+          do not change. <br />
+          They can be used to improve the performance of your application.{" "}
+          <br />
+          You can create a pure component by extending the React.PureComponent
+          class. <br />
+          You can also create a pure component by using the React.memo
+          higher-order component. <br />
+        </p>
+        <br />
+        <p className="simple_answers">Here is an example of how to use it:</p>
+        <CodeSnippet codeString={pure_component_string} language="javascript" />
       </>
     ),
   },
