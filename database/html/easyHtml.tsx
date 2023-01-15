@@ -1,4 +1,5 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import ListShow from "../../common/listShow/ListShow";
 import {
   form_string,
   html_str,
@@ -334,6 +335,65 @@ export const EASY_HTML = [
           The <code>multipart/form-data</code> value is only used when the
           <code>method</code> attribute is set to <code>post</code>.
         </p>
+      </>
+    ),
+  },
+  {
+    question: "What is the role of the <head> section in an HTML document?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The <code>&lt;head&gt;</code> section contains meta information about
+          the HTML document.
+        </p>
+        <p className="simple_answers">
+          The <code>&lt;head&gt;</code> section is a container for all the head
+          elements, including a title for the document, scripts, styles, meta
+          information, and more.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is the difference between a GET and POST request?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The `<code>GET</code>` method requests data from a specified resource.
+        </p>
+        <p className="simple_answers">
+          The `<code>POST</code>` method submits data to be processed to a
+          specified resource.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What is the use of accesskey attribute in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          The `<code>accesskey</code>` attribute specifies a shortcut key to
+          activate/focus an element.
+        </p>
+        <p className="simple_answers">
+          The `<code>accesskey</code>` attribute is used to provide a keyboard
+          shortcut to an element.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What are some common layout frameworks for HTML and CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Some common layout frameworks for HTML and CSS are:
+        </p>
+        <ListShow
+          list={["Bootstrap", "Foundation", "Materialize", "UIkit", "W3.CSS"]}
+          typeOfList="ul"
+        />
       </>
     ),
   },

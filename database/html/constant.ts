@@ -269,3 +269,29 @@ export const datalist_tag_string = `
   <option value="Safari">
 </datalist>
 `;
+
+export const contenteditable_string = `
+<p contenteditable="true">This is a paragraph.</p>
+`;
+
+export const drag_drop_string = `
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="div2" draggable="true" ondragstart="drag(event)"></div>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+`;
