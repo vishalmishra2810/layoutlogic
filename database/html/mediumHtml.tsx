@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
@@ -403,6 +404,13 @@ export const MEDIUM_HTML = [
           dragged over a valid drop target.
         </p>
         <CodeSnippet codeString={drag_drop_string} language="html" />
+        <br />
+        <Link
+          href="questions/drag_and_drop"
+          className="simple_answers_link_btn"
+        >
+          For more information, Open this link
+        </Link>
       </>
     ),
   },

@@ -397,4 +397,22 @@ export const EASY_HTML = [
       </>
     ),
   },
+  {
+    question: "What are different types of lists in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          There are three types of lists in HTML:
+        </p>
+        <ListShow
+          list={[
+            "Ordered list - <ol>",
+            "Unordered list - <ul>",
+            "Description list - <dl>",
+          ]}
+          typeOfList="ul"
+        />
+      </>
+    ),
+  },
 ];

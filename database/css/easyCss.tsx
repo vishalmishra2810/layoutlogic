@@ -178,4 +178,38 @@ export const EASY_CSS = [
       </>
     ),
   },
+  {
+    question: "What are the advantages of using CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">The advantages of using CSS are:</p>
+        <br />
+        <ul className="answer_list">
+          <li className="answer_list_item">
+            CSS saves a lot of work. It can control the layout of multiple web
+            pages all at once
+          </li>
+          <li className="answer_list_item">
+            External stylesheets are stored in CSS files
+          </li>
+          <li className="answer_list_item">
+            CSS is independent of HTML and can be used with any XML-based markup
+            language
+          </li>
+          <li className="answer_list_item">
+            CSS is easy to learn and understand
+          </li>
+          <li className="answer_list_item">
+            CSS is compatible with all browsers
+          </li>
+          <li className="answer_list_item">
+            CSS is a W3C standard and is an open standard
+          </li>
+          <li className="answer_list_item">
+            CSS has been adopted by all major browsers
+          </li>
+        </ul>
+      </>
+    ),
+  },
 ];

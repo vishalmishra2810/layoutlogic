@@ -1,5 +1,3 @@
-import Image from "next/image";
-import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import TabView from "../../common/tabView/TabView";
 import {
   calculator_css,
@@ -11,7 +9,15 @@ import {
   navigation_html,
   navigation_js,
 } from "./constant";
-import { fetch_js, todo_css, todo_html, todo_js } from "./easyConstant";
+import {
+  drag_css,
+  drag_html,
+  drag_js,
+  fetch_js,
+  todo_css,
+  todo_html,
+  todo_js,
+} from "./easyConstant";
 
 export const EASY_MACHINE_QUESTIONS = [
   {
@@ -134,5 +140,30 @@ export const EASY_MACHINE_QUESTIONS = [
     slug: "simple_calculator",
     imgUrl:
       "https://user-images.githubusercontent.com/76992713/211240906-003e1f19-ad12-41a8-b984-2e6bd057b699.png",
+  },
+  {
+    question:
+      "How to add Drag and Drop functionality to a webpage using HTML, CSS, and JavaScript?",
+    answer: (
+      <>
+        <p className="simple-answer">
+          Drag and drop is a common design pattern used in web applications.
+        </p>
+        <p className="simple-answer">
+          The program should allow the user to drag and drop items from one
+          location to another.
+        </p>
+        <br />
+        <TabView
+          tabList={["HTML", "CSS", "JavaScript"]}
+          tabComponentList={[drag_html, drag_css, drag_js]}
+          result_url="https://user-images.githubusercontent.com/76992713/212529057-f5c392ac-b4ce-4700-b315-50d980b9f678.png"
+        />
+      </>
+    ),
+    language: ["HTML", "CSS", "JavaScript"],
+    slug: "drag_and_drop",
+    imgUrl:
+      "https://user-images.githubusercontent.com/76992713/212529057-f5c392ac-b4ce-4700-b315-50d980b9f678.png",
   },
 ];
