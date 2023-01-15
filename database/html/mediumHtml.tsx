@@ -1,8 +1,10 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import {
+  contenteditable_string,
   datalist_tag_string,
   details_summary_string,
+  drag_drop_string,
   dropdown_string,
   figure_tag_string,
   geolocation_string,
@@ -354,6 +356,53 @@ export const MEDIUM_HTML = [
           input element.
         </p>
         <CodeSnippet codeString={datalist_tag_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "How do you use the contenteditable attribute in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To use the contenteditable attribute in HTML, you will need to specify
+          the contenteditable attribute in the element and set it to true.
+        </p>
+        <p className="simple_answers">
+          The contenteditable attribute is used to make an element editable.
+        </p>
+        <CodeSnippet codeString={contenteditable_string} language="html" />
+      </>
+    ),
+  },
+  {
+    question: "How do you implement drag and drop functionality in HTML?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          To implement drag and drop functionality in HTML, you will need to use
+          the dragstart, drag, dragenter, dragleave, dragover, drop, and dragend
+          events.
+        </p>
+        <p className="simple_answers">
+          The dragstart event is fired when the user starts dragging an element.
+        </p>
+        <p className="simple_answers">
+          The drag event is fired when an element or text selection is being
+          dragged.
+        </p>
+        <p className="simple_answers">
+          The dragenter event is fired when a dragged element or text selection
+          enters a valid drop target.
+        </p>
+        <p className="simple_answers">
+          The dragleave event is fired when a dragged element or text selection
+          leaves a valid drop target.
+        </p>
+        <p className="simple_answers">
+          The dragover event is fired when an element or text selection is being
+          dragged over a valid drop target.
+        </p>
+        <CodeSnippet codeString={drag_drop_string} language="html" />
       </>
     ),
   },

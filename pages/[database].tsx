@@ -28,7 +28,7 @@ function Database() {
         <link rel="icon" href="/layoutlogic.jpg" />
         <script
           defer
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1953898602810770"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
           crossOrigin="anonymous"
         ></script>
       </Head>
