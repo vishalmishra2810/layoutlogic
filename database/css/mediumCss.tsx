@@ -332,4 +332,21 @@ export const MEDIUM_CSS = [
       </>
     ),
   },
+  {
+    question: "What is box model in CSS?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          In CSS, the box model is the layout model used for elements in the
+          Document Object Model (DOM).
+          <br /> It defines the total size of an element, including the content,
+          padding, borders, and margins. The box model is used to calculate the
+          size and position of elements on a web page. <br /> The default box
+          model in CSS is the standard box model, which defines the total width
+          and height of an element as the sum of its content, padding, borders,
+          and margins.
+        </p>
+      </>
+    ),
+  },
 ];

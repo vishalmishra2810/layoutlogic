@@ -1,4 +1,3 @@
-
 export const todo_html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -241,4 +240,197 @@ fetch("https://jsonplaceholder.typicode.com/users")
     }
   })
   .catch((error) => console.log(error));
+`;
+
+export const drag_html = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left box">
+        <p class="title" draggable="true">Title 1</p>
+        <p class="title" draggable="true">Description 1</p>
+      </div>
+      <div class="right box"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+`;
+
+export const drag_css = `
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1024px;
+  height: 100vh;
+  margin: 42px auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 42px;
+}
+
+.left,
+.right {
+  width: 340px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(232, 226, 226);
+  width: 100%;
+  height: 60px;
+  background: rgb(215, 55, 55);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dragging {
+  background: rgb(127, 127, 235);
+}
+
+.hide {
+  display: none;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 1024px;
+  margin: 42px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.container {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.text-area {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 4px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border: none;
+}
+
+button {
+  width: 200px;
+  height: 52px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2417d6;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+#stop_btn {
+  background-color: #ff0000;
+}
+
+.in_progress{
+  color: #2dd782;
+}
+
+`;
+
+export const drag_js = `
+let draggable_item = document.querySelectorAll(".title");
+let draggable_zones = document.querySelectorAll(".box");
+
+// loop through draggable items
+draggable_item.forEach((item) => {
+  item.addEventListener("dragstart", (e) => {
+    e.target.classList.add("dragging");
+    setTimeout(() => {
+      e.target.classList.add("hide");
+    }, 0);
+  });
+
+  item.addEventListener("dragend", (e) => {
+    e.target.classList.remove("dragging");
+    e.target.classList.remove("hide");
+  });
+});
+
+// loop through draggable zones
+draggable_zones.forEach((zone) => {
+  zone.addEventListener("dragenter", (e) => {});
+
+  zone.addEventListener("dragover", (e) => {
+    // prevent default to allow drop
+    e.preventDefault();
+  });
+
+  zone.addEventListener("dragleave", (e) => {
+    console.log("dragleave");
+  });
+
+  zone.addEventListener("drop", (e) => {
+    const draggable = document.querySelector(".dragging");
+    zone.appendChild(draggable);
+  });
+});
+
 `;
