@@ -674,3 +674,15 @@ const person = {
 const { name, age, address: { city } } = person;
 console.log(name, age, city); // John 25 New York
 `;
+
+export const currying_example = `
+function add(a) {
+    return function(b) {
+        return a + b;
+    };
+}
+
+const add5 = add(5);
+console.log(add5(2)); // 7
+console.log(add5(3)); // 8
+`;

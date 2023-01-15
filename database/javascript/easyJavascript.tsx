@@ -5,6 +5,7 @@ import {
   arrow_template_literal_example,
   break_example,
   continue_example,
+  currying_example,
   function_example,
   if_example,
   implicit_example,
@@ -295,6 +296,28 @@ export const EASY_JAVASCRIPT = [
           codeString={arrow_template_literal_example}
           language="javascript"
         />
+      </>
+    ),
+  },
+  {
+    question: "What is Currying in JavaScript?",
+    answer: (
+      <>
+        <p className="simple_answers">
+          Currying is a technique of evaluating function with multiple
+          arguments, into sequence of functions with single argument.
+        </p>
+        <p className="simple_answers">
+          In JavaScript, currying is a technique for creating a new function
+          from an existing one by "pre-filling" some of its arguments.
+          <br /> The resulting function can be called with fewer arguments than
+          the original, and it will return a new function that takes the
+          remaining arguments. <br />
+          This can be useful for creating specialized versions of a function
+          that only differ by a few arguments, or for creating more flexible and
+          composable code.
+        </p>
+        <CodeSnippet codeString={currying_example} language="javascript" />
       </>
     ),
   },
