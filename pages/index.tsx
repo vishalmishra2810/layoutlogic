@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 import Dashboard from "../components/dashboard/Dashboard";
 import { META_TAGS } from "../utils/constant";
 
