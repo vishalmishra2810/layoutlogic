@@ -7,6 +7,8 @@ import cssIcon from "../../../assets/css.svg";
 import htmlIcon from "../../../assets/html.svg";
 import scssIcon from "../../../assets/scss.svg";
 import reduxIcon from "../../../assets/redux.svg";
+import { Adsense } from "@ctrl/react-adsense";
+import { GOOGLE_ADSENSE } from "../../../utils/constant";
 
 function FeaturedQuestions() {
   return (
@@ -26,6 +28,13 @@ function FeaturedQuestions() {
           <Modal title="SCSS" width={496} height={309} url={scssIcon} />
         </div>
       </div>
+      <Adsense
+        client={GOOGLE_ADSENSE.CLIENT_ID}
+        slot={GOOGLE_ADSENSE.AD_SLOT}
+        style={{ display: "block" }}
+        layout="in-article"
+        format="autorelaxed"
+      />
       <div className={style.featuredQuestions_bottom}>
         <div className={style.featuredQuestions_bottom_left}>
           <Modal title="CSS" width={490} height={309} url={cssIcon} />
@@ -41,6 +50,13 @@ function FeaturedQuestions() {
           />
         </div>
       </div>
+      <Adsense
+        client={GOOGLE_ADSENSE.CLIENT_ID}
+        slot={GOOGLE_ADSENSE.AD_SLOT}
+        style={{ display: "block" }}
+        layout="in-article"
+        format="autorelaxed"
+      />
     </div>
   );
 }

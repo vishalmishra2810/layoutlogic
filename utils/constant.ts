@@ -53,3 +53,7 @@ export enum DEVICE_TYPE {
   MOBILE = 800,
 }
 
+export enum GOOGLE_ADSENSE {
+  CLIENT_ID = "ca-pub-6008576066337236",
+  AD_SLOT = "5568068597",
+}

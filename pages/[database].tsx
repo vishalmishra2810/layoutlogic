@@ -26,6 +26,10 @@ function Database() {
         <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
+        <script
+          async
+          src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
       </Head>
       <div className={style.database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
