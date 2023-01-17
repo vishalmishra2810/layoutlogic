@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import React from "react";
 import { URLPaths } from "../../utils/constant";
@@ -77,6 +78,23 @@ function Footer() {
               }}
             >
               Coding Round Questions
+            </div>
+            <div className={style.footer_item}>
+              <img
+                onClick={() => {
+                  window.open(
+                    "https://www.buymeacoffee.com/sumitsinghJ",
+                    "_blank"
+                  );
+                }}
+                src={
+                  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                }
+                alt="Buy Me A Coffee"
+                width={217}
+                height={48}
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
         </div>
