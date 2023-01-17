@@ -16,13 +16,13 @@ function Dashboard() {
         <FeaturedQuestions />
         <MachineCodingList />
         <FamousQuestions />
-        <Adsense
+        {/* <Adsense
           client={GOOGLE_ADSENSE.CLIENT_ID}
           slot={GOOGLE_ADSENSE.AD_SLOT}
           style={{ display: "block" }}
           layout="in-article"
           format="autorelaxed"
-        />
+        /> */}
       </div>
       <Footer />
     </div>
