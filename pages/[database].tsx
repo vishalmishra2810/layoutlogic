@@ -12,6 +12,7 @@ import {
 } from "../utils/constant";
 import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
 import Script from "next/script";
+import Loader from "../common/loader/Loader";
 
 function Database() {
   const router = useRouter();
@@ -53,7 +54,7 @@ function Database() {
           <FrontEndCodingQuestions slug={database.toLowerCase()} />
         ) : (
           <div className={style.database_coming_soon_container}>
-            <h2>Coming Soon</h2>
+            <Loader />
           </div>
         )}
       </div>
