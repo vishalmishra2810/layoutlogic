@@ -1,5 +1,5 @@
-import Modal from "common/blogModal/Modal";
 import React from "react";
+import Modal from "../../../common/blogModal/Modal";
 import style from "./AllPost.module.scss";
 
 function AllPost({ allPosts, selectedTopic }: any) {

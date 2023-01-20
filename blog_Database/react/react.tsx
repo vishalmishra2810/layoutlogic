@@ -1,7 +1,7 @@
-import CodeSnippet from "common/codeSnippet/CodeSnippet";
-import Content from "common/contents/Contents";
 import Image from "next/image";
-import { IPostProps, TOPIC_LIST } from "utils/constant";
+import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
+import Content from "../../common/contents/Contents";
+import { IPostProps, TOPIC_LIST } from "../../utils/constant";
 import { code1, code2, code3 } from "./constant";
 
 export const REACT_POST: IPostProps[] = [

@@ -1,4 +1,4 @@
-import { IPostProps, TOPIC_LIST } from "utils/constant";
+import { IPostProps, TOPIC_LIST } from "../../utils/constant";
 
 export const JS_POST: IPostProps[] = [
   {

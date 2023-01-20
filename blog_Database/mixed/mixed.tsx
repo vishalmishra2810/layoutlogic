@@ -1,5 +1,5 @@
-import ListShow from "common/listShow/ListShow";
-import { IPostProps, TOPIC_LIST } from "utils/constant";
+import ListShow from "../../common/listShow/ListShow";
+import { IPostProps, TOPIC_LIST } from "../../utils/constant";
 
 export const Mixed_POST: IPostProps[] = [
   {
