@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import BlogDashboard from "../components/blogDashboard/BlogDashboard";
 import { META_TAGS } from "../utils/constant";
 
@@ -14,12 +15,13 @@ export default function Home() {
         <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
+        strategy="lazyOnload"
+        async
+        crossOrigin="anonymous"
+      />
       <BlogDashboard />
     </>
   );

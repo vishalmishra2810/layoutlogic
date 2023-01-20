@@ -11,6 +11,7 @@ import {
   READY_STATES_LABELS,
 } from "../utils/constant";
 import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
+import Script from "next/script";
 
 function Database() {
   const router = useRouter();
@@ -27,6 +28,12 @@ function Database() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
+        strategy="lazyOnload"
+        async
+        crossOrigin="anonymous"
+      />
       <div className={style.database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
           <div className={style.database_main_container}>
@@ -46,7 +53,7 @@ function Database() {
           <FrontEndCodingQuestions slug={database.toLowerCase()} />
         ) : (
           <div className={style.database_coming_soon_container}>
-            <h1>Coming Soon</h1>
+            <h2>Coming Soon</h2>
           </div>
         )}
       </div>

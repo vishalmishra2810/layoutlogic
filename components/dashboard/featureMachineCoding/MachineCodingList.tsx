@@ -14,9 +14,9 @@ function MachineCodingList() {
     <div className={style.machineCodingList} id="frontend_machine_coding_round">
       <div className={style.machineCodingList__container}>
         <div className={style.machineCodingList__container__header}>
-          <h1 className={style.machineCodingList__container__header__title}>
+          <h2 className={style.machineCodingList__container__header__title}>
             FrontEnd Machine Coding Round Questions
-          </h1>
+          </h2>
           <p
             className={style.machineCodingList__container__header__description}
           >
