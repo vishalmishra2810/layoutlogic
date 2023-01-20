@@ -1,15 +1,8 @@
 .allPost {
   display: flex;
   flex-direction: column;
-  margin: 32px 0px;
+  margin: 52px 0px;
   gap: 16px;
-  .allPost_header {
-    font-family: "Roboto", sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    color: #666;
-    margin-bottom: 16px;
-  }
   .allPost_posts {
     display: flex;
     gap: 32px;

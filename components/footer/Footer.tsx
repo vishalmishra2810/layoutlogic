@@ -35,6 +35,14 @@ function Footer() {
             >
               CSS
             </div>
+            <div
+              className={style.footer_item}
+              onClick={() => {
+                router.push(URLPaths.BLOG);
+              }}
+            >
+              Blog
+            </div>
           </div>
           <div className={style.footer_column}>
             <div

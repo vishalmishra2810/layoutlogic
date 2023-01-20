@@ -37,7 +37,7 @@ function Modal({
           src={url}
           alt={title}
           width={450}
-          height={320}
+          height={250}
           className={style.modal_icon}
         />
         <div className={style.modal_box_title}>{title}</div>
