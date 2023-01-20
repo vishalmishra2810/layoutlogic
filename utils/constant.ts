@@ -57,3 +57,25 @@ export enum GOOGLE_ADSENSE {
   CLIENT_ID = "ca-pub-1953898602810770",
   AD_SLOT = "7142742824",
 }
+
+export interface IPostProps {
+  title: string;
+  description: string;
+  topic: Array<string>;
+  slug: string;
+  img_url: string;
+  date: string;
+  answer: any;
+}
+
+export enum TOPIC_LIST {
+  ALL = "All",
+  HTML = "HTML",
+  CSS = "CSS",
+  JAVASCRIPT = "JavaScript",
+  REACT = "React",
+  SCSS = "SCSS",
+  REDUX = "Redux",
+  TYPESCRIPT = "TypeScript",
+  MIXED = "Mixed",
+}

@@ -30,6 +30,58 @@ import reduxIcon from "../assets/redux.svg";
 import { EASY_CODING_QUESTIONS } from "../database/codingQuestions/easyCodingQuestions";
 import { MEDIUM_CODING_QUESTIONS } from "../database/codingQuestions/mediumCodingQuestions";
 import { HARD_CODING_QUESTIONS } from "../database/codingQuestions/hardCodingQuestions";
+import { TOPIC_LIST } from "./constant";
+import { REACT_POST } from "../blog_Database/react/react";
+import { JS_POST } from "../blog_Database/js/js";
+import { CSS_POST } from "../blog_Database/css/css";
+import { TS_POST } from "../blog_Database/ts/ts";
+import { HTML_POST } from "../blog_Database/html/html";
+import { Mixed_POST } from "../blog_Database/mixed/mixed";
+
+export const getTopicsList = () => {
+  return [
+    TOPIC_LIST.ALL,
+    TOPIC_LIST.HTML,
+    TOPIC_LIST.CSS,
+    TOPIC_LIST.JAVASCRIPT,
+    TOPIC_LIST.TYPESCRIPT,
+    TOPIC_LIST.REACT,
+    TOPIC_LIST.SCSS,
+    TOPIC_LIST.REDUX,
+    TOPIC_LIST.MIXED,
+  ];
+};
+
+export const getPostsByTopic = (posts: any, topic: string) => {
+  if (topic === "All") {
+    return posts;
+  }
+  return posts.filter((post: any) => post?.topic?.includes(topic));
+};
+
+export const getAllPosts = () => {
+  return [
+    ...REACT_POST,
+    ...JS_POST,
+    ...CSS_POST,
+    ...TS_POST,
+    ...HTML_POST,
+    ...Mixed_POST,
+  ];
+};
+
+export const getRecentPosts = (post: any) => {
+  return post
+    ?.sort((a: any, b: any) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    })
+    ?.slice(0, 2);
+};
+
+export const getPostsBySlug = (slug: string) => {
+  let all_posts = getAllPosts();
+  return all_posts?.find((post: any) => post?.slug === slug);
+};
 
 export const getQuestionWithSearchText = (searchText: string, list: any) => {
   if (searchText?.trim()?.length === 0) return list;

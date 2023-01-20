@@ -1,12 +1,8 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
-import React from "react";
-import CodingQuestions from "../../components/codingQuestions/CodingQuestions";
-import { META_TAGS } from "../../utils/constant";
+import BlogDashboard from "../components/blogDashboard/BlogDashboard";
+import { META_TAGS } from "../utils/constant";
 
-function Questions() {
-  const router = useRouter();
-  const { question }: any = router.query;
+export default function Home() {
   return (
     <>
       <Head>
@@ -18,10 +14,13 @@ function Questions() {
         <meta name="googlebot" content="index, follow" />
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
+          crossOrigin="anonymous"
+        ></script>
       </Head>
-      <CodingQuestions slug={question} />
+      <BlogDashboard />
     </>
   );
 }
-
-export default Questions;

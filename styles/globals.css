@@ -118,3 +118,15 @@ strong {
   font-weight: 600;
   text-align: center;
 }
+
+.image_nextjs {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+b {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(228, 59, 59);
+}

@@ -56,3 +56,18 @@
     }
   }
 }
+
+.openBlog {
+  width: 100%;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(190, 189, 189);
+    border-radius: 10px;
+  }
+}
