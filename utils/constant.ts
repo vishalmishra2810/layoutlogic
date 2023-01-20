@@ -35,6 +35,7 @@ export enum URLPaths {
   REDUX = "/redux",
   TOP_FRONTEND_QUESTIONS = "/top-front-end-coding-questions",
   FRONTEND_MACHINE_CODING_ROUND = "/front-end-machine-coding-round-questions",
+  BLOG = "/blog",
 }
 
 export const META_TAGS = {

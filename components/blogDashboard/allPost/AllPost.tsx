@@ -5,7 +5,6 @@ import style from "./AllPost.module.scss";
 function AllPost({ allPosts, selectedTopic }: any) {
   return (
     <div className={style.allPost}>
-      <div className={style.allPost_header}>#{selectedTopic} Posts</div>
       <div className={style.allPost_posts}>
         {allPosts?.map((post: any, index: number) => (
           <Modal
