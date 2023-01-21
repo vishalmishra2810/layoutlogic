@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import React from "react";
 import ReadBlog from "../../components/readBlog/ReadBlog";
-import style from "../../styles/style.module.scss";
 import { META_TAGS } from "../../utils/constant";
 
 function OpenBlog() {
@@ -27,9 +26,7 @@ function OpenBlog() {
         async
         crossOrigin="anonymous"
       />
-      <div className={style.openBlog}>
-        <ReadBlog slug={blog} />
-      </div>
+      <ReadBlog slug={blog} />
     </>
   );
 }

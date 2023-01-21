@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { HEADER_LIST, URLPaths } from "../../utils/constant";
+import { FOOTER_HIDE_LIST, URLPaths } from "../../utils/constant";
 import style from "./Footer.module.scss";
 import Image from "next/image";
 import buyMeCoffee from "../../assets/buy_me_coffee.png";
@@ -12,8 +12,8 @@ function Footer() {
   return (
     <footer
       className={`${style.footer} ${
-        HEADER_LIST?.filter((item: any) => item?.title === database)?.length >
-          0 && style.hide_footer
+        //@ts-ignore
+        FOOTER_HIDE_LIST?.includes(database) && style.hide_footer
       }`}
     >
       <div className={style.footer_container}>

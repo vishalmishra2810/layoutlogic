@@ -2,7 +2,7 @@
   width: 100%;
   background: #ffffff;
   width: var(--max-width);
-  margin: 48px auto;
+  margin: 0px auto;
   .database_main_container {
     display: flex;
     justify-content: center;
@@ -10,14 +10,16 @@
       width: 300px;
       position: sticky;
       margin-right: 16px;
-      top: 128px;
+      top: 105px;
       height: calc(100vh - 128px);
       background: #ffffff;
+      padding-bottom: 8px;
     }
     .database_container {
       max-width: calc(var(--max-width) - 300px);
       width: 100%;
       background: #ffffff;
+      margin-top: 25px;
     }
   }
   .database_coming_soon_container {
@@ -39,20 +41,5 @@
         margin-right: 0px;
       }
     }
-  }
-}
-
-.openBlog {
-  width: 100%;
-  height: calc(100vh - 70px);
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgb(190, 189, 189);
-    border-radius: 10px;
   }
 }

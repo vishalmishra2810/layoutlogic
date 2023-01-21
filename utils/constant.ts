@@ -143,5 +143,14 @@ export const BLOG_TOPICS = [
   "Redux",
   "NextJS",
   "TypeScript",
-  "Mixed"
+  "Mixed",
+];
+
+export const FOOTER_HIDE_LIST = [
+  "reactjs",
+  "html",
+  "css",
+  "javascript",
+  "scss",
+  "redux",
 ];
