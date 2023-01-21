@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 24px;
     box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 2px 4px rgb(0 0 0 / 5%),
       0 12px 24px rgb(0 0 0 / 5%);
@@ -40,7 +40,7 @@
       background: #202123;
       color: #fff;
       cursor: pointer;
-      font-family: "Roboto", sans-serif;
+      font-family: "Inter", sans-serif;
       transition: all 0.2s ease-in-out;
       &:hover {
         background: #1a1a1d;

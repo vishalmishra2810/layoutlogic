@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import React, { memo } from "react";
 import { URLPaths } from "../../../utils/constant";
 import {
@@ -9,9 +9,8 @@ import {
 import style from "./MachineCodingList.module.scss";
 
 function MachineCodingList() {
-  const router = useRouter();
   return (
-    <div className={style.machineCodingList} id="frontend_machine_coding_round">
+    <div className={style.machineCodingList}>
       <div className={style.machineCodingList__container}>
         <div className={style.machineCodingList__container__header}>
           <h2 className={style.machineCodingList__container__header__title}>
@@ -23,25 +22,21 @@ function MachineCodingList() {
             These are the top questions that are asked in the FrontEnd Machine
             Coding Round. You can practice these questions to get better.
           </p>
-          <div
+          <Link
+            href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
             className={style.machineCodingList__container__header__btn}
-            onClick={() => {
-              router.push(URLPaths.FRONTEND_MACHINE_CODING_ROUND);
-            }}
           >
             Open All Machine Coding Round Questions
-          </div>
+          </Link>
         </div>
         <div className={style.machineCodingList__container__list}>
           {getAllMachineRoundQuestions()
             ?.slice(0, 10)
             ?.map((question: any, index: number) => (
-              <div
+              <Link
                 className={style.machineCodingList__container__list__item}
                 key={index}
-                onClick={() => {
-                  router.push("/questions/" + question.slug);
-                }}
+                href={"/questions/" + question.slug}
               >
                 <div
                   className={
@@ -87,7 +82,7 @@ function MachineCodingList() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </Link>
             ))}
         </div>
       </div>

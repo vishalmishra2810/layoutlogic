@@ -38,20 +38,6 @@ import { TS_POST } from "../blog_Database/ts/ts";
 import { HTML_POST } from "../blog_Database/html/html";
 import { Mixed_POST } from "../blog_Database/mixed/mixed";
 
-export const getTopicsList = () => {
-  return [
-    TOPIC_LIST.ALL,
-    TOPIC_LIST.HTML,
-    TOPIC_LIST.CSS,
-    TOPIC_LIST.JAVASCRIPT,
-    TOPIC_LIST.TYPESCRIPT,
-    TOPIC_LIST.REACT,
-    TOPIC_LIST.SCSS,
-    TOPIC_LIST.REDUX,
-    TOPIC_LIST.MIXED,
-  ];
-};
-
 export const getPostsByTopic = (posts: any, topic: string) => {
   if (topic === "All") {
     return posts;

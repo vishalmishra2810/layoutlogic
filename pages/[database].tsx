@@ -6,11 +6,9 @@ import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import {
-  CONSTANT_VALUE,
   META_TAGS,
   READY_STATES_LABELS,
 } from "../utils/constant";
-import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
 import Script from "next/script";
 import Loader from "../common/loader/Loader";
 
@@ -48,10 +46,6 @@ function Database() {
               />
             </div>
           </div>
-        ) : database?.toLowerCase() === CONSTANT_VALUE.TOP_FRONTEND_QUESTIONS ||
-          database?.toLowerCase() ===
-            CONSTANT_VALUE.FRONTEND_MACHINE_CODING_ROUND ? (
-          <FrontEndCodingQuestions slug={database.toLowerCase()} />
         ) : (
           <div className={style.database_coming_soon_container}>
             <Loader />

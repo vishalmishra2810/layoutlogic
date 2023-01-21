@@ -25,6 +25,9 @@ li {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -129,4 +132,24 @@ b {
   font-size: 18px;
   font-weight: 600;
   color: rgb(228, 59, 59);
+}
+
+.main-container {
+  background: #ffffff;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scrollbar-width: 8px;
+  scrollbar-color: rgb(143, 142, 142) transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.main-container::-webkit-scrollbar {
+  width: 8px;
+}
+.main-container::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 142, 142);
+  border-radius: 4px;
 }

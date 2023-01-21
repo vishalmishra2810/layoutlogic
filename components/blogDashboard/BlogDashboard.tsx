@@ -5,7 +5,7 @@ import NoPostFound from "./noPostFound/NoPostFound";
 import { useSelector } from "react-redux";
 import { getAllPosts, getPostsByTopic } from "../../utils/helper";
 import TopicsList from "../../common/topicsList/TopicsList";
-import Footer from "../footer/Footer";
+import { BLOG_TOPICS } from "../../utils/constant";
 
 function BlogDashboard() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");
@@ -25,13 +25,14 @@ function BlogDashboard() {
   }, [value]);
   return (
     <div className={style.dashboard}>
+      <TopicsList
+        selectedTopic={selectedTopic}
+        setSelectedTopic={setSelectedTopic}
+        title="Blog"
+        description="Read the latest blog posts from LayoutLogic."
+        topicList={BLOG_TOPICS}
+      />
       <div className={style.dashboard_container}>
-        <div className={style.dashboard_header}>
-          <TopicsList
-            selectedTopic={selectedTopic}
-            setSelectedTopic={setSelectedTopic}
-          />
-        </div>
         {getPostsByTopic(allPosts, selectedTopic)?.length > 0 ? (
           <AllPost
             allPosts={getPostsByTopic(allPosts, selectedTopic)}
@@ -41,7 +42,6 @@ function BlogDashboard() {
           <NoPostFound />
         )}
       </div>
-      <Footer />
     </div>
   );
 }

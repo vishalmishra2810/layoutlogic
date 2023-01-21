@@ -1,13 +1,9 @@
-import { useRouter } from "next/router";
+import Link from "next/link";
 import React, { memo } from "react";
 import { URLPaths } from "../../../utils/constant";
 import style from "./TopSection.module.scss";
 
 function TopSection() {
-  const router = useRouter();
-  const openReactQuestions = () => {
-    router.push(URLPaths.REACTJS);
-  };
   return (
     <section className={style.topSection}>
       <h1 className={style.topSection_title}>
@@ -18,8 +14,19 @@ function TopSection() {
         might need to know for your interview. We have covered all the questions
         from the basics to the advanced level.
       </p>
-      <div className={style.topSection_button} onClick={openReactQuestions}>
-        Get Started
+      <div className={style.topSection_btn_list}>
+        <Link
+          className={`${style.topSection_button_left} ${style.topSection_btn}`}
+          href={URLPaths.REACTJS}
+        >
+          Start Learning
+        </Link>
+        <Link
+          className={`${style.topSection_button_right} ${style.topSection_btn}`}
+          href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
+        >
+          Start Practicing
+        </Link>
       </div>
     </section>
   );

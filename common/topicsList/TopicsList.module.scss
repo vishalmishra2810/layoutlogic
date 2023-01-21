@@ -3,56 +3,66 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 32px 0px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    &::-webkit-scrollbar {
-      display: none;
-      width: 0px;
-    }
+    margin: 36px auto;
     .topicsList_heder_container {
-      padding: 12px 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 24px;
+      gap: 16px;
       .topicsList_header {
-        font-size: 32px;
+        font-size: 36px;
         font-weight: 700;
         color: #000;
         font-family: "Inter", sans-serif;
+        letter-spacing: -1px;
       }
       .topicsList_sub_header {
         font-size: 16px;
         font-weight: 400;
-        color: #000;
+        color: #696969;
         font-family: "Inter", sans-serif;
       }
     }
-    .topicsList_items_list {
-      margin-top: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-    .topicsList_item {
-      color: #000;
-      font-size: 14px;
-      padding: 8px 16px;
-      font-weight: 500;
-      border-radius: 100px;
-      cursor: pointer;
-      font-family: "Inter", sans-serif;
-      white-space: nowrap;
-    }
-    .topicsList_Selected {
-      color: #fff;
-      background-color: #5373f2;
-    }
+  }
+}
+
+.topicsList_items_list {
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  z-index: 3000;
+  top: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+  }
+  .topicsList_item {
+    color: #000;
+    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: 500;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    white-space: nowrap;
+  }
+  .topicsList_Selected {
+    color: #fff;
+    background-color: #5373f2;
   }
 }
