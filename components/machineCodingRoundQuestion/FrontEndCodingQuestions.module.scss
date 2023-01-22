@@ -58,9 +58,17 @@
 }
 
 @media screen and (max-width: 768px) {
-  .frontEndCodingQuestions {
-    .frontEndCodingQuestions__container {
-      padding: 0px;
+  .machine_round {
+    .machine_round_list {
+      width: 100%;
+      padding: 0px 16px;
+      .machine_round_list_item {
+        width: 100%;
+        padding: 24px;
+        cursor: pointer;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
+      }
     }
   }
 }

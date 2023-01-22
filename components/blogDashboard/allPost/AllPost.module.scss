@@ -9,3 +9,11 @@
     flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .allPost {
+    margin: 32px 0px;
+    .allPost_posts {
+    }
+  }
+}

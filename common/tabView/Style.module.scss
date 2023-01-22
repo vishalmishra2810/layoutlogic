@@ -45,6 +45,13 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .tabView__container__header__tab {
+    padding: 6px 8px !important;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    background: #525761;
+  }
   .tabView__container__content__result__image {
     width: 300px !important;
     height: 300px !important;

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 52px;
-  .frontEndCodingQuestions__container__loader{
+  .frontEndCodingQuestions__container__loader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +28,22 @@
       direction: ltr;
       font-feature-settings: "kern";
       font-family: "Inter", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .frontEndCodingQuestions__container {
+    width: 100%;
+    margin: 32px auto;
+    padding: 0px 16px;
+    .frontEndCodingQuestions__container__questions {
+      .frontEndCodingQuestions__container__questions__question {
+        font-size: 20px;
+      }
+      .frontEndCodingQuestions__container__questions__answer {
+        font-size: 14px;
+      }
     }
   }
 }

@@ -168,4 +168,9 @@ b {
   .main-container::-webkit-scrollbar-thumb {
     display: none;
   }
+  .image_nextjs {
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+  }
 }

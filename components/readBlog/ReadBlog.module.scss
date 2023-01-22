@@ -40,3 +40,24 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .readBlog {
+    width: 100%;
+    padding: 0px 16px;
+    .readBlog_container {
+      width: 100%;
+      padding: 0px 0px;
+      .readBlog_container_header {
+        .readBlog_container_header_title {
+          font-size: 28px;
+        }
+      }
+      .readBlog_container_img_box {
+        .readBlog_container_img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

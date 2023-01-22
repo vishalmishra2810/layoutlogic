@@ -64,3 +64,35 @@
     background-color: #5373f2;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .topicsList {
+    padding: 0px 16px;
+    .topicsList_container {
+      .topicsList_heder_container {
+        .topicsList_header {
+          font-size: 24px;
+          text-align: center;
+        }
+        .topicsList_sub_header {
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .topicsList_items_list {
+    padding: 0px 8px;
+    justify-content: flex-start;
+    .topicsList_item {
+      cursor: pointer;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .topicsList_Selected {
+      color: #fff;
+      background-color: #5373f2;
+    }
+  }
+}

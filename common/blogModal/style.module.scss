@@ -65,7 +65,17 @@
     padding: 0px 16px;
     width: 100%;
     .modal_box {
+      padding: 12px;
       width: 100% !important;
+      .modal_icon {
+        width: 100% !important;
+      }
+      .modal_box_title {
+        font-size: 20px !important;
+      }
+      .modal_box_description {
+        font-size: 16px !important;
+      }
     }
   }
   .modal_box_description {
