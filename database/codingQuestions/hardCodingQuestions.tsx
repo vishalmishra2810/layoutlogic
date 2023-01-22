@@ -23,5 +23,6 @@ export const HARD_CODING_QUESTIONS = [
         <CodeSnippet codeString={tree_example} language="javascript" />
       </>
     ),
+    topic: ["tree"],
   },
 ];

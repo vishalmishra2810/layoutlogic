@@ -48,6 +48,7 @@ export const EASY_CODING_QUESTIONS = [
         <CodeSnippet codeString={string_example} language="javascript" />
       </>
     ),
+    topic: ["string"],
   },
   {
     question: `Write a function that takes in a string and returns a new string with the words reversed. For example, given the string "The quick brown fox", the function should return "fox brown quick The"`,
@@ -59,6 +60,7 @@ export const EASY_CODING_QUESTIONS = [
         />
       </>
     ),
+    topic: ["string"],
   },
   {
     question:
@@ -76,6 +78,7 @@ export const EASY_CODING_QUESTIONS = [
         />
       </>
     ),
+    topic: ["string"],
   },
   {
     question: "How can I work with arrays in JavaScript?",
@@ -106,6 +109,7 @@ export const EASY_CODING_QUESTIONS = [
         </ul>
       </>
     ),
+    topic: ["array"],
   },
   {
     question:
@@ -126,5 +130,6 @@ export const EASY_CODING_QUESTIONS = [
         <CodeSnippet codeString={array_flat_example} language="javascript" />
       </>
     ),
+    topic: ["array"],
   },
 ];
