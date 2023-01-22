@@ -11,6 +11,13 @@ function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const { database } = router.query;
+
+  const closeHeader = () => {
+    setTimeout(() => {
+      setIsMenuOpen(false);
+    }, 400);
+  };
+
   return (
     <div className={style.header_container_mobile}>
       <div className={style.header_mobile}>
@@ -36,7 +43,11 @@ function HeaderMobile() {
             </>
           )}
         </div>
-        <Link className={style.header_title_mobile} href={URLPaths.HOME}>
+        <Link
+          className={style.header_title_mobile}
+          href={URLPaths.HOME}
+          onClick={closeHeader}
+        >
           LayoutLogic
         </Link>
       </div>
@@ -54,11 +65,16 @@ function HeaderMobile() {
                 "/" + database === item?.path && style.header_menu_item_active
               }`}
               href={item?.path}
+              onClick={closeHeader}
             >
               {item?.title}
             </Link>
           ))}
-          <Link className={style.header_menu_item_mobile} href={URLPaths.BLOG}>
+          <Link
+            className={style.header_menu_item_mobile}
+            href={URLPaths.BLOG}
+            onClick={closeHeader}
+          >
             Blog
           </Link>
           <div
