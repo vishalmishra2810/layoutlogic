@@ -155,3 +155,17 @@ b {
   background-color: rgb(143, 142, 142);
   border-radius: 4px;
 }
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    scrollbar-width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .main-container::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}

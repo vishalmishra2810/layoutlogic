@@ -9,48 +9,89 @@
     .header_menu_icon {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
       cursor: pointer;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
       position: absolute;
-      left: 0px;
+      left: 16px;
       .header_menu_icon_line {
-        width: 32px;
-        height: 4px;
-        background: #fff;
+        width: 28px;
+        height: 3px;
+        background: #000;
         border-radius: 2px;
       }
     }
     .header_title_mobile {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 800;
-      color: #fff;
+      color: #000;
       cursor: pointer;
       font-family: "Inter", sans-serif;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
     }
   }
   .header_menu_mobile {
     position: absolute;
-    top: 70px;
+    top: 80px;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 80px);
     background: #fff;
     z-index: 100;
     right: -100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
     .header_menu_item_mobile {
-      font-size: 18px;
+      font-size: 15px;
       padding: 16px 24px;
       font-weight: 500;
       color: rgb(15, 14, 14);
       cursor: pointer;
+      touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
       font-family: "Inter", sans-serif;
       &:hover {
         color: #e2dddd;
       }
     }
+    .header_menu_item_active {
+      color: #0070f3;
+      text-shadow: 0 0 1px #0070f3;
+    }
   }
   .open_side_bar_mobile {
     right: 0;
   }
+}
+
+.cross_btn {
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header_menu_item_mobile_buy_me_coffee {
+  display: flex;
+  align-content: center;
+  margin-left: 24px;
+  gap: 8px;
+  width: 250px;
+  border-radius: 4px;
+  background-color: #fedd03;
+  padding: 8px;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  .header_menu_item_mobile_buy_me_coffee_text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    color: #666;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+  }
+}
+.header_container_right_item_coffee {
+  border-radius: 4px;
 }

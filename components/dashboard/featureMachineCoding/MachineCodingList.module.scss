@@ -88,15 +88,21 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .machineCodingList__container {
     padding: 0px 16px;
     .machineCodingList__container__header {
       .machineCodingList__container__header__title {
         text-align: center;
+        font-size: 28px;
       }
       .machineCodingList__container__header__description {
         padding: 0px 0px;
+      }
+      .machineCodingList__container__header__btn {
+        width: 100%;
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
       }
     }
     .machineCodingList__container__list {
