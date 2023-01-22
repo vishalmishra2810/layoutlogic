@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import Modal from "../../../common/modal/Modal";
 import style from "./FamousQuestions.module.scss";
 import sourceIcon from "../../../assets/sourceCode.jpg";
+import { URLPaths } from "../../../utils/constant";
 
 function FamousQuestions() {
   return (
@@ -25,6 +26,7 @@ function FamousQuestions() {
             //@ts-ignore
             url={sourceIcon}
             width={1016}
+            route={URLPaths.TOP_FRONTEND_QUESTIONS}
           />
         </div>
       </div>

@@ -40,6 +40,26 @@
     color: #666;
     font-family: "Inter", sans-serif;
   }
+  .footer_item_buy_coffee {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fedd03;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    .header_container_right_item_coffee {
+      border-radius: 4px;
+    }
+    .footer_buy_me_coffee_title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #666;
+      font-family: "Inter", sans-serif;
+      font-style: italic;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -54,4 +74,8 @@
       }
     }
   }
+}
+
+.hide_footer {
+  display: none;
 }

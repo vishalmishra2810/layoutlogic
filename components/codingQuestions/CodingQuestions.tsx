@@ -13,6 +13,7 @@ function CodingQuestions({ slug }: ICodingQuestionsProps) {
       setListData(getQuestionsInformation(slug));
     }
   }, [slug]);
+
   return (
     <div className={style.codingQuestions}>
       <div className={style.codingQuestions__container}>

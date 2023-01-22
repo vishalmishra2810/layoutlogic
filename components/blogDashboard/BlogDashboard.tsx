@@ -2,46 +2,45 @@ import React, { useEffect } from "react";
 import AllPost from "./allPost/AllPost";
 import style from "./BlogDashboard.module.scss";
 import NoPostFound from "./noPostFound/NoPostFound";
-import { useSelector } from "react-redux";
 import { getAllPosts, getPostsByTopic } from "../../utils/helper";
 import TopicsList from "../../common/topicsList/TopicsList";
-import Footer from "../footer/Footer";
+import { BLOG_TOPICS } from "../../utils/constant";
+import Loader from "../../common/loader/Loader";
 
 function BlogDashboard() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");
-  const [allPosts, setAllPosts]: any = React.useState([]);
-  const { value } = useSelector((state: any) => state.search);
+  const [allPosts, setAllPosts] = React.useState<any>([]);
+  const [localLoading, setLocalLoading] = React.useState<boolean>(true);
 
   useEffect(() => {
-    if (value.length === 0) {
+    setLocalLoading(true);
+    if (selectedTopic === "All") {
       setAllPosts(getAllPosts());
+      setLocalLoading(false);
     } else {
-      setAllPosts(
-        getAllPosts().filter((post: any) => {
-          return post.title.toLowerCase().includes(value.toLowerCase());
-        })
-      );
+      setAllPosts(getPostsByTopic(selectedTopic));
+      setLocalLoading(false);
     }
-  }, [value]);
+  }, [selectedTopic]);
+
   return (
     <div className={style.dashboard}>
+      <TopicsList
+        selectedTopic={selectedTopic}
+        setSelectedTopic={setSelectedTopic}
+        title="Blog"
+        description="Read the latest blog posts from LayoutLogic."
+        topicList={BLOG_TOPICS}
+      />
       <div className={style.dashboard_container}>
-        <div className={style.dashboard_header}>
-          <TopicsList
-            selectedTopic={selectedTopic}
-            setSelectedTopic={setSelectedTopic}
-          />
-        </div>
-        {getPostsByTopic(allPosts, selectedTopic)?.length > 0 ? (
-          <AllPost
-            allPosts={getPostsByTopic(allPosts, selectedTopic)}
-            selectedTopic={selectedTopic}
-          />
+        {localLoading ? (
+          <Loader />
+        ) : allPosts?.length > 0 ? (
+          <AllPost allPosts={allPosts} selectedTopic={selectedTopic} />
         ) : (
           <NoPostFound />
         )}
       </div>
-      <Footer />
     </div>
   );
 }

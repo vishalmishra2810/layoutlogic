@@ -1,108 +1,81 @@
-/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import { URLPaths } from "../../utils/constant";
+import { FOOTER_HIDE_LIST, URLPaths } from "../../utils/constant";
 import style from "./Footer.module.scss";
+import Image from "next/image";
+import buyMeCoffee from "../../assets/buy_me_coffee.png";
 
 function Footer() {
   const router = useRouter();
+  const { database } = router.query;
   return (
-    <footer className={style.footer}>
+    <footer
+      className={`${style.footer} ${
+        //@ts-ignore
+        FOOTER_HIDE_LIST?.includes(database) && style.hide_footer
+      }`}
+    >
       <div className={style.footer_container}>
         <div className={style.footer_row}>
           <div className={style.footer_column}>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.JAVASCRIPT);
-              }}
-            >
+            <Link className={style.footer_item} href={URLPaths.JAVASCRIPT}>
               JavaScript
-            </div>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.HTML);
-              }}
-            >
+            </Link>
+            <Link className={style.footer_item} href={URLPaths.HTML}>
               HTML
-            </div>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.CSS);
-              }}
-            >
+            </Link>
+            <Link className={style.footer_item} href={URLPaths.CSS}>
               CSS
-            </div>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.BLOG);
-              }}
-            >
+            </Link>
+            <Link className={style.footer_item} href={URLPaths.BLOG}>
               Blog
-            </div>
+            </Link>
           </div>
           <div className={style.footer_column}>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.REACTJS);
-              }}
-            >
+            <Link className={style.footer_item} href={URLPaths.REACTJS}>
               React
-            </div>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.REDUX);
-              }}
-            >
+            </Link>
+            <Link className={style.footer_item} href={URLPaths.REDUX}>
               Redux
-            </div>
-            <div
-              className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.SCSS);
-              }}
-            >
+            </Link>
+            <Link className={style.footer_item} href={URLPaths.SCSS}>
               SCSS
-            </div>
+            </Link>
           </div>
           <div className={style.footer_column}>
-            <div
+            <Link
               className={style.footer_item}
-              onClick={() => {
-                router.push("/" + "#frontend_machine_coding_round");
-              }}
+              href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
             >
               Machine Coding Round Questions{" "}
-            </div>
-            <div
+            </Link>
+            <Link
               className={style.footer_item}
-              onClick={() => {
-                router.push(URLPaths.TOP_FRONTEND_QUESTIONS);
-              }}
+              href={URLPaths.TOP_FRONTEND_QUESTIONS}
             >
               Coding Round Questions
-            </div>
-            <div className={style.footer_item}>
-              <img
-                onClick={() => {
-                  window.open(
-                    "https://www.buymeacoffee.com/sumitsinghJ",
-                    "_blank"
-                  );
-                }}
-                src={
-                  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                }
-                alt="Buy Me A Coffee"
-                width={217}
-                height={48}
-                style={{ cursor: "pointer" }}
+            </Link>
+            <div
+              className={`${style.footer_item} ${style.footer_item_buy_coffee}`}
+              onClick={() => {
+                window.open(
+                  "https://www.buymeacoffee.com/sumitsinghJ",
+                  "_blank"
+                );
+              }}
+            >
+              <Image
+                title="Buy me a coffee"
+                src={buyMeCoffee}
+                alt="Buy me a coffee"
+                width={36}
+                height={36}
+                className={style.header_container_right_item_coffee}
               />
+              <p className={style.footer_buy_me_coffee_title}>
+                Buy me a coffee
+              </p>
             </div>
           </div>
         </div>

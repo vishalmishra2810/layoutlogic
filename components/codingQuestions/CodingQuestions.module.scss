@@ -1,15 +1,6 @@
 .codingQuestions {
   background: #ffffff;
-  overflow-y: scroll;
-  height: calc(100vh - 70px);
   width: 100%;
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgb(157, 153, 153);
-    border-radius: 4px;
-  }
   .codingQuestions__container {
     max-width: 1000px;
     margin: 0px auto;
@@ -20,14 +11,14 @@
     flex-direction: column;
     gap: 16px;
     .codingQuestions__container_questions {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       color: #000;
       font-family: "Roboto";
     }
     .codingQuestions__container__answer {
       line-height: 1.65;
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 400;
       direction: ltr;
       font-feature-settings: "kern";
@@ -39,10 +30,6 @@
 @media screen and (max-width: 768px) {
   .codingQuestions {
     padding: 16px;
-    &::-webkit-scrollbar {
-      width: 0px;
-      display: none;
-    }
     .codingQuestions__container {
       padding: 0px;
       width: 100%;

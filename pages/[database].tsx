@@ -5,13 +5,7 @@ import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
 import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
-import {
-  CONSTANT_VALUE,
-  META_TAGS,
-  READY_STATES_LABELS,
-} from "../utils/constant";
-import FrontEndCodingQuestions from "../common/frontEndCodingQuestions/FrontEndCodingQuestions";
-import Script from "next/script";
+import { META_TAGS, READY_STATES_LABELS } from "../utils/constant";
 import Loader from "../common/loader/Loader";
 
 function Database() {
@@ -29,12 +23,6 @@ function Database() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <Script
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6008576066337236"
-        strategy="lazyOnload"
-        async
-        crossOrigin="anonymous"
-      />
       <div className={style.database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
           <div className={style.database_main_container}>
@@ -48,10 +36,6 @@ function Database() {
               />
             </div>
           </div>
-        ) : database?.toLowerCase() === CONSTANT_VALUE.TOP_FRONTEND_QUESTIONS ||
-          database?.toLowerCase() ===
-            CONSTANT_VALUE.FRONTEND_MACHINE_CODING_ROUND ? (
-          <FrontEndCodingQuestions slug={database.toLowerCase()} />
         ) : (
           <div className={style.database_coming_soon_container}>
             <Loader />

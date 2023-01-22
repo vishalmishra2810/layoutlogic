@@ -25,6 +25,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={linked_list_example} language="javascript" />
       </>
     ),
+    topic: ["linked list"],
   },
   {
     question: "How to reverse a linked list in JavaScript?",
@@ -43,6 +44,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         />
       </>
     ),
+    topic: ["linked list"],
   },
   {
     question: "How can I implement a stack or queue in JavaScript?",
@@ -68,6 +70,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={stack_queue_example} language="javascript" />
       </>
     ),
+    topic: ["stack", "queue"],
   },
   {
     question: "How to implement a hash table in JavaScript?",
@@ -92,10 +95,11 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={hash_table_example} language="javascript" />
       </>
     ),
+    topic: ["hash map"],
   },
   {
     question: "How to find two words are Anagrams or not in JavaScript?",
-    answer:(
+    answer: (
       <>
         <p className="simple-answer">
           An anagram is a word or phrase formed by rearranging the letters of a
@@ -118,6 +122,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         </p>
         <CodeSnippet codeString={anagram_example} language="javascript" />
       </>
-    )
-  }
+    ),
+    topic: ["hash map", "string"],
+  },
 ];

@@ -1,31 +1,10 @@
-.dashboard {
-  background: #ffffff;
-  overflow-y: scroll;
-  height: calc(100vh - 70px);
-  width: 100%;
-  .dashboard__container {
-    width: var(--max-width);
-    margin: 0 auto;
-  }
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgb(157, 153, 153);
-    border-radius: 4px;
-  }
+.dashboard__container {
+  width: var(--max-width);
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
-  .dashboard {
+  .dashboard__container {
     width: 100%;
-    .dashboard__container {
-      width: 100%;
-      margin: 0 auto;
-    }
-    &::-webkit-scrollbar {
-      width: 0px;
-      display: none;
-    }
   }
 }

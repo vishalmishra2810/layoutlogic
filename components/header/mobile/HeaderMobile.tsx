@@ -1,23 +1,23 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { URLPaths } from "../../../utils/constant";
+import { HEADER_LIST, URLPaths } from "../../../utils/constant";
 import style from "./HeaderMobile.module.scss";
 import closeIcon from "../../../assets/close.svg";
 import Image from "next/image";
+import Link from "next/link";
+import buyMeCoffee from "../../../assets/buy_me_coffee.png";
 
 function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const clickOnLogo = () => {
-    router.push(URLPaths.HOME);
-    setIsMenuOpen(false);
-  };
-  const chooseTopic = (topic: string) => {
-    router.push(topic);
+  const { database } = router.query;
+
+  const closeHeader = () => {
     setTimeout(() => {
       setIsMenuOpen(false);
-    }, 500);
+    }, 400);
   };
+
   return (
     <div className={style.header_container_mobile}>
       <div className={style.header_mobile}>
@@ -28,7 +28,13 @@ function HeaderMobile() {
           }}
         >
           {isMenuOpen ? (
-            <Image src={closeIcon} alt="X" width={32} height={32} />
+            <Image
+              src={closeIcon}
+              alt="X"
+              width={32}
+              height={32}
+              className={style.cross_btn}
+            />
           ) : (
             <>
               <div className={style.header_menu_icon_line}></div>
@@ -37,67 +43,59 @@ function HeaderMobile() {
             </>
           )}
         </div>
-        <div className={style.header_title_mobile} onClick={clickOnLogo}>
+        <Link
+          className={style.header_title_mobile}
+          href={URLPaths.HOME}
+          onClick={closeHeader}
+        >
           LayoutLogic
-        </div>
+        </Link>
       </div>
 
       {isMenuOpen && (
-        <div
+        <ul
           className={`${style.header_menu_mobile} ${
             isMenuOpen && style.open_side_bar_mobile
           }`}
         >
-          <div
+          {HEADER_LIST.map((item: any, index: any) => (
+            <Link
+              key={index}
+              className={`${style.header_menu_item_mobile} ${
+                "/" + database === item?.path && style.header_menu_item_active
+              }`}
+              href={item?.path}
+              onClick={closeHeader}
+            >
+              {item?.title}
+            </Link>
+          ))}
+          <Link
             className={style.header_menu_item_mobile}
+            href={URLPaths.BLOG}
+            onClick={closeHeader}
+          >
+            Blog
+          </Link>
+          <div
+            className={style.header_menu_item_mobile_buy_me_coffee}
             onClick={() => {
-              chooseTopic(URLPaths.REACTJS);
+              window.open("https://www.buymeacoffee.com/sumitsinghJ", "_blank");
             }}
           >
-            ReactJs
+            <Image
+              title="Buy me a coffee"
+              src={buyMeCoffee}
+              alt="Buy me a coffee"
+              width={32}
+              height={32}
+              className={style.header_container_right_item_coffee}
+            />
+            <p className={style.header_menu_item_mobile_buy_me_coffee_text}>
+              Buy me a coffee
+            </p>
           </div>
-          <div
-            className={style.header_menu_item_mobile}
-            onClick={() => {
-              chooseTopic(URLPaths.HTML);
-            }}
-          >
-            HTML
-          </div>
-          <div
-            className={style.header_menu_item_mobile}
-            onClick={() => {
-              chooseTopic(URLPaths.CSS);
-            }}
-          >
-            CSS
-          </div>
-          <div
-            className={style.header_menu_item_mobile}
-            onClick={() => {
-              chooseTopic(URLPaths.JAVASCRIPT);
-            }}
-          >
-            JavaScript
-          </div>
-          <div
-            className={style.header_menu_item_mobile}
-            onClick={() => {
-              chooseTopic(URLPaths.SCSS);
-            }}
-          >
-            SCSS
-          </div>
-
-          <div
-            className={style.header_menu_item_mobile}
-            onClick={() => {
-              chooseTopic(URLPaths.REDUX);
-            }}
-          >
-            Redux
-          </div>
-        </div>
+        </ul>
       )}
     </div>
   );

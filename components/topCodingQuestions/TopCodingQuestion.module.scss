@@ -1,0 +1,49 @@
+.frontEndCodingQuestions__container {
+  width: 800px;
+  margin: 52px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  .frontEndCodingQuestions__container__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+  }
+  .frontEndCodingQuestions__container__questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .frontEndCodingQuestions__container__questions__question {
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      font-family: "Roboto";
+    }
+    .frontEndCodingQuestions__container__questions__answer {
+      line-height: 1.65;
+      font-size: 16px;
+      font-weight: 400;
+      direction: ltr;
+      font-feature-settings: "kern";
+      font-family: "Inter", sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .frontEndCodingQuestions__container {
+    width: 100%;
+    margin: 32px auto;
+    padding: 0px 16px;
+    .frontEndCodingQuestions__container__questions {
+      .frontEndCodingQuestions__container__questions__question {
+        font-size: 20px;
+      }
+      .frontEndCodingQuestions__container__questions__answer {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -19,6 +19,11 @@ function SideBar({ database }: ISideBarProps) {
   const onTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(e.target.value);
   };
+  useEffect(() => {
+    if (database) {
+      setSearchText("");
+    }
+  }, [database]);
 
   return (
     <aside className={style.sideBar}>
@@ -41,7 +46,7 @@ function SideBar({ database }: ISideBarProps) {
           />
         </div>
         <div className={style.sideBar_scroolable_container}>
-          <div className={style.sideBar_title}> Questions List </div>
+          <div className={style.sideBar_title}> List of Questions</div>
           <DropDown
             itemList={getQuestionWithAnswerList(
               database,

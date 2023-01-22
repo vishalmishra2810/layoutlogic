@@ -3,25 +3,49 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin: 0 auto;
   .differentiate_container {
     margin: 16px 0px;
     height: 100%;
     table {
       width: 100%;
+      min-width: 500px;
       border-collapse: collapse;
-      border: 1px solid #000;
+      border: 1px solid rgb(121, 119, 119);
+      border-radius: 5px;
       th,
       td {
         padding: 10px;
         text-align: left;
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
+        border-right: 1px solid rgb(142, 141, 141);
+        border-bottom: 1px solid rgb(143, 141, 141);
         color: #000;
       }
       .differentiate_header {
-        font-weight: 800px;
-        font-size: 20px;
+        font-weight: 600px;
+        font-size: 18px;
         color: #343541;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+      }
+      .differentiate_answer {
+        line-height: 1.65;
+        font-size: 15px;
+        font-weight: 400;
+        direction: ltr;
+        font-feature-settings: "kern";
+        font-family: "Inter", sans-serif;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .differentiate {
+    .differentiate_container {
+      table {
+        min-width: 100%;
+        width: 100%;
       }
     }
   }

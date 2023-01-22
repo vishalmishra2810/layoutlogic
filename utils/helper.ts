@@ -38,25 +38,11 @@ import { TS_POST } from "../blog_Database/ts/ts";
 import { HTML_POST } from "../blog_Database/html/html";
 import { Mixed_POST } from "../blog_Database/mixed/mixed";
 
-export const getTopicsList = () => {
-  return [
-    TOPIC_LIST.ALL,
-    TOPIC_LIST.HTML,
-    TOPIC_LIST.CSS,
-    TOPIC_LIST.JAVASCRIPT,
-    TOPIC_LIST.TYPESCRIPT,
-    TOPIC_LIST.REACT,
-    TOPIC_LIST.SCSS,
-    TOPIC_LIST.REDUX,
-    TOPIC_LIST.MIXED,
-  ];
-};
-
-export const getPostsByTopic = (posts: any, topic: string) => {
+export const getPostsByTopic = (topic: string) => {
   if (topic === "All") {
-    return posts;
+    return getAllPosts();
   }
-  return posts.filter((post: any) => post?.topic?.includes(topic));
+  return getAllPosts()?.filter((post: any) => post?.topic?.includes(topic));
 };
 
 export const getAllPosts = () => {
@@ -227,6 +213,17 @@ export const getAllMachineRoundQuestions = () => {
   ];
 };
 
+export const getAllMachineRoundQuestionsByTopics = (topic: string) => {
+  if (topic === "React") topic = "ReactJs";
+  if (topic === "All") {
+    return getAllMachineRoundQuestions();
+  } else {
+    return getAllMachineRoundQuestions().filter(
+      (question: any) => question?.language.includes(topic) === true
+    );
+  }
+};
+
 export const getTechIcon = (technologyUsed: string) => {
   if (technologyUsed) {
     technologyUsed = technologyUsed.toLowerCase();
@@ -259,6 +256,16 @@ export const getQuestionsInformation = (slug: string) => {
     (question: any) => question?.slug === slug
   );
   return question[0];
+};
+
+export const getAllFrontEndCodingQuestionsByTopics = (topic: string) => {
+  if (topic === "All") {
+    return getAllFrontEndCodingQuestions();
+  } else {
+    return getAllFrontEndCodingQuestions().filter(
+      (question: any) => question?.topic?.includes(topic.toLowerCase()) === true
+    );
+  }
 };
 
 export const getAllFrontEndCodingQuestions = () => {

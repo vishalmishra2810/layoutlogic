@@ -1,5 +1,4 @@
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import { getDescription } from "../../utils/helper";
 import style from "./QuestionDisplay.module.scss";
 

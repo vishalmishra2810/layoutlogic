@@ -25,6 +25,9 @@ li {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -70,11 +73,12 @@ code {
   font-size: 14px;
   text-shadow: 0 1px rgb(0 0 0 / 30%);
   line-height: 20px;
+  text-size-adjust: 100%;
 }
 
 pre {
   border-radius: 3px;
-  padding: 1.5rem !important;
+  padding: 1.2rem !important;
   background: #1d1f21 !important;
 }
 
@@ -105,8 +109,10 @@ nav {
 }
 
 strong {
-  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
   font-weight: 600;
+  color: #000;
 }
 
 .simple_answers_link_btn {
@@ -126,7 +132,45 @@ strong {
 
 b {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  color: rgb(228, 59, 59);
+  color: rgb(241, 89, 89);
+}
+
+.main-container {
+  background: #ffffff;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  scrollbar-width: 8px;
+  scrollbar-color: rgb(143, 142, 142) transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.main-container::-webkit-scrollbar {
+  width: 8px;
+}
+.main-container::-webkit-scrollbar-thumb {
+  background-color: rgb(143, 142, 142);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    scrollbar-width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .main-container::-webkit-scrollbar {
+    display: none;
+  }
+  .main-container::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  .image_nextjs {
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 100%;
+  }
 }

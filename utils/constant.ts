@@ -80,3 +80,77 @@ export enum TOPIC_LIST {
   TYPESCRIPT = "TypeScript",
   MIXED = "Mixed",
 }
+
+export const HEADER_LIST = [
+  {
+    title: "React",
+    path: URLPaths.REACTJS,
+  },
+  {
+    title: "HTML",
+    path: URLPaths.HTML,
+  },
+  {
+    title: "CSS",
+    path: URLPaths.CSS,
+  },
+  {
+    title: "JavaScript",
+    path: URLPaths.JAVASCRIPT,
+  },
+  {
+    title: "SCSS",
+    path: URLPaths.SCSS,
+  },
+  {
+    title: "Redux",
+    path: URLPaths.REDUX,
+  },
+];
+
+export const FRONT_END_CODING_TOPICS = [
+  "All",
+  "Array",
+  "String",
+  "Tree",
+  "Stack",
+  "Queue",
+  "Hash Map",
+  "Linked List",
+  "Data Structure",
+  "Algorithm",
+];
+
+export const FRONT_END_MACHINE_CODING_TOPICS = [
+  "All",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "SCSS",
+  "NextJS",
+  "TypeScript",
+];
+
+export const BLOG_TOPICS = [
+  "All",
+  "React",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "SCSS",
+  "Redux",
+  "NextJS",
+  "TypeScript",
+  "Mixed",
+];
+
+export const FOOTER_HIDE_LIST = [
+  "reactjs",
+  "html",
+  "css",
+  "javascript",
+  "scss",
+  "redux",
+];

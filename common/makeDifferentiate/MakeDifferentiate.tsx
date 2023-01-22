@@ -33,7 +33,7 @@ function MakeDifferentiate({
               (item, index) => (
                 <tr key={index}>
                   {Object?.keys(columnData).map((key) => (
-                    <td key={index + key}>{columnData[key][index]}</td>
+                    <td key={index + key} className={style.differentiate_answer}>{columnData[key][index]}</td>
                   ))}
                 </tr>
               )
