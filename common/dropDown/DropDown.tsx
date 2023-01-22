@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./DropDown.module.scss";
 import bottom_arrow from "../../assets/dropdown.svg";
 import { useRouter } from "next/router";

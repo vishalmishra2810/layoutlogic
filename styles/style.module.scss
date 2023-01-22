@@ -1,17 +1,25 @@
 .database {
   width: 100%;
   background: #ffffff;
-  width: var(--max-width);
-  margin: 0px auto;
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   .database_main_container {
+    margin: 0px auto;
+    width: var(--max-width);
     display: flex;
     justify-content: center;
     .database_sideBar {
       width: 300px;
       position: sticky;
       margin-right: 16px;
-      top: 105px;
-      height: calc(100vh - 128px);
+      top: 25px;
+      height: calc(100vh - 105px);
       background: #ffffff;
       padding-bottom: 8px;
     }
