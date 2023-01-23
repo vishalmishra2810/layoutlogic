@@ -40,14 +40,14 @@ function Feedback({ setShowFeedback, showFeedback }: any) {
     }));
   };
 
-  const sendMessage = () => {
+  const sendMessage = (emoji?: any) => {
     setLoading(true);
-    if (!getValidation(email, message, setTriggerData)) {
+    if (!getValidation(email, message || emoji, setTriggerData)) {
       setLoading(false);
       return;
     }
     var templateParams = {
-      message: message,
+      message: message || emoji,
       email: email,
     };
     emailjs
@@ -61,7 +61,6 @@ function Feedback({ setShowFeedback, showFeedback }: any) {
         function (response) {
           setEmail("");
           setMessage("");
-
           setShowFeedback(false);
           setLoading(false);
         },
@@ -77,7 +76,7 @@ function Feedback({ setShowFeedback, showFeedback }: any) {
 
   const onEmojiClick = (emoji: any) => {
     setMessage(emoji + " ");
-    sendMessage();
+    sendMessage(emoji + " ");
   };
 
   return (
