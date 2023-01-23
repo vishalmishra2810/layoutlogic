@@ -4,6 +4,12 @@
   .dashboard_container {
     width: 1024px;
     margin: 0px auto;
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+    }
   }
 }
 

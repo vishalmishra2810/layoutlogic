@@ -84,8 +84,10 @@
 
   .topicsList_items_list {
     padding: 0px 8px;
+    width: 100%;
+    min-width: 600px;
     justify-content: flex-start;
-    overflow-x: auto;
+    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     .topicsList_item {
       cursor: pointer;

@@ -34,7 +34,9 @@ function BlogDashboard() {
       />
       <div className={style.dashboard_container}>
         {localLoading ? (
-          <Loader />
+          <div className={style.loader}>
+            <Loader />
+          </div>
         ) : allPosts?.length > 0 ? (
           <AllPost allPosts={allPosts} selectedTopic={selectedTopic} />
         ) : (
