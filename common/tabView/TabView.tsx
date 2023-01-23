@@ -5,7 +5,6 @@ import style from "./Style.module.scss";
 
 function TabView({ tabList, tabComponentList, result_url }: any) {
   const [activeTab, setActiveTab]: any = React.useState(0);
-  console.log(tabList[activeTab]?.toLowerCase(), tabComponentList[activeTab]);
   return (
     <div className={style.tabView}>
       <div className={style.tabView__container}>
