@@ -35,7 +35,7 @@
   background-color: #fff;
   position: sticky;
   position: -webkit-sticky; /* Safari */
-  z-index: 3000;
+  z-index: 5;
   top: 80px;
   border-bottom: 1px solid #eaeaea;
   width: 100%;
@@ -85,6 +85,8 @@
   .topicsList_items_list {
     padding: 0px 8px;
     justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     .topicsList_item {
       cursor: pointer;
       touch-action: pan-y;

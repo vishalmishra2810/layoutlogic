@@ -275,3 +275,35 @@ export const getAllFrontEndCodingQuestions = () => {
     ...HARD_CODING_QUESTIONS,
   ];
 };
+
+export const getValidation = (
+  email: string,
+  message: string,
+  setErrorMessage: Function
+) => {
+  if (!email) {
+    setErrorMessage((prev: any) => ({ ...prev, email: "Email is required" }));
+    return false;
+  }
+  if (!validateEmail(email)) {
+    setErrorMessage((prev: any) => ({
+      ...prev,
+      email: "Please enter valid email",
+    }));
+    return false;
+  }
+  if (!message) {
+    setErrorMessage((prev: any) => ({
+      ...prev,
+      message: "Message is required",
+    }));
+    return false;
+  }
+
+  return true;
+};
+
+export const validateEmail = (email: string) => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+};

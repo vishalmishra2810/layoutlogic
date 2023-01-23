@@ -36,6 +36,9 @@
         justify-content: center;
         gap: 22px;
         margin-top: 8px;
+        .header_menu_list_item {
+          list-style-type: none;
+        }
         .header_menu_item {
           transition: color 0.2s ease;
           font-size: 15px;
@@ -63,6 +66,9 @@
       font-size: 14px;
       font-weight: 500;
       font-family: "Inter", sans-serif;
+      .feedback_container {
+        position: relative;
+      }
       .header_container_right_item_feedback {
         color: #696969;
         cursor: pointer;
@@ -98,5 +104,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .feedback_container {
+    display: none !important;
   }
 }
