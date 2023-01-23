@@ -1,4 +1,4 @@
-import { getAllMachineRoundQuestions } from "../utils/helper";
+import { getAllMachineRoundQuestions, getAllPosts } from "../utils/helper";
 
 function generateSiteMap(posts: any) {
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
@@ -35,6 +35,10 @@ function generateSiteMap(posts: any) {
       </url>
 
       <url>
+        <loc>https://www.layoutlogic.com/blog</loc>
+      </url>
+
+      <url>
         <loc>https://www.layoutlogic.com/front-end-machine-coding-round-questions</loc>
       </url>
 
@@ -59,8 +63,10 @@ function SiteMap() {
 export async function getServerSideProps({ res }: any) {
   // We make to get all slugs from our data source
   const request = getAllMachineRoundQuestions().map((item: any) => item?.slug);
+
+  const blogPosts = getAllPosts().map((item: any) => item?.slug);
   //sending the slugs to the generateSiteMap function
-  const sitemap = generateSiteMap(request);
+  const sitemap = generateSiteMap([...request, ...blogPosts]);
 
   res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser
