@@ -20,6 +20,7 @@ function CodeSnippet({
   language = "javascript",
   removeTopMargin = false,
 }: ICodeSnippetProps) {
+  if (language === "jsx") language = "javascript";
   return (
     <div className={style.codeSnippet}>
       <div
@@ -29,7 +30,11 @@ function CodeSnippet({
         }}
       >
         <SyntaxHighlighter language={language} style={atomOneDark}>
-          {language === "javascript"
+          {language === "javascript" ||
+          language === "jsx" ||
+          language === "tsx" ||
+          language === "ts" ||
+          language === "react"
             ? prettier.format(codeString, {
                 parser: "babel",
                 plugins: [parserBabel],

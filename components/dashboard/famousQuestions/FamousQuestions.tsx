@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import Modal from "../../../common/modal/Modal";
 import style from "./FamousQuestions.module.scss";
-import sourceIcon from "../../../assets/sourceCode.jpg";
+import sourceIcon from "../../../assets/sourceCode.svg";
 import { URLPaths } from "../../../utils/constant";
 
 function FamousQuestions() {
