@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         color="#0070f3"
         startPosition={0.3}
         stopDelayMs={200}
-        height={4}
+        height={3}
         showOnShallow={true}
       />
       <Header />

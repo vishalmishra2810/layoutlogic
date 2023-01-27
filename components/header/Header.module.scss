@@ -36,13 +36,26 @@
         justify-content: center;
         gap: 22px;
         margin-top: 8px;
+        .header_menu_button {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          cursor: pointer;
+          .header_menu_button_icon {
+            margin-top: 4px;
+          }
+          .header_menu_button_icon_rotate {
+            transform: rotate(180deg);
+          }
+          position: relative;
+        }
         .header_menu_list_item {
           list-style-type: none;
         }
         .header_menu_item {
           transition: color 0.2s ease;
           font-size: 15px;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 1.5;
           color: #696969;
           cursor: pointer;

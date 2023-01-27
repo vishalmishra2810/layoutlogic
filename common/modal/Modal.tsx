@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { URLPaths } from "../../utils/constant";
 import style from "./style.module.scss";
 
 interface IModalProps {
@@ -14,25 +15,13 @@ interface IModalProps {
   route: string;
 }
 
-function Modal({
-  title,
-  description,
-  url,
-  width,
-  height,
-  slug,
-  route,
-}: IModalProps) {
+function Modal({ title, description, url, width, height, route }: IModalProps) {
   const router = useRouter();
-  const startQuestions = () => {
-    if (slug) {
-      router.push("/" + slug);
-      return;
-    }
-    router.push("/" + title.toLowerCase());
+  const changeRoute = () => {
+    router.push(route);
   };
   return (
-    <div className={style.modal} onClick={startQuestions}>
+    <div className={style.modal} onClick={changeRoute}>
       <div
         className={style.modal_box}
         style={{
@@ -57,7 +46,8 @@ function Modal({
             marginTop: height < 350 ? 0 : height < 400 ? 12 : "",
           }}
         >
-          Get all Questions
+          Open {title}{" "}
+          {route !== URLPaths.TOP_FRONTEND_QUESTIONS ? "Questions" : ""}
         </Link>
       </div>
     </div>

@@ -2,23 +2,12 @@ import React, { useEffect } from "react";
 import style from "./Feedback.module.scss";
 import emailjs from "@emailjs/browser";
 import { getValidation } from "../../utils/helper";
-import useClickOutside from "../../utils/hooks/useClickoutSide";
 
-function Feedback({ setShowFeedback, showFeedback }: any) {
+function Feedback() {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const ref = React.useRef(null);
-  const closePopup = () => {
-    if (ref?.current === null) return;
-    if (showFeedback) {
-      setShowFeedback(false);
-    } else {
-      setShowFeedback(true);
-    }
-  };
-
-  useClickOutside(ref, closePopup);
   const [triggerData, setTriggerData] = React.useState({
     email: "",
     message: "",
@@ -61,7 +50,6 @@ function Feedback({ setShowFeedback, showFeedback }: any) {
         function (response) {
           setEmail("");
           setMessage("");
-          setShowFeedback(false);
           setLoading(false);
         },
         function (error) {
@@ -103,12 +91,12 @@ function Feedback({ setShowFeedback, showFeedback }: any) {
           </div>
           <div className={style.feedback_container_form_item}>
             <label className={style.feedback_container_form_item_label}>
-              Feedback
+              Questions or Suggestions
             </label>
             <textarea
               className={style.feedback_container_form_item_textarea}
               name="message"
-              placeholder="Your feedback..."
+              placeholder="Your question or suggestion..."
               value={message}
               onChange={handleMessageChange}
             />

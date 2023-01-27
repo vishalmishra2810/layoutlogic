@@ -143,17 +143,16 @@ b {
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  scrollbar-width: 8px;
-  scrollbar-color: rgb(143, 142, 142) transparent;
+  scrollbar-width: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 .main-container::-webkit-scrollbar {
-  width: 8px;
-}
-.main-container::-webkit-scrollbar-thumb {
-  background-color: rgb(143, 142, 142);
-  border-radius: 4px;
+  width: 0px;
+  background: transparent;
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
