@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import Modal from "../../../common/modal/Modal";
 import style from "./FeaturedQuestions.module.scss";
 import reactIcon from "../../../assets/react.svg";
 import javascriptIcon from "../../../assets/javascript.svg";
@@ -8,6 +7,8 @@ import htmlIcon from "../../../assets/html.svg";
 import scssIcon from "../../../assets/scss.svg";
 import reduxIcon from "../../../assets/redux.svg";
 import { URLPaths } from "../../../utils/constant";
+import dynamic from "next/dynamic";
+const Modal = dynamic(() => import("../../../common/modal/Modal"));
 
 function FeaturedQuestions() {
   return (
@@ -72,4 +73,4 @@ function FeaturedQuestions() {
   );
 }
 
-export default memo(FeaturedQuestions);
+export default FeaturedQuestions;

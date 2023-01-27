@@ -8,18 +8,22 @@ import HeaderMobile from "./mobile/HeaderMobile";
 import buyMeCoffee from "../../assets/buy_me_coffee.png";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-const Feedback = dynamic(() => import("../../common/feedback/Feedback"));
+import dropDownIcon from "../../assets/dropdown.svg";
+const ShowFeature = dynamic(
+  () => import("../../common/showFeature/ShowFeature")
+);
 
 function Header() {
-  const [showFeedback, setShowFeedback] = React.useState(false);
+  const [showMenu, setShowMenu] = React.useState(false);
   const windowWidth = useWindowWidth();
   const router = useRouter();
   const { database } = router.query;
 
-  const openFeedBackForm = (e: any) => {
+  const showFeatures = (e: any) => {
     e.stopPropagation();
-    setShowFeedback(true);
+    setShowMenu(!showMenu);
   };
+
   return (
     <header className={style.header}>
       {windowWidth > DEVICE_TYPE.MOBILE ? (
@@ -29,6 +33,24 @@ function Header() {
               LayoutLogic
             </Link>
             <ul className={style.header_menu}>
+              <div className={style.header_menu_feature}>
+                <div
+                  className={style.header_menu_button}
+                  onClick={showFeatures}
+                >
+                  <p className={style.header_menu_button_text}> Advanced </p>
+                  <Image
+                    src={dropDownIcon}
+                    alt="dropdown"
+                    width={20}
+                    height={20}
+                    className={`${style.header_menu_button_icon} ${
+                      showMenu && style.header_menu_button_icon_rotate
+                    }`}
+                  />
+                </div>
+                {showMenu && <ShowFeature setShowMenu={setShowMenu} />}
+              </div>
               {HEADER_LIST.map((item: any, index: any) => (
                 <li key={index} className={style.header_menu_list_item}>
                   <Link
@@ -45,20 +67,6 @@ function Header() {
             </ul>
           </div>
           <div className={style.header_container_right}>
-            <div className={style.feedback_container}>
-              <div
-                className={style.header_container_right_item_feedback}
-                onClick={openFeedBackForm}
-              >
-                Feedback
-              </div>
-              {showFeedback && (
-                <Feedback
-                  setShowFeedback={setShowFeedback}
-                  showFeedback={showFeedback}
-                />
-              )}
-            </div>
             <Link
               className={style.header_container_right_item_blog}
               href={URLPaths.BLOG}

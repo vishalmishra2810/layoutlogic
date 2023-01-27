@@ -1,8 +1,9 @@
 import React, { memo } from "react";
-import Modal from "../../../common/modal/Modal";
 import style from "./FamousQuestions.module.scss";
 import sourceIcon from "../../../assets/sourceCode.svg";
 import { URLPaths } from "../../../utils/constant";
+import dynamic from "next/dynamic";
+const Modal = dynamic(() => import("../../../common/modal/Modal"));
 
 function FamousQuestions() {
   return (
@@ -23,7 +24,6 @@ function FamousQuestions() {
             interview.
             "
             height={600}
-            //@ts-ignore
             url={sourceIcon}
             width={1016}
             route={URLPaths.TOP_FRONTEND_QUESTIONS}
@@ -34,4 +34,4 @@ function FamousQuestions() {
   );
 }
 
-export default memo(FamousQuestions);
+export default FamousQuestions;
