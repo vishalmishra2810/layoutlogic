@@ -16,10 +16,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className="main-container" ref={scrollRef}>
       <NextNProgress
-        color="#0070f3"
+        color="#f44336"
         startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
+        stopDelayMs={1}
+        height={2}
         showOnShallow={true}
       />
       <Header />
