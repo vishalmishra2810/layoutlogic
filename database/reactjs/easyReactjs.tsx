@@ -1,5 +1,4 @@
 import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
-import ListShow from "../../common/listShow/ListShow";
 import MakeDifferentiate from "../../common/makeDifferentiate/MakeDifferentiate";
 import ReplaceCode from "../../common/replaceCode/ReplaceCode";
 import {
@@ -10,6 +9,7 @@ import {
   functional_based,
   jest_test,
   react_router_example,
+  synthetic_event_string,
   usestate_example,
   use_callback_example,
   use_context_example,
@@ -26,6 +26,7 @@ export const EASY_REACTJS = [
       <p className="simple_answers">
         ReactJS is used to build single-page applications, mobile apps, and
         desktop apps.
+        <br /> It is used to build reusable UI components.
       </p>
     ),
   },
@@ -56,8 +57,8 @@ export const EASY_REACTJS = [
     answer: (
       <>
         <p className="simple_answers">
-          Data is passed between components in ReactJS using props.
-          <br /> Props are arguments passed into React components.
+          Data is passed between components in ReactJS using props. Props are
+          arguments passed into React components.
           <br /> Props are passed to components via HTML attributes.
         </p>
         <CodeSnippet codeString={`<ChildComponent name="John Doe" />`} />
@@ -79,7 +80,6 @@ export const EASY_REACTJS = [
         <p className="simple_answers">
           JSX (JavaScript XML) is a syntax extension for JavaScript that allows
           developers to write HTML-like code in their JavaScript files.
-          <br />
           <br /> It is used in conjunction with React, a JavaScript library for
           building user interfaces, to define the UI components of an app.
         </p>
@@ -129,9 +129,8 @@ export const EASY_REACTJS = [
     answer: (
       <>
         <p className="simple_answers">
-          Events are handled in ReactJS using event handlers.
-          <br /> Event handlers are functions that are called when an event
-          occurs.
+          Events are handled in ReactJS using event handlers. Event handlers are
+          functions that are called when an event occurs.
           <br /> Event handlers are passed as attributes to the elements that we
           want to handle events on.
         </p>
@@ -148,17 +147,19 @@ export const EASY_REACTJS = [
       <>
         <p className="simple_answers">
           Synthetic events are cross-browser wrapper around the browser’s native
-          event.
-          <br /> They work identically across all browsers.
+          event. They work identically across all browsers.
           <br /> Synthetic events are pooled, which means that the synthetic
           event object will be reused and all properties will be nullified after
-          the event callback has been invoked.
-          <br /> This is for performance reasons.
+          the event callback has been invoked. This is for performance reasons.
           <br /> To access the event properties in an asynchronous way, you
           should call event.persist() on the event, which will remove the event
           from the synthetic event pool and allow references to the event to be
           retained by user code.
         </p>
+        <CodeSnippet
+          codeString={synthetic_event_string}
+          language="javascript"
+        />
       </>
     ),
   },
@@ -170,13 +171,10 @@ export const EASY_REACTJS = [
           Components are styled in ReactJS using inline styles, CSS stylesheets,
           and CSS-in-JS.
         </p>
-        <br />
         <p className="simple_answers">Inline Styles:</p>
         <CodeSnippet codeString={`<div style={{color: 'red'}}></div>`} />
-        <br />
         <p className="simple_answers">CSS Stylesheets:</p>
         <CodeSnippet codeString={`import './styles.css';`} />
-        <br />
         <p className="simple_answers">CSS-in-JS:</p>
         <CodeSnippet codeString={`import styled from 'styled-components';`} />
       </>
@@ -533,8 +531,8 @@ export const EASY_REACTJS = [
     answer: (
       <>
         <p className="simple_answers">
-          The useCallback Hook is used to return a memoized callback.
-          <br /> It is used to return a memoized callback.
+          The useCallback Hook is used to return a memoized callback. It is used
+          to return a memoized callback.
         </p>
         <p className="simple_answers">
           useCallback will return a memoized version of the callback that only
@@ -554,8 +552,8 @@ export const EASY_REACTJS = [
     answer: (
       <>
         <p className="simple_answers">
-          The useMemo Hook is used to return a memoized value.
-          <br /> It is used to return a memoized value.
+          The useMemo Hook is used to return a memoized value. It is used to
+          return a memoized value.
         </p>
         <p className="simple_answers">
           useMemo will only recompute the memoized value when one of the

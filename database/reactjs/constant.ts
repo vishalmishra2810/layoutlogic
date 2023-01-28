@@ -613,3 +613,20 @@ function MyComponent() {
   );
 }
 `;
+
+export const synthetic_event_string = `
+import React from 'react';
+
+function MyComponent() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+`;
