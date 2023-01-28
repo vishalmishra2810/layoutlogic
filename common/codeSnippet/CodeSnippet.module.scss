@@ -13,10 +13,12 @@
     ::-webkit-scrollbar {
       width: 4px;
       height: 4px;
+      display: none;
+      width: 0px;
+      height: 0px;
     }
     ::-webkit-scrollbar-thumb {
-      background: #bdc0c1;
-      border-radius: 6px;
+      display: none;
     }
   }
 }

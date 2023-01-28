@@ -116,12 +116,12 @@ export const MEDIUM_REACTJS = [
           headerData={["Stateful Component", "Stateless Component"]}
           columnData={{
             0: [
-              "Stateful components are also known as <b>Smart Components</b>.",
+              "Stateful components are also known as `Smart Components`.",
               "Have authority to change the state of the application.",
               "Contains the knowledge of past, present and future states of the application.",
             ],
             1: [
-              "Stateless components are also known as <b>Dumb Components</b>.",
+              "Stateless components are also known as `Dumb Components`.",
               "Do not have authority to change the state of the application.",
               "Contains no knowledge of past, present and future states of the application.",
             ],
