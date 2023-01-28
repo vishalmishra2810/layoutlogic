@@ -5,10 +5,13 @@ import {
   getAllFrontEndCodingQuestions,
   getAllFrontEndCodingQuestionsByTopics,
 } from "../../utils/helper";
-import TopicsList from "../../common/topicsList/TopicsList";
 import style from "./TopCodingQuestion.module.scss";
-import Loader from "../../common/loader/Loader";
-import NoPostFound from "../blogDashboard/noPostFound/NoPostFound";
+import dynamic from "next/dynamic";
+const TopicsList = dynamic(() => import("../../common/topicsList/TopicsList"));
+const Loader = dynamic(() => import("../../common/loader/Loader"));
+const NoPostFound = dynamic(
+  () => import("../blogDashboard/noPostFound/NoPostFound")
+);
 
 function TopCodingQuestion() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");

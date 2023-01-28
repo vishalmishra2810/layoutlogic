@@ -6,11 +6,14 @@ import {
   getAllMachineRoundQuestionsByTopics,
   getTechIcon,
 } from "../../utils/helper";
-import TopicsList from "../../common/topicsList/TopicsList";
 import style from "./FrontEndCodingQuestions.module.scss";
 import { FRONT_END_MACHINE_CODING_TOPICS } from "../../utils/constant";
-import Loader from "../../common/loader/Loader";
-import NoPostFound from "../blogDashboard/noPostFound/NoPostFound";
+import dynamic from "next/dynamic";
+const TopicsList = dynamic(() => import("../../common/topicsList/TopicsList"));
+const Loader = dynamic(() => import("../../common/loader/Loader"));
+const NoPostFound = dynamic(
+  () => import("../blogDashboard/noPostFound/NoPostFound")
+);
 
 function FrontEndCodingQuestions() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");

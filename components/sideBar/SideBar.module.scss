@@ -31,7 +31,7 @@
         margin-right: 4px;
       }
     }
-    .sideBar_scroolable_container {
+    .sideBar_scrollable_container {
       height: calc(100vh - 160px);
       overflow-y: scroll;
       .sideBar_title {
@@ -42,10 +42,10 @@
         color: #000;
       }
       &::-webkit-scrollbar {
-        width: 8px;
+        width: 5px;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: rgb(186, 184, 184);
+        background-color: rgb(211, 209, 209);
         border-radius: 4px;
       }
     }

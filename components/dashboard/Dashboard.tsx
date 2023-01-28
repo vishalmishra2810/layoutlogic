@@ -1,6 +1,5 @@
-import React, { memo } from "react";
+import React from "react";
 import style from "./Dashboard.module.scss";
-
 import TopSection from "./topSection/TopSection";
 import dynamic from "next/dynamic";
 const MachineCodingList = dynamic(

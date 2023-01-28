@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect } from "react";
-import DropDown from "../../common/dropDown/DropDown";
+import React, { useEffect } from "react";
 import {
   TOPICS_DIFFICULTY,
   TOPICS_DIFFICULTY_LABELS,
@@ -9,6 +8,8 @@ import style from "./SideBar.module.scss";
 import searchIcon from "../../assets/search.svg";
 import Image from "next/image";
 import { DebounceInput } from "react-debounce-input";
+import dynamic from "next/dynamic";
+const DropDown = dynamic(() => import("../../common/dropDown/DropDown"));
 
 interface ISideBarProps {
   database: string;
@@ -45,7 +46,7 @@ function SideBar({ database }: ISideBarProps) {
             className={style.sideBar_search}
           />
         </div>
-        <div className={style.sideBar_scroolable_container}>
+        <div className={style.sideBar_scrollable_container}>
           <div className={style.sideBar_title}> List of Questions</div>
           <DropDown
             itemList={getQuestionWithAnswerList(

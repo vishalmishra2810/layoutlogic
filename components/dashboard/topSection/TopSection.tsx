@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { memo } from "react";
+import React from "react";
 import { URLPaths } from "../../../utils/constant";
 import style from "./TopSection.module.scss";
 
@@ -32,4 +32,4 @@ function TopSection() {
   );
 }
 
-export default memo(TopSection);
+export default TopSection;

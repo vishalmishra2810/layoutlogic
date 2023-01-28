@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import AllPost from "./allPost/AllPost";
 import style from "./BlogDashboard.module.scss";
-import NoPostFound from "./noPostFound/NoPostFound";
 import { getAllPosts, getPostsByTopic } from "../../utils/helper";
-import TopicsList from "../../common/topicsList/TopicsList";
 import { BLOG_TOPICS } from "../../utils/constant";
-import Loader from "../../common/loader/Loader";
+import dynamic from "next/dynamic";
+const AllPost = dynamic(() => import("./allPost/AllPost"));
+const NoPostFound = dynamic(() => import("./noPostFound/NoPostFound"));
+const Loader = dynamic(() => import("../../common/loader/Loader"));
+const TopicsList = dynamic(() => import("../../common/topicsList/TopicsList"));
 
 function BlogDashboard() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");
