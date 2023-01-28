@@ -3,18 +3,11 @@ import type { AppProps } from "next/app";
 import Header from "../components/header/Header";
 import { Analytics } from "@vercel/analytics/react";
 import NextNProgress from "nextjs-progressbar";
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const scrollRef: any = React.useRef(null);
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo(0, 0);
-    }
-  }, [pageProps]);
-
   return (
-    <main className="main-container" ref={scrollRef}>
+    <main className="main-container">
       <NextNProgress
         color="#f44336"
         startPosition={0.3}

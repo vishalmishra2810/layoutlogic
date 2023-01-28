@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
 import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
@@ -9,14 +9,8 @@ import { META_TAGS, READY_STATES_LABELS } from "../utils/constant";
 import Loader from "../common/loader/Loader";
 
 function Database() {
-  const scrollRef: any = React.useRef(null);
   const router = useRouter();
   const { database }: any = router.query;
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo(0, 0);
-    }
-  }, [database]);
   return (
     <>
       <Head>
@@ -29,11 +23,11 @@ function Database() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <div className={style.database} ref={scrollRef}>
+      <div className={style.database} key={database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
           <div className={style.database_main_container}>
             <div className={style.database_sideBar}>
-              <SideBar database={database} />
+              <SideBar database={database} key={database} />
             </div>
             <div className={style.database_container}>
               <QuestionDisplay
