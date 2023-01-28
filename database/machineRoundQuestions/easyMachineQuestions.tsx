@@ -40,14 +40,14 @@ export const EASY_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[todo_html, todo_css, todo_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/210720850-3cf179fa-0195-4fff-ab4b-0388d12b221f.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215260698-3feba373-a71e-4d2b-89c3-c9c9a5f09685.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "simple_todo_list",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/210720850-3cf179fa-0195-4fff-ab4b-0388d12b221f.png",
+      "https://user-images.githubusercontent.com/76992713/215260698-3feba373-a71e-4d2b-89c3-c9c9a5f09685.png",
   },
   {
     question:
@@ -76,14 +76,14 @@ export const EASY_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[fetch_html, fetch_css, fetch_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211240272-6f17f874-a057-4b57-93ee-02c4e1dea20c.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215260788-4782c288-9494-4f3d-b8f6-ba14c4d8eade.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "fetch_data_from_api",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211240272-6f17f874-a057-4b57-93ee-02c4e1dea20c.png",
+      "https://user-images.githubusercontent.com/76992713/215260788-4782c288-9494-4f3d-b8f6-ba14c4d8eade.png",
   },
   {
     question:
@@ -110,14 +110,14 @@ export const EASY_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[navigation_html, navigation_css, navigation_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211240564-95726f7e-dcf1-4aa8-b3b7-f741c53d708b.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215260863-c948c390-314e-4fd0-8ca2-0b5cf9a1d5b1.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "responsive_navigation_bar",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211240564-95726f7e-dcf1-4aa8-b3b7-f741c53d708b.png",
+      "https://user-images.githubusercontent.com/76992713/215260863-c948c390-314e-4fd0-8ca2-0b5cf9a1d5b1.png",
   },
   {
     question:
@@ -132,14 +132,14 @@ export const EASY_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[calculator_html, calculator_css, calculator_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211240906-003e1f19-ad12-41a8-b984-2e6bd057b699.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214911526-aab229f8-ae41-4dc1-a996-9ade37f11250.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "simple_calculator",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211240906-003e1f19-ad12-41a8-b984-2e6bd057b699.png",
+      "https://user-images.githubusercontent.com/76992713/214911526-aab229f8-ae41-4dc1-a996-9ade37f11250.png",
   },
   {
     question:
@@ -157,13 +157,13 @@ export const EASY_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[drag_html, drag_css, drag_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/212529057-f5c392ac-b4ce-4700-b315-50d980b9f678.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215260916-8798510a-b292-4f56-90a6-011c436f6954.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "drag_and_drop",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/212529057-f5c392ac-b4ce-4700-b315-50d980b9f678.png",
+      "https://user-images.githubusercontent.com/76992713/215260916-8798510a-b292-4f56-90a6-011c436f6954.png",
   },
 ];

@@ -54,14 +54,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[pixel_art_html, pixel_art_css, pixel_art_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211285586-c73a4bab-c294-4893-a8e0-a40fe9adba03.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214906302-63062f94-6286-4825-bbba-30953b0b9c2b.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "pixel-art-maker",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211285586-c73a4bab-c294-4893-a8e0-a40fe9adba03.png",
+      "https://user-images.githubusercontent.com/76992713/214906302-63062f94-6286-4825-bbba-30953b0b9c2b.png",
   },
   {
     question: "Build a Tic Tac Toe game using HTML, CSS, and JavaScript.",
@@ -81,14 +81,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[tic_toe_html, tic_toe_css, tic_toe_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211242320-5e03e0d5-352c-468f-9f23-9e11abfdcafc.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214907149-0dcbf8e0-d808-425f-90f6-29a60259974a.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "tic-tac-toe-game",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211242320-5e03e0d5-352c-468f-9f23-9e11abfdcafc.png",
+      "https://user-images.githubusercontent.com/76992713/214907149-0dcbf8e0-d808-425f-90f6-29a60259974a.png",
   },
   {
     question: "Build a ReactJs countdown timer?.",
@@ -102,14 +102,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["ReactJs", "CSS"]}
           tabComponentList={[countdown_js, countdown_css]}
-          result_url="https://user-images.githubusercontent.com/76992713/211242465-dbcfd29c-cb29-45f6-8c5f-9cd24298a703.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214907646-939a0647-e68b-4529-b295-59431b215a83.png"
         />
       </>
     ),
     language: ["ReactJs", "CSS"],
     slug: "reactjs-countdown-timer",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211242465-dbcfd29c-cb29-45f6-8c5f-9cd24298a703.png",
+      "https://user-images.githubusercontent.com/76992713/214907646-939a0647-e68b-4529-b295-59431b215a83.png",
   },
   {
     question:
@@ -126,14 +126,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["ReactJs", "CSS"]}
           tabComponentList={[search_filter_js, search_filter_css]}
-          result_url="https://user-images.githubusercontent.com/76992713/211286794-5ec67d81-1218-4990-a8a3-260dd9cae385.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214908311-24eb115e-4742-43ca-9786-b2f75caf435c.png"
         />
       </>
     ),
     language: ["ReactJs", "CSS"],
     slug: "optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211286794-5ec67d81-1218-4990-a8a3-260dd9cae385.png",
+      "https://user-images.githubusercontent.com/76992713/214908311-24eb115e-4742-43ca-9786-b2f75caf435c.png",
   },
   {
     question: "Build a Bishop on chessboard using HTML, CSS, and JavaScript.",
@@ -150,14 +150,14 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[chess_html, chess_css, chess_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211716374-094fdff0-ed80-472b-9cab-b7d49188f2d1.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214908664-d63029e1-febf-4476-b4f1-b4b54a693cb6.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "bishop-on-chessboard",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211716374-094fdff0-ed80-472b-9cab-b7d49188f2d1.png",
+      "https://user-images.githubusercontent.com/76992713/214908664-d63029e1-febf-4476-b4f1-b4b54a693cb6.png",
   },
   {
     question:
@@ -180,19 +180,15 @@ export const HARD_MACHINE_QUESTIONS = [
         <TabView
           tabList={["ReactJs", "CSS"]}
           tabComponentList={[counter_js, counter_css]}
-          result_url="https://user-images.githubusercontent.com/76992713/211242720-88a4f733-4662-468b-a73c-58a41a5dc70c.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214909140-66ba76f2-489e-4384-8111-6b8162312300.png"
         />
       </>
     ),
     language: ["ReactJs", "CSS"],
     slug: "reactjs-counter-application",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211242720-88a4f733-4662-468b-a73c-58a41a5dc70c.png",
+      "https://user-images.githubusercontent.com/76992713/214909140-66ba76f2-489e-4384-8111-6b8162312300.png",
   },
-  // {
-  //   question: "Build a ReactJs app for C shape with 7 boxes",
-  //   answer: <></>,
-  // },
   {
     question:
       "Build a web application for pagination using HTML, CSS, and JavaScript.",

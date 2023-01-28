@@ -49,6 +49,7 @@ function SideBar({ database }: ISideBarProps) {
         <div className={style.sideBar_scrollable_container}>
           <div className={style.sideBar_title}> List of Questions</div>
           <DropDown
+            key={database + TOPICS_DIFFICULTY.EASY}
             itemList={getQuestionWithAnswerList(
               database,
               TOPICS_DIFFICULTY.EASY,
@@ -57,6 +58,7 @@ function SideBar({ database }: ISideBarProps) {
             title={TOPICS_DIFFICULTY_LABELS.EASY}
           />
           <DropDown
+            key={database + TOPICS_DIFFICULTY.MEDIUM}
             itemList={getQuestionWithAnswerList(
               database,
               TOPICS_DIFFICULTY.MEDIUM,
@@ -65,6 +67,7 @@ function SideBar({ database }: ISideBarProps) {
             title={TOPICS_DIFFICULTY_LABELS.MEDIUM}
           />
           <DropDown
+            key={database + TOPICS_DIFFICULTY.HARD}
             itemList={getQuestionWithAnswerList(
               database,
               TOPICS_DIFFICULTY.HARD,

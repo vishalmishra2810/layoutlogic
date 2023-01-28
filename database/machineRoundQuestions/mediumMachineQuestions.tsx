@@ -38,14 +38,14 @@ export const MEDIUM_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[carousel_html, carousel_css, carousel_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211241202-1e6f73c2-9300-43c1-81a2-b2278a4fb069.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215261310-fbe89f15-9f9b-4a75-9eeb-eb42f48429cc.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "image_carousel",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211241202-1e6f73c2-9300-43c1-81a2-b2278a4fb069.png",
+      "https://user-images.githubusercontent.com/76992713/215261310-fbe89f15-9f9b-4a75-9eeb-eb42f48429cc.png",
   },
   {
     question:
@@ -101,14 +101,14 @@ export const MEDIUM_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[comment_box_html, comment_box_css, comment_box_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211241678-44a97721-a48f-4281-9d16-3723bcecfe13.png"
+          result_url="https://user-images.githubusercontent.com/76992713/215261484-1592b945-3029-48ce-804f-0adccb3df1fa.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "nested_comments",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211241678-44a97721-a48f-4281-9d16-3723bcecfe13.png",
+      "https://user-images.githubusercontent.com/76992713/215261484-1592b945-3029-48ce-804f-0adccb3df1fa.png",
   },
   {
     question: "Rating system using HTML, CSS, and JavaScript.?",
@@ -125,13 +125,13 @@ export const MEDIUM_MACHINE_QUESTIONS = [
         <TabView
           tabList={["HTML", "CSS", "JavaScript"]}
           tabComponentList={[rating_html, rating_css, rating_js]}
-          result_url="https://user-images.githubusercontent.com/76992713/211241825-3abb913c-a65b-4f78-9dbc-a00e83933960.png"
+          result_url="https://user-images.githubusercontent.com/76992713/214910462-978f5f3c-6c47-4304-bec7-afe3e54f178a.png"
         />
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
     slug: "rating_system",
     imgUrl:
-      "https://user-images.githubusercontent.com/76992713/211241825-3abb913c-a65b-4f78-9dbc-a00e83933960.png",
+      "https://user-images.githubusercontent.com/76992713/214910462-978f5f3c-6c47-4304-bec7-afe3e54f178a.png",
   },
 ];
