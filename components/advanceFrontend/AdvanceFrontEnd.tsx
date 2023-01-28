@@ -1,6 +1,7 @@
+import dynamic from "next/dynamic";
 import React from "react";
-import Feedback from "../../common/feedback/Feedback";
 import style from "./AdvanceFrontEnd.module.scss";
+const Feedback = dynamic(() => import("../../common/feedback/Feedback"));
 
 function AdvanceFrontEnd() {
   return (

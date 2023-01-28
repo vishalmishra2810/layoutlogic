@@ -24,6 +24,8 @@
   .dropDown_list {
     display: flex;
     flex-direction: column;
+    background-color: rgb(244, 241, 241);
+    border-radius: 4px;
     .dropDown_list_item {
       font-size: 14px;
       font-weight: 400;
@@ -34,7 +36,6 @@
       padding: 12px;
       &:hover {
         background-color: #e1e1e1;
-        border-radius: 4px;
       }
     }
   }
