@@ -1,27 +1,34 @@
 import React, { useEffect } from "react";
 import style from "./BlogDashboard.module.scss";
-import { getAllPosts, getPostsByTopic } from "../../utils/helper";
 import { BLOG_TOPICS } from "../../utils/constant";
 import dynamic from "next/dynamic";
+import { client } from "../../utils/sanity";
 const AllPost = dynamic(() => import("./allPost/AllPost"));
 const NoPostFound = dynamic(() => import("./noPostFound/NoPostFound"));
 const Loader = dynamic(() => import("../../common/loader/Loader"));
 const TopicsList = dynamic(() => import("../../common/topicsList/TopicsList"));
 
-function BlogDashboard() {
+function BlogDashboard({ blog_list }: any) {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");
-  const [allPosts, setAllPosts] = React.useState<any>([]);
+  const [allPosts, setAllPosts] = React.useState<any>(blog_list);
   const [localLoading, setLocalLoading] = React.useState<boolean>(true);
 
   useEffect(() => {
     setLocalLoading(true);
     if (selectedTopic === "All") {
-      setAllPosts(getAllPosts());
+      setAllPosts(blog_list);
       setLocalLoading(false);
     } else {
-      setAllPosts(getPostsByTopic(selectedTopic));
-      setLocalLoading(false);
+      (async () => {
+        const blog_list = await client.fetch(
+          `*[_type == "blog" && $topic in categories[]]`,
+          { topic: selectedTopic.toLowerCase() }
+        );
+        setAllPosts(blog_list);
+        setLocalLoading(false);
+      })();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTopic]);
 
   return (

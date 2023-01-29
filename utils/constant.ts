@@ -129,7 +129,7 @@ export const FRONT_END_MACHINE_CODING_TOPICS = [
   "React",
   "SCSS",
   "NextJS",
-  'Mixed',
+  "Mixed",
 ];
 
 export const BLOG_TOPICS = [
@@ -152,4 +152,8 @@ export const FOOTER_HIDE_LIST = [
   "javascript",
   "scss",
   "redux",
+];
+
+export const BLOG_SLUG_LIST = [
+  "top-10-javascript-concepts-you-must-know"
 ];

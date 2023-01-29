@@ -2,6 +2,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import style from "./style.module.scss";
+import { client } from "../../utils/sanity";
+import { useNextSanityImage } from "next-sanity-image";
 
 interface IModalProps {
   title: string;
@@ -24,6 +26,7 @@ function Modal({
   const startQuestions = () => {
     router.push("/blog/" + slug);
   };
+  const imageProps = useNextSanityImage(client, url);
   return (
     <div className={style.modal} onClick={startQuestions}>
       <div
@@ -34,7 +37,7 @@ function Modal({
         }}
       >
         <Image
-          src={url}
+          {...imageProps}
           alt={title}
           width={450}
           height={250}
