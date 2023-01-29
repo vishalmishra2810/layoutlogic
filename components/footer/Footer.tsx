@@ -4,7 +4,7 @@ import React from "react";
 import { FOOTER_HIDE_LIST, URLPaths } from "../../utils/constant";
 import style from "./Footer.module.scss";
 import Image from "next/image";
-import buyMeCoffee from "../../assets/buy_me_coffee.png";
+import buyMeCoffee from "../../assets/buy_me_coffee.svg";
 
 function Footer() {
   const router = useRouter();
@@ -69,8 +69,8 @@ function Footer() {
                 title="Buy me a coffee"
                 src={buyMeCoffee}
                 alt="Buy me a coffee"
-                width={36}
-                height={36}
+                width={32}
+                height={32}
                 className={style.header_container_right_item_coffee}
               />
               <p className={style.footer_buy_me_coffee_title}>

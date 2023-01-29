@@ -1,4 +1,3 @@
-import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import TabView from "../../common/tabView/TabView";
 import {
   carousel_css,
@@ -14,6 +13,13 @@ import {
   rating_html,
   rating_js,
 } from "./constant";
+import {
+  geolocation_html,
+  geolocation_js,
+  web_worker_html,
+  web_worker_js,
+  web_worker_worker_js,
+} from "./easyConstant";
 
 export const MEDIUM_MACHINE_QUESTIONS = [
   {
@@ -133,5 +139,74 @@ export const MEDIUM_MACHINE_QUESTIONS = [
     slug: "rating_system",
     imgUrl:
       "https://user-images.githubusercontent.com/76992713/214910462-978f5f3c-6c47-4304-bec7-afe3e54f178a.png",
+  },
+  {
+    question:
+      "Implement a feature that uses web workers to offload CPU-intensive tasks and improve performance in a web application.?",
+
+    answer: (
+      <>
+        <p className="simple-answer">
+          A web worker is a JavaScript running in the background, without
+          affecting the performance of the page.
+        </p>
+        <p className="simple-answer">
+          Web workers are used to perform tasks in background threads.
+        </p>
+        <p className="simple-answer">
+          If you have a task that takes a long time to complete, you can use a
+          web worker to run the task in the background, without blocking the
+          main thread.
+        </p>
+        <p className="simple-answer">
+          Here's an example of how you can use web workers to offload
+          CPU-intensive tasks:
+        </p>
+        <br />
+        <TabView
+          tabList={["HTML", "index.js", "worker.js"]}
+          tabComponentList={[
+            web_worker_html,
+            web_worker_js,
+            web_worker_worker_js,
+          ]}
+          result_url="https://user-images.githubusercontent.com/76992713/215307935-2128bc86-462e-4795-83c6-f1b82acf91f5.png"
+        />
+      </>
+    ),
+    language: ["HTML", "JavaScript"],
+    slug: "web_worker_offload_cpu_using_worker_js",
+    imgUrl:
+      "https://user-images.githubusercontent.com/76992713/215307935-2128bc86-462e-4795-83c6-f1b82acf91f5.png",
+  },
+  {
+    question:
+      "Implement a feature that uses the browser's geolocation API to display the user's current location.?",
+    answer: (
+      <>
+        <p className="simple-answer">
+          The Geolocation API is used to get the geographical position of a
+          user.
+        </p>
+        <p className="simple-answer">
+          For this feature, you can use the
+          navigator.geolocation.getCurrentPosition() method.
+        </p>
+        <p className="simple-answer">
+          Here's an example of how you can use the Geolocation API to display
+          the user's current location:
+        </p>
+        <br />
+        <TabView
+          tabList={["HTML", "JavaScript"]}
+          tabComponentList={[geolocation_html, geolocation_js]}
+          result_url="https://user-images.githubusercontent.com/76992713/215307956-6dccc22a-0feb-4fb6-9138-226e27ba33c9.png"
+        />
+      </>
+    ),
+    language: ["HTML", "JavaScript"],
+    slug: "geolocation_api_display_user_location_with_current_location_details",
+    imgUrl:
+      "https://user-images.githubusercontent.com/76992713/215307956-6dccc22a-0feb-4fb6-9138-226e27ba33c9.png",
   },
 ];

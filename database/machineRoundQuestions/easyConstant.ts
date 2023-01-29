@@ -434,3 +434,103 @@ draggable_zones.forEach((zone) => {
 });
 
 `;
+
+export const web_worker_html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+`;
+
+export const web_worker_js = `
+const worker = new Worker("worker.js");
+worker.addEventListener("message", (e) => {
+  console.log(e.data);
+});
+
+worker.postMessage("start");
+
+// another task that will be executed
+console.log("I will be executed first");
+
+let result = 0;
+for (let i = 0; i < 1000; i++) {
+  result += i;
+}
+
+console.log(result);
+`;
+
+export const web_worker_worker_js = `
+self.addEventListener("message", (e) => {
+  if (e.data === "start") {
+    let i = 0;
+    while (i < 1000000000) {
+      i++;
+    }
+    self.postMessage("done");
+  }
+});
+`;
+
+export const geolocation_html = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="longitude_latitude"></div>
+    <div id="user_city_country"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
+`;
+export const geolocation_js = `
+let user_longitude_latitude = document.getElementById("longitude_latitude");
+let user_city_country = document.getElementById("user_city_country");
+// gat user current location using geolocation api
+
+// get user current location
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+// show user current location
+function showPosition(position) {
+  console.log(position.coords.latitude, position.coords.longitude);
+  user_longitude_latitude.innerHTML = \`Latitude: \${position.coords.latitude} <br> Longitude: \${position.coords.longitude}\`;
+  getCityAndCountry(position.coords.latitude, position.coords.longitude);
+}
+
+// call getLocation function
+getLocation();
+
+//find user current city and country and all user location details
+function getCityAndCountry(latitude, longitude) {
+  fetch(
+    \`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=\${latitude}&longitude=\${longitude}&localityLanguage=en\`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+    user_city_country.innerHTML = \`Country: \${data.countryName}\`;
+      console.log(data);
+    });
+}
+
+`;

@@ -1,4 +1,3 @@
-import CodeSnippet from "../../common/codeSnippet/CodeSnippet";
 import TabView from "../../common/tabView/TabView";
 import {
   chess_css,

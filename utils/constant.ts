@@ -128,10 +128,9 @@ export const FRONT_END_MACHINE_CODING_TOPICS = [
   "CSS",
   "JavaScript",
   "React",
-  "Redux",
   "SCSS",
   "NextJS",
-  "TypeScript",
+  'Mixed',
 ];
 
 export const BLOG_TOPICS = [
