@@ -118,8 +118,7 @@ export const FRONT_END_CODING_TOPICS = [
   "Queue",
   "Hash Map",
   "Linked List",
-  "Data Structure",
-  "Algorithm",
+  "Graph",
 ];
 
 export const FRONT_END_MACHINE_CODING_TOPICS = [
