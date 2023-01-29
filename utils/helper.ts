@@ -30,13 +30,9 @@ import reduxIcon from "../assets/redux.svg";
 import { EASY_CODING_QUESTIONS } from "../database/codingQuestions/easyCodingQuestions";
 import { MEDIUM_CODING_QUESTIONS } from "../database/codingQuestions/mediumCodingQuestions";
 import { HARD_CODING_QUESTIONS } from "../database/codingQuestions/hardCodingQuestions";
-import { TOPIC_LIST } from "./constant";
 import { REACT_POST } from "../blog_Database/react/react";
-import { JS_POST } from "../blog_Database/js/js";
-import { CSS_POST } from "../blog_Database/css/css";
-import { TS_POST } from "../blog_Database/ts/ts";
-import { HTML_POST } from "../blog_Database/html/html";
 import { Mixed_POST } from "../blog_Database/mixed/mixed";
+import { JS_POST } from "../blog_Database/js/js";
 
 export const getPostsByTopic = (topic: string) => {
   if (topic === "All") {
@@ -48,11 +44,8 @@ export const getPostsByTopic = (topic: string) => {
 export const getAllPosts = () => {
   return [
     ...REACT_POST,
-    ...JS_POST,
-    ...CSS_POST,
-    ...TS_POST,
-    ...HTML_POST,
     ...Mixed_POST,
+    ...JS_POST
   ];
 };
 

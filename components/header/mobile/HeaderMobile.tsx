@@ -5,7 +5,7 @@ import style from "./HeaderMobile.module.scss";
 import closeIcon from "../../../assets/close.svg";
 import Image from "next/image";
 import Link from "next/link";
-import buyMeCoffee from "../../../assets/buy_me_coffee.png";
+import buyMeCoffee from "../../../assets/buy_me_coffee.svg";
 
 function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

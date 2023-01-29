@@ -4,14 +4,14 @@ import React from "react";
 import { DEVICE_TYPE, HEADER_LIST, URLPaths } from "../../utils/constant";
 import useWindowWidth from "../../utils/hooks/useWindowWidth";
 import style from "./Header.module.scss";
-import HeaderMobile from "./mobile/HeaderMobile";
-import buyMeCoffee from "../../assets/buy_me_coffee.png";
+import buyMeCoffee from "../../assets/buy_me_coffee.svg";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import dropDownIcon from "../../assets/dropdown.svg";
 const ShowFeature = dynamic(
   () => import("../../common/showFeature/ShowFeature")
 );
+const HeaderMobile = dynamic(() => import("./mobile/HeaderMobile"));
 
 function Header() {
   const [showMenu, setShowMenu] = React.useState(false);
@@ -77,8 +77,8 @@ function Header() {
               title="Buy me a coffee"
               src={buyMeCoffee}
               alt="Buy me a coffee"
-              width={42}
-              height={42}
+              width={34}
+              height={34}
               className={style.header_container_right_item_coffee}
               onClick={() => {
                 window.open(
