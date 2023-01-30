@@ -9,12 +9,12 @@ function AllPost({ allPosts, selectedTopic }: any) {
         {allPosts?.map((post: any, index: number) => (
           <Modal
             key={index}
-            description={post?.meta_description}
-            title={post?.name}
-            url={post?.mainImage}
+            description={post?.description}
+            title={post?.title}
+            url={post?.img_url}
             width={post?.width}
             height={post?.height}
-            slug={post?.slug?.current}
+            slug={post?.slug}
           />
         ))}
       </div>
