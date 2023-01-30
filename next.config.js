@@ -4,7 +4,6 @@ const nextConfig = {
   images: {
     domains: [
       "user-images.githubusercontent.com",
-      "cdn.sanity.io",
     ],
     loader: "default",
   },

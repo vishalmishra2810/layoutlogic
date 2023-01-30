@@ -2,31 +2,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import ReadBlog from "../../components/readBlog/ReadBlog";
-import { BLOG_SLUG_LIST, META_TAGS } from "../../utils/constant";
-import { client } from "../../utils/sanity";
+import { META_TAGS } from "../../utils/constant";
 
-//getStaticPaths is used to generate the paths for the dynamic routes
-export async function getStaticPaths() {
-  const paths = BLOG_SLUG_LIST.map((blog: any) => ({
-    params: { blog: blog },
-  }));
-  return { paths, fallback: false };
-}
-
-//getStaticProps is used to fetch the data for the dynamic routes
-export async function getStaticProps({ params }: any) {
-  const blog = await client.fetch(
-    `*[_type == "blog" && slug.current == $slug][0]`,
-    { slug: params.blog }
-  );
-  return {
-    props: {
-      blog,
-    },
-  };
-}
-
-function OpenBlog({ blog }: any) {
+function OpenBlog() {
+  const router = useRouter();
+  const { blog } = router.query;
   return (
     <>
       <Head>
@@ -39,7 +19,7 @@ function OpenBlog({ blog }: any) {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <ReadBlog blog={blog} />
+      <ReadBlog slug={blog} />
     </>
   );
 }
