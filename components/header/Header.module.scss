@@ -39,8 +39,9 @@
         .header_menu_button {
           display: flex;
           align-items: center;
-          gap: 4px;
+          gap: 2px;
           cursor: pointer;
+          color: #000;
           .header_menu_button_icon {
             margin-top: 4px;
           }
