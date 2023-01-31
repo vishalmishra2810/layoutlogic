@@ -1,7 +1,8 @@
 import React from "react";
+import Tutorial from "../../components/tutorial/Tutorial";
 
-function Tutorial() {
+function TutorialDocs() {
   return <Tutorial />;
 }
 
-export default Tutorial;
+export default TutorialDocs;
