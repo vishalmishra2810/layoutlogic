@@ -42,8 +42,8 @@ function Header() {
                   <Image
                     src={dropDownIcon}
                     alt="dropdown"
-                    width={20}
-                    height={20}
+                    width={28}
+                    height={28}
                     className={`${style.header_menu_button_icon} ${
                       showMenu && style.header_menu_button_icon_rotate
                     }`}
