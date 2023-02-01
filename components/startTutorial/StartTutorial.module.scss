@@ -1,6 +1,47 @@
 .startTutorial {
   display: flex;
+  max-width: 1200px;
   .startTutorial__content {
     padding: 30px;
+    .startTutorial__content__header {
+      font-family: "Roboto", sans-serif;
+      color: #000000;
+      margin-bottom: 62px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .startTutorial__content__header__title {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      .startTutorial__content__header__text {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .startTutorial__content__body__text {
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #0a7ea3;
+      margin-bottom: 20px;
+    }
+  }
+  .startTutorial__content__body__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .startTutorial__content__body__list__line{
+      height: 32px;
+      width: 4px;
+      background-color: #a33a0a;
+      //make curve line
+      border-radius: 50%;
+
+
+    
+    }
   }
 }

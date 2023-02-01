@@ -33,6 +33,9 @@ import { HARD_CODING_QUESTIONS } from "../database/codingQuestions/hardCodingQue
 import { REACT_POST } from "../blog_Database/react/react";
 import { Mixed_POST } from "../blog_Database/mixed/mixed";
 import { JS_POST } from "../blog_Database/js/js";
+import typeScriptIcon from "./../assets/typescript.svg";
+import nextjsIcon from "./../assets/nextjs.svg";
+
 
 export const getPostsByTopic = (topic: string) => {
   if (topic === "All") {
@@ -233,6 +236,10 @@ export const getTechIcon = (technologyUsed: string) => {
         return scssIcon;
       case ALL_TECH.REDUX:
         return reduxIcon;
+      case ALL_TECH.TYPESCRIPT:
+        return typeScriptIcon;
+      case ALL_TECH.NEXTJs:
+        return nextjsIcon;
       default:
         return "";
     }

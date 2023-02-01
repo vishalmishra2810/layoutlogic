@@ -7,4 +7,5 @@ export enum ALL_TECH {
   SASS = "sass",
   REDUX = "redux",
   SCSS = "scss",
+  NEXTJs = "nextjs",
 }

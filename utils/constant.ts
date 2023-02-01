@@ -154,6 +154,15 @@ export const FOOTER_HIDE_LIST = [
   "redux",
 ];
 
-export const BLOG_SLUG_LIST = [
-  "top-10-javascript-concepts-you-must-know"
+export const BLOG_SLUG_LIST = ["top-10-javascript-concepts-you-must-know"];
+
+export const TUTORIAL_LIST = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "ReactJs",
+  "SCSS",
+  "Redux",
+  "NextJS",
+  "TypeScript",
 ];
