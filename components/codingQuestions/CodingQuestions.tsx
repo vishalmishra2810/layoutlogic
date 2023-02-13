@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import style from "./CodingQuestions.module.scss";
-import { stack_blitz_url } from "../../utils/constant";
+import { stack_blitz_url, URLPaths } from "../../utils/constant";
 import QuestionsExplanations from "../../common/questionsExplanation/QuestionsExplanations";
 import { getQuestionsInformation } from "../../utils/helper";
 import { useRouter } from "next/router";
@@ -21,11 +21,20 @@ function CodingQuestions({ slug }: ICodingQuestionsProps) {
   const goBack = () => {
     router.back();
   };
+
+  const goToDashboard = () => {
+    router.push(URLPaths.HOME);
+  };
   return (
     <div className={style.machine}>
       <div className={style.machine_left}>
         <div className={style.machine_left_header}>
-          <div className={style.machine_left_header_title}>LayoutLogic</div>
+          <div
+            className={style.machine_left_header_title}
+            onClick={goToDashboard}
+          >
+            LayoutLogic
+          </div>
           <div className={style.machine_left_header_subTitle} onClick={goBack}>
             Go back
           </div>
