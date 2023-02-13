@@ -1,6 +1,7 @@
 import Head from "next/head";
-import BlogDashboard from "../components/blogDashboard/BlogDashboard";
-import { META_TAGS } from "../utils/constant";
+import BlogDashboard from "../../components/blogDashboard/BlogDashboard";
+import Header from "../../components/header/Header";
+import { META_TAGS } from "../../utils/constant";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
+      <Header />
       <BlogDashboard />
     </>
   );

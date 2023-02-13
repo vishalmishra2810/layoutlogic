@@ -7,6 +7,7 @@ import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
 import { META_TAGS, READY_STATES_LABELS } from "../utils/constant";
 import Loader from "../common/loader/Loader";
+import Header from "../components/header/Header";
 
 function Database() {
   const router = useRouter();
@@ -23,6 +24,7 @@ function Database() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
+      <Header />
       <div className={style.database} key={database}>
         {READY_STATES_LABELS[database?.toLowerCase()] ? (
           <div className={style.database_main_container}>

@@ -28,6 +28,9 @@ function StartTutorial() {
           <p className={style.startTutorial__content__body__text}>
             Roadmap to becoming a frontend developer in 2023:-
           </p>
+          <div className={style.startTutorial__content__body__start_button}>
+            Start
+            </div>
           <div className={style.startTutorial__content__body__list}>
             <div
               className={style.startTutorial__content__body__list__line}

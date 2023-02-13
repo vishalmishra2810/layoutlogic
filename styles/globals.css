@@ -134,7 +134,7 @@ b {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: rgb(241, 89, 89);
+  color: rgb(159, 44, 44);
 }
 
 .main-container {
@@ -172,4 +172,8 @@ b {
     border-radius: 4px;
     width: 100%;
   }
+}
+
+.MenuBar-LogoContent-zHT24 {
+  display: none !important;
 }

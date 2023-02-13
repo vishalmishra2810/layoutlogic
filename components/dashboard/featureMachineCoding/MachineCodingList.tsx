@@ -36,7 +36,7 @@ function MachineCodingList() {
               <Link
                 className={style.machineCodingList__container__list__item}
                 key={index}
-                href={"/questions/" + question.slug}
+                href={"/machine-round-question/" + question.slug}
               >
                 <div
                   className={

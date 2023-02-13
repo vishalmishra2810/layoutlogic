@@ -6,7 +6,7 @@ import {
   getAllMachineRoundQuestionsByTopics,
   getTechIcon,
 } from "../../utils/helper";
-import style from "./FrontEndCodingQuestions.module.scss";
+import style from "./MachineCodingQuestionsList.module.scss";
 import { FRONT_END_MACHINE_CODING_TOPICS } from "../../utils/constant";
 import dynamic from "next/dynamic";
 const TopicsList = dynamic(() => import("../../common/topicsList/TopicsList"));
@@ -15,7 +15,7 @@ const NoPostFound = dynamic(
   () => import("../blogDashboard/noPostFound/NoPostFound")
 );
 
-function FrontEndCodingQuestions() {
+function MachineCodingQuestionsList() {
   const [selectedTopic, setSelectedTopic] = React.useState<string>("All");
   const [listData, setListData] = useState<any>([]);
   const [localLoading, setLocalLoading] = React.useState<boolean>(true);
@@ -48,7 +48,7 @@ function FrontEndCodingQuestions() {
         ) : listData?.length > 0 ? (
           listData?.map((question: any, index: number) => (
             <Link
-              href={"/questions/" + question.slug}
+              href={"/machine-round-question/" + question.slug}
               className={style.machine_round_list_item}
               key={index}
             >
@@ -93,4 +93,4 @@ function FrontEndCodingQuestions() {
   );
 }
 
-export default memo(FrontEndCodingQuestions);
+export default MachineCodingQuestionsList;

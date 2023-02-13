@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Dashboard from "../components/dashboard/Dashboard";
+import Header from "../components/header/Header";
 import { META_TAGS } from "../utils/constant";
 const Footer = dynamic(() => import("../components/footer/Footer"));
 
@@ -17,6 +18,7 @@ export default function Home() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
+      <Header />
       <Dashboard />
       <Footer />
     </>
