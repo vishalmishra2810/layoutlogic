@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
+import Header from "../../components/header/Header";
 import ReadBlog from "../../components/readBlog/ReadBlog";
 import { META_TAGS } from "../../utils/constant";
 
@@ -19,6 +20,7 @@ function OpenBlog() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
+      <Header />
       <ReadBlog slug={blog} />
     </>
   );

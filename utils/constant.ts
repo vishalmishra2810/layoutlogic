@@ -166,3 +166,25 @@ export const TUTORIAL_LIST = [
   "NextJS",
   "TypeScript",
 ];
+
+export enum stack_blitz_url {
+  "simple_todo_list" = "web-platform-1qdfqt",
+  "fetch_data_from_api" = "web-platform-hzxtpe",
+  "responsive_navigation_bar" = "web-platform-jwqcrz",
+  "simple_calculator" = "web-platform-zjxkyt",
+  "drag_and_drop" = "web-platform-uewoba",
+  "image_carousel" = "web-platform-nlrd1d",
+  "lazy_load_images" = "web-platform-1y4gdj",
+  "nested_comments" = "web-platform-zcip94",
+  "rating_system" = "web-platform-c6p1mk",
+  "web_worker_offload_cpu_using_worker_js" = "web-platform-wetqtp",
+  "geolocation_api_display_user_location_with_current_location_details" = "web-platform-jpr3jp",
+  "pixel-art-maker" = "web-platform-9djjcj",
+  "tic-tac-toe-game" = "web-platform-1ccpet",
+  "reactjs-countdown-timer" = "react-ts-2nkzws",
+  "optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll" = "react-ts-qhzwoc",
+  "bishop-on-chessboard" = "web-platform-k2z696",
+  "reactjs-counter-application" = "react-8de17j",
+  "pagination" = "web-platform-x8zexy",
+  "" = "",
+}
