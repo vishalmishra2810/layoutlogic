@@ -186,5 +186,4 @@ export enum stack_blitz_url {
   "bishop-on-chessboard" = "web-platform-k2z696",
   "reactjs-counter-application" = "react-8de17j",
   "pagination" = "web-platform-x8zexy",
-  "" = "",
 }
