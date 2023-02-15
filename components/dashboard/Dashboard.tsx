@@ -11,7 +11,9 @@ const FamousQuestions = dynamic(
 const FeaturedQuestions = dynamic(
   () => import("./featuredQuestions/FeaturedQuestions")
 );
-
+const AdvanceFrontendFeature = dynamic(
+  () => import("./advanceFrontendFeature/AdvanceFrontendFeature")
+);
 function Dashboard() {
   return (
     <div className={style.dashboard__container}>
@@ -19,6 +21,7 @@ function Dashboard() {
       <FeaturedQuestions />
       <MachineCodingList />
       <FamousQuestions />
+      <AdvanceFrontendFeature />
     </div>
   );
 }

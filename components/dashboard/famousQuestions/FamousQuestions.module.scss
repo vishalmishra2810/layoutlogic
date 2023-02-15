@@ -1,17 +1,27 @@
 .codingQuestions {
   width: 100%;
   margin: 120px auto;
+  margin-bottom: 0px;
   .codingQuestions__container {
     width: 100%;
     margin: 0 auto;
     .codingQuestions__container__header {
       text-align: center;
-      margin-bottom: 52px;
-      font-size: 32px;
+      margin-bottom: 8px;
+      font-size: 28px;
       font-weight: 600;
       color: #000000;
       font-family: "Roboto", sans-serif;
       padding: 0px 32px;
+    }
+    .codingQuestions__container__description {
+      text-align: center;
+      margin-bottom: 52px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #666666;
+      font-family: "Inter", sans-serif;
+      margin-bottom: 52px;
     }
     .codingQuestions__container__questions {
       display: flex;

@@ -13,12 +13,14 @@ interface ICodeSnippetProps {
   codeString?: string;
   language?: string;
   removeTopMargin?: boolean;
+  showLineNumber?: boolean;
 }
 
 function CodeSnippet({
   codeString,
   language = "javascript",
   removeTopMargin = false,
+  showLineNumber = false,
 }: ICodeSnippetProps) {
   if (language === "jsx") language = "javascript";
   return (
@@ -29,7 +31,11 @@ function CodeSnippet({
           marginTop: removeTopMargin ? 0 : "",
         }}
       >
-        <SyntaxHighlighter language={language} style={atomOneDark}>
+        <SyntaxHighlighter
+          language={language}
+          style={atomOneDark}
+          showLineNumbers={showLineNumber}
+        >
           {language === "javascript" ||
           language === "jsx" ||
           language === "tsx" ||

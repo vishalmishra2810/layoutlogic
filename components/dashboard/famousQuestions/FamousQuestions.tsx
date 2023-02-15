@@ -10,8 +10,12 @@ function FamousQuestions() {
     <div className={style.codingQuestions}>
       <div className={style.codingQuestions__container}>
         <div className={style.codingQuestions__container__header}>
-          These are the famous coding questions asked in almost every front-end
-          interview
+          Advance Coding Questions For Front-End Developers
+        </div>
+        <div className={style.codingQuestions__container__description}>
+          If you are not beginners and you are looking for the advanced coding
+          questions, then you are at the right place. We have compiled a list of
+          the most frequently asked front-end interview questions and answers.
         </div>
         <div className={style.codingQuestions__container__questions}>
           <Modal
