@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
+import AdvanceFrontEnd from "../../components/advanceFrontend/AdvanceFrontEnd";
 import Header from "../../components/header/Header";
-import MachineCodingQuestionsList from "../../components/machineCodingQuestion/MachineCodingQuestionsList";
 import { META_TAGS } from "../../utils/constant";
 
-function MachineCodingRound() {
+function Advance_frontend() {
   return (
     <>
       <Head>
@@ -18,9 +18,9 @@ function MachineCodingRound() {
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
       <Header />
-      <MachineCodingQuestionsList />
+      <AdvanceFrontEnd />
     </>
   );
 }
 
-export default MachineCodingRound;
+export default Advance_frontend;
