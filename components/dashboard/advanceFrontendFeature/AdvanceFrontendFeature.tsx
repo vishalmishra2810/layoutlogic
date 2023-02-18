@@ -1,11 +1,12 @@
 import React from "react";
-import CodeSnippet from "../../../common/codeSnippet/CodeSnippet";
 import style from "./AdvanceFrontendFeature.module.scss";
 import { ADVANCE_FRONTEND_FEATURE } from "./constant";
 import outputIcon from "../../../assets/Loading-bro.svg";
 import Image from "next/image";
 import { URLPaths } from "../../../utils/constant";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+const CodeSnippet = dynamic(() => import("../../../common/codeSnippet/CodeSnippet"));
 
 function AdvanceFrontendFeature() {
   return (
