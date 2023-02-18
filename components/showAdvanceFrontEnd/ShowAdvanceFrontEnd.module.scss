@@ -1,0 +1,49 @@
+.machine {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #14181f;
+  overflow: hidden;
+  .machine_left {
+    flex: 1;
+    .machine_left_header {
+      height: 48px;
+      display: flex;
+      background-color: #2e3137;
+      align-items: center;
+      gap: 32px;
+      padding: 0 16px;
+      .machine_left_header_title {
+        font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: 500;
+        color: #fff;
+      }
+      .machine_left_header_subTitle {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    .iframe_container {
+      width: 100%;
+      height: calc(100vh - 48px);
+      background: url("../../assets/loader.gif");
+      background-size: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .coding_questions_container_footer {
+      position: fixed;
+      bottom: 0;
+      height: 30px;
+      width: 200px;
+      left: 0;
+      background: #2e3137;
+      z-index: 999999;
+    }
+  }
+}

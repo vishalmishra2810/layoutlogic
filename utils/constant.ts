@@ -187,3 +187,14 @@ export enum stack_blitz_url {
   "reactjs-counter-application" = "react-8de17j",
   "pagination" = "web-platform-x8zexy",
 }
+
+export enum LAYOUT_TYPE {
+  LIST = "list",
+  GRID = "grid",
+}
+
+export enum ADVANCE_FRONTEND_URL {
+  "random-color-palette-generator" = "web-platform-qkw6r9",
+  "check-internet-connection" = "web-platform-bylfby",
+  "random-password-generator" = "web-platform-robs3z",
+}

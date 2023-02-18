@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
-import Header from "../../components/header/Header";
-import MachineCodingQuestionsList from "../../components/machineCodingQuestion/MachineCodingQuestionsList";
+import ShowAdvanceFrontEnd from "../../components/showAdvanceFrontEnd/ShowAdvanceFrontEnd";
 import { META_TAGS } from "../../utils/constant";
 
-function MachineCodingRound() {
+function AdvanceFrontEnd() {
+  const router = useRouter();
+  const { advance } = router.query;
   return (
     <>
       <Head>
@@ -17,10 +19,9 @@ function MachineCodingRound() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <Header />
-      <MachineCodingQuestionsList />
+      <ShowAdvanceFrontEnd slug={advance} />
     </>
   );
 }
 
-export default MachineCodingRound;
+export default AdvanceFrontEnd;

@@ -35,7 +35,7 @@ import { Mixed_POST } from "../blog_Database/mixed/mixed";
 import { JS_POST } from "../blog_Database/js/js";
 import typeScriptIcon from "./../assets/typescript.svg";
 import nextjsIcon from "./../assets/nextjs.svg";
-
+import { ADVANCE_FRONTEND_LIST } from "../database/advanceFrontEnd";
 
 export const getPostsByTopic = (topic: string) => {
   if (topic === "All") {
@@ -45,11 +45,7 @@ export const getPostsByTopic = (topic: string) => {
 };
 
 export const getAllPosts = () => {
-  return [
-    ...REACT_POST,
-    ...Mixed_POST,
-    ...JS_POST
-  ];
+  return [...REACT_POST, ...Mixed_POST, ...JS_POST];
 };
 
 export const getRecentPosts = (post: any) => {
@@ -306,4 +302,31 @@ export const getValidation = (
 export const validateEmail = (email: string) => {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
+};
+
+export const getAdvanceFrontEndList = (text: any, level: any) => {
+  if (text === "") {
+    return getLevelWiseList([...ADVANCE_FRONTEND_LIST], level);
+  } else {
+    return getLevelWiseList(
+      [...ADVANCE_FRONTEND_LIST].filter((item: any) =>
+        item?.title?.toLowerCase().includes(text.toLowerCase())
+      ),
+      level
+    );
+  }
+};
+
+export const getLevelWiseList = (list: any, level: any) => {
+  let levelWiseList: any = [];
+  list?.map((item: any) => {
+    if (
+      (level?.easy && item?.level?.toLowerCase() === "easy") ||
+      (level?.medium && item?.level?.toLowerCase() === "medium") ||
+      (level?.hard && item?.level?.toLowerCase() === "hard")
+    ) {
+      levelWiseList.push(item);
+    }
+  });
+  return levelWiseList;
 };
