@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
-import Header from "../components/header/Header";
-import TopCodingQuestion from "../components/topCodingQuestions/TopCodingQuestion";
-import { META_TAGS } from "../utils/constant";
+import OpenQuestion from "../../components/practice/openQuestion/OpenQuestion";
+import { META_TAGS } from "../../utils/constant";
 
-function TopFrontendQuestion() {
+function PracticeList() {
+  const router = useRouter();
+  const { questions } = router.query;
   return (
     <>
       <Head>
@@ -17,10 +19,9 @@ function TopFrontendQuestion() {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <Header />
-      <TopCodingQuestion />
+      <OpenQuestion slug={questions} />
     </>
   );
 }
 
-export default TopFrontendQuestion;
+export default PracticeList;

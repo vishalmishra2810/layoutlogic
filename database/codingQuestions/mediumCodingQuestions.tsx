@@ -25,7 +25,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={linked_list_example} language="javascript" />
       </>
     ),
-    topic: ["linked list"],
+    topic: ["linked-list"],
   },
   {
     question: "How to reverse a linked list in JavaScript?",
@@ -44,7 +44,8 @@ export const MEDIUM_CODING_QUESTIONS = [
         />
       </>
     ),
-    topic: ["linked list"],
+    topic: ["linked-list"],
+    type: "question",
   },
   {
     question: "How can I implement a stack or queue in JavaScript?",
@@ -95,7 +96,7 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={hash_table_example} language="javascript" />
       </>
     ),
-    topic: ["hash map"],
+    topic: ["hash-map"],
   },
   {
     question: "How to find two words are Anagrams or not in JavaScript?",
@@ -123,6 +124,8 @@ export const MEDIUM_CODING_QUESTIONS = [
         <CodeSnippet codeString={anagram_example} language="javascript" />
       </>
     ),
-    topic: ["hash map", "string"],
+    topic: ["hash-map", "string"],
+    type: "question",
+    slug : "anagram"
   },
 ];

@@ -61,6 +61,8 @@ export const EASY_CODING_QUESTIONS = [
       </>
     ),
     topic: ["string"],
+    type: "question",
+    slug: "reverse-word-in-string",
   },
   {
     question:
@@ -79,6 +81,8 @@ export const EASY_CODING_QUESTIONS = [
       </>
     ),
     topic: ["string"],
+    type: "question",
+    slug: "palindrome-string",
   },
   {
     question: "How can I work with arrays in JavaScript?",
@@ -131,5 +135,7 @@ export const EASY_CODING_QUESTIONS = [
       </>
     ),
     topic: ["array"],
+    type: "question",
+    slug: "array-flat",
   },
 ];

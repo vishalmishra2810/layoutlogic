@@ -1,0 +1,64 @@
+.leftSidebar {
+  width: 320px;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  .leftSidebar__title {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 24px 16px;
+    .leftSidebar__title__icon {
+      cursor: pointer;
+    }
+    .leftSidebar__title__text {
+      font-size: 16px;
+      font-weight: 400;
+      color: #000;
+      cursor: pointer;
+      font-family: "Inter";
+    }
+    border-bottom: 1px solid #e9e6e6;
+  }
+  .leftSidebar__list {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .leftSidebar__list__item {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      justify-content: space-between;
+      cursor: pointer;
+      .leftSidebar__list__item__title {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        font-family: "Inter";
+      }
+      .leftSidebar__list__item__icon {
+        transform: rotate(-90deg);
+      }
+      &:hover {
+        background-color: #f0eeee;
+      }
+    }
+    .leftSidebar__list__item__active {
+      background-color: #e6f6ff;
+      .leftSidebar__list__item__title {
+        color: #0a7ea3;
+        font-weight: 600;
+      }
+      .leftSidebar__list__item__icon {
+        filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+      }
+    }
+  }
+}

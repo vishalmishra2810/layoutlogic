@@ -1,0 +1,14 @@
+.open {
+  width: 100vw;
+  height: 100%;
+  .iframe_container {
+    width: 100%;
+    height: 100%;
+    background-color: #2e3137;
+    iframe {
+      width: 100%;
+      height: 100%;
+      background-color: #2e3137;
+    }
+  }
+}
