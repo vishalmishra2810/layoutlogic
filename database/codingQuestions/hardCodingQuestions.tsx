@@ -308,7 +308,7 @@ export const HARD_CODING_QUESTIONS = [
     topic: ["backtracking"],
   },
   {
-    question:'Explain bit manipulation ',
+    question: "Explain bit manipulation ",
     answer: (
       <>
         <p className="simple-answer">
@@ -320,9 +320,9 @@ export const HARD_CODING_QUESTIONS = [
         <p className="simple-answer">
           Bit manipulation is the act of algorithmically manipulating bits or
           other pieces of data shorter than a word. Computer programming tasks
-          that require bit manipulation include low-level device control,
-          error detection and correction algorithms, data compression, and
-          encryption algorithms.
+          that require bit manipulation include low-level device control, error
+          detection and correction algorithms, data compression, and encryption
+          algorithms.
         </p>
         <br />
         <p className="simple-answer">
@@ -343,8 +343,8 @@ export const HARD_CODING_QUESTIONS = [
           <li className="answer_list_item">
             <strong>Bitwise AND</strong>
             <p className="simple-answer">
-              The bitwise AND operator copies a bit to the result if it exists in
-              both operands. (A & B) will give 12 which is 0000 1100
+              The bitwise AND operator copies a bit to the result if it exists
+              in both operands. (A & B) will give 12 which is 0000 1100
             </p>
           </li>
           <li className="answer_list_item">
@@ -373,20 +373,20 @@ export const HARD_CODING_QUESTIONS = [
             <strong>Left Shift</strong>
             <p className="simple-answer">
               The left operands value is moved left by the number of bits
-              specified by the right operand. (A {"<<"} 2) will give 240 which is
-              1111 0000
+              specified by the right operand. (A {"<<"} 2) will give 240 which
+              is 1111 0000
             </p>
           </li>
           <li className="answer_list_item">
             <strong>Right Shift</strong>
             <p className="simple-answer">
               The left operands value is moved right by the number of bits
-              specified by the right operand. (A >> 2) will give 15 which is
+              specified by the right operand. (A {">>"} 2) will give 15 which is
               0000 1111
             </p>
           </li>
-      </ul>
-    </>
+        </ul>
+      </>
     ),
     topic: ["bit-manipulation"],
   },
@@ -397,8 +397,8 @@ export const HARD_CODING_QUESTIONS = [
         <p className="simple-answer">
           Recursion is a method of solving a problem where the solution depends
           on solutions to smaller instances of the same problem (as opposed to
-          iteration). The approach can be applied to many types of problems,
-          and recursion is one of the central ideas of computer science.
+          iteration). The approach can be applied to many types of problems, and
+          recursion is one of the central ideas of computer science.
         </p>
         <br />
         <p className="simple-answer">
@@ -406,8 +406,8 @@ export const HARD_CODING_QUESTIONS = [
           situation in which the solution is sufficiently simple that it can be
           solved without using recursion. The solution to the base case is
           returned. The solution of the bigger problem is created by combining
-          the solution to the base case with the solution to smaller
-          instances of the same problem.
+          the solution to the base case with the solution to smaller instances
+          of the same problem.
         </p>
         <br />
         <p className="simple-answer">
@@ -423,7 +423,7 @@ export const HARD_CODING_QUESTIONS = [
     topic: ["recursion"],
   },
   {
-    question:'Explain sorting with bubble sort example',
+    question: "Explain sorting with bubble sort example",
     answer: (
       <>
         <p className="simple-answer">
@@ -447,8 +447,8 @@ export const HARD_CODING_QUESTIONS = [
     topic: ["sorting"],
   },
   {
-    question:'Explain searching with binary search example',
-    answer :(
+    question: "Explain searching with binary search example",
+    answer: (
       <>
         <p className="simple-answer">
           Searching is the process of finding an item with specified properties
@@ -478,6 +478,6 @@ export const HARD_CODING_QUESTIONS = [
     ),
     topic: ["math"],
     type: "question",
-    slug : "lcm"
+    slug: "lcm",
   },
 ];

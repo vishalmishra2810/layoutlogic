@@ -35,7 +35,7 @@ function TopCodingQuestion() {
                 Quick Start
               </div>
               <div className={style.coding__container_top_left__description}>
-                Don't know where to start? Here are some of the most popular
+                Don not know where to start? Here are some of the most popular
                 topics you can start with.
               </div>
               <button
