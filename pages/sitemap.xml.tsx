@@ -1,19 +1,21 @@
+import { FRONT_END_CODING_TOPICS } from "../utils/constant";
 import {
   getAdvanceFrontEndList,
   getAllMachineRoundQuestions,
   getAllPosts,
+  getFrontOnlyQuestions,
 } from "../utils/helper";
 
-function generateSiteMap(posts: any, blog: any, advance_list: any) {
+function generateSiteMap(
+  posts: any,
+  blog: any,
+  advance_list: any,
+  question_list: any
+) {
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
      <url>
        <loc>https://www.layoutlogic.com</loc>
      </url>
-
-     <url>
-       <loc>https://www.layoutlogic.com/top-front-end-coding-questions</loc>
-     </url>
-
       <url>
         <loc>https://www.layoutlogic.com/reactjs</loc>
       </url>
@@ -49,6 +51,16 @@ function generateSiteMap(posts: any, blog: any, advance_list: any) {
       <url>
       <loc>https://www.layoutlogic.com/advance-frontend-feature</loc>
       </url>
+
+      <url>
+      <loc>https://www.layoutlogic.com/coding-question</loc>
+      </url>
+
+      <url>
+      <loc>https://www.layoutlogic.com/question-practice</loc>
+      </url>
+
+
      ${posts
        .map((slug: any) => {
          return `
@@ -80,6 +92,26 @@ function generateSiteMap(posts: any, blog: any, advance_list: any) {
       `;
         })
         .join("")}
+
+        ${FRONT_END_CODING_TOPICS.map((slug: any) => {
+          return `
+          <url>
+          <loc>https://www.layoutlogic.com/coding-question/${slug.value}</loc>
+          </url>
+          `;
+        }).join("")}
+
+        ${question_list
+          .map((slug: any) => {
+            return `
+          <url>
+          <loc>https://www.layoutlogic.com/question-practice/${slug}</loc>
+          </url>
+          `;
+          })
+          .join("")}
+          
+        
           
 
 
@@ -94,19 +126,20 @@ function SiteMap() {
 export async function getServerSideProps({ res }: any) {
   // We make to get all slugs from our data source
   const request = getAllMachineRoundQuestions().map((item: any) => item?.slug);
-
   const blogPosts = getAllPosts().map((item: any) => item?.slug);
-
   const advance_frontend_list = getAdvanceFrontEndList("", {
     easy: true,
     medium: true,
     hard: true,
   }).map((item: any) => item?.slug);
+
+  const question_list = getFrontOnlyQuestions()?.map((item: any) => item?.slug);
   //sending the slugs to the generateSiteMap function
   const sitemap = generateSiteMap(
     [...request],
     [...blogPosts],
-    [...advance_frontend_list]
+    [...advance_frontend_list],
+    [...question_list]
   );
 
   res.setHeader("Content-Type", "text/xml");

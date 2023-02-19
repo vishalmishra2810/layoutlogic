@@ -46,6 +46,7 @@ export const MEDIUM_CODING_QUESTIONS = [
     ),
     topic: ["linked-list"],
     type: "question",
+    slug: "how-to-reverse-a-linked-list-in-javascript",
   },
   {
     question: "How can I implement a stack or queue in JavaScript?",
@@ -126,6 +127,6 @@ export const MEDIUM_CODING_QUESTIONS = [
     ),
     topic: ["hash-map", "string"],
     type: "question",
-    slug : "anagram"
+    slug: "anagram",
   },
 ];
