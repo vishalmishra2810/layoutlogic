@@ -432,3 +432,113 @@ myGraph.showConnections();
 
 // output - 0-->1 2  1-->3 2 0  2-->4 1 0  3-->1 4  4-->3 2 5  5-->4 6  6-->5 
 `;
+
+export const fib_top_down = `
+// top down approach
+function fib(n, memo = {}) {
+    if (n in memo) return memo[n];
+    if (n <= 2) return 1;
+    memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
+    return memo[n];
+}
+`;
+
+export const fib_bottom_up = `
+// bottom up approach
+function fib(n) {
+    if (n <= 2) return 1;
+    let fibNums = [0, 1, 1];
+    for (let i = 3; i <= n; i++) {
+        fibNums[i] = fibNums[i - 1] + fibNums[i - 2];
+    }
+    return fibNums[n];
+}
+`;
+
+export const coin_change_greedy_algo = `
+// greedy algorithm
+function coinChangeGreedy(coins, amount) {
+    let result = [];
+    let total = 0;
+    for (let i = coins.length - 1; i >= 0; i--) {
+        while (total + coins[i] <= amount) {
+            result.push(coins[i]);
+            total += coins[i];
+        }
+    }
+    return result;
+}
+`;
+
+export const coin_change_backtracking = `
+// backtracking
+function coinChangeBacktracking(coins, amount) {
+    let result = [];
+    let total = 0;
+    let index = 0;
+    while (index < coins.length) {
+        if (total + coins[index] <= amount) {
+            result.push(coins[index]);
+            total += coins[index];
+        } else {
+            index++;
+        }
+    }
+    return result;
+}
+`;
+
+export const factorial_recursive = `
+// recursive
+function factorial(n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+`;
+
+export const bubble_sort = `
+// bubble sort
+function bubbleSort(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+`;
+
+export const binary_search = `
+// binary search
+function binarySearch(arr, val) {
+    let start = 0;
+    let end = arr.length - 1;
+    let middle = Math.floor((start + end) / 2);
+    while (arr[middle] !== val && start <= end) {
+        if (val < arr[middle]) {
+            end = middle - 1;
+        } else {
+            start = middle + 1;
+        }
+        middle = Math.floor((start + end) / 2);
+    }
+    return arr[middle] === val ? middle : -1;
+}
+`;
+
+export const lcm = `
+// lcm of two numbers
+function lcm(a, b) {
+    let max = Math.max(a, b);
+    let min = Math.min(a, b);
+    let lcm = max;
+    while (lcm % min !== 0) {
+        lcm += max;
+    }
+    return lcm;
+}
+`;

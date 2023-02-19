@@ -37,6 +37,7 @@ export enum URLPaths {
   FRONTEND_MACHINE_CODING_ROUND = "/machine-round-question",
   BLOG = "/blog",
   ADVANCE_FRONTEND_FEATURE = "/advance-frontend-feature",
+  QUESTION_PRACTICE = "/question-practice",
 }
 
 export const META_TAGS = {
@@ -110,15 +111,74 @@ export const HEADER_LIST = [
 ];
 
 export const FRONT_END_CODING_TOPICS = [
-  "All",
-  "Array",
-  "String",
-  "Tree",
-  "Stack",
-  "Queue",
-  "Hash Map",
-  "Linked List",
-  "Graph",
+  {
+    title: "Array",
+    value: "array",
+  },
+  {
+    title: "String",
+    value: "string",
+  },
+  {
+    title: "Tree",
+    value: "tree",
+  },
+  {
+    title: "Stack",
+    value: "stack",
+  },
+  {
+    title: "Queue",
+    value: "queue",
+  },
+  {
+    title: "Hash Map",
+    value: "hash-map",
+  },
+  {
+    title: "Linked List",
+    value: "linked-list",
+  },
+  {
+    title: "Graph",
+    value: "graph",
+  },
+  {
+    title: "Dynamic Programming",
+    value: "dynamic-programming",
+  },
+  {
+    title: "Greedy",
+    value: "greedy",
+  },
+  {
+    title: "Backtracking",
+    value: "backtracking",
+  },
+  {
+    title: "Bit Manipulation",
+    value: "bit-manipulation",
+  },
+  {
+    title: "Recursion",
+    value: "recursion",
+  },
+  {
+    title: "Sorting",
+    value: "sorting",
+  },
+  {
+    title: "Searching",
+    value: "searching",
+  },
+  {
+    title: "Math",
+    value: "math",
+  },
+  {
+    title: "Mixed",
+    value: "mixed",
+  },
 ];
 
 export const FRONT_END_MACHINE_CODING_TOPICS = [

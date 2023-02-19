@@ -254,14 +254,23 @@ export const getQuestionsInformation = (slug: string) => {
   return question[0];
 };
 
-export const getAllFrontEndCodingQuestionsByTopics = (topic: string) => {
-  if (topic === "All") {
-    return getAllFrontEndCodingQuestions();
+export const getFrontOnlyQuestions = (slug = "") => {
+  if (slug === "") {
+    return getAllFrontEndCodingQuestions()?.filter(
+      (question: any) => question?.type?.toLowerCase() === "question"
+    );
   } else {
-    return getAllFrontEndCodingQuestions().filter(
-      (question: any) => question?.topic?.includes(topic.toLowerCase()) === true
+    return getAllFrontEndCodingQuestions()?.filter(
+      (question: any) =>
+        question?.type?.toLowerCase() === "question" && question?.slug === slug
     );
   }
+};
+
+export const getAllFrontEndCodingQuestionsByTopics = (topic: string) => {
+  return getAllFrontEndCodingQuestions()?.filter(
+    (question: any) => question?.topic?.includes(topic?.toLowerCase()) === true
+  );
 };
 
 export const getAllFrontEndCodingQuestions = () => {
