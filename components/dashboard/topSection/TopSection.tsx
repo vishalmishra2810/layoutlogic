@@ -7,7 +7,7 @@ function TopSection() {
   return (
     <section className={style.topSection}>
       <h1 className={style.topSection_title}>
-        From beginners to advanced, covered all the FrontEnd Stuff for you.
+        From beginners to advanced, Covered all the FrontEnd Stuff for you.
       </h1>
       <p className={style.topSection_description}>
         We have covered all the FrontEnd related stuff for you. You will learn

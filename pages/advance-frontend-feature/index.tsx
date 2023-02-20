@@ -8,7 +8,7 @@ function Advance_frontend() {
   return (
     <>
       <Head>
-        <title>Integrate Advance FrontEnd Feature in your Project</title>
+        <title>Integrate 100+ Advance FrontEnd Feature in your Project</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -8,13 +8,13 @@ function MachineCodingRound() {
     <>
       <Head>
         <title>
-          FrontEnd Machine Coding Round Questions and Answers for Top Product
-          Based Companies and Startups
+          Top 20+ FrontEnd Machine Coding Round Questions and Answers in 2023 |
+          Layoutlogic
         </title>
         <meta
           name="description"
           content="
-        Top FrontEnd Machine Coding Round Questions and Answers for Product Based Companies and Startups. Try to solve these questions and improve your coding skills without any local setup.
+        Here are the Top 20+ FrontEnd Machine Coding Round Questions which an aspiring front end developer must prepare in 2023 for FrontEnd Machine Coding Round interviews to get dream job in Product Based Companies or Big Startups.
         "
         />
         <meta

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React from "react";
-import Footer from "../../components/footer/Footer";
 import TopCodingQuestion from "../../components/topCodingQuestions/TopCodingQuestion";
 import { META_TAGS } from "../../utils/constant";
 
@@ -8,7 +7,10 @@ function TopFrontendQuestion() {
   return (
     <>
       <Head>
-        <title>LayoutLogic</title>
+        <title>
+          Best 100+ Coding Question on Data Structure and Algorithm |
+          Layoutlogic
+        </title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

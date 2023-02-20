@@ -248,6 +248,27 @@ export enum stack_blitz_url {
   "pagination" = "web-platform-x8zexy",
 }
 
+export const ALL_PATH_MACHINE_CODING = [
+  "simple_todo_list",
+  "fetch_data_from_api",
+  "responsive_navigation_bar",
+  "simple_calculator",
+  "drag_and_drop",
+  "image_carousel",
+  "lazy_load_images",
+  "nested_comments",
+  "rating_system",
+  "web_worker_offload_cpu_using_worker_js",
+  "geolocation_api_display_user_location_with_current_location_details",
+  "pixel-art-maker",
+  "tic-tac-toe-game",
+  "reactjs-countdown-timer",
+  "optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll",
+  "bishop-on-chessboard",
+  "reactjs-counter-application",
+  "pagination",
+];
+
 export enum LAYOUT_TYPE {
   LIST = "list",
   GRID = "grid",
