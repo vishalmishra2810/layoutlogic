@@ -9,7 +9,7 @@ import { READY_STATES_LABELS } from "../utils/constant";
 import Loader from "../common/loader/Loader";
 import Header from "../components/header/Header";
 
-function Database({ url }: any) {
+function Database() {
   const router = useRouter();
   const { database }: any = router.query;
   return (
