@@ -7,12 +7,12 @@ function TopSection() {
   return (
     <section className={style.topSection}>
       <h1 className={style.topSection_title}>
-        From beginners to advanced, we have covered all the questions.
+        From beginners to advanced, covered all the FrontEnd Stuff for you.
       </h1>
       <p className={style.topSection_description}>
-        With the help of our application, You will learn the questions that you
-        might need to know for your interview. We have covered all the questions
-        from the basics to the advanced level.
+        We have covered all the FrontEnd related stuff for you. You will learn
+        from the basics to the advanced level.You will get all the questions
+        that you might need to know for your next interview.
       </p>
       <div className={style.topSection_btn_list}>
         <Link

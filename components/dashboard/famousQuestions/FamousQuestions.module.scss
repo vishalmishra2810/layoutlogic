@@ -2,6 +2,40 @@
   width: 100%;
   margin: 120px auto;
   margin-bottom: 0px;
+  .design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .line {
+      width: 1px;
+      height: 100px;
+      background: linear-gradient(180deg, #EA8D8D, #A890FE);
+    }
+    .circle {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(-90deg, #EA8D8D, #A890FE);
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      color: #000;
+      margin: 16px 0px;
+      background: linear-gradient(90deg, #EA8D8D, #A890FE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
   .codingQuestions__container {
     width: 100%;
     margin: 0 auto;

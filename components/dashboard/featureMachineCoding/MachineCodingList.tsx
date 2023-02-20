@@ -11,6 +11,11 @@ import style from "./MachineCodingList.module.scss";
 function MachineCodingList() {
   return (
     <div className={style.machineCodingList}>
+      <div className={style.design}>
+        <div className={style.line}></div>
+        <div className={style.circle}>2</div>
+        <div className={style.title}>Machine Coding Round Questions</div>
+      </div>
       <div className={style.machineCodingList__container}>
         <div className={style.machineCodingList__container__header}>
           <h2 className={style.machineCodingList__container__header__title}>

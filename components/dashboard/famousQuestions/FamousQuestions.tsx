@@ -8,6 +8,13 @@ const Modal = dynamic(() => import("../../../common/modal/Modal"));
 function FamousQuestions() {
   return (
     <div className={style.codingQuestions}>
+      <div className={style.design}>
+        <div className={style.line}></div>
+        <div className={style.circle}>3</div>
+        <div className={style.title}>
+          Data Structures & Algorithms Questions
+        </div>
+      </div>
       <div className={style.codingQuestions__container}>
         <div className={style.codingQuestions__container__header}>
           Advance Coding Questions For Front-End Developers
