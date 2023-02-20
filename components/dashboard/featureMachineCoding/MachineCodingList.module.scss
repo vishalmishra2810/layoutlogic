@@ -1,5 +1,4 @@
 .machineCodingList__container {
-  margin: 200px 0px;
   .machineCodingList__container__header {
     display: flex;
     align-items: center;
@@ -77,6 +76,41 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+}
+.design {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .line {
+    width: 1px;
+    height: 100px;
+    background: linear-gradient(180deg, #f9d004, #ff4e50);
+  }
+  .circle {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(-90deg, #ff4e50, #f9d004);
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    margin: 16px 0px;
+    background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 .machineCodingList__container__list__item__img {

@@ -8,9 +8,7 @@ import buyMeCoffee from "../../assets/buy_me_coffee.svg";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import dropDownIcon from "../../assets/dropdown.svg";
-const ShowFeature = dynamic(
-  () => import("../../common/showFeature/ShowFeature")
-);
+import ShowFeature from "../../common/showFeature/ShowFeature";
 const HeaderMobile = dynamic(() => import("./mobile/HeaderMobile"));
 
 function Header() {

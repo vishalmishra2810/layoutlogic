@@ -6,11 +6,18 @@ import Image from "next/image";
 import { URLPaths } from "../../../utils/constant";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-const CodeSnippet = dynamic(() => import("../../../common/codeSnippet/CodeSnippet"));
+const CodeSnippet = dynamic(
+  () => import("../../../common/codeSnippet/CodeSnippet")
+);
 
 function AdvanceFrontendFeature() {
   return (
     <div className={style.advancedFeature}>
+      <div className={style.design}>
+        <div className={style.line}></div>
+        <div className={style.circle}>4</div>
+        <div className={style.title}>Advanced Frontend Features</div>
+      </div>
       <div className={style.advancedFeature_header}>
         <div className={style.advancedFeature_header__text}>
           Integrate Advanced Frontend Features in your project

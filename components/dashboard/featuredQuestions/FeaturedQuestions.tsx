@@ -13,6 +13,11 @@ const Modal = dynamic(() => import("../../../common/modal/Modal"));
 function FeaturedQuestions() {
   return (
     <div className={style.featuredQuestions}>
+      <div className={style.design}>
+        <div className={style.line}></div>
+        <div className={style.circle}>1</div>
+        <div className={style.title}>Featured Questions</div>
+      </div>
       <div className={style.featuredQuestions_box}>
         <div className={style.featuredQuestions_left_box}>
           <Modal
