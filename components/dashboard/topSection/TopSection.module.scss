@@ -15,18 +15,6 @@
     background: linear-gradient(90deg, #f9d423 0%, #ff4e50 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 5s ease infinite;
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
   }
   .topSection_description {
     font-size: 20px;

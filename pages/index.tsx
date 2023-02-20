@@ -14,7 +14,7 @@ export default function Home() {
         <meta
           name="description"
           content="
-         Practice and Prepare for FrontEnd Machine Coding Round, Problem Solving , Data Structure, Algorithm, 
+         Practice and Prepare for FrontEnd Machine Coding Round, Data Structure, Algorithm, 
          ReactJS, JavaScript, HTML, CSS, Redux, SCSS and add Advance FrontEnd Snippet to make your Project Standout.
         "
         />

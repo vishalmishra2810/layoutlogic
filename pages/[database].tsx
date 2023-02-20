@@ -5,23 +5,38 @@ import QuestionDisplay from "../common/questionDisplay/QuestionDisplay";
 import { getAllList } from "../utils/helper";
 import style from "./../styles/style.module.scss";
 import SideBar from "./../components/sideBar/SideBar";
-import { READY_STATES_LABELS } from "../utils/constant";
+import { FOOTER_HIDE_LIST, READY_STATES_LABELS } from "../utils/constant";
 import Loader from "../common/loader/Loader";
 import Header from "../components/header/Header";
 
-function Database() {
+export async function getStaticPaths() {
+  const paths = FOOTER_HIDE_LIST.map((item) => ({
+    params: { database: item.toLowerCase() },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: any) {
+  return {
+    props: {
+      url: params.database,
+    },
+  };
+}
+
+function Database({ url }: any) {
   const router = useRouter();
   const { database }: any = router.query;
   return (
     <>
       <Head>
         <title>
-          Reactjs, JavaScript, HTML, CSS, Redux, SCSS Top Interview Practice
-          Questions and Answers
+          {`Top 50+ ${url} Interview Questions and Answers in 2023 | Layoutlogic`}
         </title>
         <meta
           name="description"
-          content="Practice and Prepare for Reactjs, JavaScript, HTML, CSS, Redux, SCSS top Interview Questions and Answers with best solutions and code examples for Product Based Companies and Startups."
+          content={`Here are the Top ${url} Interview Questions which an aspiring front end developer must prepare in 2023 for ${url} interviews to get dream job in Product Based Companies or Big Startups.
+          `}
         />
         <meta
           name="keywords"

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Read FrontEnd Related Blogs</title>
+        <title>Top Blog on FrontEnd Development | Layoutlogic</title>
         <meta name="description" content={META_TAGS.DESCRIPTION} />
         <meta name="keywords" content={META_TAGS.KEYWORDS} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
