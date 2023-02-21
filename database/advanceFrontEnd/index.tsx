@@ -21,4 +21,18 @@ export const ADVANCE_FRONTEND_LIST = [
     level: "Medium",
     slug: "random-password-generator",
   },
+  {
+    title: "Detect browser or tab close",
+    description: "Write a JavaScript function to detect browser or tab close",
+    tags: ["javascript", "html", "css"],
+    level: "Easy",
+    slug: "detect-browser-or-tab-close",
+  },
+  {
+    title: "Convert Text to Speech",
+    description: "Convert Text to Speech in JavaScript",
+    tags: ["javascript", "html", "css"],
+    level: "Hard",
+    slug: "convert-text-to-speech",
+  },
 ];

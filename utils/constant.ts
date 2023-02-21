@@ -278,4 +278,6 @@ export enum ADVANCE_FRONTEND_URL {
   "random-color-palette-generator" = "web-platform-qkw6r9",
   "check-internet-connection" = "web-platform-bylfby",
   "random-password-generator" = "web-platform-robs3z",
+  "detect-browser-or-tab-close" = "web-platform-yschbp",
+  "convert-text-to-speech" = "web-platform-u1adig",
 }

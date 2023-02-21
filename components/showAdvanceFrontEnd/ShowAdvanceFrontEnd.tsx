@@ -28,7 +28,9 @@ function ShowAdvanceFrontEnd({ slug }: any) {
         </div>
         <div className={style.machine_left_body}>
           <iframe
-            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin 
+             camera; microphone; geolocation; midi; encrypted-media; usb; vr; accelerometer; gyroscope; payment; ambient-light-sensor; autoplay;
+            "
             frameBorder={0}
             allowFullScreen={true}
             loading="lazy"
