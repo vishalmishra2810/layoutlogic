@@ -19,15 +19,17 @@ function ReadBlog({ slug }: any) {
             {new Date(blog?.date).toDateString()}
           </div>
         </div>
-        <div className={style.readBlog_container_img_box}>
-          <Image
-            src={blog?.img_url}
-            alt={blog?.slug}
-            width={700}
-            height={420}
-            className={style.readBlog_container_img}
-          />
-        </div>
+        {blog?.img_url && (
+          <div className={style.readBlog_container_img_box}>
+            <Image
+              src={blog?.img_url}
+              alt={blog?.slug}
+              width={700}
+              height={420}
+              className={style.readBlog_container_img}
+            />
+          </div>
+        )}
         <div className={style.readBlog_container_content}>{blog?.answer}</div>
       </div>
     </div>
