@@ -33,13 +33,15 @@ function Modal({
           height: height,
         }}
       >
-        <Image
-          src={url}
-          alt={title}
-          width={450}
-          height={250}
-          className={style.modal_icon}
-        />
+        {url && (
+          <Image
+            src={url}
+            alt={title}
+            width={450}
+            height={250}
+            className={style.modal_icon}
+          />
+        )}
         <div className={style.modal_box_title}>{title}</div>
         <div className={style.modal_box_description}>{description}</div>
         <div onClick={startQuestions} className={style.modal_box_button}>
