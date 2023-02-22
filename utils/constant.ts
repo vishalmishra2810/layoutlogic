@@ -219,8 +219,6 @@ export const BLOG_SLUG_LIST = [
   "top-10-javascript-concepts-you-must-know",
   "how-to-use-react-hooks",
   "search-engine-optimization-seo",
-  "200+-best-color-for-your-website",
-  "50+-best-gradient-color-for-your-website",
 ];
 
 export const TUTORIAL_LIST = [
