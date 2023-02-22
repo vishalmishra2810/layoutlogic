@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
-import Header from "../../components/header/Header";
+import MinimalHeader from "../../components/blogDashboard/minimalHeader/MinimalHeader";
 import ReadBlog from "../../components/readBlog/ReadBlog";
 import { BLOG_SLUG_LIST } from "../../utils/constant";
 
@@ -46,7 +46,7 @@ function OpenBlog({ url }: any) {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <Header />
+      <MinimalHeader />
       <ReadBlog slug={blog} />
     </>
   );

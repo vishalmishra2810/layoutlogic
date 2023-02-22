@@ -1,0 +1,23 @@
+.minimalHeader {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+  width: 100%;
+  top: 0;
+  z-index: 3000;
+  border-bottom: 1px solid #eaeaea;
+  transform: translateZ(0);
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(0, 0%, 100%, 0.8);
+  height: 60px;
+  padding: 0px 52px;
+  display: flex;
+  align-items: center;
+  .minimalHeader__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    line-height: 52px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+  }
+}
