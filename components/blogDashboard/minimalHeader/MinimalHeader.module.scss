@@ -13,11 +13,13 @@
   display: flex;
   align-items: center;
   .minimalHeader__title {
+    width: 1032px;
+    margin: 0 auto;
     font-size: 20px;
     font-weight: 500;
     color: #000;
     line-height: 52px;
     cursor: pointer;
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
 }

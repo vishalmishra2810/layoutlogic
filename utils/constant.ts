@@ -285,4 +285,14 @@ export enum ADVANCE_FRONTEND_URL {
   "random-password-generator" = "web-platform-robs3z",
   "detect-browser-or-tab-close" = "web-platform-yschbp",
   "convert-text-to-speech" = "web-platform-u1adig",
+  "typewriter-effect" = "react-jc5opm",
 }
+
+export const ALL_PATH_ADVANCE_FRONTEND = [
+  "random-color-palette-generator",
+  "check-internet-connection",
+  "random-password-generator",
+  "detect-browser-or-tab-close",
+  "convert-text-to-speech",
+  "typewriter-effect",
+];
