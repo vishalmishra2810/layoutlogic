@@ -8,6 +8,13 @@ export const ADVANCE_FRONTEND_LIST = [
     slug: "random-color-palette-generator",
   },
   {
+    title: "TypeWriter Effect",
+    description: "Create a Typewriter Effect in ReactJS",
+    tags: ["reactjs", "javascript", "css"],
+    level: "Medium",
+    slug: "typewriter-effect",
+  },
+  {
     title: "Check Internet Connection",
     description: "Check Offline or Online Status in JavaScript",
     tags: ["javascript", "html", "css"],
