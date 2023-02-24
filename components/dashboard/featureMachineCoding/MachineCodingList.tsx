@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { memo } from "react";
-import { URLPaths } from "../../../utils/constant";
+import { DEVICE_TYPE, URLPaths } from "../../../utils/constant";
 import {
   getAllMachineRoundQuestions,
   getTechIcon,
 } from "../../../utils/helper";
+import useWindowWidth from "../../../utils/hooks/useWindowWidth";
 import style from "./MachineCodingList.module.scss";
 
 function MachineCodingList() {
+  const windowWidth = useWindowWidth();
   return (
     <div className={style.machineCodingList}>
       <div className={style.design}>
@@ -36,7 +38,7 @@ function MachineCodingList() {
         </div>
         <div className={style.machineCodingList__container__list}>
           {getAllMachineRoundQuestions()
-            ?.slice(0, 8)
+            ?.slice(0, windowWidth > DEVICE_TYPE.MOBILE ? 6 : 4)
             ?.map((question: any, index: number) => (
               <Link
                 className={style.machineCodingList__container__list__item}
