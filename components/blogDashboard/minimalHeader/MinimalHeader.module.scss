@@ -9,12 +9,11 @@
   backdrop-filter: saturate(180%) blur(5px);
   background: hsla(0, 0%, 100%, 0.8);
   height: 60px;
-  padding: 0px 52px;
+  padding: 0px 56px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   .minimalHeader__title {
-    width: 1032px;
-    margin: 0 auto;
     font-size: 20px;
     font-weight: 500;
     color: #000;

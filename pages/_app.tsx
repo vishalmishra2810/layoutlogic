@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { Analytics } from "@vercel/analytics/react";
 import NextNProgress from "nextjs-progressbar";
 import React from "react";
+import { Provider } from "react-redux";
+import { store } from "../redux/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,7 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
         height={2}
         showOnShallow={true}
       />
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
       <Analytics />
     </main>
   );
