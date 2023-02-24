@@ -1,0 +1,20 @@
+.allCompiler {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 56px 8px;
+  .compiler__item {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    &:hover {
+      transform: scale(1.06);
+    }
+  }
+  .active__item {
+    background-color: #a5ffbd;
+    border-color: #76f812;
+  }
+}

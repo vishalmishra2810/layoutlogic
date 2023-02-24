@@ -296,3 +296,13 @@ export const ALL_PATH_ADVANCE_FRONTEND = [
   "convert-text-to-speech",
   "typewriter-effect",
 ];
+
+export const ALL_PLAYGROUND_URL = [
+  "c",
+  "cpp",
+  "java",
+  "python",
+  "javascript",
+  "c#",
+  "Go-lang",
+];
