@@ -11,8 +11,8 @@ function TopSection() {
       </h1>
       <p className={style.topSection_description}>
         We have covered all the FrontEnd related stuff for you. You will learn
-        from the basics to the advanced level.You will get all the questions
-        that you might need to know for your next interview.
+        from the basics to the advanced level.You will get all the FrontEnd
+        related stuff in one place with the best quality content.
       </p>
       <div className={style.topSection_btn_list}>
         <Link
