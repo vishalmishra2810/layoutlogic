@@ -3,15 +3,17 @@ import style from "./FeaturedQuestions.module.scss";
 import { FEATURED_DATA } from "./constant";
 import Image from "next/image";
 import Link from "next/link";
+import DrawLine from "../../../common/drawLine/DrawLine";
 
 function FeaturedQuestions() {
   return (
     <div className={style.featuredQuestions}>
-      <div className={style.design}>
-        <div className={style.line}></div>
-        <div className={style.circle}>1</div>
-        <div className={style.title}>Featured Questions</div>
-      </div>
+      <DrawLine
+        title="Featured Questions"
+        circleNumber="1"
+        firstColor="#6dd5ed"
+        secondColor="#2193b0"
+      />
       <div className={style.featuredQuestions_grid}>
         {FEATURED_DATA?.map((item: any, index: any) => (
           <div

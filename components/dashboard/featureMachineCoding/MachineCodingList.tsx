@@ -1,23 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { memo } from "react";
-import { DEVICE_TYPE, URLPaths } from "../../../utils/constant";
-import {
-  getAllMachineRoundQuestions,
-  getTechIcon,
-} from "../../../utils/helper";
-import useWindowWidth from "../../../utils/hooks/useWindowWidth";
+import DrawLine from "../../../common/drawLine/DrawLine";
+import { URLPaths } from "../../../utils/constant";
+import { getAllMachineRoundQuestions } from "../../../utils/helper";
 import style from "./MachineCodingList.module.scss";
 
 function MachineCodingList() {
-  const windowWidth = useWindowWidth();
   return (
     <div className={style.machineCodingList}>
-      <div className={style.design}>
-        <div className={style.line}></div>
-        <div className={style.circle}>2</div>
-        <div className={style.title}>Machine Coding Round Questions</div>
-      </div>
+      <DrawLine
+        title="Machine Coding Round Questions"
+        circleNumber="2"
+        firstColor="#f9d004"
+        secondColor="#ff4e50"
+        addMargin={true}
+      />
       <div className={style.machineCodingList__container}>
         <div className={style.machineCodingList__container__header}>
           <h2 className={style.machineCodingList__container__header__title}>
@@ -38,13 +36,24 @@ function MachineCodingList() {
         </div>
         <div className={style.machineCodingList__container__list}>
           {getAllMachineRoundQuestions()
-            ?.slice(0, windowWidth > DEVICE_TYPE.MOBILE ? 6 : 4)
+            ?.slice(0, 4)
             ?.map((question: any, index: number) => (
               <Link
                 className={style.machineCodingList__container__list__item}
                 key={index}
                 href={"/machine-round-question/" + question.slug}
               >
+                <Image
+                  src={question.imgUrl}
+                  width={480}
+                  height={280}
+                  alt={question.slug}
+                  style={{
+                    borderRadius: "4px",
+                    objectFit: "cover",
+                    border: "1px solid #eaeaea",
+                  }}
+                />
                 <div
                   className={
                     style.machineCodingList__container__list__item__question
@@ -54,39 +63,18 @@ function MachineCodingList() {
                 </div>
                 <div
                   className={
-                    style.machineCodingList__container__list__item__img
+                    style.machineCodingList__container__list__item__tech
                   }
                 >
-                  <Image
-                    src={question.imgUrl}
-                    width={300}
-                    height={200}
-                    alt={question.slug}
-                    style={{
-                      objectFit: "contain",
-                    }}
-                  />
-                </div>
-                <div
-                  className={
-                    style.machineCodingList__container__list__item__language
-                  }
-                >
-                  {question?.language?.map((language: any, index: number) => (
-                    <div
-                      className={
-                        style.machineCodingList__container__list__item__language__item
-                      }
+                  {question.language?.map((tech: any, index: number) => (
+                    <span
                       key={index}
+                      className={
+                        style.machineCodingList__container__list__item__tech__item
+                      }
                     >
-                      <Image
-                        alt={language}
-                        src={getTechIcon(language)}
-                        width={30}
-                        height={30}
-                        title={language}
-                      />
-                    </div>
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </Link>
