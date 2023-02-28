@@ -1,7 +1,7 @@
 .leftSidebar {
   width: 320px;
   height: 100vh;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid rgb(19, 47, 76);
   .leftSidebar__title {
     height: 80px;
     display: flex;
@@ -11,15 +11,17 @@
     padding: 24px 16px;
     .leftSidebar__title__icon {
       cursor: pointer;
+      background: #132f4c;
+      border-radius: 50%;
+      border: 1px solid rgb(19, 47, 76);
     }
     .leftSidebar__title__text {
       font-size: 16px;
       font-weight: 400;
-      color: #000;
+      color: #66b2ff;
       cursor: pointer;
-      font-family: "Inter";
     }
-    border-bottom: 1px solid #e9e6e6;
+    border-bottom: 1px solid rgb(19, 47, 76);
   }
   .leftSidebar__list {
     height: calc(100vh - 80px);
@@ -34,24 +36,24 @@
     .leftSidebar__list__item {
       display: flex;
       align-items: center;
-      padding: 10px 16px;
+      padding: 8px 32px;
       justify-content: space-between;
       cursor: pointer;
       .leftSidebar__list__item__title {
         font-size: 16px;
         font-weight: 500;
-        color: #000;
+        color: #66b2ff;
         font-family: "Inter";
       }
       .leftSidebar__list__item__icon {
         transform: rotate(-90deg);
       }
       &:hover {
-        background-color: #f0eeee;
+        background: #1b497b;
       }
     }
     .leftSidebar__list__item__active {
-      background-color: #e6f6ff;
+      background: #0d3056;
       .leftSidebar__list__item__title {
         color: #0a7ea3;
         font-weight: 600;

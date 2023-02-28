@@ -55,17 +55,13 @@ function MachineCodingQuestionsList() {
               <div className={style.machine_round_list_item_question}>
                 {question.question}
               </div>
-              <div className={style.machine_round_list_item_image}>
-                <Image
-                  src={question.imgUrl}
-                  width={300}
-                  height={200}
-                  alt={question.slug}
-                  style={{
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
+              <Image
+                src={question.imgUrl}
+                width={350}
+                height={250}
+                alt={question.slug}
+                className={style.machine_round_list_item_image}
+              />
               <div className={style.machine_round_list_item_language_container}>
                 {question?.language?.map((language: any, index: number) => (
                   <div

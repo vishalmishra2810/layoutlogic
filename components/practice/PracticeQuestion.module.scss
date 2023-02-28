@@ -3,7 +3,6 @@
   max-width: 1032px;
   margin: 0 auto;
   height: calc(100vh - 80px);
-  background-color: white;
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
@@ -24,17 +23,15 @@
       justify-content: space-between;
       height: auto;
       padding: 16px;
-      border-radius: 4px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      background-color: #132f4c;
+      border-radius: 16px;
+      border: 1px solid #5090d3;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
-      &:hover {
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        transform: scale(1.004);
-      }
       .practice__question__title {
         font-size: 15px;
         line-height: 20px;
+        color: #f1f3f4;
         font-weight: 400;
         font-family: "Inter", monospace;
       }

@@ -1,45 +1,64 @@
-import React, { memo } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import { FRONT_END_CODING_TOPICS, URLPaths } from "../../../utils/constant";
 import style from "./FamousQuestions.module.scss";
-import sourceIcon from "../../../assets/sourceCode.svg";
-import { URLPaths } from "../../../utils/constant";
-import dynamic from "next/dynamic";
-const Modal = dynamic(() => import("../../../common/modal/Modal"));
 
 function FamousQuestions() {
+  const router = useRouter();
   return (
     <div className={style.codingQuestions}>
-      <div className={style.design}>
-        <div className={style.line}></div>
-        <div className={style.circle}>3</div>
-        <div className={style.title}>
-          Data Structures & Algorithms Questions
-        </div>
-      </div>
       <div className={style.codingQuestions__container}>
         <div className={style.codingQuestions__container__header}>
-          Advance Coding Questions For Front-End Developers
-        </div>
-        <div className={style.codingQuestions__container__description}>
-          If you are not beginners and you are looking for the advanced coding
-          questions, then you are at the right place. We have compiled a list of
-          the most frequently asked front-end interview questions and answers.
+          <div className={style.codingQuestions__container__header__title}>
+            Data Structures and Algorithms
+          </div>
+          <div className={style.codingQuestions__container__header__sub_title}>
+            Practice popular Data Structures and Algorithms <br />
+            Questions with best solutions.
+          </div>
+          <p className={style.codingQuestions__container__header__description}>
+            We have compiled a list of the most frequently asked Data Structures
+            <br /> and Algorithms interview questions and answers.
+          </p>
         </div>
         <div className={style.codingQuestions__container__questions}>
-          <Modal
-            title="Top Front-End Coding Questions"
-            slug="top-front-end-coding-questions"
-            description="
-            we have compiled a list of the most frequently asked front-end
-            interview questions and answers. These questions are the most
-            important ones that you need to know to ace your front-end
-            interview.
-            "
-            height={600}
-            url={sourceIcon}
-            width={1016}
-            route={URLPaths.TOP_FRONTEND_QUESTIONS}
-          />
+          <div className={style.codingQuestions__container__questions__item}>
+            {FRONT_END_CODING_TOPICS?.slice(0, 16)?.map((item, index) => (
+              <div
+                key={index}
+                className={
+                  style.codingQuestions__container__questions__item__title
+                }
+                onClick={() => {
+                  router.push("/coding-question/" + item?.value);
+                }}
+              >
+                <p
+                  className={
+                    style.codingQuestions__container__questions__item__title__text
+                  }
+                >
+                  {item.title}
+                </p>
+                <Link
+                  href={"/coding-question/" + item?.value}
+                  className={
+                    style.codingQuestions__container__questions__item__title__link
+                  }
+                >
+                  Learn More
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
+        <Link
+          href={URLPaths.TOP_FRONTEND_QUESTIONS}
+          className={style.codingQuestions__container__questions__link}
+        >
+          View All Topics
+        </Link>
       </div>
     </div>
   );

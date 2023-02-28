@@ -11,9 +11,6 @@ function QuestionDisplay({ questionData, database }: IQuestionDisplayProps) {
   return (
     <div className={style.questionDisplay}>
       <div className={style.questionDisplay_container}>
-        <div className={style.questionDisplay_container_title}>
-          {getDescription(database)}
-        </div>
         {questionData?.map((questions: any, index: number) => (
           <div
             key={index}

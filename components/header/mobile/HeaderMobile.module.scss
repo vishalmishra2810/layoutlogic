@@ -14,18 +14,18 @@
       touch-action: pan-y;
       -webkit-tap-highlight-color: transparent;
       position: absolute;
-      left: 16px;
+      left: 32px;
       .header_menu_icon_line {
         width: 28px;
         height: 3px;
-        background: #000;
+        background: #66b2ff;
         border-radius: 2px;
       }
     }
     .header_title_mobile {
       font-size: 28px;
       font-weight: 800;
-      color: #000;
+      color: #66b2ff;
       cursor: pointer;
       font-family: "Inter", sans-serif;
       touch-action: pan-y;
@@ -34,10 +34,10 @@
   }
   .header_menu_mobile {
     position: absolute;
-    top: 80px;
+    top: 70px;
     width: 100%;
-    height: calc(100vh - 80px);
-    background: #fff;
+    height: calc(100vh - 70px);
+    background: #011e3c;
     z-index: 100;
     right: -100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -46,9 +46,9 @@
     flex-direction: column;
     .header_menu_item_mobile {
       font-size: 15px;
-      padding: 16px 24px;
+      padding: 12px 32px;
       font-weight: 500;
-      color: rgb(15, 14, 14);
+      color: #fff;
       cursor: pointer;
       touch-action: pan-y;
       -webkit-tap-highlight-color: transparent;
@@ -56,10 +56,6 @@
       &:hover {
         color: #e2dddd;
       }
-    }
-    .header_menu_item_active {
-      color: #0070f3;
-      text-shadow: 0 0 1px #0070f3;
     }
   }
   .open_side_bar_mobile {
@@ -72,26 +68,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.header_menu_item_mobile_buy_me_coffee {
-  display: flex;
-  align-content: center;
-  margin-left: 24px;
-  gap: 8px;
-  width: 250px;
-  border-radius: 4px;
-  background-color: #fedd03;
-  padding: 8px;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-  .header_menu_item_mobile_buy_me_coffee_text {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 32px;
-    color: #666;
-    font-family: "Inter", sans-serif;
-    font-style: italic;
-  }
-}
 .header_container_right_item_coffee {
   border-radius: 4px;
 }
