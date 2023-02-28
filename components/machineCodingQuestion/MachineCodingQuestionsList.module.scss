@@ -16,9 +16,9 @@
     .machine_round_list_item {
       width: 490px;
       height: auto;
-      background-color: #fff;
-      border-radius: 4px;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      background-color: #132f4c;
+      border-radius: 16px;
+      border: 1px solid #5090d3;
       transition: all 0.2s ease-in-out;
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -28,14 +28,13 @@
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 16px;
       justify-content: space-between;
       .machine_round_list_item_question {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
-        color: #000000;
+        color: #fff;
         font-family: "Inter", sans-serif;
-        margin-bottom: 8px;
       }
       .machine_round_list_item_image {
         width: 100%;
@@ -44,7 +43,7 @@
         align-items: center;
         justify-content: center;
         border: 1px solid #f5f5f5;
-        border-radius: 4px;
+        border-radius: 16px;
       }
       .machine_round_list_item_language_container {
         display: flex;

@@ -43,8 +43,8 @@ function LeftSidebar({ topic }: any) {
             <Image
               src={dropdownIcon}
               alt="dropdown"
-              width={32}
-              height={32}
+              width={24}
+              height={24}
               className={style.leftSidebar__list__item__icon}
             />
           </div>

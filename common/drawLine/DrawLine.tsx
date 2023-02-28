@@ -7,6 +7,7 @@ function DrawLine({
   firstColor,
   secondColor,
   addMargin,
+  description = "",
 }: any) {
   return (
     <div className={style.design}>
@@ -14,7 +15,7 @@ function DrawLine({
         className={style.line}
         style={{
           background: `linear-gradient(180deg, ${firstColor}, ${secondColor})`,
-          marginTop: addMargin ? "150px" : "0px",
+          marginTop: addMargin ? "56px" : "0px",
         }}
       ></div>
       <div
@@ -33,6 +34,10 @@ function DrawLine({
       >
         {title}
       </div>
+      <div
+        className={style.description}
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></div>
     </div>
   );
 }

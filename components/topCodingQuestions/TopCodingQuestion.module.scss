@@ -18,15 +18,15 @@
         font-family: "Roboto", sans-serif;
         font-size: 36px;
         font-weight: 600;
-        color: #000;
+        color: #fff;
         text-align: center;
       }
       .coding_header__description {
         font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 400;
-        color: #000;
-        margin-top: 8px;
+        color: #a0aab4;
+        margin-top: 4px;
         text-align: center;
       }
     }
@@ -40,24 +40,25 @@
       justify-content: space-between;
       .coding__container_top_left,
       .coding__container_top_right {
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        border-radius: 4px;
+        background: #132f4c;
+        border: 1px solid #5090d3;
+        border-radius: 12px;
         flex: 1;
-        height: 230px;
+        height: 250px;
         padding: 24px;
         .coding__container_top_left__title,
         .coding__container_top_right__title {
           font-family: "Inter", sans-serif;
           font-size: 24px;
           font-weight: 600;
-          color: #000;
+          color: #fff;
         }
         .coding__container_top_left__description,
         .coding__container_top_right__description {
           font-family: "Inter", sans-serif;
           font-size: 16px;
           font-weight: 400;
-          color: #000;
+          color: #b2bac2;
           margin: 16px 0px;
         }
         .coding__container_top_left__button {
@@ -92,14 +93,14 @@
       font-family: "Roboto", sans-serif;
       font-size: 32px;
       font-weight: 500;
-      color: #333;
+      color: #fff;
       margin-top: 52px;
     }
     .coding__container_item__description {
       font-family: "Inter", sans-serif;
       font-size: 16px;
       font-weight: 400;
-      color: #333;
+      color: #b2bac2;
       margin-top: 16px;
       .coding__container_item__description__list {
         margin-top: 16px;
@@ -116,12 +117,13 @@
     font-size: 16px;
     font-weight: 400;
     font-family: "Inter", sans-serif;
-    color: #333;
+    color: #b2bac2;
     .coding__container_conclusion__title {
       font-size: 24px;
       font-weight: 500;
       font-family: "Roboto", sans-serif;
       margin-bottom: 12px;
+      color: #fff;
     }
   }
 }

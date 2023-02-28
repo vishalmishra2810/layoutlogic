@@ -1,42 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { memo } from "react";
-import DrawLine from "../../../common/drawLine/DrawLine";
 import { URLPaths } from "../../../utils/constant";
 import { getAllMachineRoundQuestions } from "../../../utils/helper";
+import { WHY_CHOOSE_US } from "./constant";
 import style from "./MachineCodingList.module.scss";
 
 function MachineCodingList() {
   return (
     <div className={style.machineCodingList}>
-      <DrawLine
-        title="Machine Coding Round Questions"
-        circleNumber="2"
-        firstColor="#f9d004"
-        secondColor="#ff4e50"
-        addMargin={true}
-      />
       <div className={style.machineCodingList__container}>
-        <div className={style.machineCodingList__container__header}>
-          <h2 className={style.machineCodingList__container__header__title}>
-            FrontEnd Machine Coding Round Questions
+        <div className={style.machineCodingList__container__text}>
+          <h2 className={style.machineCodingList__container__text__title}>
+            Machine Coding Round Questions
           </h2>
-          <p
-            className={style.machineCodingList__container__header__description}
-          >
-            These are the top questions that are asked in the FrontEnd Machine
-            Coding Round. You can practice these questions to get better.
+          <p className={style.machineCodingList__container__text__description}>
+            Practice most popular FrontEnd Machine Round <br /> Questions with
+            best solutions.
           </p>
-          <Link
-            href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
-            className={style.machineCodingList__container__header__btn}
-          >
-            Open All Machine Coding Round Questions
-          </Link>
+          <p className={style.machineCodingList__container__text__sub_heading}>
+            Why choose us?
+          </p>
+          <div className={style.machineCodingList__container__text__list}>
+            {WHY_CHOOSE_US.map((item, index) => (
+              <div
+                key={index}
+                className={style.machineCodingList__container__text__list__item}
+              >
+                <h3
+                  className={
+                    style.machineCodingList__container__text__list__item__title
+                  }
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className={
+                    style.machineCodingList__container__text__list__item__description
+                  }
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={style.machineCodingList__container__list_header}>
+          Some of the questions:-
         </div>
         <div className={style.machineCodingList__container__list}>
           {getAllMachineRoundQuestions()
-            ?.slice(0, 4)
+            ?.slice(0, 6)
             ?.map((question: any, index: number) => (
               <Link
                 className={style.machineCodingList__container__list__item}
@@ -45,14 +59,12 @@ function MachineCodingList() {
               >
                 <Image
                   src={question.imgUrl}
-                  width={480}
-                  height={280}
+                  width={285}
+                  height={200}
                   alt={question.slug}
-                  style={{
-                    borderRadius: "4px",
-                    objectFit: "cover",
-                    border: "1px solid #eaeaea",
-                  }}
+                  className={
+                    style.machineCodingList__container__list__item__img
+                  }
                 />
                 <div
                   className={
@@ -80,6 +92,12 @@ function MachineCodingList() {
               </Link>
             ))}
         </div>
+        <Link
+          href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
+          className={style.machineCodingList__container__list__view_all}
+        >
+          View All List of Questions
+        </Link>
       </div>
     </div>
   );

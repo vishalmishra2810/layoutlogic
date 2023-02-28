@@ -1,26 +1,17 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
-import { DEVICE_TYPE, HEADER_LIST, URLPaths } from "../../utils/constant";
+import { DEVICE_TYPE, URLPaths } from "../../utils/constant";
 import useWindowWidth from "../../utils/hooks/useWindowWidth";
 import style from "./Header.module.scss";
-import buyMeCoffee from "../../assets/buy_me_coffee.svg";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import dropDownIcon from "../../assets/dropdown.svg";
-import ShowFeature from "../../common/showFeature/ShowFeature";
+import ShowFeature from "./showFeature/ShowFeature";
 const HeaderMobile = dynamic(() => import("./mobile/HeaderMobile"));
 
 function Header() {
-  const [showMenu, setShowMenu] = React.useState(false);
+  const [showFeature, setShowFeature] = React.useState(false);
+  const [showLearn, setShowLearn] = React.useState(false);
+  const [showResources, setShowResources] = React.useState(false);
   const windowWidth = useWindowWidth();
-  const router = useRouter();
-  const { database } = router.query;
-
-  const showFeatures = (e: any) => {
-    e.stopPropagation();
-    setShowMenu(!showMenu);
-  };
 
   return (
     <header className={style.header}>
@@ -31,61 +22,61 @@ function Header() {
               LayoutLogic
             </Link>
             <ul className={style.header_menu}>
-              <div className={style.header_menu_feature}>
-                <div
-                  className={style.header_menu_button}
-                  onClick={showFeatures}
-                >
-                  <p className={style.header_menu_button_text}> Advanced </p>
-                  <Image
-                    src={dropDownIcon}
-                    alt="dropdown"
-                    width={28}
-                    height={28}
-                    className={`${style.header_menu_button_icon} ${
-                      showMenu && style.header_menu_button_icon_rotate
-                    }`}
-                  />
+              <div
+                className={style.header_menu_feature}
+                onMouseEnter={() => setShowFeature(true)}
+                onMouseLeave={() => setShowFeature(false)}
+              >
+                <div className={style.header_menu_button}>
+                  <p className={style.header_menu_button_text}> Features </p>
                 </div>
-                {showMenu && <ShowFeature setShowMenu={setShowMenu} />}
+                {showFeature && (
+                  <ShowFeature
+                    onClose={() => setShowFeature(false)}
+                    name="Features"
+                  />
+                )}
               </div>
-              {HEADER_LIST.map((item: any, index: any) => (
-                <li key={index} className={style.header_menu_list_item}>
-                  <Link
-                    className={`${style.header_menu_item} ${
-                      "/" + database === item?.path &&
-                      style.header_menu_item_active
-                    }`}
-                    href={item?.path}
-                  >
-                    {item?.title}
-                  </Link>
-                </li>
-              ))}
+              <div
+                className={style.header_menu_feature}
+                onMouseEnter={() => setShowLearn(true)}
+                onMouseLeave={() => setShowLearn(false)}
+              >
+                <div className={style.header_menu_button}>
+                  <p className={style.header_menu_button_text}> Learn </p>
+                </div>
+                {showLearn && (
+                  <ShowFeature
+                    onClose={() => setShowLearn(false)}
+                    name="Learn"
+                  />
+                )}
+              </div>
+              {/* <div
+                className={style.header_menu_feature}
+                onMouseEnter={() => setShowResources(true)}
+                onMouseLeave={() => setShowResources(false)}
+              >
+                <div className={style.header_menu_button}>
+                  <p className={style.header_menu_button_text}> Resources </p>
+                </div>
+                {showResources && (
+                  <ShowFeature
+                    onClose={() => setShowResources(false)}
+                    name="Resources"
+                  />
+                )}
+              </div> */}
             </ul>
           </div>
-          <div className={style.header_container_right}>
+          {/* <div className={style.header_container_right}>
             <Link
               className={style.header_container_right_item_blog}
               href={URLPaths.BLOG}
             >
               Blog
             </Link>
-            <Image
-              title="Buy me a coffee"
-              src={buyMeCoffee}
-              alt="Buy me a coffee"
-              width={34}
-              height={34}
-              className={style.header_container_right_item_coffee}
-              onClick={() => {
-                window.open(
-                  "https://www.buymeacoffee.com/sumitsinghJ",
-                  "_blank"
-                );
-              }}
-            />
-          </div>
+          </div> */}
         </div>
       ) : (
         <HeaderMobile />

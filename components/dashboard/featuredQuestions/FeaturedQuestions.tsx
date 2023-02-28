@@ -1,43 +1,80 @@
 import React from "react";
 import style from "./FeaturedQuestions.module.scss";
-import { FEATURED_DATA } from "./constant";
 import Image from "next/image";
 import Link from "next/link";
-import DrawLine from "../../../common/drawLine/DrawLine";
+import { FEATURED_DATA } from "./constant";
 
 function FeaturedQuestions() {
+  const [selectedTopics, setSelectedTopics] = React.useState<any>(
+    FEATURED_DATA[0]
+  );
   return (
-    <div className={style.featuredQuestions}>
-      <DrawLine
-        title="Featured Questions"
-        circleNumber="1"
-        firstColor="#6dd5ed"
-        secondColor="#2193b0"
-      />
-      <div className={style.featuredQuestions_grid}>
-        {FEATURED_DATA?.map((item: any, index: any) => (
-          <div
-            className={`${style.featuredQuestions_grid_item}
-            ${index === 0 && style.featuredQuestions_grid_item_1}
-            ${index === 4 && style.featuredQuestions_grid_item_5}
-            `}
-            key={index}
-          >
-            <Image src={item?.icon} alt={item?.title} width={80} height={80} />
-            <div className={style.featuredQuestions_grid_item_title}>
-              {item?.title}
+    <div className={style.topics}>
+      <div className={style.topics_grid}>
+        <div className={style.topics_title}>Important Topics</div>
+        <div className={style.topics_grid_item}>
+          <div className={style.topics_grid_item_left}>
+            <div className={style.topics_grid_item_title}>
+              Every Questions that needed to ace FrontEnd Interviews are here.
             </div>
-            <div className={style.featuredQuestions_grid_item_description}>
-              {item?.description}
+            <div className={style.topics_grid_item_description}>
+              Ace your FrontEnd interviews with the Latest and Most Popular
+              FrontEnd Interview Questions.
             </div>
+            <div className={style.topics_grid_item_lists}>
+              {FEATURED_DATA?.map((item: any, index: any) => (
+                <div
+                  className={`${style.topics_grid_item_list} ${
+                    selectedTopics?.title === item?.title && style.selectedItem
+                  }`}
+                  key={index}
+                  onClick={() => setSelectedTopics(item)}
+                >
+                  <Image
+                    src={item?.icon}
+                    alt={item?.title}
+                    width={32}
+                    height={32}
+                    className={style.topics_grid_item_list_icon}
+                  />
+                  <div className={style.topics_grid_item_list_right}>
+                    <div className={style.topics_grid_item_list_title}>
+                      {item?.title}
+                    </div>
+                    <div className={style.topics_grid_item_list_description}>
+                      {item?.description}
+                    </div>
+                    <Link
+                      href={item?.url}
+                      className={style.topics_grid_item_list_link}
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={style.topics_grid_item_right}>
+            {selectedTopics?.questions?.map((item: any, index: any) => (
+              <div className={style.topics_grid_item_right_item} key={index}>
+                <div className={style.topics_grid_item_right_item_title}>
+                  {item?.question}
+                </div>
+                <div className={style.topics_grid_item_right_item_line}></div>
+                <div className={style.topics_grid_item_right_item_answer}>
+                  {item?.answer}
+                </div>
+              </div>
+            ))}
             <Link
-              className={style.featuredQuestions_grid_item_button}
-              href={item?.url}
+              href={selectedTopics?.url}
+              className={style.topics_grid_item_right_link}
             >
-              Open {item?.title} Questions
+              View All List
             </Link>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

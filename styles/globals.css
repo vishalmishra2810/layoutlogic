@@ -38,7 +38,12 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-  background: #ffffff;
+  background: #001e3c;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
 
 a {
@@ -59,14 +64,14 @@ a {
 }
 .answer_list_item {
   margin-left: 32px;
-  color: #000;
+  color: #0a7ea3;
 }
 .simple_answers {
   margin-left: 0px;
-  color: #000;
+  color: #a0aab4;
 }
 .simple-answer {
-  color: #000;
+  color: #a0aab4;
 }
 code {
   font-family: "Menlo", monospace;
@@ -79,7 +84,7 @@ code {
 pre {
   border-radius: 3px;
   padding: 1.2rem !important;
-  background-color: #161b22 !important;
+  background-color: #011e3c !important;
 }
 
 pre p {
@@ -112,7 +117,7 @@ strong {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #000;
+  color: #0a7ea3;
 }
 
 .simple_answers_link_btn {
@@ -134,11 +139,11 @@ b {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: rgb(159, 44, 44);
+  color: #0a7ea3;
 }
 
 .main-container {
-  background: #ffffff;
+  background: #001e3c;
   overflow-y: scroll;
   height: 100vh;
   width: 100%;

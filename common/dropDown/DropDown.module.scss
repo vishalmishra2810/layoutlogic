@@ -9,7 +9,7 @@
     .dropDown_header_title {
       font-size: 16px;
       font-weight: 600;
-      color: #000000;
+      color: #66b2ff;
       font-family: "Inter", sans-serif;
     }
     .dropDown_icon {
@@ -24,18 +24,18 @@
   .dropDown_list {
     display: flex;
     flex-direction: column;
-    background-color: rgb(244, 241, 241);
-    border-radius: 4px;
+    background: #0b1929;
     .dropDown_list_item {
       font-size: 14px;
       font-weight: 400;
-      line-height: 1.65;
-      color: #666;
+      line-height: 1.5;
+      color: #b2bac2;
       font-family: "Inter", sans-serif;
       cursor: pointer;
-      padding: 12px;
+      padding: 10px 8px;
+      border-radius: 12px;
       &:hover {
-        background-color: #e1e1e1;
+        background: #011e3c;
       }
     }
   }

@@ -7,7 +7,7 @@ interface IReplaceCodeProps {
 }
 function ReplaceCode({ codeString, list }: IReplaceCodeProps) {
   return (
-    <p className="simple_answers">
+    <p>
       {codeString.split(" ").map((word, index) => {
         if (list?.includes(word)) {
           return (

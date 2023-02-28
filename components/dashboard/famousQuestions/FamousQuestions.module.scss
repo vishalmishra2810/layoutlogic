@@ -1,79 +1,104 @@
 .codingQuestions {
   width: 100%;
-  margin: 120px auto;
+  margin: 0px auto;
   margin-bottom: 0px;
-  .design {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .line {
-      width: 1px;
-      height: 100px;
-      background: linear-gradient(180deg, #EA8D8D, #A890FE);
-    }
-    .circle {
-      font-size: 16px;
-      font-weight: 600;
-      font-family: "Roboto", sans-serif;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(-90deg, #EA8D8D, #A890FE);
-    }
-    .title {
-      font-size: 20px;
-      font-weight: 600;
-      font-family: "Roboto", sans-serif;
-      color: #000;
-      margin: 16px 0px;
-      background: linear-gradient(90deg, #EA8D8D, #A890FE);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+  background-color: #0b1929;
+  padding: 56px 0px;
   .codingQuestions__container {
     width: 100%;
+    width: var(--max-width);
     margin: 0 auto;
     .codingQuestions__container__header {
-      text-align: center;
-      margin-bottom: 8px;
-      font-size: 28px;
-      font-weight: 600;
-      color: #000000;
-      font-family: "Roboto", sans-serif;
-      padding: 0px 32px;
-    }
-    .codingQuestions__container__description {
-      text-align: center;
-      margin-bottom: 52px;
-      font-size: 15px;
-      font-weight: 400;
-      color: #666666;
-      font-family: "Inter", sans-serif;
-      margin-bottom: 52px;
+      .codingQuestions__container__header__title {
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #66b2ff;
+        font-family: "Roboto", sans-serif;
+      }
+      .codingQuestions__container__header__sub_title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        line-height: 1.2;
+      }
+      .codingQuestions__container__header__description {
+        font-size: 14px;
+        font-weight: 400;
+        color: #a0aab4;
+        line-height: 1.2;
+        margin-top: 10px;
+      }
     }
     .codingQuestions__container__questions {
+      margin-top: 56px;
+      .codingQuestions__container__questions__item {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        .codingQuestions__container__questions__item__title {
+          padding: 24px;
+          width: 236px;
+          cursor: pointer;
+          border-radius: 12px;
+          background: #132f4c;
+          border: 1px solid #5090d3;
+          &:hover {
+            background: #164070;
+          }
+          .codingQuestions__container__questions__item__title__text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            font-family: "Roboto", sans-serif;
+          }
+          .codingQuestions__container__questions__item__title__link {
+            font-size: 14px;
+            font-weight: 400;
+            color: #66b2ff;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .codingQuestions__container__questions__link {
+      margin-top: 24px;
+      font-size: 14px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
       display: flex;
       align-items: center;
+      text-align: center;
       justify-content: center;
+      width: 100%;
+      color: #66b2ff;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .codingQuestions {
-    width: 100%;
-    padding: 0px 0px;
+    padding: 56px 16px;
     .codingQuestions__container {
       width: 100%;
-      .codingQuestions__container__header {
-        padding: 0px 0px;
-        font-size: 28px;
+      .codingQuestions__container__questions {
+        margin-top: 56px;
+        .codingQuestions__container__questions__item {
+          justify-content: center;
+          .codingQuestions__container__questions__item__title {
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+          }
+        }
+      }
+      .codingQuestions__container__questions__link {
+        touch-action: pan-y;
+        -webkit-tap-highlight-color: transparent;
       }
     }
   }

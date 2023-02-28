@@ -257,7 +257,7 @@ export const HARD_REACTJS = [
         <br />
         <Link
           className="simple_answers_link_btn"
-          href={"questions/reactjs-countdown-timer"}
+          href={"/machine-round-question/reactjs-countdown-timer"}
         >
           Open Project
         </Link>
@@ -277,7 +277,7 @@ export const HARD_REACTJS = [
         <Link
           className="simple_answers_link_btn"
           href={
-            "questions/optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll"
+            "/machine-round-question/optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll"
           }
         >
           Open Project
@@ -297,7 +297,7 @@ export const HARD_REACTJS = [
         <br />
         <Link
           className="simple_answers_link_btn"
-          href={"/questions/reactjs-counter-application"}
+          href={"/machine-round-question/reactjs-counter-application"}
         >
           Open Project
         </Link>

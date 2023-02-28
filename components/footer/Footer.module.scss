@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  background-color: #fafafa;
-  border-top: 1px solid #eaeaea;
+  background-color: #001e3c;
+  border-top: 1px solid rgba(194, 224, 255, 0.08);
   padding: 20px 0;
   .footer_container {
     width: 100%;
@@ -22,12 +22,12 @@
           font-weight: 600;
           font-size: 16px;
           line-height: 24px;
-          color: #666;
+          color: #fff;
           text-decoration: none;
           font-family: "Inter", sans-serif;
           cursor: pointer;
           &:hover {
-            color: rgb(0, 0, 0);
+            color: #66b2ff;
           }
         }
       }
@@ -37,7 +37,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: #666;
+    color: #fff;
     font-family: "Inter", sans-serif;
   }
   .footer_item_buy_coffee {

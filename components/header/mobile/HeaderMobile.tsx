@@ -5,7 +5,7 @@ import style from "./HeaderMobile.module.scss";
 import closeIcon from "../../../assets/close.svg";
 import Image from "next/image";
 import Link from "next/link";
-import buyMeCoffee from "../../../assets/buy_me_coffee.svg";
+// import buyMeCoffee from "../../../assets/buy_me_coffee.svg";
 
 function HeaderMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,14 +70,14 @@ function HeaderMobile() {
               {item?.title}
             </Link>
           ))}
-          <Link
+          {/* <Link
             className={style.header_menu_item_mobile}
             href={URLPaths.BLOG}
             onClick={closeHeader}
           >
             Blog
-          </Link>
-          <div
+          </Link> */}
+          {/* <div
             className={style.header_menu_item_mobile_buy_me_coffee}
             onClick={() => {
               window.open("https://www.buymeacoffee.com/sumitsinghJ", "_blank");
@@ -94,7 +94,7 @@ function HeaderMobile() {
             <p className={style.header_menu_item_mobile_buy_me_coffee_text}>
               Buy me a coffee
             </p>
-          </div>
+          </div> */}
         </ul>
       )}
     </div>

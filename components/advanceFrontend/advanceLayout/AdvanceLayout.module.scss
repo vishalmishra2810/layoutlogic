@@ -6,13 +6,9 @@
   .adv_layout_item {
     width: 315px;
     height: auto;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      transform: scale(1.004);
-    }
+    border-radius: 12px;
+    background-color: #023367;
+    border: 1px solid #054da7;
     padding: 16px;
     cursor: pointer;
     font-family: "Inter", sans-serif;
@@ -34,6 +30,7 @@
       font-family: "Roboto", sans-serif;
       //max to 1 lines
       overflow: hidden;
+      color: #fff;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 1;
@@ -43,7 +40,7 @@
       font-size: 14px;
       font-weight: 400;
       font-family: "Inter", sans-serif;
-      //max to 4 lines
+      color: #b2bac2;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -54,6 +51,7 @@
     .adv_layout_item_tags {
       margin-top: 42px;
       display: flex;
+      color: #b2bac2;
       flex-wrap: wrap;
       font-size: 14px;
       gap: 8px;

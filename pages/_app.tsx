@@ -10,10 +10,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className="main-container">
       <NextNProgress
-        color="#FF5555"
+        color="#0a7ea3"
         startPosition={0.3}
         stopDelayMs={1}
-        height={2}
+        height={4}
         showOnShallow={true}
       />
       <Provider store={store}>

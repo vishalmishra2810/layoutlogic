@@ -1,18 +1,22 @@
 import Link from "next/link";
 import React from "react";
-import { URLPaths } from "../../../utils/constant";
+import { DEVICE_TYPE, URLPaths } from "../../../utils/constant";
+import useWindowWidth from "../../../utils/hooks/useWindowWidth";
 import style from "./TopSection.module.scss";
 
 function TopSection() {
+  const windowWidth = useWindowWidth();
   return (
     <section className={style.topSection}>
       <h1 className={style.topSection_title}>
-        From beginners to advanced, Covered all the FrontEnd Stuff for you.
+        Code With
+        <span className={style.topSection_title_highlight}> Creativity</span>
       </h1>
+
       <p className={style.topSection_description}>
-        We have covered all the FrontEnd related stuff for you. You will learn
-        from the basics to the advanced level.You will get all the FrontEnd
-        related stuff in one place with the best quality content.
+        Advance your FrontEnd skills with the best quality content{" "}
+        {windowWidth > DEVICE_TYPE.MOBILE && <br />} and prepare for the
+        FrontEnd interviews.
       </p>
       <div className={style.topSection_btn_list}>
         <Link

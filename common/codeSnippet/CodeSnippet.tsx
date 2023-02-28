@@ -2,7 +2,7 @@
 import React from "react";
 import style from "./CodeSnippet.module.scss";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import {monokaiSublime} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import prettier from "prettier/standalone";
 import parserBabel from "prettier/parser-babel";
 import parserHtml from "prettier/parser-html";
@@ -33,7 +33,7 @@ function CodeSnippet({
       >
         <SyntaxHighlighter
           language={language}
-          style={atomOneDark}
+          style={monokaiSublime}
           showLineNumbers={showLineNumber}
         >
           {language === "javascript" ||

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./DropDown.module.scss";
 import bottom_arrow from "../../assets/dropdown.svg";
 import { useRouter } from "next/router";
@@ -25,8 +25,8 @@ function DropDown({ itemList, title }: IDropDownProps) {
           <Image
             src={bottom_arrow}
             alt=""
-            width={16}
-            height={16}
+            width={24}
+            height={24}
             className={show ? style.dropDown_icon_reverse : style.dropDown_icon}
           />
           <div className={style.dropDown_header_title}>
