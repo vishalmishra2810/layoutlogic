@@ -59,7 +59,7 @@ function FamousQuestions() {
                 style.codingQuestions__container__play_ground__description
               }
             >
-              🤔 If you are confused and don't know where to start, you can
+              🤔 If you are confused and do not know where to start, you can
               start with our curated list of topics and questions.
               <span
                 className={
