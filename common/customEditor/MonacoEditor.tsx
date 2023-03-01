@@ -25,6 +25,11 @@ function MonacoEditor({ language }: any) {
   const [showEditorSetting, setShowEditorSetting] = useState(false);
   const [output, setOutput] = useState("");
   const [showInput, setShowInput] = useState(false);
+  const [compiling, setCompiling] = useState(false);
+
+  useEffect(() => {
+    setValue(getDefaultValue(language));
+  }, []);
   useEffect(() => {
     defineTheme(selectTheme?.value).then((res) => {
       dispatch(setGlobalTheme(res));
@@ -33,6 +38,7 @@ function MonacoEditor({ language }: any) {
   }, [selectTheme]);
 
   const handleCompile = () => {
+    setCompiling(true);
     var data = {
       code: value,
       language: getLanguage(language),
@@ -53,9 +59,11 @@ function MonacoEditor({ language }: any) {
         } else {
           setOutput(response.data.output);
         }
+        setCompiling(false);
       })
       .catch(function (error) {
         console.log(error);
+        setCompiling(false);
       });
   };
 
@@ -120,8 +128,13 @@ function MonacoEditor({ language }: any) {
             <button
               className={style.editorHeaderRightBtn}
               onClick={handleCompile}
+              disabled={compiling}
             >
-              Run
+              {compiling ? (
+                <div className={style.editorHeaderRightBtnLoader}></div>
+              ) : (
+                "Run"
+              )}
             </button>
           </div>
           <Editor
@@ -160,16 +173,15 @@ function MonacoEditor({ language }: any) {
               onClick={() => setShowInput(!showInput)}
               className={style.editorOutput_input_title}
             >
-              Add Custom Input
+              Input
             </p>
-            {showInput ||
-              (true && (
-                <textarea
-                  placeholder="Custom Input"
-                  onChange={(e) => setCustomInput(e.target.value)}
-                  className={style.editorOutput_input_textarea}
-                />
-              ))}
+            {showInput && (
+              <textarea
+                placeholder="Enter your input..."
+                onChange={(e) => setCustomInput(e.target.value)}
+                className={style.editorOutput_input_textarea}
+              />
+            )}
           </div>
         </div>
       </div>

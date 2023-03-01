@@ -22,7 +22,7 @@ function Header() {
               LayoutLogic
             </Link>
             <ul className={style.header_menu}>
-              <div
+              <li
                 className={style.header_menu_feature}
                 onMouseEnter={() => setShowFeature(true)}
                 onMouseLeave={() => setShowFeature(false)}
@@ -36,8 +36,8 @@ function Header() {
                     name="Features"
                   />
                 )}
-              </div>
-              <div
+              </li>
+              <li
                 className={style.header_menu_feature}
                 onMouseEnter={() => setShowLearn(true)}
                 onMouseLeave={() => setShowLearn(false)}
@@ -51,7 +51,7 @@ function Header() {
                     name="Learn"
                   />
                 )}
-              </div>
+              </li>
               {/* <div
                 className={style.header_menu_feature}
                 onMouseEnter={() => setShowResources(true)}
