@@ -45,6 +45,10 @@ function AdvanceFrontendFeature() {
           </Link>
         ))}
       </div>
+      <div className={style.advancedFeature_footer}>
+        {" "}
+        Show More <span>&#8594;</span>
+      </div>
     </div>
   );
 }

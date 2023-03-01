@@ -71,7 +71,7 @@ function FeaturedQuestions() {
               href={selectedTopics?.url}
               className={style.topics_grid_item_right_link}
             >
-              View All List
+              Show More <span>&#8594;</span>
             </Link>
           </div>
         </div>

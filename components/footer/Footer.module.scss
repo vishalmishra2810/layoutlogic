@@ -14,15 +14,23 @@
     .footer_row {
       display: flex;
       justify-content: space-between;
+      .footer_header {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        font-family: "Inter", sans-serif;
+      }
       .footer_column {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 8px;
         .footer_item {
-          font-weight: 600;
-          font-size: 16px;
+          font-weight: 400;
+          font-size: 14px;
           line-height: 24px;
-          color: #fff;
+          color: #b2bac2;
           text-decoration: none;
           font-family: "Inter", sans-serif;
           cursor: pointer;
@@ -37,7 +45,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: #fff;
+    color: #eeecec;
     font-family: "Inter", sans-serif;
   }
   .footer_item_buy_coffee {
