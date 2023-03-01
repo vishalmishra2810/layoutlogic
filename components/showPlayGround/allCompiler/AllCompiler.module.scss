@@ -8,13 +8,14 @@
     transition: all 0.3s ease-in-out;
     padding: 4px;
     border-radius: 4px;
-    border: 1px solid #eaeaea;
+    background-color: #0b1929;
+    border: 1px solid #132f4c;
     &:hover {
       transform: scale(1.06);
     }
   }
   .active__item {
-    background-color: #a5ffbd;
-    border-color: #76f812;
+    background-color: #132F4C;
+    border-color: #5090D3;
   }
 }

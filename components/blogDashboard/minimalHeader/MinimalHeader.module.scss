@@ -1,13 +1,15 @@
 .minimalHeader {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   position: -webkit-sticky; /* Safari */
-  width: 100%;
   top: 0;
   z-index: 3000;
-  border-bottom: 1px solid #eaeaea;
-  transform: translateZ(0);
-  backdrop-filter: saturate(180%) blur(5px);
-  background: hsla(0, 0%, 100%, 0.8);
+  background-color: #2e3136;
+  box-shadow: inset 0px -1px 1px #132f4c;
+  backdrop-filter: blur(8px);
   height: 60px;
   padding: 0px 56px;
   display: flex;
@@ -16,7 +18,7 @@
   .minimalHeader__title {
     font-size: 20px;
     font-weight: 500;
-    color: #000;
+    color: #fff;
     line-height: 52px;
     cursor: pointer;
     font-family: "Roboto", sans-serif;

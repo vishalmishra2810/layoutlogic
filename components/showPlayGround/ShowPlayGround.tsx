@@ -6,8 +6,8 @@ import style from "./ShowPlayGround.module.scss";
 function ShowPlayGround({ language }: any) {
   return (
     <div className={style.showPlayGround}>
-      <AllCompiler language={language} />
-      <MonacoEditor language={language} />
+      <AllCompiler language={language} key={language + "compiler"} />
+      <MonacoEditor language={language} key={language} />
     </div>
   );
 }
