@@ -120,7 +120,7 @@ function FamousQuestions() {
           href={URLPaths.TOP_FRONTEND_QUESTIONS}
           className={style.codingQuestions__container__questions__link}
         >
-          View All Topics
+          Show More <span>&#8594;</span>
         </Link>
       </div>
     </div>

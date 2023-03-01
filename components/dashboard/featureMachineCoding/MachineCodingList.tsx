@@ -96,7 +96,7 @@ function MachineCodingList() {
           href={URLPaths.FRONTEND_MACHINE_CODING_ROUND}
           className={style.machineCodingList__container__list__view_all}
         >
-          View All List of Questions
+          Show More <span>&#8594;</span>
         </Link>
       </div>
     </div>
