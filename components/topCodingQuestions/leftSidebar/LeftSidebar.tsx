@@ -14,8 +14,8 @@ function LeftSidebar({ topic }: any) {
         <Image
           src={LayoutLogicIcon}
           alt="LayoutLogic"
-          width={42}
-          height={42}
+          width={32}
+          height={32}
           className={style.leftSidebar__title__icon}
           onClick={() => router.push(URLPaths.HOME)}
         />
@@ -23,7 +23,7 @@ function LeftSidebar({ topic }: any) {
           className={style.leftSidebar__title__text}
           onClick={() => router.back()}
         >
-          Go back{" "}
+          <span>&#x2190;</span> Go back
         </div>
       </div>
       <div className={style.leftSidebar__list}>
@@ -43,8 +43,8 @@ function LeftSidebar({ topic }: any) {
             <Image
               src={dropdownIcon}
               alt="dropdown"
-              width={24}
-              height={24}
+              width={20}
+              height={20}
               className={style.leftSidebar__list__item__icon}
             />
           </div>
