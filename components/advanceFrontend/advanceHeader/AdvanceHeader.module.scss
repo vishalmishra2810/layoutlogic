@@ -17,10 +17,10 @@
   .adv_searchBar {
     width: 100%;
     height: 42px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #132f4c;
+    border-radius: 8px;
     padding: 0 8px;
-    background: white;
+    background: #0b1929;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,10 +31,11 @@
       outline: none;
       font-size: 16px;
       color: #333;
-      background: #ffffff;
+      background: #0b1929;
       &::placeholder {
-        color: #ccc;
+        color: #b2bac2;
       }
+      color: #fff;
     }
     .search_icon {
       margin-right: 4px;
@@ -66,8 +67,8 @@
     width: 80px;
     height: 32px;
     display: flex;
-    border-radius: 4px;
-    background-color: #e9e6e6;
+    border-radius: 8px;
+    border: 1px solid #132f4c;
     .right_content_header_type_list {
       cursor: pointer;
       display: flex;
@@ -81,7 +82,7 @@
       .line {
         width: 100%;
         height: 2px;
-        border: 1px solid #333;
+        border: 1px solid #fff;
       }
     }
     .right_content_header_type_grid {
@@ -97,7 +98,7 @@
       .line {
         width: 100%;
         height: 10px;
-        border: 1px solid #333;
+        border: 1px solid #fff;
       }
     }
     .active {
