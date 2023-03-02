@@ -2,8 +2,10 @@ import React from "react";
 import style from "./AdvanceFrontendFeature.module.scss";
 import { ADVANCE_FRONTEND_LIST } from "../../../database/advanceFrontEnd";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function AdvanceFrontendFeature() {
+  const router = useRouter();
   return (
     <div className={style.advancedFeature}>
       <div className={style.advancedFeature_header}>
@@ -45,7 +47,12 @@ function AdvanceFrontendFeature() {
           </Link>
         ))}
       </div>
-      <div className={style.advancedFeature_footer}>
+      <div
+        className={style.advancedFeature_footer}
+        onClick={() => {
+          router.push("/advance-frontend-feature");
+        }}
+      >
         {" "}
         Show More <span>&#8594;</span>
       </div>
