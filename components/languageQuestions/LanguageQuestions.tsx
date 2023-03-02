@@ -17,31 +17,40 @@ function LanguageQuestions({ topic }: any) {
 
   return (
     <div className={style.language}>
-      <LeftSidebar topic={topic}/>
-      <div className={style.language__container}>
+      <div className={style.language__left}>
+        <LeftSidebar topic={topic} />
+      </div>
+      <div className={style.language__right}>
         <div className={style.language__container__title}>
           {topic?.toUpperCase()}
         </div>
-        {localLoading ? (
-          <div className={style.language__container__loader}>
-            <Loader />
-          </div>
-        ) : listData.length > 0 ? (
-          <div className={style.language__container__questions}>
-            {listData?.map((item: any, index: number) => (
-              <div key={index} className={style.language__container__questions}>
-                <div className={style.language__container__questions__question}>
-                  {item.question}
+        <div className={style.language__container}>
+          {localLoading ? (
+            <div className={style.language__container__loader}>
+              <Loader />
+            </div>
+          ) : listData.length > 0 ? (
+            <div className={style.language__container__questions}>
+              {listData?.map((item: any, index: number) => (
+                <div
+                  key={index}
+                  className={style.language__container__questions}
+                >
+                  <div
+                    className={style.language__container__questions__question}
+                  >
+                    {item.question}
+                  </div>
+                  <div className={style.language__container__questions__answer}>
+                    {item.answer}
+                  </div>
                 </div>
-                <div className={style.language__container__questions__answer}>
-                  {item.answer}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <NoPostFound title="Currently there are no questions available." />
-        )}
+              ))}
+            </div>
+          ) : (
+            <NoPostFound title="Currently there are no questions available." />
+          )}
+        </div>
       </div>
     </div>
   );

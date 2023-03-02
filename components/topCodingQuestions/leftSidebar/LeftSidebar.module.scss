@@ -3,20 +3,21 @@
   height: 100vh;
   border: 1px solid rgb(19, 47, 76);
   .leftSidebar__title {
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    padding: 24px 16px;
+    padding: 0px 24px;
     .leftSidebar__title__icon {
       cursor: pointer;
       background: #132f4c;
       border-radius: 50%;
       border: 1px solid rgb(19, 47, 76);
+      object-fit: contain;
     }
     .leftSidebar__title__text {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       color: #66b2ff;
       cursor: pointer;
@@ -36,26 +37,27 @@
     .leftSidebar__list__item {
       display: flex;
       align-items: center;
-      padding: 8px 32px;
+      padding: 8px 24px;
       justify-content: space-between;
       cursor: pointer;
       .leftSidebar__list__item__title {
         font-size: 16px;
         font-weight: 500;
-        color: #66b2ff;
-        font-family: "Inter";
+        color: #fff;
+        font-family: "Roboto", sans-serif;
       }
       .leftSidebar__list__item__icon {
         transform: rotate(-90deg);
       }
       &:hover {
-        background: #1b497b;
+        background: #132f4c;
       }
     }
     .leftSidebar__list__item__active {
       background: #0d3056;
+      border-radius: 0px;
       .leftSidebar__list__item__title {
-        color: #0a7ea3;
+        color: #66b2ff;
         font-weight: 600;
       }
       .leftSidebar__list__item__icon {

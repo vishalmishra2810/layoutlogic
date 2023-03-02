@@ -46,7 +46,7 @@ function Details({ url }: any) {
         <meta name="author" content="Sumit Kumar Singh" />
         <link rel="icon" href="/layoutlogic.jpg" />
       </Head>
-      <LanguageQuestions topic={topics} />
+      <LanguageQuestions topic={topics} key={topics} />
     </>
   );
 }
