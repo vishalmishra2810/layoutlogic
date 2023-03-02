@@ -6,6 +6,18 @@ import { useRouter } from "next/router";
 
 function AdvanceFrontendFeature() {
   const router = useRouter();
+  const getColor = (level: any) => {
+    switch (level) {
+      case "Easy":
+        return style.adv_layout_item_level_easy;
+      case "Medium":
+        return style.adv_layout_item_level_medium;
+      case "Hard":
+        return style.adv_layout_item_level_hard;
+      default:
+        return style.adv_layout_item_level_easy;
+    }
+  };
   return (
     <div className={style.advancedFeature}>
       <div className={style.advancedFeature_header}>
@@ -24,23 +36,19 @@ function AdvanceFrontendFeature() {
       <div className={style.advancedFeature_body}>
         {ADVANCE_FRONTEND_LIST?.map((item, index) => (
           <Link
-            className={style.advancedFeature_body__item}
             key={index}
+            className={style.adv_layout_item}
             href={"/advance-frontend-feature/" + item?.slug}
           >
-            <div className={style.advancedFeature_body__item__header}>
-              {item.title}
-            </div>
-            <div className={style.advancedFeature_body__item__description}>
+            <div className={`${getColor(item.level)}`}>{item.level}</div>
+            <div className={style.adv_layout_item_title}>{item.title}</div>
+            <div className={style.adv_layout_item_question}>
               {item.description}
             </div>
-            <div className={style.advancedFeature_body__item__tags}>
-              {item.tags?.map((tag, index) => (
-                <div
-                  className={style.advancedFeature_body__item__tags__item}
-                  key={index}
-                >
-                  {tag}
+            <div className={style.adv_layout_item_tags}>
+              {item.tags.map((tag: any, index: any) => (
+                <div key={index} className={style.adv_layout_item_tag}>
+                  #{tag}
                 </div>
               ))}
             </div>
