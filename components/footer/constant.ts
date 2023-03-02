@@ -21,7 +21,7 @@ export const FOOTER_LINKS_MACHINE_ROUND = [
   },
   {
     title: "Pixel Art Maker",
-    slug: "pixel_art_maker",
+    slug: "pixel-art-maker",
   },
 ];
 

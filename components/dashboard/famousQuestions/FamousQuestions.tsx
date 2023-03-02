@@ -78,6 +78,7 @@ function FamousQuestions() {
               src={compiler}
               alt="play-ground"
               width={600}
+              placeholder="blur"
               height={600}
               className={
                 style.codingQuestions__container__play_ground__right__image
