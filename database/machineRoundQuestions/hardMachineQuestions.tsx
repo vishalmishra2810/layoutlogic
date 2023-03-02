@@ -25,6 +25,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Pixel Art Maker",
     slug: "pixel-art-maker",
     description:
       "A pixel art maker is a web application that allows users to create pixel art.",
@@ -59,6 +60,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Tic Tac Toe Game",
     slug: "tic-tac-toe-game",
     description:
       "A Tic Tac Toe game is a web application that allows users to play Tic Tac Toe.",
@@ -81,6 +83,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["ReactJs", "CSS"],
+    title: "ReactJs Countdown Timer",
     slug: "reactjs-countdown-timer",
     imgUrl:
       "https://user-images.githubusercontent.com/76992713/214907646-939a0647-e68b-4529-b295-59431b215a83.png",
@@ -110,6 +113,8 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["ReactJs", "CSS"],
+    title:
+      "Optimize search filter in ReactJs using debounce and infinite scroll",
     slug: "optimize-search-filter-in-reactjs-using-debounce-and-infinite-scroll",
     description:
       "A search filter is a web application that allows users to search.",
@@ -140,6 +145,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Bishop on chessboard",
     slug: "bishop-on-chessboard",
     description:
       "A Bishop on chessboard is a web application that allows users to move Bishop on chessboard.",
@@ -165,6 +171,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["ReactJs", "CSS"],
+    title: "ReactJs Counter Application",
     slug: "reactjs-counter-application",
     description:
       "A counter application is a web application that allows users to count.",
@@ -191,6 +198,7 @@ export const HARD_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Pagination",
     slug: "pagination",
     description:
       "A pagination is a web application that allows users to paginate.",

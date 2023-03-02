@@ -37,7 +37,8 @@
   position: -webkit-sticky; /* Safari */
   z-index: 5;
   top: 70px;
-  border: 1px solid #132f4c;
+  border-top: 1px solid #132f4c;
+  border-bottom: 1px solid #132f4c;
   width: 100%;
   gap: 16px;
   overflow-x: scroll;
@@ -61,13 +62,13 @@
   }
   .topicsList_Selected {
     color: #fff;
-    background-color: #5373f2;
+    background-color: #17426c;
   }
 }
 
 @media screen and (max-width: 768px) {
   .topicsList {
-    padding: 0px 16px;
+    padding: 0px 0px;
     .topicsList_container {
       .topicsList_heder_container {
         .topicsList_header {
@@ -83,9 +84,10 @@
   }
 
   .topicsList_items_list {
-    padding: 0px 8px;
+    display: none;
+    padding: 0px;
     width: 100%;
-    min-width: 600px;
+    min-width: 100%;
     justify-content: flex-start;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -96,7 +98,7 @@
     }
     .topicsList_Selected {
       color: #fff;
-      background-color: #5373f2;
+      background-color: #17426c;
     }
   }
 }

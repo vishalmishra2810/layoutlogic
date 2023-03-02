@@ -47,7 +47,6 @@ function SideBar({ database }: ISideBarProps) {
           />
         </div>
         <div className={style.sideBar_scrollable_container}>
-          <div className={style.sideBar_title}> List of Questions</div>
           <DropDown
             key={database + TOPICS_DIFFICULTY.EASY}
             itemList={getQuestionWithAnswerList(
