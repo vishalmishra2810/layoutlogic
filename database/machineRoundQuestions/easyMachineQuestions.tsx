@@ -25,6 +25,7 @@ export const EASY_MACHINE_QUESTIONS = [
         </p>
       </>
     ),
+    title: "Simple To-Do List",
     description:
       "To-do list is a simple list of tasks that need to be completed. It is a common practice for software developers to keep a list of tasks that need to be completed. This helps them stay organized and focused on the current task at hand. The program should allow the user to add and remove items from the list.",
     language: ["HTML", "CSS", "JavaScript"],
@@ -77,6 +78,7 @@ export const EASY_MACHINE_QUESTIONS = [
         </p>
       </>
     ),
+    title: "Fetch Data From API",
     description:
       "An API is a set of programming instructions and standards for accessing a web-based software application or web tool. APIs are used when programming graphical user interface (GUI) components. For example, an API might be used to create a button on a webpage that, when clicked, displays a message. The program should fetch data from a public API and display it on a webpage. There are so many approaches to fetch data from API. Some of them are using fetch(), axios, etc. here is an example of fetching data from API using fetch() method.",
     language: ["HTML", "CSS", "JavaScript"],
@@ -135,6 +137,7 @@ export const EASY_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Responsive Navigation Bar",
     description:
       "A responsive navigation bar is a navigation bar that changes its appearance based on the size of the screen. The navigation bar should collapse into a hamburger menu on smaller screens. The hamburger menu is a button that displays a drop-down menu when clicked. The hamburger menu is a common design pattern used in responsive websites.",
     slug: "responsive_navigation_bar",
@@ -183,6 +186,7 @@ export const EASY_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Simple Calculator",
     description:
       "A calculator is a device that performs mathematical operations. The program should allow the user to add, subtract, multiply, and divide numbers. The program should display the result of the calculation on the screen.",
     slug: "simple_calculator",
@@ -247,6 +251,7 @@ export const EASY_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Drag and Drop",
     description:
       "Drag and drop is a common design pattern used in web applications. The program should allow the user to drag and drop items from one location to another.",
     slug: "drag_and_drop",

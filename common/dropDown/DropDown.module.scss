@@ -3,14 +3,19 @@
   .dropDown_header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 36px;
-    gap: 12px;
+    padding: 12px;
     cursor: pointer;
+    border-radius: 8px;
+    &:hover {
+      background-color: rgb(19, 47, 76);
+    }
     .dropDown_header_title {
       font-size: 16px;
       font-weight: 600;
-      color: #66b2ff;
-      font-family: "Inter", sans-serif;
+      color: #fff;
+      font-family: "Roboto", sans-serif;
     }
     .dropDown_icon {
       font-size: 24px !important;
@@ -29,13 +34,13 @@
       font-size: 14px;
       font-weight: 400;
       line-height: 1.5;
-      color: #b2bac2;
+      color: rgb(178, 186, 194);
       font-family: "Inter", sans-serif;
       cursor: pointer;
-      padding: 10px 8px;
-      border-radius: 12px;
+      padding: 8px;
+      border-radius: 8px;
       &:hover {
-        background: #011e3c;
+        background: rgb(16, 53, 93);
       }
     }
   }

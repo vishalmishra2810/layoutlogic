@@ -26,6 +26,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Image Carousel",
     slug: "image_carousel",
     description:
       "An image carousel is a slideshow for cycling through a series of images, which works like a slideshow. The carousel should display a single image at a time. The carousel should have a button to go to the next image. The carousel should have a button to go to the previous image.",
@@ -86,6 +87,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Lazy Load Images",
     slug: "lazy_load_images",
     description:
       "Lazy loading is a technique that defers loading of non-critical resources at page load time. The technique allows you to improve the page load speed and reduce bandwidth consumption. The program should load images as the user scrolls down the page.",
@@ -120,6 +122,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Nested Comments",
     slug: "nested_comments",
     description:
       "A comment box is a web application that allows users to post comments. The comment box should have a text area to enter the comment. The comment box should have a button to post the comment. The comment box should have a button to reply to the comment.",
@@ -151,6 +154,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "CSS", "JavaScript"],
+    title: "Rating System",
     slug: "rating_system",
     description:
       "A rating system is a web application that allows users to rate a product or service. The rating system should have a star rating system.",
@@ -185,6 +189,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "JavaScript"],
+    title: "Web Worker Offload CPU Using Worker.js",
     slug: "web_worker_offload_cpu_using_worker_js",
     imgUrl:
       "https://user-images.githubusercontent.com/76992713/215307935-2128bc86-462e-4795-83c6-f1b82acf91f5.png",
@@ -218,6 +223,7 @@ export const MEDIUM_MACHINE_QUESTIONS = [
       </>
     ),
     language: ["HTML", "JavaScript"],
+    title: "Geolocation API Display User Location",
     slug: "geolocation_api_display_user_location_with_current_location_details",
     imgUrl:
       "https://user-images.githubusercontent.com/76992713/215307956-6dccc22a-0feb-4fb6-9138-226e27ba33c9.png",

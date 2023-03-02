@@ -52,16 +52,19 @@ function MachineCodingQuestionsList() {
               className={style.machine_round_list_item}
               key={index}
             >
-              <div className={style.machine_round_list_item_question}>
-                {question.question}
-              </div>
               <Image
                 src={question.imgUrl}
-                width={350}
-                height={250}
+                width={450}
+                height={260}
                 alt={question.slug}
                 className={style.machine_round_list_item_image}
               />
+              <div className={style.machine_round_list_item_question}>
+                {question.title}
+              </div>
+              <div className={style.machine_round_list_item_description}>
+                {question.question}
+              </div>
               <div className={style.machine_round_list_item_language_container}>
                 {question?.language?.map((language: any, index: number) => (
                   <div
@@ -73,8 +76,11 @@ function MachineCodingQuestionsList() {
                     <Image
                       alt={language}
                       src={getTechIcon(language)}
-                      width={30}
-                      height={30}
+                      width={24}
+                      height={24}
+                      className={
+                        style.machine_round_list_item_language_container_item_icon
+                      }
                     />
                   </div>
                 ))}
