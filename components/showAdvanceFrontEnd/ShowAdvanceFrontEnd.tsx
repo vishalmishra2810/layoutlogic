@@ -4,6 +4,7 @@ import { ADVANCE_FRONTEND_URL, URLPaths } from "../../utils/constant";
 import style from "./ShowAdvanceFrontEnd.module.scss";
 
 function ShowAdvanceFrontEnd({ slug }: any) {
+  const [loading, setLoading] = React.useState<boolean>(true);
   const router = useRouter();
   const goBack = () => {
     router.back();
@@ -23,17 +24,19 @@ function ShowAdvanceFrontEnd({ slug }: any) {
             LayoutLogic
           </div>
           <div className={style.machine_left_header_subTitle} onClick={goBack}>
-            Go back
+            <span>&#8592;</span> Go back
           </div>
         </div>
         <div className={style.machine_left_body}>
+          {loading ? <Loader /> : null}
           <iframe
-            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin 
-             camera; microphone; geolocation; midi; encrypted-media; usb; vr; accelerometer; gyroscope; payment; ambient-light-sensor; autoplay;
-            "
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full; midi; geolocation; microphone; camera; midi; vr *; xr-spatial-tracking *;  "
             frameBorder={0}
             allowFullScreen={true}
-            loading="lazy"
+            loading="eager"
+            //hide loader when iframe is loaded
+            onLoad={() => setLoading(false)}
             className={style.iframe_container}
             //@ts-ignore
             src={`https://stackblitz.com/edit/${ADVANCE_FRONTEND_URL[slug]}?embed=1&file=App.tsx&theme=dark&hideNavigation=1`}
@@ -46,3 +49,14 @@ function ShowAdvanceFrontEnd({ slug }: any) {
 }
 
 export default ShowAdvanceFrontEnd;
+
+function Loader() {
+  return (
+    <div className={style.loader}>
+      <div className={style["loader-bar"]}></div>
+      <div className={style["loader-bar"]}></div>
+      <div className={style["loader-bar"]}></div>
+      <div className={style["loader-bar"]}></div>
+    </div>
+  );
+}
