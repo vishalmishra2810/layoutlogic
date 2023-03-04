@@ -52,6 +52,14 @@ function Header() {
                   />
                 )}
               </li>
+              <Link
+                href={URLPaths.PLAYGROUND + "/javascript"}
+                className={style.header_menu_feature}
+              >
+                <div className={style.header_menu_button}>
+                  <p className={style.header_menu_button_text}>PlayGround</p>
+                </div>
+              </Link>
               {/* <div
                 className={style.header_menu_feature}
                 onMouseEnter={() => setShowResources(true)}
