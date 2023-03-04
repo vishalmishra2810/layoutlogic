@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 import React from "react";
 import { FOOTER_HIDE_LIST, HEADER_LIST, URLPaths } from "../../utils/constant";
 import style from "./Footer.module.scss";
-import Image from "next/image";
-import buyMeCoffee from "../../assets/buy_me_coffee.svg";
 import {
   ADVANCED_ROUND_LINKS,
   CODING_ROUND_LINKS,
@@ -72,22 +70,6 @@ function Footer() {
           <div className={style.footer_title}>
             Copyright @2023 LayoutLogic All Rights Reserved
           </div>
-          {/* <div
-            className={`${style.footer_item} ${style.footer_item_buy_coffee}`}
-            onClick={() => {
-              window.open("https://www.buymeacoffee.com/sumitsinghJ", "_blank");
-            }}
-          >
-            <Image
-              title="Buy me a coffee"
-              src={buyMeCoffee}
-              alt="Buy me a coffee"
-              width={32}
-              height={32}
-              className={style.header_container_right_item_coffee}
-            />
-            <p className={style.footer_buy_me_coffee_title}>Buy me a coffee</p>
-          </div> */}
         </div>
       </div>
     </footer>
