@@ -10,7 +10,6 @@ const HeaderMobile = dynamic(() => import("./mobile/HeaderMobile"));
 function Header() {
   const [showFeature, setShowFeature] = React.useState(false);
   const [showLearn, setShowLearn] = React.useState(false);
-  const [showResources, setShowResources] = React.useState(false);
   const windowWidth = useWindowWidth();
 
   return (
@@ -60,31 +59,8 @@ function Header() {
                   <p className={style.header_menu_button_text}>PlayGround</p>
                 </div>
               </Link>
-              {/* <div
-                className={style.header_menu_feature}
-                onMouseEnter={() => setShowResources(true)}
-                onMouseLeave={() => setShowResources(false)}
-              >
-                <div className={style.header_menu_button}>
-                  <p className={style.header_menu_button_text}> Resources </p>
-                </div>
-                {showResources && (
-                  <ShowFeature
-                    onClose={() => setShowResources(false)}
-                    name="Resources"
-                  />
-                )}
-              </div> */}
             </ul>
           </div>
-          {/* <div className={style.header_container_right}>
-            <Link
-              className={style.header_container_right_item_blog}
-              href={URLPaths.BLOG}
-            >
-              Blog
-            </Link>
-          </div> */}
         </div>
       ) : (
         <HeaderMobile />
