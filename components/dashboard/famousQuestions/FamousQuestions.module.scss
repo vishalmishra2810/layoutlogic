@@ -74,17 +74,18 @@
           align-items: center;
           justify-content: center;
           padding: 12px 24px;
+          height: 48px;
           width: 200px;
           border-radius: 10px;
-          background: #5090d3;
-          border: 1px solid #5090d3;
+          background: #027afa;
+          border: 1px solid #0175f0;
           font-size: 14px;
           font-weight: 600;
           color: #fff;
           font-family: "Roboto", sans-serif;
           cursor: pointer;
           &:hover {
-            background: #66b2ff;
+            background: #025ab8;
           }
         }
         .codingQuestions__container__play_ground__description {

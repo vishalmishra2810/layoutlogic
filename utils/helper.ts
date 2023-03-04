@@ -30,36 +30,10 @@ import reduxIcon from "../assets/redux.svg";
 import { EASY_CODING_QUESTIONS } from "../database/codingQuestions/easyCodingQuestions";
 import { MEDIUM_CODING_QUESTIONS } from "../database/codingQuestions/mediumCodingQuestions";
 import { HARD_CODING_QUESTIONS } from "../database/codingQuestions/hardCodingQuestions";
-import { REACT_POST } from "../blog_Database/react/react";
-import { Mixed_POST } from "../blog_Database/mixed/mixed";
-import { JS_POST } from "../blog_Database/js/js";
 import typeScriptIcon from "./../assets/typescript.svg";
 import nextjsIcon from "./../assets/nextjs.svg";
 import { ADVANCE_FRONTEND_LIST } from "../database/advanceFrontEnd";
 
-export const getPostsByTopic = (topic: string) => {
-  if (topic === "All") {
-    return getAllPosts();
-  }
-  return getAllPosts()?.filter((post: any) => post?.topic?.includes(topic));
-};
-
-export const getAllPosts = () => {
-  return [...REACT_POST, ...Mixed_POST, ...JS_POST];
-};
-
-export const getRecentPosts = (post: any) => {
-  return post
-    ?.sort((a: any, b: any) => {
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    })
-    ?.slice(0, 2);
-};
-
-export const getPostsBySlug = (slug: string) => {
-  let all_posts = getAllPosts();
-  return all_posts?.find((post: any) => post?.slug === slug);
-};
 
 export const getQuestionWithSearchText = (searchText: string, list: any) => {
   if (searchText?.trim()?.length === 0) return list;

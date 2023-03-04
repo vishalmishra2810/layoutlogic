@@ -2,16 +2,10 @@ import { FRONT_END_CODING_TOPICS } from "../utils/constant";
 import {
   getAdvanceFrontEndList,
   getAllMachineRoundQuestions,
-  getAllPosts,
   getFrontOnlyQuestions,
 } from "../utils/helper";
 
-function generateSiteMap(
-  posts: any,
-  blog: any,
-  advance_list: any,
-  question_list: any
-) {
+function generateSiteMap(posts: any, advance_list: any, question_list: any) {
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
      <url>
        <loc>https://www.layoutlogic.com</loc>
@@ -71,16 +65,6 @@ function generateSiteMap(
      `;
        })
        .join("")}
-      ${blog
-        .map((slug: any) => {
-          return `
-        <url>
-            <loc>${`https://www.layoutlogic.com/blog/${slug}`}</loc>
-        </url>
-
-      `;
-        })
-        .join("")}
 
       ${advance_list
         .map((slug: any) => {
@@ -126,7 +110,6 @@ function SiteMap() {
 export async function getServerSideProps({ res }: any) {
   // We make to get all slugs from our data source
   const request = getAllMachineRoundQuestions().map((item: any) => item?.slug);
-  const blogPosts = getAllPosts().map((item: any) => item?.slug);
   const advance_frontend_list = getAdvanceFrontEndList("", {
     easy: true,
     medium: true,
@@ -137,7 +120,6 @@ export async function getServerSideProps({ res }: any) {
   //sending the slugs to the generateSiteMap function
   const sitemap = generateSiteMap(
     [...request],
-    [...blogPosts],
     [...advance_frontend_list],
     [...question_list]
   );

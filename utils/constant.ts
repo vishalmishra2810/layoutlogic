@@ -38,6 +38,7 @@ export enum URLPaths {
   BLOG = "/blog",
   ADVANCE_FRONTEND_FEATURE = "/advance-frontend-feature",
   QUESTION_PRACTICE = "/question-practice",
+  PLAYGROUND = "/playground",
 }
 
 export const META_TAGS = {
