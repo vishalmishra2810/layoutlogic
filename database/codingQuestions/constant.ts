@@ -435,11 +435,11 @@ myGraph.showConnections();
 
 export const fib_top_down = `
 // top down approach
-function fib(n, memo = {}) {
-    if (n in memo) return memo[n];
-    if (n <= 2) return 1;
-    memo[n] = fib(n - 1, memo) + fib(n - 2, memo);
-    return memo[n];
+function fib(value , memo = {}) {
+    if (value in memo) return memo[value];
+    if (value <= 2) return 1;
+    memo[value] = fib(value - 1, memo) + fib(value - 2, memo);
+    return memo[value];
 }
 `;
 
