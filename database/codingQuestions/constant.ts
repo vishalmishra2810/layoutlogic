@@ -436,7 +436,7 @@ myGraph.showConnections();
 export const fib_top_down = `
 // top down approach
 function fib(value , memo = {}) {
-    if (value in memo) return memo[value];
+    if(memo[value]) return memo[value];
     if (value <= 2) return 1;
     memo[value] = fib(value - 1, memo) + fib(value - 2, memo);
     return memo[value];
