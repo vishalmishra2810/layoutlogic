@@ -34,7 +34,7 @@ function AdvanceFrontendFeature() {
         </div>
       </div>
       <div className={style.advancedFeature_body}>
-        {ADVANCE_FRONTEND_LIST?.map((item, index) => (
+        {ADVANCE_FRONTEND_LIST?.slice(0, 6)?.map((item, index) => (
           <Link
             key={index}
             className={style.adv_layout_item}
