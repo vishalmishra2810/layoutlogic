@@ -287,6 +287,13 @@ export enum ADVANCE_FRONTEND_URL {
   "detect-browser-or-tab-close" = "web-platform-yschbp",
   "convert-text-to-speech" = "web-platform-u1adig",
   "typewriter-effect" = "react-jc5opm",
+  "json-formatter" = "web-platform-sgao5f",
+  "download-file" = "web-platform-vjlskc",
+  "take-screenshot" = "web-platform-4d9vtb",
+  "voice-to-text" = "web-platform-8pad5u",
+  "record-video" = "web-platform-d2unmd",
+  "extract-text-from-pdf" = "web-platform-egcsjk",
+  "csv-viewer" = "web-platform-3kkvy2",
 }
 
 export const ALL_PATH_ADVANCE_FRONTEND = [
@@ -296,6 +303,13 @@ export const ALL_PATH_ADVANCE_FRONTEND = [
   "detect-browser-or-tab-close",
   "convert-text-to-speech",
   "typewriter-effect",
+  "json-formatter",
+  "download-file",
+  "take-screenshot",
+  "voice-to-text",
+  "record-video",
+  "extract-text-from-pdf",
+  "csv-viewer",
 ];
 
 export const ALL_PLAYGROUND_URL = [
