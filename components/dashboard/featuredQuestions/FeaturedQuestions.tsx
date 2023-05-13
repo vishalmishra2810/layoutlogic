@@ -11,14 +11,14 @@ function FeaturedQuestions() {
   useEffect(() => {
     (() => {
       if (typeof window !== "undefined") {
-        (window as any).hj("identify", {
-          name: "Sumit Kumar Singh",
-          email: "sumit@gmail.com",
-          address: "Bangalore",
-          phone: "1234567890",
-          company: "Google",
-          role: "Software Engineer",
-          experience: "5 years",
+        (window as any).hj("identify",'sks', {
+          'name': "Sumit Kumar Singh",
+          'email': "sumit@gmail.com",
+          'address': "Bangalore",
+          'phone': "1234567890",
+          'company': "Google",
+          'role': "Software Engineer",
+          'experience': "5 years",
         });
       }
     })();
