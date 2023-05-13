@@ -11,8 +11,7 @@ export default function Home() {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-var userId = your_user_id || null; // Replace your_user_id with your own if available.
-window.hj('identify', userId, {
+window.hj('identify', null, {
     // Add your own custom attributes here. Some EXAMPLES:
     // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
     // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
