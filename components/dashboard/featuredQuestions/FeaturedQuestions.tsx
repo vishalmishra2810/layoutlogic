@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./FeaturedQuestions.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +8,21 @@ function FeaturedQuestions() {
   const [selectedTopics, setSelectedTopics] = React.useState<any>(
     FEATURED_DATA[0]
   );
+  useEffect(()=>{
+      (()=>{
+        if (typeof window !== "undefined") {
+          (window as any).hj("identify", "sumitkumar", {
+            name: "Sumit Kumar Singh",
+            email: "sumit@gmail.com",
+            address : "Bangalore",
+            phone : "1234567890",
+            company : "Google",
+            role : "Software Engineer",
+            experience : "5 years",
+          });
+        }
+      })();
+  },[]);
   return (
     <div className={style.topics}>
       <div className={style.topics_grid}>
