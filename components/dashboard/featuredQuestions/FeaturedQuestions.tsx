@@ -11,7 +11,8 @@ function FeaturedQuestions() {
   useEffect(() => {
     (() => {
       if (typeof window !== "undefined") {
-        (window as any).hj("identify",'sks', {
+        console.log("window", window, 'attributes.set');
+        (window as any).hj('attributes.set', {
           'name': "Sumit Kumar Singh",
           'email': "sumit@gmail.com",
           'address': "Bangalore",
